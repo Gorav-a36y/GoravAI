@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | GoravAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            dark: '#0B1120',
+                            primary: '#1e40af',
+                            accent: '#3b82f6',
+                            light: '#f8fafc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(226, 232, 240, 0.6); }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="logo.jpg" alt="GoravAI Logo" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1e40af/ffffff?text=GA';">
+                    <span class="font-bold text-2xl tracking-tight text-brand-dark">Gorav<span class="text-brand-accent">AI</span></span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Home</a>
+                    <a href="index.html#services" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Services</a>
+                    <a href="projects.html" class="text-sm font-medium text-brand-primary font-bold transition-colors">Projects</a>
+                    <a href="pricing.html" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Pricing</a>
+                    <a href="index.html#contact" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Contact</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="https://parkashdev.app.n8n.cloud/webhook/54d7a3ad-d2e2-40fe-bd13-145042b8ad89/chat" target="_blank" class="px-6 py-2.5 bg-brand-dark text-white text-sm font-semibold rounded-full hover:bg-brand-primary transition-colors shadow-lg">Talk to Agent</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-800 hover:text-brand-primary focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-slate-700">Home</a>
+                <a href="projects.html" class="block px-3 py-2 text-base font-medium text-brand-primary font-bold bg-blue-50 rounded-md">Projects</a>
+                <a href="pricing.html" class="block px-3 py-2 text-base font-medium text-slate-700">Pricing</a>
+                <a href="https://parkashdev.app.n8n.cloud/webhook/54d7a3ad-d2e2-40fe-bd13-145042b8ad89/chat" target="_blank" class="block mt-4 text-center px-4 py-3 bg-brand-dark text-white font-semibold rounded-lg">Talk to Agent</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-40 pb-16 bg-white text-center px-4">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-brand-dark mb-6">Our Projects</h1>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">Explore the intelligent AI solutions and digital systems built by GoravAI to transform industries and empower users.</p>
+    </header>
+
+    <!-- Overview Grid -->
+    <section class="pb-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <a href="#hospital" class="group block p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-primary transition-all duration-300">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6"><i class="fas fa-heartbeat text-2xl"></i></div>
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-primary transition-colors">Hospital Management AI</h3>
+                <p class="text-slate-500 mt-2 text-sm">Smart medical automation connecting patients, doctors, and pharmacies.</p>
+                <div class="mt-4 text-brand-primary font-semibold text-sm flex items-center">View Details <i class="fas fa-arrow-down ml-2 group-hover:translate-y-1 transition-transform"></i></div>
+            </a>
+            <!-- Card 2 -->
+            <a href="#learnmate" class="group block p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-500 transition-all duration-300">
+                <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6"><i class="fas fa-graduation-cap text-2xl"></i></div>
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">LearnMate AI</h3>
+                <p class="text-slate-500 mt-2 text-sm">Multi-language study assistant for smart learning and exam prep.</p>
+                <div class="mt-4 text-indigo-600 font-semibold text-sm flex items-center">View Details <i class="fas fa-arrow-down ml-2 group-hover:translate-y-1 transition-transform"></i></div>
+            </a>
+            <!-- Card 3 -->
+            <a href="#sparky" class="group block p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-yellow-500 transition-all duration-300">
+                <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-xl flex items-center justify-center mb-6"><i class="fas fa-bolt text-2xl"></i></div>
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-yellow-600 transition-colors">Sparky Automation</h3>
+                <p class="text-slate-500 mt-2 text-sm">AI dispatcher for electricians automating jobs, pricing, and scheduling.</p>
+                <div class="mt-4 text-yellow-600 font-semibold text-sm flex items-center">View Details <i class="fas fa-arrow-down ml-2 group-hover:translate-y-1 transition-transform"></i></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Project 1: Hospital -->
+    <section id="hospital" class="py-24 bg-blue-50 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-start">
+                <div class="lg:w-1/2">
+                    <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold uppercase tracking-wide mb-4">Healthcare AI</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Hospital Management – Smart Medical AI Agent</h2>
+                    <p class="text-lg text-slate-700 leading-relaxed mb-6">
+                        A next-generation AI system that connects patients directly with doctors, pharmacies, and hospital services using intelligent automation.
+                    </p>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        It understands user symptoms, predicts possible diseases, guides them with treatments, and helps them reach the right doctor. The system also features a powerful <strong>Smart Disease Alert System</strong> that monitors outbreaks in real-time and alerts authorities.
+                    </p>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-blue-100 mb-8">
+                        <h4 class="font-bold text-slate-900 mb-3 flex items-center"><i class="fas fa-shield-virus text-red-500 mr-2"></i> Disease Alert Protocol</h4>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> <strong>10 Cases (24h):</strong> Alert sent to nearest hospital.</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> <strong>20 Cases (24h):</strong> Email sent to DHO Office with full analysis.</li>
+                        </ul>
+                    </div>
+
+                    <h4 class="font-bold text-slate-900 mb-4">Key Features</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="flex items-center text-slate-700"><i class="fas fa-notes-medical text-blue-500 w-6"></i> Symptom Understanding</div>
+                        <div class="flex items-center text-slate-700"><i class="fas fa-user-md text-blue-500 w-6"></i> Doctor Automation</div>
+                        <div class="flex items-center text-slate-700"><i class="fas fa-map-marked-alt text-blue-500 w-6"></i> Cluster Analysis</div>
+                        <div class="flex items-center text-slate-700"><i class="fas fa-file-medical-alt text-blue-500 w-6"></i> DHO Auto-Reporting</div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 bg-white rounded-2xl p-8 shadow-xl border border-blue-100">
+                    <!-- Visual Representation -->
+                    <div class="bg-blue-600 rounded-xl p-6 text-white mb-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="font-bold">AI Health Agent</div>
+                            <div class="text-xs bg-blue-500 px-2 py-1 rounded">Online</div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-blue-500/50 p-3 rounded-lg w-3/4">User: "I have high fever and headache since last night."</div>
+                            <div class="bg-white text-blue-900 p-3 rounded-lg w-3/4 ml-auto">AI: "Based on your location (Sector F-11) and symptoms, this could be Viral Flu. There are 12 similar cases nearby. I am booking an appointment with Dr. Ali at City Hospital."</div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-50 p-4 rounded-lg text-center">
+                            <i class="fas fa-hospital text-3xl text-blue-500 mb-2"></i>
+                            <div class="font-bold text-sm">Hospital Connect</div>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg text-center">
+                            <i class="fas fa-pills text-3xl text-blue-500 mb-2"></i>
+                            <div class="font-bold text-sm">Pharmacy Link</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project 2: LearnMate -->
+    <section id="learnmate" class="py-24 bg-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row-reverse gap-12 items-start">
+                <div class="lg:w-1/2">
+                    <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold uppercase tracking-wide mb-4">EdTech AI</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">LearnMate AI – Smart Study Assistant</h2>
+                    <p class="text-lg text-slate-700 leading-relaxed mb-6">
+                        A multi-language AI tutor specifically trained for students in Pakistan, helping them work smart—not hard.
+                    </p>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        It speaks <strong>English, Urdu, Sindhi, Punjabi, and Balochi</strong>. Whether it's predicting board exam papers, writing essays, or creating instant presentations, LearnMate provides personalized learning paths and real-time academic help.
+                    </p>
+                    
+                    <h4 class="font-bold text-slate-900 mb-4">Key Features</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="flex items-center text-slate-700"><i class="fas fa-language text-indigo-500 w-6"></i> Multi-language Support</div>
+                        <div class="flex items-center text-slate-700"><i class="fas fa-file-alt text-indigo-500 w-6"></i> Exam Predictions</div>
+                        <div class="flex items-center text-slate-700"><i class="fas fa-magic text-indigo-500 w-6"></i> Essay Generation</div>
+                        <div class="flex items-center text-slate-700"><i class="fas fa-chalkboard-teacher text-indigo-500 w-6"></i> Smart Tips</div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 bg-slate-50 rounded-2xl p-8 shadow-inner border border-slate-100">
+                    <div class="grid grid-cols-2 gap-6">
+                         <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-indigo-500">
+                             <div class="text-indigo-600 font-bold mb-1">Exam Prep</div>
+                             <p class="text-xs text-slate-500">"Predict Physics Class 10 Paper"</p>
+                         </div>
+                         <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+                             <div class="text-green-600 font-bold mb-1">Homework</div>
+                             <p class="text-xs text-slate-500">"Write an essay on Quaid-e-Azam in Urdu"</p>
+                         </div>
+                         <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-purple-500">
+                             <div class="text-purple-600 font-bold mb-1">Presentations</div>
+                             <p class="text-xs text-slate-500">"Create PPT structure for Biology"</p>
+                         </div>
+                         <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-orange-500">
+                             <div class="text-orange-600 font-bold mb-1">Languages</div>
+                             <p class="text-xs text-slate-500">Urdu, Sindhi, Punjabi, Balochi</p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project 3: Sparky -->
+    <section id="sparky" class="py-24 bg-slate-50 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+             <div class="flex flex-col lg:flex-row gap-12 items-start">
+                <div class="lg:w-1/2">
+                    <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-bold uppercase tracking-wide mb-4">Automation AI</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Sparky Automation – Electrician AI Dispatcher</h2>
+                    <p class="text-lg text-slate-700 leading-relaxed mb-6">
+                        An AI agent that manages electrician jobs, pricing, scheduling, and client communication automatically.
+                    </p>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        Sparky acts as a virtual manager. It distinguishes between <strong>Simple Work</strong> (fan repair, bulb change) and <strong>Complex Work</strong> (rewiring, installations). It instantly quotes prices for simple jobs and collects detailed requirements (images, descriptions) for complex ones, generating official DOC files for the electrician.
+                    </p>
+                    
+                    <h4 class="font-bold text-slate-900 mb-4">Workflow Automation</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <div class="bg-green-100 text-green-700 p-2 rounded mr-3 mt-1"><i class="fas fa-check"></i></div>
+                            <div>
+                                <h5 class="font-bold text-slate-800">Simple Tasks</h5>
+                                <p class="text-sm text-slate-600">Instant AI pricing negotiation & scheduling.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-700 p-2 rounded mr-3 mt-1"><i class="fas fa-file-contract"></i></div>
+                            <div>
+                                <h5 class="font-bold text-slate-800">Complex Tasks</h5>
+                                <p class="text-sm text-slate-600">Image analysis & DOC file generation for electrician review.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 bg-slate-900 rounded-2xl p-8 shadow-2xl relative overflow-hidden text-white">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-500 opacity-10 rounded-full blur-3xl"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-6 border-b border-slate-700 pb-4">
+                            <div class="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center text-black font-bold"><i class="fas fa-bolt"></i></div>
+                            <div>
+                                <div class="font-bold text-lg">Sparky AI</div>
+                                <div class="text-xs text-slate-400">Job Dispatcher Active</div>
+                            </div>
+                        </div>
+                        <div class="space-y-4 font-mono text-sm">
+                            <div class="text-green-400">> Incoming Call: Customer (Fan Repair)</div>
+                            <div class="text-slate-300">> Analysis: Simple Job</div>
+                            <div class="text-yellow-400">> Action: Quote Standard Price ($15)</div>
+                            <div class="text-slate-300">> Status: Booked @ 4:00 PM</div>
+                            <div class="border-t border-slate-700 my-2"></div>
+                             <div class="text-green-400">> Incoming Request: Home Rewiring</div>
+                            <div class="text-slate-300">> Analysis: Complex Job</div>
+                            <div class="text-yellow-400">> Action: Request Images & Generate Report.doc</div>
+                            <div class="text-blue-400">> Email Sent: electrician@sparky.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="#" class="flex items-center gap-2 mb-4">
+                        <img src="logo.jpg" class="h-8 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/50x50/1e40af/ffffff?text=GA';">
+                        <span class="font-bold text-xl text-brand-dark">Gorav<span class="text-brand-accent">AI</span></span>
+                    </a>
+                    <p class="text-slate-500 text-sm leading-relaxed">GoravAI delivers modern, scalable, and intelligent digital solutions.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-dark mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li><a href="index.html" class="hover:text-brand-primary">Home</a></li>
+                        <li><a href="projects.html" class="hover:text-brand-primary">Projects</a></li>
+                        <li><a href="pricing.html" class="hover:text-brand-primary">Pricing</a></li>
+                        <li><a href="index.html#contact" class="hover:text-brand-primary">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-dark mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li>Web Development</li>
+                        <li>AI Agents</li>
+                        <li>Logo Design</li>
+                        <li>Digital Marketing</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-dark mb-6">Contact Us</h4>
+                    <ul class="space-y-4 mb-6 text-sm text-slate-500">
+                        <li class="flex gap-3"><i class="fas fa-envelope mt-1 text-brand-accent"></i> hello@goravai.com</li>
+                        <li class="flex gap-3"><i class="fas fa-map-marker-alt mt-1 text-brand-accent"></i> Tech Hub District, Silicon Valley, CA</li>
+                    </ul>
+                    <div class="flex gap-3">
+                         <a href="#" class="social-btn w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-black hover:text-white"><svg viewBox="0 0 24 24" class="w-4 h-4 fill-current"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></a>
+                        <a href="#" class="social-btn w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#E1306C] hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/gorav-kumar-61968a381" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#0077b5] hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/share/17VpXx6YjX/" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#1877F2] hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-100 pt-8 text-center">
+                <p class="text-slate-400 text-sm">© 2025 GoravAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
