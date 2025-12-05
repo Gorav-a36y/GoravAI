@@ -18,8 +18,8 @@
                     colors: {
                         brand: {
                             dark: '#0B1120',
-                            primary: '#1e40af',
-                            accent: '#3b82f6',
+                            primary: '#1e40af', /* Dark Blue */
+                            accent: '#3b82f6', /* Lighter Blue Accent */
                             light: '#f8fafc',
                         }
                     }
@@ -28,13 +28,122 @@
         }
     </script>
     <style>
+        /* Glassy effect for fixed navigation */
         .glass-nav {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(226, 232, 240, 0.6);
         }
-        .social-btn { transition: all 0.3s ease; }
-        .social-btn:hover { transform: translateY(-3px); }
+        
+        /* Social button hover effect with shine */
+        .social-btn { 
+            transition: all 0.3s ease; 
+            transform-style: preserve-3d; /* For better Z-axis conceptual effect */
+            position: relative; /* For pseudo-element positioning */
+            overflow: hidden; /* Hide shine when it's off-button */
+        }
+        .social-btn:hover { 
+            transform: translateY(-3px); 
+        }
+
+        /* Shine Pseudo-element */
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%; /* Width of the shine line */
+            height: 100%;
+            /* Diagonal light effect */
+            background: linear-gradient(
+                90deg, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.5) 50%, 
+                rgba(255, 255, 255, 0) 100%
+            );
+            /* Skew to create the diagonal line/sweep effect, and hide it off-screen left */
+            transform: skewX(-20deg) translateX(-150%);
+            transition: transform 0.6s ease;
+            z-index: 10;
+        }
+
+        /* Animate the shine across the button on hover */
+        .social-btn:hover::before {
+            /* Move the diagonal shine across to the right */
+            transform: skewX(-20deg) translateX(300%);
+        }
+        
+        /* Custom CSS for Service Card Hover Effect */
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-4px); /* Slight lift */
+            /* Custom shadow to visually enhance the lift effect (mimics shadow-xl) */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05); 
+        }
+
+        /* ------------------------------------------- */
+        /* New CSS for Service Icon Container and Hover */
+        /* ------------------------------------------- */
+        .service-icon-container {
+            transition: all 0.3s ease;
+        }
+        
+        /* General hover effect (no box-shadow, just scale) */
+        .service-card:hover .service-icon-container {
+            transform: scale(1.05);
+        }
+
+        /* 1. Web Development (Blue) */
+        .icon-web-dev {
+            background-color: #eff6ff; /* bg-blue-50 */
+            color: #1e40af; /* text-brand-primary */
+        }
+        .service-card:hover .icon-web-dev {
+            background-color: #1e40af; /* Swap to primary color */
+            color: white; /* Swap icon color to white */
+        }
+
+        /* 2. AI Agents (Accent Blue, dark card) */
+        .icon-ai-agent {
+            background-color: rgba(255, 255, 255, 0.1); /* bg-white/10 */
+            color: #3b82f6; /* text-brand-accent */
+        }
+        .service-card:hover .icon-ai-agent {
+            background-color: #3b82f6; /* Swap to accent color */
+            color: white; /* Swap icon color to white */
+        }
+
+        /* 3. Logo & Brand Design (Purple) */
+        .icon-logo-design {
+            background-color: #f3e8ff; /* bg-purple-50 */
+            color: #9333ea; /* text-purple-600 */
+        }
+        .service-card:hover .icon-logo-design {
+            background-color: #9333ea; /* Swap to purple-600 */
+            color: white; /* Swap icon color to white */
+        }
+
+        /* 4. Digital Marketing (Green) */
+        .icon-digital-mkt {
+            background-color: #ecfdf5; /* bg-green-50 */
+            color: #059669; /* text-green-600 */
+        }
+        .service-card:hover .icon-digital-mkt {
+            background-color: #059669; /* Swap to green-600 */
+            color: white; /* Swap icon color to white */
+        }
+
+        /* 5. Domain Selling (Orange) */
+        .icon-domain-sell {
+            background-color: #fff7ed; /* bg-orange-50 */
+            color: #f97316; /* text-orange-600 */
+        }
+        .service-card:hover .icon-domain-sell {
+            background-color: #f97316; /* Swap to orange-600 */
+            color: white; /* Swap icon color to white */
+        }
     </style>
 </head>
 <body class="font-sans text-slate-800 bg-slate-50 antialiased overflow-x-hidden">
@@ -45,7 +154,7 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
-                    <!-- REPLACE 'logo.jpg' WITH YOUR ACTUAL FILE NAME -->
+                    <!-- Placeholder Logo (replace with your actual image path) -->
                     <img src="logo.jpg" alt="GoravAI Logo" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1e40af/ffffff?text=GA';">
                     <span class="font-bold text-2xl tracking-tight text-brand-dark">Gorav<span class="text-brand-accent">AI</span></span>
                 </a>
@@ -60,7 +169,7 @@
                     <a href="index.html#contact" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Contact</a>
                 </div>
 
-                <!-- CTA Button -->
+                <!-- CTA Button - Talk to Agent -->
                 <div class="hidden md:block">
                     <a href="https://parkashdev.app.n8n.cloud/webhook/54d7a3ad-d2e2-40fe-bd13-145042b8ad89/chat" target="_blank" class="px-6 py-2.5 bg-brand-dark text-white text-sm font-semibold rounded-full hover:bg-brand-primary transition-colors duration-300 shadow-lg shadow-blue-900/20">
                         Talk to Agent
@@ -143,29 +252,38 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Service Cards -->
-                <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                    <div class="w-14 h-14 bg-blue-50 text-brand-primary rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-laptop-code"></i></div>
+                <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm service-card">
+                    <!-- Updated classes for CSS control -->
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-2xl mb-6 service-icon-container icon-web-dev"><i class="fas fa-laptop-code"></i></div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Web Development</h3>
                     <p class="text-slate-600">Professional, responsive websites, portals, and custom systems tailored for any business need.</p>
                 </div>
-                <div class="p-8 rounded-2xl bg-brand-dark text-white border border-slate-800 shadow-lg relative overflow-hidden group">
+                
+                <div class="p-8 rounded-2xl bg-brand-dark text-white border border-slate-800 shadow-lg relative overflow-hidden group service-card">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600 rounded-full blur-3xl opacity-20 -mr-10 -mt-10"></div>
-                    <div class="w-14 h-14 bg-white/10 text-brand-accent rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-robot"></i></div>
+                    <!-- Updated classes for CSS control -->
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-2xl mb-6 service-icon-container icon-ai-agent"><i class="fas fa-robot"></i></div>
                     <h3 class="text-xl font-bold text-white mb-3">AI Agents & Automation</h3>
                     <p class="text-slate-300">Custom AI bots for chat, workflow automation, customer support, and business optimization.</p>
                 </div>
-                <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                    <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-pen-nib"></i></div>
+                
+                <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm service-card">
+                    <!-- Updated classes for CSS control -->
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-2xl mb-6 service-icon-container icon-logo-design"><i class="fas fa-pen-nib"></i></div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Logo & Brand Design</h3>
                     <p class="text-slate-600">Unique, modern, and memorable logos that elevate your brand identity.</p>
                 </div>
-                <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                    <div class="w-14 h-14 bg-green-50 text-green-600 rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-chart-line"></i></div>
+                
+                <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm service-card">
+                    <!-- Updated classes for CSS control -->
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-2xl mb-6 service-icon-container icon-digital-mkt"><i class="fas fa-chart-line"></i></div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Digital Marketing</h3>
                     <p class="text-slate-600">SEO, social media marketing, ad campaigns, and strategies to grow your business.</p>
                 </div>
-                <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 md:col-span-2">
-                    <div class="w-14 h-14 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-globe"></i></div>
+                
+                <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm service-card md:col-span-2">
+                    <!-- Updated classes for CSS control -->
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-2xl mb-6 service-icon-container icon-domain-sell"><i class="fas fa-globe"></i></div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Domain Selling</h3>
                     <p class="text-slate-600">Premium domain suggestions, purchasing support, and domain marketplace services.</p>
                 </div>
@@ -196,14 +314,29 @@
 
                 <div class="lg:w-1/2 w-full">
                     <div class="relative max-w-sm mx-auto p-3 bg-white rounded-2xl shadow-xl border border-slate-100">
-                        <!-- REPLACE 'founder.jpg' WITH YOUR ACTUAL FILE NAME -->
+                        <!-- Founder Image Placeholder -->
+                        <!-- ALT tag updated to reflect 'Gorav Khemani' -->
                         <img src="founder.jpg" alt="Gorav Khemani" class="w-full h-80 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e40af/ffffff?text=Founder+Photo';">
                         <div class="p-6">
+                            <!-- Founder name restored to "Gorav Khemani" -->
                             <h4 class="text-2xl font-bold text-brand-dark">Gorav Khemani</h4>
+                            
+                            <!-- Founder Title -->
                             <p class="text-brand-primary font-medium text-lg mb-4">Founder of GoravAI</p>
+                            
+                            <!-- START: Newly added descriptive line with specific formatting (NOW MOVED AFTER Founder line) -->
+                            <!-- Reverting to text-sm and adding double quotes as requested -->
+                            <div class="border-l-4 border-brand-accent pl-4 py-1 mt-1 mb-4">
+                                <p class="text-sm text-slate-700 font-medium">"A visionary leader focused on combining creative design with powerful automation."</p>
+                            </div>
+                            <!-- END: Newly added descriptive line with specific formatting -->
+
                             <div class="flex gap-3">
-                                <a href="https://www.linkedin.com/in/gorav-kumar-61968a381" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#0077b5] hover:text-white transition-all"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-black hover:text-white transition-all"><svg viewBox="0 0 24 24" class="w-4 h-4 fill-current"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></a>
+                                <!-- Social links are correct: LinkedIn, X (Twitter) -->
+                                <!-- ADDED social-btn class to enable shine effect -->
+                                <a href="https://www.linkedin.com/in/gorav-kumar-61968a381" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#0077b5] hover:text-white transition-all"><i class="fab fa-linkedin-in"></i></a>
+                                <!-- ADDED social-btn class to enable shine effect -->
+                                <a href="#" class="social-btn w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-black hover:text-white transition-all"><svg viewBox="0 0 24 24" class="w-4 h-4 fill-current"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></a>
                             </div>
                         </div>
                     </div>
@@ -213,50 +346,65 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 pt-16 pb-8">
+    <footer class="bg-[#0b0f1a] border-t border-slate-800 pt-16 pb-8 text-slate-400">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div>
                     <a href="#" class="flex items-center gap-2 mb-4">
                         <img src="logo.jpg" class="h-8 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/50x50/1e40af/ffffff?text=GA';">
-                        <span class="font-bold text-xl text-brand-dark">Gorav<span class="text-brand-accent">AI</span></span>
+                        <!-- Updated logo text color to white -->
+                        <span class="font-bold text-xl text-white">Gorav<span class="text-brand-accent">AI</span></span>
                     </a>
-                    <p class="text-slate-500 text-sm leading-relaxed">GoravAI delivers modern, scalable, and intelligent digital solutions.</p>
+                    <p class="text-sm leading-relaxed">GoravAI delivers modern, scalable, and intelligent digital solutions.</p>
                 </div>
                 <div>
-                    <h4 class="font-bold text-brand-dark mb-6">Quick Links</h4>
-                    <ul class="space-y-3 text-sm text-slate-500">
-                        <li><a href="index.html" class="hover:text-brand-primary">Home</a></li>
-                        <li><a href="projects.html" class="hover:text-brand-primary">Projects</a></li>
-                        <li><a href="pricing.html" class="hover:text-brand-primary">Pricing</a></li>
-                        <li><a href="index.html#contact" class="hover:text-brand-primary">Contact</a></li>
+                    <!-- Updated heading color to white -->
+                    <h4 class="font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <!-- Updated link hover color -->
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="projects.html" class="hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="index.html#contact" class="hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-brand-dark mb-6">Services</h4>
-                    <ul class="space-y-3 text-sm text-slate-500">
-                        <li>Web Development</li>
-                        <li>AI Agents</li>
-                        <li>Logo Design</li>
-                        <li>Digital Marketing</li>
+                    <!-- Updated heading color to white -->
+                    <h4 class="font-bold text-white mb-6">Services</h4>
+                    <!-- Updated services list with <a> tags and hover color -->
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">AI Agents</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">Logo Design</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">Digital Marketing</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">Domain Selling</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-brand-dark mb-6">Contact Us</h4>
-                    <ul class="space-y-4 mb-6 text-sm text-slate-500">
-                        <li class="flex gap-3"><i class="fas fa-envelope mt-1 text-brand-accent"></i> hello@goravai.com</li>
+                    <!-- Updated heading color to white -->
+                    <h4 class="font-bold text-white mb-6">Contact Us</h4>
+                    <ul class="space-y-4 mb-6 text-sm">
+                        <!-- Removed text-slate-500, relying on parent color, added white hover -->
+                        <li class="flex gap-3"><i class="fas fa-envelope mt-1 text-brand-accent"></i> <span class="hover:text-white transition-colors">hello@goravai.com</span></li>
+                        <li class="flex gap-3"><i class="fas fa-phone mt-1 text-brand-accent"></i> <span class="hover:text-white transition-colors">+92 300 1234567</span></li>
                         <li class="flex gap-3"><i class="fas fa-map-marker-alt mt-1 text-brand-accent"></i> F-67/1196, Behind United Hotel Qazi Qayoom Road Hyder chowk Hyderabad Sindh</li>
                     </ul>
                     <div class="flex gap-3">
-                        <a href="#" class="social-btn w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-black hover:text-white"><svg viewBox="0 0 24 24" class="w-4 h-4 fill-current"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></a>
-                        <a href="#" class="social-btn w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#E1306C] hover:text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/gorav-kumar-61968a381" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#0077b5] hover:text-white"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.facebook.com/share/17VpXx6YjX/" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#1877F2] hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <!-- Updated social button colors for dark background -->
+                        <a href="#" class="social-btn w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-black hover:text-white"><svg viewBox="0 0 24 24" class="w-4 h-4 fill-current"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></a>
+                        <a href="#" class="social-btn w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#E1306C] hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/gorav-kumar-61968a381" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#0077b5] hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/share/17VpXx6YjX/" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#1877F2] hover:text-white"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-slate-100 pt-8 text-center">
-                <p class="text-slate-400 text-sm">© 2025 GoravAI. All rights reserved.</p>
+            <!-- Updated border and text colors for dark mode -->
+            <div class="border-t border-slate-700 pt-8 text-center">
+                <p class="text-slate-500 text-sm">
+                    © 2025 GoravAI. All rights reserved. 
+                    <!-- Updated link colors -->
+                    <a href="privacypolicy.html" class="text-brand-accent hover:text-white font-medium ml-2 transition-colors">Privacy Policy</a>
+                </p>
             </div>
         </div>
     </footer>
