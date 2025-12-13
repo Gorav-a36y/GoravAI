@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans | GoravAI</title>
+    
+    <!-- Your Custom Favicon -->
+    <link rel="icon" href="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png" type="image/png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            dark: '#0B1120',
+                            primary: '#1e40af',
+                            accent: '#3b82f6',
+                            light: '#f8fafc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav { 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(226, 232, 240, 0.6); 
+        }
+
+        /* Social button hover effect with shine */
+        .social-btn { 
+            transition: all 0.3s ease; 
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+        }
+        .social-btn:hover { 
+            transform: translateY(-3px); 
+        }
+
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 100%;
+            background: linear-gradient(
+                90deg, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.5) 50%, 
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-20deg) translateX(-150%);
+            transition: transform 0.6s ease;
+            z-index: 10;
+        }
+
+        .social-btn:hover::before {
+            transform: skewX(-20deg) translateX(300%);
+        }
+
+        /* Pricing card hover effect */
+        .pricing-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
+                    <img src="https://pbs.twimg.com/profile_banners/1996632161676574720/1765637447/600x200" alt="GoravAI Logo" class="h-10 w-auto max-w-[150px] object-contain rounded-md" onerror="this.onerror=null; this.src='https://placehold.co/150x40/1e40af/ffffff?text=GoravAI+Logo';">
+                    <span class="font-bold text-2xl tracking-tight text-brand-dark">Gorav<span class="text-brand-accent">AI</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Home</a>
+                    <a href="index.html#services" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Services</a>
+                    <a href="projects.html" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Projects</a>
+                    <a href="pricing.html" class="text-sm font-medium text-brand-primary font-bold transition-colors">Pricing</a>
+                    <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">About</a>
+                    <a href="index.html#contact" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- CTA Button - Talk to Agent -->
+                <div class="hidden md:block">
+                    <a href="https://devkhemani.app.n8n.cloud/webhook/39c57088-da29-497a-a7ea-343120bf4edf/chat" target="_blank" class="px-6 py-2.5 bg-brand-dark text-white text-sm font-semibold rounded-full hover:bg-brand-primary transition-colors duration-300 shadow-lg shadow-blue-900/20">
+                        Talk to Agent <i class="fas fa-robot ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-800 hover:text-brand-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-primary hover:bg-blue-50 rounded-md">Home</a>
+                <a href="projects.html" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-brand-primary hover:bg-blue-50 rounded-md">Projects</a>
+                <a href="pricing.html" class="block px-3 py-2 text-base font-medium text-brand-primary bg-blue-50 rounded-md">Pricing</a>
+                <a href="https://devkhemani.app.n8n.cloud/webhook/39c57088-da29-497a-a7ea-343120bf4edf/chat" target="_blank" class="block mt-4 text-center px-4 py-3 bg-brand-dark text-white font-semibold rounded-lg">Talk to Agent</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-40 pb-16 bg-white text-center px-4">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4">PRICING PLANS</h1>
+        <p class="text-xl text-slate-600">Choose a plan that suits your needs</p>
+    </header>
+
+    <!-- Pricing Cards Section -->
+    <section class="py-16 px-4 bg-slate-50">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Package 1 -->
+            <div class="pricing-card bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <!-- Header -->
+                <div class="p-8 text-center">
+                    <h3 class="text-lg font-semibold text-slate-700 mb-2">Business Website</h3>
+                    <div class="text-4xl font-bold text-slate-900 mb-6">�Rs 20,000</div>
+                    <img src="https://placehold.co/200x150/3b82f6/ffffff?text=Website+Design" alt="Package 1" class="mx-auto mb-6 rounded-lg">
+                </div>
+                
+                <!-- Package Badge -->
+                <div class="bg-blue-600 text-white text-center py-3 font-bold">
+                    <i class="fas fa-check-circle mr-2"></i>Up To 4 Total Pages
+                </div>
+                
+                <!-- Features List -->
+                <div class="p-8">
+                    <h4 class="font-bold text-slate-900 mb-4 text-center">PACKAGE 1</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-blue-600 mr-3"></i>
+                            <span>Basic SEO</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-blue-600 mr-3"></i>
+                            <span>Speed Optimization</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-blue-600 mr-3"></i>
+                            <span>Design Customization</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-blue-600 mr-3"></i>
+                            <span>Mobile Responsive</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-blue-600 mr-3"></i>
+                            <span>Custom Design</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-blue-600 mr-3"></i>
+                            <span>W3C Validation</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-blue-600 mr-3"></i>
+                            <span>Consultation</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-blue-600 mr-3"></i>
+                            <span>Training</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-blue-600 mr-3"></i>
+                            <span>Support</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Delivery Time -->
+                <div class="px-8 pb-8">
+                    <div class="bg-blue-600 text-white text-center py-3 rounded-lg font-bold">
+                        <i class="fas fa-clock mr-2"></i>Delivery Time 7 Days
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="pricing-card bg-white rounded-2xl shadow-xl border-2 border-green-500 overflow-hidden transform md:scale-105">
+                <!-- Header -->
+                <div class="p-8 text-center">
+                    <h3 class="text-lg font-semibold text-slate-700 mb-2">Business Website</h3>
+                    <div class="text-4xl font-bold text-slate-900 mb-6">�Rs 25,000</div>
+                    <img src="https://placehold.co/200x150/10b981/ffffff?text=Professional+Web" alt="Package 2" class="mx-auto mb-6 rounded-lg">
+                </div>
+                
+                <!-- Package Badge -->
+                <div class="bg-green-600 text-white text-center py-3 font-bold">
+                    <i class="fas fa-check-circle mr-2"></i>Up To 6 Total Pages
+                </div>
+                
+                <!-- Features List -->
+                <div class="p-8">
+                    <h4 class="font-bold text-slate-900 mb-4 text-center">PACKAGE 2</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Basic SEO</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Speed Optimization</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Design Customization</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Mobile Responsive</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Custom Design</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>W3C Validation</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Consultation</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Training</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-green-600 mr-3"></i>
+                            <span>Support</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Delivery Time -->
+                <div class="px-8 pb-8">
+                    <div class="bg-green-600 text-white text-center py-3 rounded-lg font-bold">
+                        <i class="fas fa-clock mr-2"></i>Delivery Time 7 Days
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="pricing-card bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <!-- Header -->
+                <div class="p-8 text-center">
+                    <h3 class="text-lg font-semibold text-slate-700 mb-2">Business Website</h3>
+                    <div class="text-4xl font-bold text-slate-900 mb-6">�Rs 30,000</div>
+                    <img src="https://placehold.co/200x150/f59e0b/ffffff?text=Premium+Site" alt="Package 3" class="mx-auto mb-6 rounded-lg">
+                </div>
+                
+                <!-- Package Badge -->
+                <div class="bg-yellow-500 text-white text-center py-3 font-bold">
+                    <i class="fas fa-check-circle mr-2"></i>Up To 10 Total Pages
+                </div>
+                
+                <!-- Features List -->
+                <div class="p-8">
+                    <h4 class="font-bold text-slate-900 mb-4 text-center">PACKAGE 3</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-yellow-500 mr-3"></i>
+                            <span class="font-semibold text-yellow-600">Complete SEO</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-yellow-500 mr-3"></i>
+                            <span>Speed Optimization</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-yellow-500 mr-3"></i>
+                            <span>Design Customization</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-yellow-500 mr-3"></i>
+                            <span>Mobile Responsive</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-yellow-500 mr-3"></i>
+                            <span>Custom Design</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-yellow-500 mr-3"></i>
+                            <span>W3C Validation</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-yellow-500 mr-3"></i>
+                            <span>Consultation</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-yellow-500 mr-3"></i>
+                            <span>Training</span>
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check text-yellow-500 mr-3"></i>
+                            <span>Support</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Delivery Time -->
+                <div class="px-8 pb-8">
+                    <div class="bg-yellow-500 text-white text-center py-3 rounded-lg font-bold">
+                        <i class="fas fa-clock mr-2"></i>Delivery Time 7 Days
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-white text-center px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-brand-dark mb-4">Ready to Get Started?</h2>
+            <p class="text-lg text-slate-600 mb-8">Contact us today to discuss your project and choose the perfect package for your business.</p>
+            <a href="https://devkhemani.app.n8n.cloud/webhook/39c57088-da29-497a-a7ea-343120bf4edf/chat" target="_blank" class="inline-block px-8 py-4 bg-brand-dark text-white rounded-full font-semibold hover:bg-brand-primary transition-all duration-300 shadow-lg shadow-blue-900/30 hover:-translate-y-1">
+                Talk to Agent <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b0f1a] border-t border-slate-800 pt-16 pb-8 text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="#" class="flex items-center gap-2 mb-4">
+                        <img src="https://pbs.twimg.com/profile_banners/1996632161676574720/1765637447/600x200" alt="GoravAI Logo" class="h-8 w-auto max-w-[120px] object-contain rounded-md" onerror="this.onerror=null; this.src='https://placehold.co/120x30/1e40af/ffffff?text=GoravAI+Logo';">
+                        <span class="font-bold text-xl text-white">Gorav<span class="text-brand-accent">AI</span></span>
+                    </a>
+                    <p class="text-sm leading-relaxed">GoravAI delivers modern, scalable, and intelligent digital solutions.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="projects.html" class="hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="index.html#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">AI Agents</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">Logo Design</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">Digital Marketing</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">Domain Selling</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-6">Contact Us</h4>
+                    <ul class="space-y-4 mb-6 text-sm">
+                        <li class="flex gap-3"><i class="fas fa-envelope mt-1 text-brand-accent"></i> <span class="hover:text-white transition-colors">hello@goravai.com</span></li>
+                        <li class="flex gap-3"><i class="fas fa-phone mt-1 text-brand-accent"></i> <span class="hover:text-white transition-colors">+92 300 1234567</span></li>
+                        <li class="flex gap-3"><i class="fas fa-map-marker-alt mt-1 text-brand-accent"></i> F-67/1196, Behind United Hotel Qazi Qayoom Road Hyder chowk Hyderabad Sindh</li>
+                    </ul>
+                    <div class="flex gap-3">
+                        <a href="https://x.com/GoravKhemani" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-black hover:text-white"><svg viewBox="0 0 24 24" class="w-4 h-4 fill-current"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></a>
+                        <a href="https://www.instagram.com/gorav_khemani/" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#E1306C] hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/gorav-kumar-61968a381" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#0077b5] hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/share/17VpXx6YjX/" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#1877F2] hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 pt-8 text-center">
+                <p class="text-slate-500 text-sm">
+                    © 2025 GoravAI. All rights reserved. 
+                    <a href="privacypolicy.html" class="text-brand-accent hover:text-white font-medium ml-2 transition-colors">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
