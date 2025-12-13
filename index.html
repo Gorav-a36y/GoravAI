@@ -2,42 +2,35 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <!-- SEO Recommendation: X-UA-Compatible meta tag for IE support -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Recommendation: Optimized Title (58 characters) -->
     <title>GoravAI | Intelligent Web Development, AI, and Automation</title>
     
-    <!-- SEO Recommendation: Meta Description for CTR -->
     <meta name="description" content="GoravAI empowers businesses with powerful web development, custom AI agents, branding, and high-impact digital solutions designed for modern growth.">
     
-    <!-- SEO Recommendation: Canonical Tag for duplicate content prevention -->
     <link rel="canonical" href="https://gorav-a36y.github.io/GoravAI/" />
     
-    <!-- SEO Recommendation: Robots Meta Tag to control indexing -->
     <meta name="robots" content="index, follow">
     
-    <!-- Favicon (Set to a generic placeholder, will be updated by script) -->
-    <link rel="icon" id="favicon-link" href="https://placehold.co/32x32/1e40af/ffffff?text=GA" type="image/png">
+    <!-- Your Custom Favicon -->
+    <link rel="icon" href="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png" type="image/png">
 
     <!-- Social Sharing: OpenGraph (Facebook, LinkedIn) -->
     <meta property="og:title" content="GoravAI | Intelligent Web Development, AI, and Automation">
     <meta property="og:description" content="GoravAI empowers businesses with powerful web development, custom AI agents, branding, and high-impact digital solutions designed for modern growth.">
     <meta property="og:url" content="https://gorav-a36y.github.io/GoravAI/">
     <meta property="og:type" content="website">
-    <!-- Updated with new URL -->
-    <meta property="og:image" id="og-image-meta" content="https://pbs.twimg.com/profile_banners/1996632161676574720/1765637447/600x200">
+    <meta property="og:image" content="https://pbs.twimg.com/profile_banners/1996632161676574720/1765637447/600x200">
     
     <!-- Social Sharing: Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="GoravAI | Intelligent Web Development, AI, and Automation">
     <meta name="twitter:description" content="GoravAI empowers businesses with powerful web development, custom AI agents, branding, and high-impact digital solutions designed for modern growth.">
-    <!-- Updated with new URL -->
-    <meta name="twitter:image" id="twitter-image-meta" content="https://pbs.twimg.com/profile_banners/1996632161676574720/1765637447/600x200">
+    <meta name="twitter:image" content="https://pbs.twimg.com/profile_banners/1996632161676574720/1765637447/600x200">
     
-    <!-- SEO Recommendation: JSON-LD Structured Data for rich results -->
-    <script type="application/ld+json" id="json-ld-data">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -65,8 +58,8 @@
                     colors: {
                         brand: {
                             dark: '#0B1120',
-                            primary: '#1e40af', /* Dark Blue */
-                            accent: '#3b82f6', /* Lighter Blue Accent */
+                            primary: '#1e40af',
+                            accent: '#3b82f6',
                             light: '#f8fafc',
                         }
                     }
@@ -126,19 +119,16 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05); 
         }
 
-        /* ------------------------------------------- */
-        /* New CSS for Service Icon Container and Hover */
-        /* ------------------------------------------- */
+        /* Service Icon Container and Hover */
         .service-icon-container {
             transition: all 0.3s ease;
         }
         
-        /* General hover effect (no box-shadow, just scale) */
         .service-card:hover .service-icon-container {
             transform: scale(1.05);
         }
 
-        /* 1. Web Development (Blue) */
+        /* Web Development (Blue) */
         .icon-web-dev {
             background-color: #eff6ff; 
             color: #1e40af; 
@@ -148,7 +138,7 @@
             color: white; 
         }
 
-        /* 2. AI Agents (Accent Blue, dark card) */
+        /* AI Agents (Accent Blue, dark card) */
         .icon-ai-agent {
             background-color: rgba(255, 255, 255, 0.1); 
             color: #3b82f6; 
@@ -158,7 +148,7 @@
             color: white; 
         }
 
-        /* 3. Logo & Brand Design (Purple) */
+        /* Logo & Brand Design (Purple) */
         .icon-logo-design {
             background-color: #f3e8ff; 
             color: #9333ea; 
@@ -168,7 +158,7 @@
             color: white; 
         }
 
-        /* 4. Digital Marketing (Green) */
+        /* Digital Marketing (Green) */
         .icon-digital-mkt {
             background-color: #ecfdf5; 
             color: #059669; 
@@ -178,7 +168,7 @@
             color: white; 
         }
 
-        /* 5. Domain Selling (Orange) */
+        /* Domain Selling (Orange) */
         .icon-domain-sell {
             background-color: #fff7ed; 
             color: #f97316; 
@@ -187,86 +177,18 @@
             background-color: #f97316; 
             color: white; 
         }
-
-        /* Custom Styles for Logo Generator */
-        #logo-generator-ui {
-            transition: height 0.3s ease, opacity 0.3s ease;
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            border-bottom: 1px solid rgba(226, 232, 240, 0.6);
-        }
-        #logo-generator-ui.active {
-            max-height: 300px; 
-            opacity: 1;
-        }
-        .loader {
-            border-top-color: #1e40af;
-            -webkit-animation: spinner 1.5s linear infinite;
-            animation: spinner 1.5s linear infinite;
-        }
-        @-webkit-keyframes spinner {
-            0% { -webkit-transform: rotate(0deg); }
-            100% { -webkit-transform: rotate(360deg); }
-        }
-        @keyframes spinner {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
     </style>
 </head>
 <body class="font-sans text-slate-800 bg-slate-50 antialiased overflow-x-hidden">
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
-        <div id="logo-generator-ui" class="p-3 bg-blue-50/50 hidden">
-             <!-- Logo Generator UI - Hidden by default -->
-            <div class="max-w-7xl mx-auto flex flex-col items-start gap-4">
-                <p class="text-sm font-medium text-brand-primary flex items-center gap-2">
-                    <i class="fas fa-magic"></i> AI Asset Manager
-                </p>
-                
-                <!-- Full Logo Generation Row -->
-                <div class="w-full flex flex-col sm:flex-row gap-3">
-                     <!-- Input for prompt (optional) -->
-                    <input type="text" id="logo-prompt" placeholder="Optional: Describe your perfect logo or leave blank for default..." class="flex-grow w-full md:w-64 p-2 border border-blue-200 rounded-lg text-sm focus:ring-brand-accent focus:border-brand-accent transition-all">
-                    <!-- Full Generation Button -->
-                    <button id="generate-logo-btn" class="flex-shrink-0 px-4 py-2 bg-brand-accent text-white font-semibold rounded-lg hover:bg-brand-primary transition-colors duration-300 shadow-md flex items-center justify-center">
-                        <span id="btn-text-full"><i class="fas fa-palette mr-2"></i> Generate & Apply Full Logo</span>
-                        <div id="btn-loader-full" class="hidden w-5 h-5 border-2 border-white border-solid rounded-full loader"></div>
-                    </button>
-                </div>
-
-                <!-- Favicon Optimization Row -->
-                <div class="w-full flex flex-col sm:flex-row gap-3 mt-2">
-                    <div class="flex-grow w-full">
-                        <p class="text-xs text-slate-600 mt-1">Uses your current logo to generate a perfect 32x32 favicon.</p>
-                    </div>
-                    <!-- Favicon Optimization Button -->
-                    <button id="optimize-favicon-btn" class="flex-shrink-0 px-4 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors duration-300 shadow-md flex items-center justify-center">
-                        <span id="btn-text-favicon"><i class="fas fa-compress-alt mr-2"></i> Optimize Favicon</span>
-                        <div id="btn-loader-favicon" class="hidden w-5 h-5 border-2 border-white border-solid rounded-full loader"></div>
-                    </button>
-                </div>
-
-
-            </div>
-            <!-- Notification Area -->
-            <div id="logo-message" class="text-center mt-4 text-sm font-medium hidden"></div>
-        </div>
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo - Adjusted styling for wide banner -->
+                <!-- Logo -->
                 <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
-                    <!-- LOGO URL: Using the provided Twitter banner link -->
-                    <img id="nav-logo" src="https://pbs.twimg.com/profile_banners/1996632161676574720/1765637447/600x200" alt="GoravAI Logo" class="h-10 w-auto max-w-[150px] object-contain rounded-md" onerror="this.onerror=null; this.src='https://placehold.co/150x40/1e40af/ffffff?text=GoravAI+Logo';">
+                    <img src="https://pbs.twimg.com/profile_banners/1996632161676574720/1765637447/600x200" alt="GoravAI Logo" class="h-10 w-auto max-w-[150px] object-contain rounded-md" onerror="this.onerror=null; this.src='https://placehold.co/150x40/1e40af/ffffff?text=GoravAI+Logo';">
                     <span class="font-bold text-2xl tracking-tight text-brand-dark">Gorav<span class="text-brand-accent">AI</span></span>
-                    
-                    <!-- Toggle Logo Generator Button -->
-                    <button id="toggle-generator-btn" class="ml-2 text-slate-400 hover:text-brand-accent text-sm transition-colors" title="Toggle AI Asset Manager">
-                        <i class="fas fa-cog"></i>
-                    </button>
                 </a>
 
                 <!-- Desktop Menu -->
@@ -342,7 +264,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <p class="text-center text-sm font-semibold text-slate-400 uppercase tracking-widest mb-6">Trusted By Innovative Partners</p>
             <div class="flex justify-center">
-                <!-- CodePro Link Updated -->
                 <a href="https://codepro.com.pk/" target="_blank" class="flex items-center gap-2 group grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100">
                     <div class="w-10 h-10 bg-black rounded-lg flex items-center justify-center text-white font-bold">
                         <i class="fas fa-terminal"></i>
@@ -364,7 +285,6 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Service Cards -->
                 <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm service-card">
-                    <!-- ICON FIX: using rounded-full -->
                     <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-web-dev"><i class="fas fa-laptop-code"></i></div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Web Development</h3>
                     <p class="text-slate-600">Professional, responsive websites, portals, and custom systems tailored for any business need.</p>
@@ -372,28 +292,24 @@
                 
                 <div class="p-8 rounded-2xl bg-brand-dark text-white border border-slate-800 shadow-lg relative overflow-hidden group service-card">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600 rounded-full blur-3xl opacity-20 -mr-10 -mt-10"></div>
-                    <!-- ICON FIX: using rounded-full -->
                     <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-ai-agent"><i class="fas fa-robot"></i></div>
                     <h3 class="text-xl font-bold text-white mb-3">AI Agents & Automation</h3>
                     <p class="text-slate-300">Custom AI bots for chat, workflow automation, customer support, and business optimization.</p>
                 </div>
                 
                 <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm service-card">
-                    <!-- ICON FIX: using rounded-full -->
                     <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-logo-design"><i class="fas fa-pen-nib"></i></div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Logo & Brand Design</h3>
                     <p class="text-slate-600">Unique, modern, and memorable logos that elevate your brand identity.</p>
                 </div>
                 
                 <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm service-card">
-                    <!-- ICON FIX: using rounded-full -->
                     <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-digital-mkt"><i class="fas fa-chart-line"></i></div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Digital Marketing</h3>
                     <p class="text-slate-600">SEO, social media marketing, ad campaigns, and strategies to grow your business.</p>
                 </div>
                 
                 <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm service-card md:col-span-2">
-                    <!-- ICON FIX: using rounded-full -->
                     <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-domain-sell"><i class="fas fa-globe"></i></div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Domain Selling</h3>
                     <p class="text-slate-600">Premium domain suggestions, purchasing support, and domain marketplace services.</p>
@@ -424,10 +340,9 @@
                     </div>
                 </div>
 
-                <!-- Founder Card Column (Layout structure maintained) -->
+                <!-- Founder Card Column -->
                 <div class="lg:w-1/2 w-full">
                     <div class="relative max-w-sm mx-auto p-3 bg-white rounded-2xl shadow-xl border border-slate-100">
-                        <!-- Founder Image Source has been maintained -->
                         <img src="https://pbs.twimg.com/profile_images/1997316190642061312/tq0oVJQs_400x400.jpg" alt="Gorav Khemani - Founder of GoravAI" class="w-full h-80 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e40af/ffffff?text=Founder+Photo';">
                         <div class="p-6">
                             <h4 class="text-2xl font-bold text-brand-dark">Gorav Khemani</h4>
@@ -440,7 +355,6 @@
                             
                             <div class="flex gap-3">
                                 <a href="https://www.linkedin.com/in/gorav-kumar-61968a381" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#0077b5] hover:text-white transition-all"><i class="fab fa-linkedin-in"></i></a>
-                                <!-- X/Twitter URL -->
                                 <a href="https://x.com/GoravKhemani" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-black hover:text-white transition-all"><svg viewBox="0 0 24 24" class="w-4 h-4 fill-current"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></a>
                             </div>
                         </div>
@@ -456,8 +370,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div>
                     <a href="#" class="flex items-center gap-2 mb-4">
-                        <!-- LOGO URL: Using the provided Twitter banner link -->
-                        <img id="footer-logo" src="https://pbs.twimg.com/profile_banners/1996632161676574720/1765637447/600x200" alt="GoravAI Logo" class="h-8 w-auto max-w-[120px] object-contain rounded-md" onerror="this.onerror=null; this.src='https://placehold.co/120x30/1e40af/ffffff?text=GoravAI+Logo';">
+                        <img src="https://pbs.twimg.com/profile_banners/1996632161676574720/1765637447/600x200" alt="GoravAI Logo" class="h-8 w-auto max-w-[120px] object-contain rounded-md" onerror="this.onerror=null; this.src='https://placehold.co/120x30/1e40af/ffffff?text=GoravAI+Logo';">
                         <span class="font-bold text-xl text-white">Gorav<span class="text-brand-accent">AI</span></span>
                     </a>
                     <p class="text-sm leading-relaxed">GoravAI delivers modern, scalable, and intelligent digital solutions.</p>
@@ -489,16 +402,13 @@
                         <li class="flex gap-3"><i class="fas fa-map-marker-alt mt-1 text-brand-accent"></i> F-67/1196, Behind United Hotel Qazi Qayoom Road Hyder chowk Hyderabad Sindh</li>
                     </ul>
                     <div class="flex gap-3">
-                        <!-- X/Twitter URL -->
                         <a href="https://x.com/GoravKhemani" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-black hover:text-white"><svg viewBox="0 0 24 24" class="w-4 h-4 fill-current"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></a>
-                        <!-- Instagram URL -->
                         <a href="https://www.instagram.com/gorav_khemani/" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#E1306C] hover:text-white"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/in/gorav-kumar-61968a381" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#0077b5] hover:text-white"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://www.facebook.com/share/17VpXx6YjX/" target="_blank" class="social-btn w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#1877F2] hover:text-white"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
             </div>
-            <!-- Updated border and text colors for dark mode -->
             <div class="border-t border-slate-700 pt-8 text-center">
                 <p class="text-slate-500 text-sm">
                     © 2025 GoravAI. All rights reserved. 
@@ -507,234 +417,10 @@
             </div>
         </div>
     </footer>
+
     <script>
-        // --- Configuration ---
-        const IMAGE_MODEL = 'imagen-4.0-generate-001';
-        const API_KEY = ""; // Canvas provides the API key at runtime
-        // NEW URL from the user
-        const BASE_LOGO_URL = "https://pbs.twimg.com/profile_banners/1996632161676574720/1765637447/600x200"; 
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        // --- DOM Elements ---
-        const toggleGeneratorBtn = document.getElementById('toggle-generator-btn');
-        const generatorUI = document.getElementById('logo-generator-ui');
-        
-        // Full Logo Generator elements
-        const generateLogoBtn = document.getElementById('generate-logo-btn');
-        const logoPromptInput = document.getElementById('logo-prompt');
-        const btnTextFull = document.getElementById('btn-text-full');
-        const btnLoaderFull = document.getElementById('btn-loader-full');
-        
-        // Favicon Optimizer elements
-        const optimizeFaviconBtn = document.getElementById('optimize-favicon-btn');
-        const btnTextFavicon = document.getElementById('btn-text-favicon');
-        const btnLoaderFavicon = document.getElementById('btn-loader-favicon');
-        
-        const logoMessage = document.getElementById('logo-message');
-        
-        let isGeneratingFull = false;
-        let isGeneratingFavicon = false;
-        
-        // --- Initialization: Apply the new logo URL to all elements ---
-        function initializeLogo() {
-            // Apply the user-provided Twitter banner URL to the main logo elements
-            document.getElementById('nav-logo').src = BASE_LOGO_URL;
-            document.getElementById('footer-logo').src = BASE_LOGO_URL;
-
-            // Apply the Twitter banner URL to the SEO meta tags
-            document.getElementById('og-image-meta').content = BASE_LOGO_URL;
-            document.getElementById('twitter-image-meta').content = BASE_LOGO_URL;
-        }
-
-        // --- Utility Functions ---
-        
-        // Utility to handle exponential backoff for API calls
-        async function exponentialBackoffFetch(url, options, maxRetries = 5, delay = 1000) {
-            for (let i = 0; i < maxRetries; i++) {
-                try {
-                    const response = await fetch(url, options);
-                    if (response.status !== 429) {
-                        return response;
-                    }
-                    // If rate limited (429), wait and retry
-                    await new Promise(resolve => setTimeout(resolve, delay * (2 ** i) + Math.random() * 500));
-                } catch (error) {
-                    if (i === maxRetries - 1) throw error;
-                    await new Promise(resolve => setTimeout(resolve, delay * (2 ** i) + Math.random() * 500));
-                }
-            }
-            throw new Error('API call failed after maximum retries.');
-        }
-
-        // Function to apply the generated logo URL across the document
-        function applyNewLogo(imageUrl) {
-            // 1. Update Navigation and Footer Image Sources
-            document.getElementById('nav-logo').src = imageUrl;
-            document.getElementById('footer-logo').src = imageUrl;
-
-            // 2. Update SEO Meta Tags (Favicon is handled separately now)
-            document.getElementById('og-image-meta').content = imageUrl;
-            document.getElementById('twitter-image-meta').content = imageUrl;
-
-            // 3. Update JSON-LD Structured Data
-            const jsonLdScript = document.getElementById('json-ld-data');
-            if (jsonLdScript) {
-                try {
-                    const jsonLd = JSON.parse(jsonLdScript.textContent);
-                    jsonLd.logo = imageUrl;
-                    jsonLdScript.textContent = JSON.stringify(jsonLd, null, 2);
-                } catch (e) {
-                    console.error("Error parsing JSON-LD script:", e);
-                }
-            }
-        }
-        
-        // Function to update only the favicon
-        function applyNewFavicon(imageUrl) {
-            document.getElementById('favicon-link').href = imageUrl;
-        }
-
-
-        // --- Image Generation Handlers ---
-
-        // Handler for Full Logo Generation
-        async function handleFullLogoGeneration() {
-            if (isGeneratingFull) return;
-
-            isGeneratingFull = true;
-            logoMessage.classList.add('hidden');
-            btnTextFull.classList.add('hidden');
-            btnLoaderFull.classList.remove('hidden');
-
-            const defaultPrompt = "A simple, modern, iconic logo for 'GoravAI'. Abstract design combining a neural network node and a code bracket. Use primary colors dark blue (#1e40af) and bright blue (#3b82f6). Minimalistic, high resolution, wide banner ratio.";
-            const userPrompt = logoPromptInput.value.trim();
-            const prompt = userPrompt || defaultPrompt;
-
-            const payload = {
-                instances: [{ prompt: prompt }],
-                parameters: {
-                    sampleCount: 1,
-                    aspectRatio: "2:1" // Aspect ratio adjusted for a banner style logo
-                }
-            };
-            
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${IMAGE_MODEL}:predict?key=${API_KEY}`;
-            
-            try {
-                const response = await exponentialBackoffFetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                const result = await response.json();
-                
-                if (result.predictions && result.predictions.length > 0 && result.predictions[0].bytesBase64Encoded) {
-                    const base64Data = result.predictions[0].bytesBase64Encoded;
-                    const imageUrl = `data:image/png;base64,${base64Data}`;
-                    
-                    applyNewLogo(imageUrl);
-
-                    logoMessage.textContent = 'New AI Logo applied successfully!';
-                    logoMessage.classList.remove('text-red-600', 'hidden');
-                    logoMessage.classList.add('text-brand-primary');
-
-                } else {
-                    throw new Error(result.error?.message || 'Image generation failed: No image data returned.');
-                }
-            } catch (error) {
-                console.error('Logo generation failed:', error);
-                logoMessage.textContent = `Error generating logo: ${error.message}`;
-                logoMessage.classList.remove('hidden', 'text-brand-primary');
-                logoMessage.classList.add('text-red-600');
-            } finally {
-                isGeneratingFull = false;
-                btnTextFull.classList.remove('hidden');
-                btnLoaderFull.classList.add('hidden');
-                setTimeout(() => logoMessage.classList.add('hidden'), 7000);
-            }
-        }
-
-        // Handler for Favicon Optimization
-        async function handleFaviconOptimization() {
-            if (isGeneratingFavicon) return;
-            
-            isGeneratingFavicon = true;
-            logoMessage.classList.add('hidden');
-            btnTextFavicon.classList.add('hidden');
-            btnLoaderFavicon.classList.remove('hidden');
-
-            // Prompt for favicon generation, referencing the brand identity
-            // We use the same model, which generates a new image based on the prompt.
-            const prompt = `Generate a highly simplified, square favicon icon (32x32) that captures the essence of the 'GoravAI' brand banner. Focus on a single, clear symbol or the initials 'GA'. Use the dominant colors from the banner image (dark blue and white/light grey). Minimalistic and highly recognizable at a small scale.`;
-
-            const payload = {
-                instances: [{ prompt: prompt }],
-                parameters: {
-                    sampleCount: 1,
-                    aspectRatio: "1:1"
-                }
-            };
-
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${IMAGE_MODEL}:predict?key=${API_KEY}`;
-
-            try {
-                const response = await exponentialBackoffFetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                const result = await response.json();
-
-                if (result.predictions && result.predictions.length > 0 && result.predictions[0].bytesBase64Encoded) {
-                    const base64Data = result.predictions[0].bytesBase64Encoded;
-                    const imageUrl = `data:image/png;base64,${base64Data}`;
-                    
-                    // Apply the new image ONLY to the favicon link
-                    applyNewFavicon(imageUrl);
-
-                    logoMessage.textContent = 'AI-Optimized Favicon applied successfully!';
-                    logoMessage.classList.remove('text-red-600', 'hidden');
-                    logoMessage.classList.add('text-purple-600');
-                } else {
-                    throw new Error(result.error?.message || 'Favicon generation failed: No image data returned.');
-                }
-            } catch (error) {
-                console.error('Favicon optimization failed:', error);
-                logoMessage.textContent = `Error generating favicon: ${error.message}`;
-                logoMessage.classList.remove('hidden', 'text-purple-600');
-                logoMessage.classList.add('text-red-600');
-            } finally {
-                isGeneratingFavicon = false;
-                btnTextFavicon.classList.remove('hidden');
-                btnLoaderFavicon.classList.add('hidden');
-                setTimeout(() => logoMessage.classList.add('hidden'), 7000);
-            }
-        }
-
-
-        // --- Event Listeners ---
-        document.addEventListener('DOMContentLoaded', () => {
-            initializeLogo();
-
-            // Mobile Menu Toggle
-            document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-                document.getElementById('mobile-menu').classList.toggle('hidden');
-            });
-
-            // Logo Generator Toggle
-            toggleGeneratorBtn.addEventListener('click', () => {
-                generatorUI.classList.toggle('hidden');
-                generatorUI.classList.toggle('active');
-            });
-
-            // Full Logo Generation Button Click
-            generateLogoBtn.addEventListener('click', handleFullLogoGeneration);
-            
-            // Favicon Optimization Button Click
-            optimizeFaviconBtn.addEventListener('click', handleFaviconOptimization);
-        });
-
-    </script>
-</body>
-</html>
+        m
