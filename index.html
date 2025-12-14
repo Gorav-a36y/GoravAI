@@ -16,7 +16,7 @@
     <!-- Your Custom Favicon -->
     <link rel="icon" href="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png" type="image/png">
 
-    <!-- Social Sharing: OpenGraph (Facebook, LinkedIn) -->
+    <!-- Social Sharing: OpenGraph -->
     <meta property="og:title" content="GoravAI | Intelligent Web Development, AI, and Automation">
     <meta property="og:description" content="GoravAI empowers businesses with powerful web development, custom AI agents, branding, and high-impact digital solutions designed for modern growth.">
     <meta property="og:url" content="https://gorav-a36y.github.io/GoravAI/">
@@ -68,14 +68,12 @@
         }
     </script>
     <style>
-        /* Glassy effect for fixed navigation */
         .glass-nav {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(226, 232, 240, 0.6);
         }
         
-        /* Social button hover effect with shine */
         .social-btn { 
             transition: all 0.3s ease; 
             transform-style: preserve-3d; 
@@ -86,7 +84,6 @@
             transform: translateY(-3px); 
         }
 
-        /* Shine Pseudo-element */
         .social-btn::before {
             content: '';
             position: absolute;
@@ -105,12 +102,10 @@
             z-index: 10;
         }
 
-        /* Animate the shine across the button on hover */
         .social-btn:hover::before {
             transform: skewX(-20deg) translateX(300%);
         }
         
-        /* Custom CSS for Service Card Hover Effect */
         .service-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -119,7 +114,6 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05); 
         }
 
-        /* Service Icon Container and Hover */
         .service-icon-container {
             transition: all 0.3s ease;
         }
@@ -128,7 +122,6 @@
             transform: scale(1.05);
         }
 
-        /* Web Development (Blue) */
         .icon-web-dev {
             background-color: #eff6ff; 
             color: #1e40af; 
@@ -138,7 +131,6 @@
             color: white; 
         }
 
-        /* AI Agents (Accent Blue, dark card) */
         .icon-ai-agent {
             background-color: rgba(255, 255, 255, 0.1); 
             color: #3b82f6; 
@@ -148,7 +140,6 @@
             color: white; 
         }
 
-        /* Logo & Brand Design (Purple) */
         .icon-logo-design {
             background-color: #f3e8ff; 
             color: #9333ea; 
@@ -158,7 +149,6 @@
             color: white; 
         }
 
-        /* Digital Marketing (Green) */
         .icon-digital-mkt {
             background-color: #ecfdf5; 
             color: #059669; 
@@ -168,7 +158,6 @@
             color: white; 
         }
 
-        /* Domain Selling (Orange) */
         .icon-domain-sell {
             background-color: #fff7ed; 
             color: #f97316; 
@@ -185,13 +174,11 @@
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
                 <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
                     <img src="https://pbs.twimg.com/profile_banners/1996632161676574720/1765637447/600x200" alt="GoravAI Logo" class="h-10 w-auto max-w-[150px] object-contain rounded-md" onerror="this.onerror=null; this.src='https://placehold.co/150x40/1e40af/ffffff?text=GoravAI+Logo';">
                     <span class="font-bold text-2xl tracking-tight text-brand-dark">Gorav<span class="text-brand-accent">AI</span></span>
                 </a>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-sm font-medium text-brand-primary font-bold transition-colors">Home</a>
                     <a href="index.html#services" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Services</a>
@@ -201,14 +188,12 @@
                     <a href="index.html#contact" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors">Contact</a>
                 </div>
 
-                <!-- CTA Button - Talk to Agent -->
                 <div class="hidden md:block">
                     <a href="https://devkhemani.app.n8n.cloud/webhook/39c57088-da29-497a-a7ea-343120bf4edf/chat" target="_blank" class="px-6 py-2.5 bg-brand-dark text-white text-sm font-semibold rounded-full hover:bg-brand-primary transition-colors duration-300 shadow-lg shadow-blue-900/20">
                         Talk to Agent <i class="fas fa-robot ml-1"></i>
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-slate-800 hover:text-brand-primary focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
@@ -217,7 +202,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="index.html" class="block px-3 py-2 text-base font-medium text-brand-primary bg-blue-50 rounded-md">Home</a>
@@ -230,7 +214,6 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-white">
-        <!-- Background Elements -->
         <div class="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gradient-to-bl from-blue-50 to-transparent opacity-60 rounded-bl-[100px]"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -283,7 +266,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Service Cards -->
                 <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm service-card">
                     <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-web-dev"><i class="fas fa-laptop-code"></i></div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Web Development</h3>
@@ -322,7 +304,6 @@
     <section id="about" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-16">
-                <!-- Text Content Column -->
                 <div class="lg:w-1/2">
                     <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">About GoravAI</h2>
                     <p class="text-lg text-slate-600 mb-6 leading-relaxed">
@@ -340,7 +321,6 @@
                     </div>
                 </div>
 
-                <!-- Founder Card Column -->
                 <div class="lg:w-1/2 w-full">
                     <div class="relative max-w-sm mx-auto p-3 bg-white rounded-2xl shadow-xl border border-slate-100">
                         <img src="https://pbs.twimg.com/profile_images/1997316190642061312/tq0oVJQs_400x400.jpg" alt="Gorav Khemani - Founder of GoravAI" class="w-full h-80 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e40af/ffffff?text=Founder+Photo';">
@@ -397,8 +377,8 @@
                 <div>
                     <h4 class="font-bold text-white mb-6">Contact Us</h4>
                     <ul class="space-y-4 mb-6 text-sm">
-                        <li class="flex gap-3"><i class="fas fa-envelope mt-1 text-brand-accent"></i> <span class="hover:text-white transition-colors">parkashdev748@gmail.com</span></li>
-                        <li class="flex gap-3"><i class="fas fa-phone mt-1 text-brand-accent"></i> <span class="hover:text-white transition-colors">+92 336 1319915</span></li>
+                        <li class="flex gap-3"><i class="fas fa-envelope mt-1 text-brand-accent"></i> <span class="hover:text-white transition-colors">hello@goravai.com</span></li>
+                        <li class="flex gap-3"><i class="fas fa-phone mt-1 text-brand-accent"></i> <span class="hover:text-white transition-colors">+92 300 1234567</span></li>
                         <li class="flex gap-3"><i class="fas fa-map-marker-alt mt-1 text-brand-accent"></i> F-67/1196, Behind United Hotel Qazi Qayoom Road Hyder chowk Hyderabad Sindh</li>
                     </ul>
                     <div class="flex gap-3">
@@ -412,15 +392,19 @@
             <div class="border-t border-slate-700 pt-8 text-center">
                 <p class="text-slate-500 text-sm">
                     © 2025 GoravAI. All rights reserved. 
-                    <a href="#" class="text-brand-accent hover:text-white font-medium ml-2 transition-colors">Privacy Policy</a>
+                    <a href="privacypolicy.html" class="text-brand-accent hover:text-white font-medium ml-2 transition-colors">Privacy Policy</a>
                 </p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
-        m
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
