@@ -1,1596 +1,2485 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>GoravAI | Intelligent Web Development, AI, and Automation</title>
-    
-    <meta name="description" content="GoravAI empowers businesses with powerful web development, custom AI agents, branding, and high-impact digital solutions designed for modern growth.">
-    
+
+    <meta
+      name="description"
+      content="GoravAI empowers businesses with powerful web development, custom AI agents, branding, and high-impact digital solutions designed for modern growth."
+    />
+
     <link rel="canonical" href="https://gorav-a36y.github.io/GoravAI/" />
-    
-    <meta name="robots" content="index, follow">
-    
+
+    <meta name="robots" content="index, follow" />
+
     <!-- Favicon -->
-    <link rel="icon" href="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png" type="image/png">
+    <link
+      rel="icon"
+      href="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
+      type="image/png"
+    />
 
     <!-- Social Sharing: OpenGraph -->
-    <meta property="og:title" content="GoravAI | Intelligent Web Development, AI, and Automation">
-    <meta property="og:description" content="GoravAI empowers businesses with powerful web development, custom AI agents, branding, and high-impact digital solutions designed for modern growth.">
-    <meta property="og:url" content="https://gorav-a36y.github.io/GoravAI/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png">
-    
+    <meta
+      property="og:title"
+      content="GoravAI | Intelligent Web Development, AI, and Automation"
+    />
+    <meta
+      property="og:description"
+      content="GoravAI empowers businesses with powerful web development, custom AI agents, branding, and high-impact digital solutions designed for modern growth."
+    />
+    <meta property="og:url" content="https://gorav-a36y.github.io/GoravAI/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
+    />
+
     <!-- Social Sharing: Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GoravAI | Intelligent Web Development, AI, and Automation">
-    <meta name="twitter:description" content="GoravAI empowers businesses with powerful web development, custom AI agents, branding, and high-impact digital solutions designed for modern growth.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png">
-    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="GoravAI | Intelligent Web Development, AI, and Automation"
+    />
+    <meta
+      name="twitter:description"
+      content="GoravAI empowers businesses with powerful web development, custom AI agents, branding, and high-impact digital solutions designed for modern growth."
+    />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
+    />
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "GoravAI",
-      "url": "https://gorav-a36y.github.io/GoravAI/",
-      "logo": "https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png", 
-      "sameAs": [
-        "https://www.linkedin.com/in/gorav-kumar-61968a381",
-        "https://www.facebook.com/share/17VpXx6YjX/"
-      ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "GoravAI",
+        "url": "https://gorav-a36y.github.io/GoravAI/",
+        "logo": "https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png",
+        "sameAs": [
+          "https://www.linkedin.com/in/gorav-kumar-61968a381",
+          "https://www.facebook.com/share/17VpXx6YjX/"
+        ]
+      }
     </script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { 
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Space Grotesk', 'sans-serif']
-                    },
-                    colors: {
-                        background: '#070A12',
-                        foreground: '#F4F6FF',
-                        accent: '#4C6BFF',
-                        muted: '#A7B1D8',
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            colors: {
+              background: "#070A12",
+              foreground: "#F4F6FF",
+              accent: "#4C6BFF",
+              muted: "#A7B1D8",
+            },
+          },
+        },
+      };
     </script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #070A12;
-            color: #F4F6FF;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        
-        .text-gradient {
-            background: linear-gradient(135deg, #4C6BFF 0%, #7B8FFF 50%, #A5B4FF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .glass-nav {
-            background: rgba(7, 10, 18, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-        }
-        
-        .glass-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(12px);
-        }
-        
-        .social-btn { 
-            transition: all 0.3s ease; 
-            transform-style: preserve-3d; 
-            position: relative; 
-            overflow: hidden; 
-        }
-        
-        .social-btn:hover { 
-            transform: translateY(-3px); 
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        .social-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 25%; 
-            height: 100%;
-            background: linear-gradient(
-                90deg, 
-                rgba(255, 255, 255, 0) 0%, 
-                rgba(255, 255, 255, 0.5) 50%, 
-                rgba(255, 255, 255, 0) 100%
-            );
-            transform: skewX(-20deg) translateX(-150%);
-            transition: transform 0.6s ease;
-            z-index: 10;
-        }
+      html {
+        scroll-behavior: smooth;
+      }
 
-        .social-btn:hover::before {
-            transform: skewX(-20deg) translateX(300%);
-        }
-        
-        .service-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px); 
-            box-shadow: 0 25px 50px -12px rgba(76, 107, 255, 0.25);
-            border-color: rgba(76, 107, 255, 0.4);
-        }
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #070a12;
+        color: #f4f6ff;
+        overflow-x: hidden;
+      }
 
-        .service-icon-container {
-            transition: all 0.3s ease;
-        }
-        
-        .service-card:hover .service-icon-container {
-            transform: scale(1.1);
-        }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Space Grotesk", sans-serif;
+      }
 
-        .icon-web-dev {
-            background-color: rgba(76, 107, 255, 0.1); 
-            color: #4C6BFF; 
-        }
-        .service-card:hover .icon-web-dev {
-            background-color: #4C6BFF; 
-            color: white; 
-        }
+      .text-gradient {
+        background: linear-gradient(
+          135deg,
+          #4c6bff 0%,
+          #7b8fff 50%,
+          #a5b4ff 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
 
-        .icon-ai-agent {
-            background-color: rgba(76, 107, 255, 0.1); 
-            color: #4C6BFF; 
-        }
-        .service-card:hover .icon-ai-agent {
-            background-color: #4C6BFF; 
-            color: white; 
-        }
+      .glass-nav {
+        background: rgba(7, 10, 18, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
 
-        .icon-logo-design {
-            background-color: rgba(147, 51, 234, 0.1); 
-            color: #9333ea; 
-        }
-        .service-card:hover .icon-logo-design {
-            background-color: #9333ea; 
-            color: white; 
-        }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+      }
 
-        .icon-digital-mkt {
-            background-color: rgba(5, 150, 105, 0.1); 
-            color: #059669; 
-        }
-        .service-card:hover .icon-digital-mkt {
-            background-color: #059669; 
-            color: white; 
-        }
+      .social-btn {
+        transition: all 0.3s ease;
+        transform-style: preserve-3d;
+        position: relative;
+        overflow: hidden;
+      }
 
-        .icon-domain-sell {
-            background-color: rgba(249, 115, 22, 0.1); 
-            color: #f97316; 
-        }
-        .service-card:hover .icon-domain-sell {
-            background-color: #f97316; 
-            color: white; 
-        }
+      .social-btn:hover {
+        transform: translateY(-3px);
+      }
 
-        /* Grain overlay */
-        .grain-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-            opacity: 0.04;
-            mix-blend-mode: overlay;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-        }
+      .social-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.5) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: skewX(-20deg) translateX(-150%);
+        transition: transform 0.6s ease;
+        z-index: 10;
+      }
 
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
+      .social-btn:hover::before {
+        transform: skewX(-20deg) translateX(300%);
+      }
 
-        ::-webkit-scrollbar-track {
-            background: #070A12;
-        }
+      .service-card {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
 
-        ::-webkit-scrollbar-thumb {
-            background: #1e293b;
-            border-radius: 4px;
-        }
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px -12px rgba(76, 107, 255, 0.25);
+        border-color: rgba(76, 107, 255, 0.4);
+      }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: #334155;
-        }
+      .service-icon-container {
+        transition: all 0.3s ease;
+      }
 
-        /* Selection */
-        ::selection {
-            background: rgba(76, 107, 255, 0.3);
-            color: #F4F6FF;
-        }
+      .service-card:hover .service-icon-container {
+        transform: scale(1.1);
+      }
 
-        /* Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-        }
+      .icon-web-dev {
+        background-color: rgba(76, 107, 255, 0.1);
+        color: #4c6bff;
+      }
+      .service-card:hover .icon-web-dev {
+        background-color: #4c6bff;
+        color: white;
+      }
 
-        .float-animation {
-            animation: float 4s ease-in-out infinite;
-        }
+      .icon-ai-agent {
+        background-color: rgba(76, 107, 255, 0.1);
+        color: #4c6bff;
+      }
+      .service-card:hover .icon-ai-agent {
+        background-color: #4c6bff;
+        color: white;
+      }
 
-        @keyframes pulse-glow {
-            0%, 100% { opacity: 0.6; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.05); }
-        }
+      .icon-logo-design {
+        background-color: rgba(147, 51, 234, 0.1);
+        color: #9333ea;
+      }
+      .service-card:hover .icon-logo-design {
+        background-color: #9333ea;
+        color: white;
+      }
 
-        .animate-pulse-glow {
-            animation: pulse-glow 6s ease-in-out infinite;
-        }
+      .icon-digital-mkt {
+        background-color: rgba(5, 150, 105, 0.1);
+        color: #059669;
+      }
+      .service-card:hover .icon-digital-mkt {
+        background-color: #059669;
+        color: white;
+      }
 
-        /* Social icon hover colors */
-        .social-linkedin:hover {
-            background-color: #0077b5 !important;
-            color: white !important;
-            box-shadow: 0 0 20px rgba(0, 119, 181, 0.5);
-        }
+      .icon-domain-sell {
+        background-color: rgba(249, 115, 22, 0.1);
+        color: #f97316;
+      }
+      .service-card:hover .icon-domain-sell {
+        background-color: #f97316;
+        color: white;
+      }
 
-        .social-x:hover {
-            background-color: #000000 !important;
-            color: white !important;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
+      /* Grain overlay */
+      .grain-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0.04;
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      }
 
-        .social-instagram:hover {
-            background-color: #E1306C !important;
-            color: white !important;
-            box-shadow: 0 0 20px rgba(225, 48, 108, 0.5);
-        }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
 
-        .social-facebook:hover {
-            background-color: #1877F2 !important;
-            color: white !important;
-            box-shadow: 0 0 20px rgba(24, 119, 242, 0.5);
-        }
+      ::-webkit-scrollbar-track {
+        background: #070a12;
+      }
 
-        .social-whatsapp:hover {
-            background-color: #25D366 !important;
-            color: white !important;
-            box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
-        }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 4px;
+      }
 
-        /* Accordion styles */
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #334155;
+      }
 
-        .accordion-item.active .accordion-content {
-            max-height: 500px;
-        }
+      /* Selection */
+      ::selection {
+        background: rgba(76, 107, 255, 0.3);
+        color: #f4f6ff;
+      }
 
-        .accordion-icon {
-            transition: transform 0.3s ease;
+      /* Animations */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
         }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
 
-        .accordion-item.active .accordion-icon {
-            transform: rotate(180deg);
-        }
+      .float-animation {
+        animation: float 4s ease-in-out infinite;
+      }
 
-        /* Button hover effects */
-        .btn-primary {
-            transition: all 0.3s ease;
+      @keyframes pulse-glow {
+        0%,
+        100% {
+          opacity: 0.6;
+          transform: scale(1);
         }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 10px 40px rgba(76, 107, 255, 0.4);
+        50% {
+          opacity: 1;
+          transform: scale(1.05);
         }
+      }
 
-        .btn-outline {
-            transition: all 0.3s ease;
-        }
-        
-        .btn-outline:hover {
-            border-color: #4C6BFF;
-            color: #4C6BFF;
-            transform: translateY(-2px);
-        }
+      .animate-pulse-glow {
+        animation: pulse-glow 6s ease-in-out infinite;
+      }
 
-        /* Network node hover */
-        .network-node {
-            transition: all 0.3s ease;
-        }
-        
-        .network-node:hover {
-            transform: scale(1.1);
-        }
+      /* Social icon hover colors */
+      .social-linkedin:hover {
+        background-color: #0077b5 !important;
+        color: white !important;
+        box-shadow: 0 0 20px rgba(0, 119, 181, 0.5);
+      }
 
-        .network-node:hover .node-circle {
-            border-color: rgba(76, 107, 255, 0.6);
-            background: rgba(76, 107, 255, 0.2);
-        }
+      .social-x:hover {
+        background-color: #000000 !important;
+        color: white !important;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
 
-        /* Use case card hover */
-        .usecase-card {
-            transition: all 0.4s ease;
-        }
-        
-        .usecase-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(76, 107, 255, 0.4);
-        }
+      .social-instagram:hover {
+        background-color: #e1306c !important;
+        color: white !important;
+        box-shadow: 0 0 20px rgba(225, 48, 108, 0.5);
+      }
 
-        .usecase-card:hover img {
-            transform: scale(1.05);
-        }
+      .social-facebook:hover {
+        background-color: #1877f2 !important;
+        color: white !important;
+        box-shadow: 0 0 20px rgba(24, 119, 242, 0.5);
+      }
 
-        /* Nav link hover */
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #4C6BFF;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
+      .social-whatsapp:hover {
+        background-color: #25d366 !important;
+        color: white !important;
+        box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+      }
 
-        /* Pinned section styles */
-        .pinned-section {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-        }
+      /* Accordion styles */
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .accordion-item.active .accordion-content {
+        max-height: 500px;
+      }
+
+      .accordion-icon {
+        transition: transform 0.3s ease;
+      }
+
+      .accordion-item.active .accordion-icon {
+        transform: rotate(180deg);
+      }
+
+      /* Button hover effects */
+      .btn-primary {
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 10px 40px rgba(76, 107, 255, 0.4);
+      }
+
+      .btn-outline {
+        transition: all 0.3s ease;
+      }
+
+      .btn-outline:hover {
+        border-color: #4c6bff;
+        color: #4c6bff;
+        transform: translateY(-2px);
+      }
+
+      /* Network node hover */
+      .network-node {
+        transition: all 0.3s ease;
+      }
+
+      .network-node:hover {
+        transform: scale(1.1);
+      }
+
+      .network-node:hover .node-circle {
+        border-color: rgba(76, 107, 255, 0.6);
+        background: rgba(76, 107, 255, 0.2);
+      }
+
+      /* Use case card hover */
+      .usecase-card {
+        transition: all 0.4s ease;
+      }
+
+      .usecase-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(76, 107, 255, 0.4);
+      }
+
+      .usecase-card:hover img {
+        transform: scale(1.05);
+      }
+
+      /* Nav link hover */
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #4c6bff;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      /* Pinned section styles */
+      .pinned-section {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
     </style>
-<base target="_blank">
-</head>
-<body class="antialiased">
+  </head>
+  <body class="antialiased">
     <!-- Grain overlay -->
     <div class="grain-overlay"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
-                    <img src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png" alt="GoravAI Logo" class="h-10 w-auto object-contain rounded-md">
-                    <span class="font-display font-bold text-2xl tracking-tight text-white">Gorav<span class="text-[#4C6BFF]">AI</span></span>
-                </a>
+    <nav
+      class="fixed w-full z-50 glass-nav transition-all duration-300"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <a href="#" class="flex-shrink-0 flex items-center gap-2">
+            <img
+              src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
+              alt="GoravAI Logo"
+              class="h-10 w-auto object-contain rounded-md"
+            />
+            <span
+              class="font-display font-bold text-2xl tracking-tight text-white"
+              >Gorav<span class="text-[#4C6BFF]">AI</span></span
+            >
+          </a>
 
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="nav-link text-sm font-medium text-white transition-colors hover:text-[#4C6BFF]">Home</a>
-                    <a href="#services" class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors">Services</a>
-                    <a href="#projects" class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors">Projects</a>
-                    <a href="pricing.html" class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors">Pricing</a>
-                    <a href="#about" class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors">About</a>
-                    <a href="#footer" class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors">Contact</a>
-                </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#home"
+              class="nav-link text-sm font-medium text-white transition-colors hover:text-[#4C6BFF]"
+              >Home</a
+            >
+            <a
+              href="#services"
+              class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
+              >Services</a
+            >
+            <a
+              href="projects.html"
+              class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
+              >Projects</a
+            >
+            <a
+              href="pricing.html"
+              class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
+              >Pricing</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
+              >About</a
+            >
+            <a
+              href="#footer"
+              class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
+              >Contact</a
+            >
+          </div>
 
-                <div class="hidden md:block">
-                    <a href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat" target="_blank" class="btn-primary inline-flex items-center px-6 py-2.5 bg-[#4C6BFF] text-white text-sm font-semibold rounded-xl hover:bg-[#3D56CC]">
-                        Talk to Agent <i class="fas fa-robot ml-2"></i>
-                    </a>
-                </div>
+          <div class="hidden md:block">
+            <a
+              href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat"
+              target="_blank"
+              class="btn-primary inline-flex items-center px-6 py-2.5 bg-[#4C6BFF] text-white text-sm font-semibold rounded-xl hover:bg-[#3D56CC]"
+            >
+              Talk to Agent <i class="fas fa-robot ml-2"></i>
+            </a>
+          </div>
 
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-white hover:text-[#4C6BFF] focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-btn"
+              class="text-white hover:text-[#4C6BFF] focus:outline-none"
+            >
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
         </div>
+      </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-[#070A12] border-t border-white/[0.06] absolute w-full">
-            <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="index.html" class="block px-3 py-2 text-base font-medium text-white bg-white/[0.04] rounded-md">Home</a>
-                <a href="#services" class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md">Services</a>
-                <a href="#projects" class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md">Projects</a>
-                <a href="pricing.html" class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md">Pricing</a>
-                <a href="#about" class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md">About</a>
-                <a href="#footer" class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md">Contact</a>
-                <a href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat" target="_blank" class="block mt-4 text-center px-4 py-3 bg-[#4C6BFF] text-white font-semibold rounded-xl">Talk to Agent</a>
-            </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-[#070A12] border-t border-white/[0.06] absolute w-full"
+      >
+        <div class="px-4 pt-2 pb-6 space-y-2">
+          <a
+            href="#home"
+            class="block px-3 py-2 text-base font-medium text-white bg-white/[0.04] rounded-md"
+            >Home</a
+          >
+          <a
+            href="#services"
+            class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
+            >Services</a
+          >
+          <a
+            href="#projects"
+            class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
+            >Projects</a
+          >
+          <a
+            href="#pricing"
+            class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
+            >Pricing</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
+            >About</a
+          >
+          <a
+            href="#footer"
+            class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
+            >Contact</a
+          >
+          <a
+            href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat"
+            target="_blank"
+            class="block mt-4 text-center px-4 py-3 bg-[#4C6BFF] text-white font-semibold rounded-xl"
+            >Talk to Agent</a
+          >
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#070A12]">
-        <!-- Background gradient -->
-        <div class="absolute inset-0 bg-gradient-to-b from-[#070A12] via-[#0B1120] to-[#070A12]"></div>
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#070A12]"
+    >
+      <!-- Background gradient -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-[#070A12] via-[#0B1120] to-[#070A12]"
+      ></div>
 
-        <!-- Orb -->
-        <div class="hero-orb absolute left-1/2 top-[52%] -translate-x-1/2 -translate-y-1/2 w-[62vw] h-[62vw] max-w-[900px] max-h-[900px] opacity-0">
-            <div class="absolute inset-0 rounded-full bg-gradient-radial from-[#4C6BFF]/30 via-[#4C6BFF]/10 to-transparent blur-3xl animate-pulse-glow"></div>
-            <div class="absolute inset-[15%] rounded-full bg-gradient-radial from-[#4C6BFF]/40 via-[#2D3A8C]/20 to-transparent"></div>
-            <div class="absolute inset-[35%] rounded-full bg-gradient-radial from-[#7B8FFF]/60 via-[#4C6BFF]/30 to-transparent blur-xl"></div>
-            <div class="absolute top-[20%] left-[15%] w-2 h-2 rounded-full bg-white/60 float-animation"></div>
-            <div class="absolute top-[30%] right-[20%] w-1.5 h-1.5 rounded-full bg-[#4C6BFF]/80 float-animation" style="animation-delay: 1s;"></div>
-            <div class="absolute bottom-[25%] left-[25%] w-1 h-1 rounded-full bg-white/40 float-animation" style="animation-delay: 2s;"></div>
+      <!-- Orb -->
+      <div
+        class="hero-orb absolute left-1/2 top-[52%] -translate-x-1/2 -translate-y-1/2 w-[62vw] h-[62vw] max-w-[900px] max-h-[900px] opacity-0"
+      >
+        <div
+          class="absolute inset-0 rounded-full bg-gradient-radial from-[#4C6BFF]/30 via-[#4C6BFF]/10 to-transparent blur-3xl animate-pulse-glow"
+        ></div>
+        <div
+          class="absolute inset-[15%] rounded-full bg-gradient-radial from-[#4C6BFF]/40 via-[#2D3A8C]/20 to-transparent"
+        ></div>
+        <div
+          class="absolute inset-[35%] rounded-full bg-gradient-radial from-[#7B8FFF]/60 via-[#4C6BFF]/30 to-transparent blur-xl"
+        ></div>
+        <div
+          class="absolute top-[20%] left-[15%] w-2 h-2 rounded-full bg-white/60 float-animation"
+        ></div>
+        <div
+          class="absolute top-[30%] right-[20%] w-1.5 h-1.5 rounded-full bg-[#4C6BFF]/80 float-animation"
+          style="animation-delay: 1s"
+        ></div>
+        <div
+          class="absolute bottom-[25%] left-[25%] w-1 h-1 rounded-full bg-white/40 float-animation"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto pt-20"
+      >
+        <!-- Badge -->
+        <div
+          class="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] mb-8 opacity-0"
+        >
+          <span class="w-2 h-2 rounded-full bg-[#4C6BFF] animate-pulse"></span>
+          <span
+            class="text-xs font-medium text-[#A7B1D8] uppercase tracking-wider"
+            >Next-Gen AI Agency</span
+          >
         </div>
 
-        <!-- Content -->
-        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto pt-20">
-            <!-- Badge -->
-            <div class="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] mb-8 opacity-0">
-                <span class="w-2 h-2 rounded-full bg-[#4C6BFF] animate-pulse"></span>
-                <span class="text-xs font-medium text-[#A7B1D8] uppercase tracking-wider">Next-Gen AI Agency</span>
-            </div>
+        <!-- Headline -->
+        <h1
+          class="hero-headline font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.05] opacity-0"
+        >
+          Build agents that work<br />while you
+          <span class="text-gradient">sleep.</span>
+        </h1>
 
-            <!-- Headline -->
-            <h1 class="hero-headline font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.05] opacity-0">
-                Build agents that work<br>while you <span class="text-gradient">sleep.</span>
-            </h1>
+        <!-- Subheadline -->
+        <p
+          class="hero-subheadline text-lg md:text-xl text-[#A7B1D8] max-w-2xl mx-auto mb-10 leading-relaxed opacity-0"
+        >
+          GoravAI empowers businesses with powerful web development, custom AI
+          agents, branding, and high-impact digital solutions designed for
+          modern growth.
+        </p>
 
-            <!-- Subheadline -->
-            <p class="hero-subheadline text-lg md:text-xl text-[#A7B1D8] max-w-2xl mx-auto mb-10 leading-relaxed opacity-0">
-                GoravAI empowers businesses with powerful web development, custom AI agents, branding, and high-impact digital solutions designed for modern growth.
-            </p>
-
-            <!-- CTAs -->
-            <div class="hero-cta flex flex-col sm:flex-row justify-center gap-4 opacity-0">
-                <a href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat" target="_blank" class="btn-primary inline-flex items-center justify-center px-8 py-4 bg-[#4C6BFF] text-white rounded-xl font-semibold hover:bg-[#3D56CC] group">
-                    Talk to Agent <i class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                <a href="pricing.html" class="btn-outline inline-flex items-center justify-center px-8 py-4 bg-white/[0.04] text-white border border-white/[0.12] rounded-xl font-semibold">
-                    View Pricing
-                </a>
-            </div>
+        <!-- CTAs -->
+        <div
+          class="hero-cta flex flex-col sm:flex-row justify-center gap-4 opacity-0"
+        >
+          <a
+            href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat"
+            target="_blank"
+            class="btn-primary inline-flex items-center justify-center px-8 py-4 bg-[#4C6BFF] text-white rounded-xl font-semibold hover:bg-[#3D56CC] group"
+          >
+            Talk to Agent
+            <i
+              class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"
+            ></i>
+          </a>
+          <a
+            href="#pricing"
+            class="btn-outline inline-flex items-center justify-center px-8 py-4 bg-white/[0.04] text-white border border-white/[0.12] rounded-xl font-semibold"
+          >
+            View Pricing
+          </a>
         </div>
+      </div>
 
-        <!-- Scroll indicator -->
-        <div class="hero-scroll absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0">
-            <span class="text-xs text-[#A7B1D8]/60 uppercase tracking-widest">Scroll to explore</span>
-            <i class="fas fa-chevron-down w-5 h-5 text-[#A7B1D8]/60 animate-bounce"></i>
-        </div>
+      <!-- Scroll indicator -->
+      <div
+        class="hero-scroll absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0"
+      >
+        <span class="text-xs text-[#A7B1D8]/60 uppercase tracking-widest"
+          >Scroll to explore</span
+        >
+        <i
+          class="fas fa-chevron-down w-5 h-5 text-[#A7B1D8]/60 animate-bounce"
+        ></i>
+      </div>
     </section>
 
     <!-- Agent Builder Section (Describe it. We build it.) -->
-    <section id="agent-builder" class="relative min-h-screen flex items-center overflow-hidden bg-[#070A12]" style="z-index: 20;">
-        <!-- Background glow -->
-        <div class="absolute top-[10%] right-[6%] w-[50vw] h-[50vw] rounded-full bg-[#4C6BFF]/10 blur-[100px] pointer-events-none"></div>
+    <section
+      id="agent-builder"
+      class="relative min-h-screen flex items-center overflow-hidden bg-[#070A12]"
+      style="z-index: 20"
+    >
+      <!-- Background glow -->
+      <div
+        class="absolute top-[10%] right-[6%] w-[50vw] h-[50vw] rounded-full bg-[#4C6BFF]/10 blur-[100px] pointer-events-none"
+      ></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <!-- Left content -->
-                <div class="space-y-8">
-                    <div class="agent-builder-headline">
-                        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-                            Describe it.<br>
-                            <span class="text-gradient">We build it.</span>
-                        </h2>
-                    </div>
-
-                    <p class="agent-builder-body text-lg text-[#A7B1D8] leading-relaxed max-w-md">
-                        Type what you need. GoravAI generates the agent, connects the tools, and deploys it in minutes—not weeks.
-                    </p>
-
-                    <ul class="agent-builder-features space-y-4">
-                        <li class="flex items-center gap-3 text-white/90">
-                            <div class="w-8 h-8 rounded-lg bg-[#4C6BFF]/10 flex items-center justify-center">
-                                <i class="fas fa-comment text-[#4C6BFF] text-sm"></i>
-                            </div>
-                            <span class="text-sm font-medium">Natural language agent builder</span>
-                        </li>
-                        <li class="flex items-center gap-3 text-white/90">
-                            <div class="w-8 h-8 rounded-lg bg-[#4C6BFF]/10 flex items-center justify-center">
-                                <i class="fas fa-bolt text-[#4C6BFF] text-sm"></i>
-                            </div>
-                            <span class="text-sm font-medium">Built-in memory & tool calling</span>
-                        </li>
-                        <li class="flex items-center gap-3 text-white/90">
-                            <div class="w-8 h-8 rounded-lg bg-[#4C6BFF]/10 flex items-center justify-center">
-                                <i class="fas fa-globe text-[#4C6BFF] text-sm"></i>
-                            </div>
-                            <span class="text-sm font-medium">Deploy anywhere (API, chat, webhook)</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Right - UI Card -->
-                <div class="agent-builder-card relative">
-                    <div class="glass-card rounded-3xl p-6 sm:p-8 h-[500px] flex flex-col relative overflow-hidden">
-                        <!-- Card header dots -->
-                        <div class="flex items-center gap-2 mb-6">
-                            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-                        </div>
-
-                        <!-- Chat-like content -->
-                        <div class="flex-1 space-y-4 overflow-hidden">
-                            <!-- AI message -->
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-sparkles text-white text-sm"></i>
-                                </div>
-                                <div class="glass-card rounded-2xl rounded-tl-sm px-4 py-3 max-w-[80%]">
-                                    <p class="text-sm text-white/90">I'll create a research agent that gathers market data, summarizes sources, and delivers insights daily at 9 AM.</p>
-                                </div>
-                            </div>
-
-                            <!-- User message -->
-                            <div class="flex items-start gap-3 justify-end">
-                                <div class="bg-[#4C6BFF] rounded-2xl rounded-tr-sm px-4 py-3 max-w-[80%]">
-                                    <p class="text-sm text-white">Perfect! Connect it to my Slack and email.</p>
-                                </div>
-                                <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-xs text-white/60">You</span>
-                                </div>
-                            </div>
-
-                            <!-- AI response -->
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-sparkles text-white text-sm"></i>
-                                </div>
-                                <div class="glass-card rounded-2xl rounded-tl-sm px-4 py-3 max-w-[80%]">
-                                    <p class="text-sm text-white/90">Done! Your agent is now live. Here's the dashboard link.</p>
-                                    <div class="mt-3 flex items-center gap-2 text-xs text-[#4C6BFF]">
-                                        <i class="fas fa-check text-xs"></i>
-                                        <span>Connected to Slack #research</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 text-xs text-[#4C6BFF]">
-                                        <i class="fas fa-check text-xs"></i>
-                                        <span>Email notifications enabled</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Input pill -->
-                        <div class="mt-6">
-                            <div class="flex items-center gap-3 px-5 py-4 rounded-full bg-white/[0.04] border border-white/[0.08]">
-                                <i class="fas fa-comment text-[#A7B1D8]"></i>
-                                <span class="text-sm text-[#A7B1D8]/60 flex-1">Ask a follow-up...</span>
-                                <div class="w-8 h-8 rounded-full bg-[#4C6BFF] flex items-center justify-center">
-                                    <i class="fas fa-sparkles text-white text-sm"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Decorative elements -->
-                    <div class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#4C6BFF]/20 blur-2xl"></div>
-                    <div class="absolute -bottom-4 -left-4 w-32 h-32 rounded-full bg-[#7B8FFF]/10 blur-2xl"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Agent Network Section (One hub. Many agents.) -->
-    <section id="agent-network" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#070A12]" style="z-index: 30;">
-        <!-- Background gradient -->
-        <div class="absolute inset-0 bg-gradient-radial from-[#0B1120] via-[#070A12] to-[#070A12]"></div>
-
-        <!-- Content -->
-        <div class="relative z-10 text-center px-4">
-            <!-- Headline -->
-            <div class="agent-network-headline mb-4">
-                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-                    One hub. <span class="text-gradient">Many agents.</span>
-                </h2>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Left content -->
+          <div class="space-y-8">
+            <div class="agent-builder-headline">
+              <h2
+                class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight"
+              >
+                Describe it.<br />
+                <span class="text-gradient">We build it.</span>
+              </h2>
             </div>
 
-            <!-- Subheadline -->
-            <p class="agent-network-subheadline text-lg text-[#A7B1D8] max-w-xl mx-auto mb-16">
-                Orchestrate a team of specialized agents that hand off tasks, share memory, and stay consistent.
+            <p
+              class="agent-builder-body text-lg text-[#A7B1D8] leading-relaxed max-w-md"
+            >
+              Type what you need. GoravAI generates the agent, connects the
+              tools, and deploys it in minutes—not weeks.
             </p>
 
-            <!-- Network visualization -->
-            <div class="relative w-[320px] h-[320px] sm:w-[400px] sm:h-[400px] mx-auto">
-                <!-- Connection lines -->
-                <div class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left" style="transform: translate(-50%, -50%) rotate(0deg);"></div>
-                <div class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left" style="transform: translate(-50%, -50%) rotate(60deg);"></div>
-                <div class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left" style="transform: translate(-50%, -50%) rotate(120deg);"></div>
-                <div class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left" style="transform: translate(-50%, -50%) rotate(180deg);"></div>
-                <div class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left" style="transform: translate(-50%, -50%) rotate(240deg);"></div>
-                <div class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left" style="transform: translate(-50%, -50%) rotate(300deg);"></div>
+            <ul class="agent-builder-features space-y-4">
+              <li class="flex items-center gap-3 text-white/90">
+                <div
+                  class="w-8 h-8 rounded-lg bg-[#4C6BFF]/10 flex items-center justify-center"
+                >
+                  <i class="fas fa-comment text-[#4C6BFF] text-sm"></i>
+                </div>
+                <span class="text-sm font-medium"
+                  >Natural language agent builder</span
+                >
+              </li>
+              <li class="flex items-center gap-3 text-white/90">
+                <div
+                  class="w-8 h-8 rounded-lg bg-[#4C6BFF]/10 flex items-center justify-center"
+                >
+                  <i class="fas fa-bolt text-[#4C6BFF] text-sm"></i>
+                </div>
+                <span class="text-sm font-medium"
+                  >Built-in memory & tool calling</span
+                >
+              </li>
+              <li class="flex items-center gap-3 text-white/90">
+                <div
+                  class="w-8 h-8 rounded-lg bg-[#4C6BFF]/10 flex items-center justify-center"
+                >
+                  <i class="fas fa-globe text-[#4C6BFF] text-sm"></i>
+                </div>
+                <span class="text-sm font-medium"
+                  >Deploy anywhere (API, chat, webhook)</span
+                >
+              </li>
+            </ul>
+          </div>
 
-                <!-- Central Hub -->
-                <div class="agent-hub absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                    <div class="relative w-[130px] h-[130px] sm:w-[180px] sm:h-[180px]">
-                        <div class="absolute inset-0 rounded-full bg-[#4C6BFF]/20 blur-2xl"></div>
-                        <div class="absolute inset-0 rounded-full bg-gradient-to-br from-[#4C6BFF] to-[#2D3A8C] flex flex-col items-center justify-center border border-white/10">
-                            <i class="fas fa-microchip w-8 h-8 sm:w-10 sm:h-10 text-white mb-2 text-2xl"></i>
-                            <span class="text-xs sm:text-sm font-semibold text-white">Agent Hub</span>
-                        </div>
-                    </div>
+          <!-- Right - UI Card -->
+          <div class="agent-builder-card relative">
+            <div
+              class="glass-card rounded-3xl p-6 sm:p-8 h-[500px] flex flex-col relative overflow-hidden"
+            >
+              <!-- Card header dots -->
+              <div class="flex items-center gap-2 mb-6">
+                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+              </div>
+
+              <!-- Chat-like content -->
+              <div class="flex-1 space-y-4 overflow-hidden">
+                <!-- AI message -->
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center flex-shrink-0"
+                  >
+                    <i class="fas fa-sparkles text-white text-sm"></i>
+                  </div>
+                  <div
+                    class="glass-card rounded-2xl rounded-tl-sm px-4 py-3 max-w-[80%]"
+                  >
+                    <p class="text-sm text-white/90">
+                      I'll create a research agent that gathers market data,
+                      summarizes sources, and delivers insights daily at 9 AM.
+                    </p>
+                  </div>
                 </div>
 
-                <!-- Satellite nodes -->
-                <div class="network-node absolute left-1/2 top-1/2 z-10" style="transform: translate(calc(-50% + 140px), -50%);">
-                    <div class="group cursor-pointer">
-                        <div class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"></div>
-                        <div class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300">
-                            <i class="fas fa-search w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"></i>
-                        </div>
-                        <span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap">Research</span>
-                    </div>
+                <!-- User message -->
+                <div class="flex items-start gap-3 justify-end">
+                  <div
+                    class="bg-[#4C6BFF] rounded-2xl rounded-tr-sm px-4 py-3 max-w-[80%]"
+                  >
+                    <p class="text-sm text-white">
+                      Perfect! Connect it to my Slack and email.
+                    </p>
+                  </div>
+                  <div
+                    class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0"
+                  >
+                    <span class="text-xs text-white/60">You</span>
+                  </div>
                 </div>
 
-                <div class="network-node absolute left-1/2 top-1/2 z-10" style="transform: translate(calc(-50% + 70px), calc(-50% - 121px));">
-                    <div class="group cursor-pointer">
-                        <div class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"></div>
-                        <div class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300">
-                            <i class="fas fa-pen-nib w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"></i>
-                        </div>
-                        <span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap">Write</span>
+                <!-- AI response -->
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center flex-shrink-0"
+                  >
+                    <i class="fas fa-sparkles text-white text-sm"></i>
+                  </div>
+                  <div
+                    class="glass-card rounded-2xl rounded-tl-sm px-4 py-3 max-w-[80%]"
+                  >
+                    <p class="text-sm text-white/90">
+                      Done! Your agent is now live. Here's the dashboard link.
+                    </p>
+                    <div
+                      class="mt-3 flex items-center gap-2 text-xs text-[#4C6BFF]"
+                    >
+                      <i class="fas fa-check text-xs"></i>
+                      <span>Connected to Slack #research</span>
                     </div>
+                    <div class="flex items-center gap-2 text-xs text-[#4C6BFF]">
+                      <i class="fas fa-check text-xs"></i>
+                      <span>Email notifications enabled</span>
+                    </div>
+                  </div>
                 </div>
+              </div>
 
-                <div class="network-node absolute left-1/2 top-1/2 z-10" style="transform: translate(calc(-50% - 70px), calc(-50% - 121px));">
-                    <div class="group cursor-pointer">
-                        <div class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"></div>
-                        <div class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300">
-                            <i class="fas fa-code w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"></i>
-                        </div>
-                        <span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap">Code</span>
-                    </div>
+              <!-- Input pill -->
+              <div class="mt-6">
+                <div
+                  class="flex items-center gap-3 px-5 py-4 rounded-full bg-white/[0.04] border border-white/[0.08]"
+                >
+                  <i class="fas fa-comment text-[#A7B1D8]"></i>
+                  <span class="text-sm text-[#A7B1D8]/60 flex-1"
+                    >Ask a follow-up...</span
+                  >
+                  <div
+                    class="w-8 h-8 rounded-full bg-[#4C6BFF] flex items-center justify-center"
+                  >
+                    <i class="fas fa-sparkles text-white text-sm"></i>
+                  </div>
                 </div>
-
-                <div class="network-node absolute left-1/2 top-1/2 z-10" style="transform: translate(calc(-50% - 140px), -50%);">
-                    <div class="group cursor-pointer">
-                        <div class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"></div>
-                        <div class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300">
-                            <i class="fas fa-eye w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"></i>
-                        </div>
-                        <span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap">Review</span>
-                    </div>
-                </div>
-
-                <div class="network-node absolute left-1/2 top-1/2 z-10" style="transform: translate(calc(-50% - 70px), calc(-50% + 121px));">
-                    <div class="group cursor-pointer">
-                        <div class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"></div>
-                        <div class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300">
-                            <i class="fas fa-rocket w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"></i>
-                        </div>
-                        <span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap">Deploy</span>
-                    </div>
-                </div>
-
-                <div class="network-node absolute left-1/2 top-1/2 z-10" style="transform: translate(calc(-50% + 70px), calc(-50% + 121px));">
-                    <div class="group cursor-pointer">
-                        <div class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"></div>
-                        <div class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300">
-                            <i class="fas fa-chart-bar w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"></i>
-                        </div>
-                        <span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap">Analyze</span>
-                    </div>
-                </div>
+              </div>
             </div>
+
+            <!-- Decorative elements -->
+            <div
+              class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#4C6BFF]/20 blur-2xl"
+            ></div>
+            <div
+              class="absolute -bottom-4 -left-4 w-32 h-32 rounded-full bg-[#7B8FFF]/10 blur-2xl"
+            ></div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Agent Network Section (One hub. Many agents.) - UPDATED -->
+    <section
+      id="agent-network"
+      class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#070A12]"
+      style="z-index: 50"
+    >
+      <!-- Background gradient -->
+      <div
+        class="absolute inset-0 bg-gradient-radial from-[#0B1120] via-[#070A12] to-[#070A12]"
+      ></div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 text-center px-4 w-full h-screen flex flex-col justify-center items-center"
+      >
+        <!-- Headline -->
+        <div class="agent-network-headline mb-4 opacity-0 -translate-y-10">
+          <h2
+            class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white"
+          >
+            One hub. <span class="text-gradient">Many agents.</span>
+          </h2>
+        </div>
+
+        <!-- Subheadline -->
+        <p
+          class="agent-network-subheadline text-lg text-[#A7B1D8] max-w-xl mx-auto mb-16 opacity-0"
+        >
+          Orchestrate a team of specialized agents that hand off tasks, share
+          memory, and stay consistent.
+        </p>
+
+        <!-- Network visualization -->
+        <div
+          class="network-container relative w-[320px] h-[320px] sm:w-[400px] sm:h-[400px]"
+        >
+          <!-- Connection lines -->
+          <div
+            class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left"
+            style="transform: translate(-50%, -50%) rotate(0deg)"
+          ></div>
+          <div
+            class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left"
+            style="transform: translate(-50%, -50%) rotate(60deg)"
+          ></div>
+          <div
+            class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left"
+            style="transform: translate(-50%, -50%) rotate(120deg)"
+          ></div>
+          <div
+            class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left"
+            style="transform: translate(-50%, -50%) rotate(180deg)"
+          ></div>
+          <div
+            class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left"
+            style="transform: translate(-50%, -50%) rotate(240deg)"
+          ></div>
+          <div
+            class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left"
+            style="transform: translate(-50%, -50%) rotate(300deg)"
+          ></div>
+
+          <!-- Central Hub -->
+          <div
+            class="agent-hub absolute left-1/2 top-1/2 z-20 opacity-0 scale-0"
+          >
+            <div
+              class="relative w-[130px] h-[130px] sm:w-[180px] sm:h-[180px] -translate-x-1/2 -translate-y-1/2"
+            >
+              <div
+                class="absolute inset-0 rounded-full bg-[#4C6BFF]/20 blur-2xl"
+              ></div>
+              <div
+                class="absolute inset-0 rounded-full bg-gradient-to-br from-[#4C6BFF] to-[#2D3A8C] flex flex-col items-center justify-center border border-white/10"
+              >
+                <i
+                  class="fas fa-microchip w-8 h-8 sm:w-10 sm:h-10 text-white mb-2 text-2xl"
+                ></i>
+                <span class="text-xs sm:text-sm font-semibold text-white"
+                  >Agent Hub</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Satellite nodes (Starting at center 0,0) -->
+          <!-- Research (0 deg) -->
+          <div
+            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0 scale-0"
+          >
+            <div class="group cursor-pointer">
+              <div
+                class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"
+              ></div>
+              <div
+                class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-search w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"
+                ></i>
+              </div>
+              <span
+                class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap"
+                >Research</span
+              >
+            </div>
+          </div>
+
+          <!-- Write (60 deg) -->
+          <div
+            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0 scale-0"
+          >
+            <div class="group cursor-pointer">
+              <div
+                class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"
+              ></div>
+              <div
+                class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-pen-nib w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"
+                ></i>
+              </div>
+              <span
+                class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap"
+                >Write</span
+              >
+            </div>
+          </div>
+
+          <!-- Code (120 deg) -->
+          <div
+            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0 scale-0"
+          >
+            <div class="group cursor-pointer">
+              <div
+                class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"
+              ></div>
+              <div
+                class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-code w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"
+                ></i>
+              </div>
+              <span
+                class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap"
+                >Code</span
+              >
+            </div>
+          </div>
+
+          <!-- Review (180 deg) -->
+          <div
+            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0 scale-0"
+          >
+            <div class="group cursor-pointer">
+              <div
+                class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"
+              ></div>
+              <div
+                class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-eye w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"
+                ></i>
+              </div>
+              <span
+                class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap"
+                >Review</span
+              >
+            </div>
+          </div>
+
+          <!-- Deploy (240 deg) -->
+          <div
+            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0 scale-0"
+          >
+            <div class="group cursor-pointer">
+              <div
+                class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"
+              ></div>
+              <div
+                class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-rocket w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"
+                ></i>
+              </div>
+              <span
+                class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap"
+                >Deploy</span
+              >
+            </div>
+          </div>
+
+          <!-- Analyze (300 deg) -->
+          <div
+            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0 scale-0"
+          >
+            <div class="group cursor-pointer">
+              <div
+                class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"
+              ></div>
+              <div
+                class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-chart-bar w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"
+                ></i>
+              </div>
+              <span
+                class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap"
+                >Analyze</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Use Cases Section (Turn tasks into outcomes.) -->
-    <section id="projects" class="py-24 bg-[#070A12]" style="z-index: 40;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Header -->
-            <div class="usecases-header mb-16">
-                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-                    Turn tasks into <span class="text-gradient">outcomes.</span>
-                </h2>
-                <p class="text-lg text-[#A7B1D8] max-w-xl">
-                    From research to revenue—deploy agents that move work forward.
-                </p>
-            </div>
-
-            <!-- Cards -->
-            <div class="space-y-6">
-                <!-- Research Agent -->
-                <div class="usecase-card glass-card rounded-3xl overflow-hidden hover:border-[#4C6BFF]/30 transition-all duration-500">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-2/5 h-48 md:h-64 overflow-hidden">
-                            <div class="relative w-full h-full">
-                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop" alt="Research Agent" class="w-full h-full object-cover transition-transform duration-700">
-                                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#070A12]/80"></div>
-                            </div>
-                        </div>
-                        <div class="md:w-3/5 p-6 sm:p-8 flex flex-col justify-center">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center">
-                                    <i class="fas fa-search w-5 h-5 text-[#4C6BFF]"></i>
-                                </div>
-                                <h3 class="font-display text-xl sm:text-2xl font-bold text-white">Research Agent</h3>
-                            </div>
-                            <p class="text-[#A7B1D8] leading-relaxed">Gather market data, summarize sources, and deliver insights on schedule.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Content Agent -->
-                <div class="usecase-card glass-card rounded-3xl overflow-hidden hover:border-[#4C6BFF]/30 transition-all duration-500">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-2/5 h-48 md:h-64 overflow-hidden">
-                            <div class="relative w-full h-full">
-                                <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&h=600&fit=crop" alt="Content Agent" class="w-full h-full object-cover transition-transform duration-700">
-                                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#070A12]/80"></div>
-                            </div>
-                        </div>
-                        <div class="md:w-3/5 p-6 sm:p-8 flex flex-col justify-center">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center">
-                                    <i class="fas fa-file-alt w-5 h-5 text-[#4C6BFF]"></i>
-                                </div>
-                                <h3 class="font-display text-xl sm:text-2xl font-bold text-white">Content Agent</h3>
-                            </div>
-                            <p class="text-[#A7B1D8] leading-relaxed">Draft, rewrite, and publish across channels with your brand voice.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ops Agent -->
-                <div class="usecase-card glass-card rounded-3xl overflow-hidden hover:border-[#4C6BFF]/30 transition-all duration-500">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-2/5 h-48 md:h-64 overflow-hidden">
-                            <div class="relative w-full h-full">
-                                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop" alt="Ops Agent" class="w-full h-full object-cover transition-transform duration-700">
-                                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#070A12]/80"></div>
-                            </div>
-                        </div>
-                        <div class="md:w-3/5 p-6 sm:p-8 flex flex-col justify-center">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center">
-                                    <i class="fas fa-cog w-5 h-5 text-[#4C6BFF]"></i>
-                                </div>
-                                <h3 class="font-display text-xl sm:text-2xl font-bold text-white">Ops Agent</h3>
-                            </div>
-                            <p class="text-[#A7B1D8] leading-relaxed">Validate data, trigger workflows, and keep systems in sync.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="projects" class="py-24 bg-[#070A12]" style="z-index: 40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="usecases-header mb-16">
+          <h2
+            class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
+          >
+            Turn tasks into <span class="text-gradient">outcomes.</span>
+          </h2>
+          <p class="text-lg text-[#A7B1D8] max-w-xl">
+            From research to revenue—deploy agents that move work forward.
+          </p>
         </div>
+
+        <!-- Cards -->
+        <div class="space-y-6">
+          <!-- Research Agent -->
+          <div
+            class="usecase-card glass-card rounded-3xl overflow-hidden hover:border-[#4C6BFF]/30 transition-all duration-500"
+          >
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-2/5 h-48 md:h-64 overflow-hidden">
+                <div class="relative w-full h-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop"
+                    alt="Research Agent"
+                    class="w-full h-full object-cover transition-transform duration-700"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent to-[#070A12]/80"
+                  ></div>
+                </div>
+              </div>
+              <div class="md:w-3/5 p-6 sm:p-8 flex flex-col justify-center">
+                <div class="flex items-center gap-3 mb-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center"
+                  >
+                    <i class="fas fa-search w-5 h-5 text-[#4C6BFF]"></i>
+                  </div>
+                  <h3
+                    class="font-display text-xl sm:text-2xl font-bold text-white"
+                  >
+                    Research Agent
+                  </h3>
+                </div>
+                <p class="text-[#A7B1D8] leading-relaxed">
+                  Gather market data, summarize sources, and deliver insights on
+                  schedule.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Agent -->
+          <div
+            class="usecase-card glass-card rounded-3xl overflow-hidden hover:border-[#4C6BFF]/30 transition-all duration-500"
+          >
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-2/5 h-48 md:h-64 overflow-hidden">
+                <div class="relative w-full h-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&h=600&fit=crop"
+                    alt="Content Agent"
+                    class="w-full h-full object-cover transition-transform duration-700"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent to-[#070A12]/80"
+                  ></div>
+                </div>
+              </div>
+              <div class="md:w-3/5 p-6 sm:p-8 flex flex-col justify-center">
+                <div class="flex items-center gap-3 mb-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center"
+                  >
+                    <i class="fas fa-file-alt w-5 h-5 text-[#4C6BFF]"></i>
+                  </div>
+                  <h3
+                    class="font-display text-xl sm:text-2xl font-bold text-white"
+                  >
+                    Content Agent
+                  </h3>
+                </div>
+                <p class="text-[#A7B1D8] leading-relaxed">
+                  Draft, rewrite, and publish across channels with your brand
+                  voice.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ops Agent -->
+          <div
+            class="usecase-card glass-card rounded-3xl overflow-hidden hover:border-[#4C6BFF]/30 transition-all duration-500"
+          >
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-2/5 h-48 md:h-64 overflow-hidden">
+                <div class="relative w-full h-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop"
+                    alt="Ops Agent"
+                    class="w-full h-full object-cover transition-transform duration-700"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent to-[#070A12]/80"
+                  ></div>
+                </div>
+              </div>
+              <div class="md:w-3/5 p-6 sm:p-8 flex flex-col justify-center">
+                <div class="flex items-center gap-3 mb-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center"
+                  >
+                    <i class="fas fa-cog w-5 h-5 text-[#4C6BFF]"></i>
+                  </div>
+                  <h3
+                    class="font-display text-xl sm:text-2xl font-bold text-white"
+                  >
+                    Ops Agent
+                  </h3>
+                </div>
+                <p class="text-[#A7B1D8] leading-relaxed">
+                  Validate data, trigger workflows, and keep systems in sync.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-24 bg-[#070A12]" style="z-index: 50;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 services-header">
-                <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Our <span class="text-gradient">Services</span></h2>
-                <div class="h-1 w-20 bg-[#4C6BFF] mx-auto rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="service-card glass-card p-8 rounded-2xl">
-                    <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-web-dev">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Web Development</h3>
-                    <p class="text-[#A7B1D8]">Professional, responsive websites, portals, and custom systems tailored for any business need.</p>
-                </div>
-                
-                <div class="service-card glass-card p-8 rounded-2xl">
-                    <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-ai-agent">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">AI Agents & Automation</h3>
-                    <p class="text-[#A7B1D8]">Custom AI bots for chat, workflow automation, customer support, and business optimization.</p>
-                </div>
-                
-                <div class="service-card glass-card p-8 rounded-2xl">
-                    <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-logo-design">
-                        <i class="fas fa-pen-nib"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Logo & Brand Design</h3>
-                    <p class="text-[#A7B1D8]">Unique, modern, and memorable logos that elevate your brand identity.</p>
-                </div>
-                
-                <div class="service-card glass-card p-8 rounded-2xl">
-                    <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-digital-mkt">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Digital Marketing</h3>
-                    <p class="text-[#A7B1D8]">SEO, social media marketing, ad campaigns, and strategies to grow your business.</p>
-                </div>
-                
-                <div class="service-card glass-card p-8 rounded-2xl md:col-span-2 lg:col-span-1">
-                    <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-domain-sell">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Domain Selling</h3>
-                    <p class="text-[#A7B1D8]">Premium domain suggestions, purchasing support, and domain marketplace services.</p>
-                </div>
-            </div>
+    <section id="services" class="py-24 bg-[#070A12]" style="z-index: 50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 services-header">
+          <h2
+            class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
+          >
+            Our <span class="text-gradient">Services</span>
+          </h2>
+          <div class="h-1 w-20 bg-[#4C6BFF] mx-auto rounded-full"></div>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="service-card glass-card p-8 rounded-2xl">
+            <div
+              class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-web-dev"
+            >
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Web Development</h3>
+            <p class="text-[#A7B1D8]">
+              Professional, responsive websites, portals, and custom systems
+              tailored for any business need.
+            </p>
+          </div>
+
+          <div class="service-card glass-card p-8 rounded-2xl">
+            <div
+              class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-ai-agent"
+            >
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              AI Agents & Automation
+            </h3>
+            <p class="text-[#A7B1D8]">
+              Custom AI bots for chat, workflow automation, customer support,
+              and business optimization.
+            </p>
+          </div>
+
+          <div class="service-card glass-card p-8 rounded-2xl">
+            <div
+              class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-logo-design"
+            >
+              <i class="fas fa-pen-nib"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              Logo & Brand Design
+            </h3>
+            <p class="text-[#A7B1D8]">
+              Unique, modern, and memorable logos that elevate your brand
+              identity.
+            </p>
+          </div>
+
+          <div class="service-card glass-card p-8 rounded-2xl">
+            <div
+              class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-digital-mkt"
+            >
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Digital Marketing</h3>
+            <p class="text-[#A7B1D8]">
+              SEO, social media marketing, ad campaigns, and strategies to grow
+              your business.
+            </p>
+          </div>
+
+          <div
+            class="service-card glass-card p-8 rounded-2xl md:col-span-2 lg:col-span-1"
+          >
+            <div
+              class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-domain-sell"
+            >
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Domain Selling</h3>
+            <p class="text-[#A7B1D8]">
+              Premium domain suggestions, purchasing support, and domain
+              marketplace services.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Agency-grade delivery Section -->
-    <section class="py-24 bg-[#070A12]" style="z-index: 60;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-                <!-- Left - Sticky Image -->
-                <div class="lg:sticky lg:top-24 agency-image">
-                    <div class="relative rounded-3xl overflow-hidden" style="max-height: 800px;">
-                        <img src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/agency%20website%20pic.png" alt="GoravAI Agency" class="w-full h-auto object-cover" style="max-height: 800px;">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#070A12]/90 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 float-animation">
-                            <div class="glass-card px-4 py-2 rounded-full">
-                                <span class="text-sm font-medium text-white">GoravAI Agency</span>
-                            </div>
-                        </div>
-                    </div>
+    <section class="py-24 bg-[#070A12]" style="z-index: 60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <!-- Left - Sticky Image -->
+          <div class="lg:sticky lg:top-24 agency-image">
+            <div
+              class="relative rounded-3xl overflow-hidden"
+              style="max-height: 800px"
+            >
+              <img
+                src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/agency%20website%20pic.png"
+                alt="GoravAI Agency"
+                class="w-full h-auto object-cover"
+                style="max-height: 800px"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#070A12]/90 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-6 left-6 float-animation">
+                <div class="glass-card px-4 py-2 rounded-full">
+                  <span class="text-sm font-medium text-white"
+                    >GoravAI Agency</span
+                  >
                 </div>
-
-                <!-- Right - Services -->
-                <div class="space-y-8 lg:pt-12">
-                    <div class="mb-12 agency-header">
-                        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-                            Agency-grade <span class="text-gradient">delivery.</span>
-                        </h2>
-                        <p class="text-lg text-[#A7B1D8] leading-relaxed">
-                            We design, tune, and ship agents that match your workflows—not the other way around.
-                        </p>
-                    </div>
-
-                    <div class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-lightbulb text-[#4C6BFF] text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-display text-xl font-bold text-white mb-2">Discovery & Design</h3>
-                                <p class="text-[#A7B1D8] leading-relaxed">Map your workflow, define guardrails, and choose the right model stack.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-wrench text-[#4C6BFF] text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-display text-xl font-bold text-white mb-2">Build & Integrate</h3>
-                                <p class="text-[#A7B1D8] leading-relaxed">Connect APIs, add memory, and ship secure endpoints.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-chart-line text-[#4C6BFF] text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-display text-xl font-bold text-white mb-2">Run & Improve</h3>
-                                <p class="text-[#A7B1D8] leading-relaxed">Monitor runs, collect feedback, and iterate prompts.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+
+          <!-- Right - Services -->
+          <div class="space-y-8 lg:pt-12">
+            <div class="mb-12 agency-header">
+              <h2
+                class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
+              >
+                Agency-grade <span class="text-gradient">delivery.</span>
+              </h2>
+              <p class="text-lg text-[#A7B1D8] leading-relaxed">
+                We design, tune, and ship agents that match your workflows—not
+                the other way around.
+              </p>
+            </div>
+
+            <div
+              class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500"
+            >
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-lightbulb text-[#4C6BFF] text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="font-display text-xl font-bold text-white mb-2">
+                    Discovery & Design
+                  </h3>
+                  <p class="text-[#A7B1D8] leading-relaxed">
+                    Map your workflow, define guardrails, and choose the right
+                    model stack.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500"
+            >
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-wrench text-[#4C6BFF] text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="font-display text-xl font-bold text-white mb-2">
+                    Build & Integrate
+                  </h3>
+                  <p class="text-[#A7B1D8] leading-relaxed">
+                    Connect APIs, add memory, and ship secure endpoints.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500"
+            >
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-chart-line text-[#4C6BFF] text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="font-display text-xl font-bold text-white mb-2">
+                    Run & Improve
+                  </h3>
+                  <p class="text-[#A7B1D8] leading-relaxed">
+                    Monitor runs, collect feedback, and iterate prompts.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="py-24 bg-[#070A12]" style="z-index: 70;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 testimonials-header">
-                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-                    Loved by <span class="text-gradient">builders</span> and <span class="text-gradient">operators.</span>
-                </h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="testimonial-card glass-card rounded-3xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500">
-                    <div class="mb-6">
-                        <i class="fas fa-quote-left text-[#4C6BFF]/40 text-2xl"></i>
-                    </div>
-                    <p class="text-white/90 text-lg leading-relaxed mb-8">"We shipped a research agent in days. It now runs 200+ queries a week."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center">
-                            <span class="text-sm font-semibold text-white">AR</span>
-                        </div>
-                        <div>
-                            <p class="font-medium text-white">Ava R.</p>
-                            <p class="text-sm text-[#A7B1D8]">Product</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card glass-card rounded-3xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500">
-                    <div class="mb-6">
-                        <i class="fas fa-quote-left text-[#4C6BFF]/40 text-2xl"></i>
-                    </div>
-                    <p class="text-white/90 text-lg leading-relaxed mb-8">"The agency turned our messy workflow into a reliable agent pipeline."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center">
-                            <span class="text-sm font-semibold text-white">MT</span>
-                        </div>
-                        <div>
-                            <p class="font-medium text-white">Marcus T.</p>
-                            <p class="text-sm text-[#A7B1D8]">Ops</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card glass-card rounded-3xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500">
-                    <div class="mb-6">
-                        <i class="fas fa-quote-left text-[#4C6BFF]/40 text-2xl"></i>
-                    </div>
-                    <p class="text-white/90 text-lg leading-relaxed mb-8">"Finally, an AI layer that feels like real infrastructure."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center">
-                            <span class="text-sm font-semibold text-white">LK</span>
-                        </div>
-                        <div>
-                            <p class="font-medium text-white">Leo K.</p>
-                            <p class="text-sm text-[#A7B1D8]">Engineering</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Testimonials Section - NO ANIMATION -->
+    <section class="py-24 bg-[#070A12]" style="z-index: 70">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 testimonials-header">
+          <h2
+            class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white"
+          >
+            Loved by <span class="text-gradient">builders</span> and
+            <span class="text-gradient">operators.</span>
+          </h2>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="testimonial-card glass-card rounded-3xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500"
+          >
+            <div class="mb-6">
+              <i class="fas fa-quote-left text-[#4C6BFF]/40 text-2xl"></i>
+            </div>
+            <p class="text-white/90 text-lg leading-relaxed mb-8">
+              "We shipped a research agent in days. It now runs 200+ queries a
+              week."
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center"
+              >
+                <span class="text-sm font-semibold text-white">AR</span>
+              </div>
+              <div>
+                <p class="font-medium text-white">Ava R.</p>
+                <p class="text-sm text-[#A7B1D8]">Product</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="testimonial-card glass-card rounded-3xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500"
+          >
+            <div class="mb-6">
+              <i class="fas fa-quote-left text-[#4C6BFF]/40 text-2xl"></i>
+            </div>
+            <p class="text-white/90 text-lg leading-relaxed mb-8">
+              "The agency turned our messy workflow into a reliable agent
+              pipeline."
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center"
+              >
+                <span class="text-sm font-semibold text-white">MT</span>
+              </div>
+              <div>
+                <p class="font-medium text-white">Marcus T.</p>
+                <p class="text-sm text-[#A7B1D8]">Ops</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="testimonial-card glass-card rounded-3xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500"
+          >
+            <div class="mb-6">
+              <i class="fas fa-quote-left text-[#4C6BFF]/40 text-2xl"></i>
+            </div>
+            <p class="text-white/90 text-lg leading-relaxed mb-8">
+              "Finally, an AI layer that feels like real infrastructure."
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center"
+              >
+                <span class="text-sm font-semibold text-white">LK</span>
+              </div>
+              <div>
+                <p class="font-medium text-white">Leo K.</p>
+                <p class="text-sm text-[#A7B1D8]">Engineering</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-[#070A12]" style="z-index: 80;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <!-- Left content -->
-                <div class="space-y-8 about-content">
-                    <div>
-                        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-                            About <span class="text-gradient">GoravAI</span>
-                        </h2>
-                        <p class="text-lg text-[#A7B1D8] leading-relaxed mb-6">
-                            GoravAI is a forward-thinking digital agency led by experienced developers and AI engineers. We specialize in building powerful web solutions, intelligent AI agents, creative branding, and high-impact digital marketing strategies.
-                        </p>
-                        <p class="text-lg text-[#A7B1D8] leading-relaxed">
-                            Our mission is to democratize AI automation, making it accessible to businesses of all sizes. We believe in the power of autonomous agents to transform how work gets done.
-                        </p>
-                    </div>
-
-                    <!-- Stats -->
-                    <div class="grid grid-cols-2 gap-6 pt-6">
-                        <div class="border-l-2 border-[#4C6BFF] pl-4">
-                            <div class="font-display text-3xl sm:text-4xl font-bold text-white mb-1">50+</div>
-                            <div class="text-sm text-[#A7B1D8]">Projects Delivered</div>
-                        </div>
-                        <div class="border-l-2 border-[#7B8FFF] pl-4">
-                            <div class="font-display text-3xl sm:text-4xl font-bold text-white mb-1">100%</div>
-                            <div class="text-sm text-[#A7B1D8]">Client Satisfaction</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right - Founder card -->
-                <div class="relative flex justify-center about-image">
-                    <div class="glass-card rounded-3xl overflow-hidden" style="width: 400px;">
-                        <!-- Image -->
-                        <div style="width: 400px; height: 400px; overflow: hidden;">
-                            <img src="https://pbs.twimg.com/profile_images/1997316190642061312/tq0oVJQs_400x400.jpg" alt="Gorav Khemani - Founder of GoravAI" class="w-full h-full object-cover">
-                        </div>
-
-                        <!-- Content -->
-                        <div class="p-6 sm:p-8">
-                            <h3 class="font-display text-2xl font-bold text-white mb-1">Gorav Khemani</h3>
-                            <p class="text-[#4C6BFF] font-medium mb-4">Founder of GoravAI</p>
-
-                            <!-- Quote -->
-                            <div class="border-l-2 border-[#4C6BFF] pl-4 mb-6">
-                                <i class="fas fa-quote-left text-[#4C6BFF]/40 mb-2 text-sm"></i>
-                                <p class="text-sm text-[#A7B1D8] italic">"A visionary leader focused on combining creative design with powerful automation."</p>
-                            </div>
-
-                            <!-- Social links -->
-                            <div class="flex gap-3">
-                                <a href="https://www.linkedin.com/in/gorav-kumar-61968a381" target="_blank" rel="noopener noreferrer" class="social-btn social-linkedin w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300 cursor-pointer">
-                                    <i class="fab fa-linkedin-in text-lg"></i>
-                                </a>
-                                <a href="https://x.com/GoravKhemani" target="_blank" rel="noopener noreferrer" class="social-btn social-x w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300 cursor-pointer">
-                                    <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current">
-                                        <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Decorative elements -->
-                    <div class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#4C6BFF]/10 blur-2xl"></div>
-                    <div class="absolute -bottom-4 -left-4 w-32 h-32 rounded-full bg-[#7B8FFF]/10 blur-2xl"></div>
-                </div>
+    <section id="about" class="py-24 bg-[#070A12]" style="z-index: 80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Left content -->
+          <div class="space-y-8 about-content">
+            <div>
+              <h2
+                class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6"
+              >
+                About <span class="text-gradient">GoravAI</span>
+              </h2>
+              <p class="text-lg text-[#A7B1D8] leading-relaxed mb-6">
+                GoravAI is a forward-thinking digital agency led by experienced
+                developers and AI engineers. We specialize in building powerful
+                web solutions, intelligent AI agents, creative branding, and
+                high-impact digital marketing strategies.
+              </p>
+              <p class="text-lg text-[#A7B1D8] leading-relaxed">
+                Our mission is to democratize AI automation, making it
+                accessible to businesses of all sizes. We believe in the power
+                of autonomous agents to transform how work gets done.
+              </p>
             </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 gap-6 pt-6">
+              <div class="border-l-2 border-[#4C6BFF] pl-4">
+                <div
+                  class="font-display text-3xl sm:text-4xl font-bold text-white mb-1"
+                >
+                  50+
+                </div>
+                <div class="text-sm text-[#A7B1D8]">Projects Delivered</div>
+              </div>
+              <div class="border-l-2 border-[#7B8FFF] pl-4">
+                <div
+                  class="font-display text-3xl sm:text-4xl font-bold text-white mb-1"
+                >
+                  100%
+                </div>
+                <div class="text-sm text-[#A7B1D8]">Client Satisfaction</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right - Founder card -->
+          <div class="relative flex justify-center about-image">
+            <div
+              class="glass-card rounded-3xl overflow-hidden"
+              style="width: 400px"
+            >
+              <!-- Image -->
+              <div style="width: 400px; height: 400px; overflow: hidden">
+                <img
+                  src="https://pbs.twimg.com/profile_images/1997316190642061312/tq0oVJQs_400x400.jpg"
+                  alt="Gorav Khemani - Founder of GoravAI"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="p-6 sm:p-8">
+                <h3 class="font-display text-2xl font-bold text-white mb-1">
+                  Gorav Khemani
+                </h3>
+                <p class="text-[#4C6BFF] font-medium mb-4">
+                  Founder of GoravAI
+                </p>
+
+                <!-- Quote -->
+                <div class="border-l-2 border-[#4C6BFF] pl-4 mb-6">
+                  <i
+                    class="fas fa-quote-left text-[#4C6BFF]/40 mb-2 text-sm"
+                  ></i>
+                  <p class="text-sm text-[#A7B1D8] italic">
+                    "A visionary leader focused on combining creative design
+                    with powerful automation."
+                  </p>
+                </div>
+
+                <!-- Social links -->
+                <div class="flex gap-3">
+                  <a
+                    href="https://www.linkedin.com/in/gorav-kumar-61968a381"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn social-linkedin w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300 cursor-pointer"
+                  >
+                    <i class="fab fa-linkedin-in text-lg"></i>
+                  </a>
+                  <a
+                    href="https://x.com/GoravKhemani"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn social-x w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300 cursor-pointer"
+                  >
+                    <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current">
+                      <path
+                        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Decorative elements -->
+            <div
+              class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#4C6BFF]/10 blur-2xl"
+            ></div>
+            <div
+              class="absolute -bottom-4 -left-4 w-32 h-32 rounded-full bg-[#7B8FFF]/10 blur-2xl"
+            ></div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-24 bg-[#070A12]" style="z-index: 90;">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 faq-header">
-                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-                    Questions? <span class="text-gradient">Answers.</span>
-                </h2>
-            </div>
-
-            <div class="space-y-4">
-                <div class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden">
-                    <button class="accordion-trigger w-full flex items-center justify-between py-5 text-left" onclick="toggleAccordion(this)">
-                        <span class="text-white font-medium">Do I need to write code?</span>
-                        <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <p class="text-[#A7B1D8] pb-5 leading-relaxed">No! GoravAI is designed for everyone. You can build powerful agents using natural language. Simply describe what you want, and our platform handles the rest. For advanced users, we also offer code-level customization.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden">
-                    <button class="accordion-trigger w-full flex items-center justify-between py-5 text-left" onclick="toggleAccordion(this)">
-                        <span class="text-white font-medium">Can I connect my own tools?</span>
-                        <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <p class="text-[#A7B1D8] pb-5 leading-relaxed">Absolutely. GoravAI integrates with 100+ popular tools and services including Slack, Notion, Google Workspace, Salesforce, and more. You can also connect custom APIs using our webhook system.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden">
-                    <button class="accordion-trigger w-full flex items-center justify-between py-5 text-left" onclick="toggleAccordion(this)">
-                        <span class="text-white font-medium">How does memory work?</span>
-                        <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <p class="text-[#A7B1D8] pb-5 leading-relaxed">Our agents come with built-in memory that persists across conversations and sessions. They can remember context, user preferences, and historical data to provide more personalized and accurate responses over time.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden">
-                    <button class="accordion-trigger w-full flex items-center justify-between py-5 text-left" onclick="toggleAccordion(this)">
-                        <span class="text-white font-medium">What models are supported?</span>
-                        <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <p class="text-[#A7B1D8] pb-5 leading-relaxed">We support all major LLMs including GPT-4, Claude, Gemini, and open-source models like Llama and Mistral. You can choose the best model for each agent based on your needs and budget.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden">
-                    <button class="accordion-trigger w-full flex items-center justify-between py-5 text-left" onclick="toggleAccordion(this)">
-                        <span class="text-white font-medium">How do I get support?</span>
-                        <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <p class="text-[#A7B1D8] pb-5 leading-relaxed">All plans include email support. Growth and Scale plans get priority support with faster response times. Scale customers also get access to a dedicated account manager and Slack channel.</p>
-                    </div>
-                </div>
-            </div>
+    <section id="faq" class="py-24 bg-[#070A12]" style="z-index: 90">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 faq-header">
+          <h2
+            class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
+          >
+            Questions? <span class="text-gradient">Answers.</span>
+          </h2>
         </div>
+
+        <div class="space-y-4">
+          <div
+            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden"
+          >
+            <button
+              class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
+              onclick="toggleAccordion(this)"
+            >
+              <span class="text-white font-medium"
+                >Do I need to write code?</span
+              >
+              <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
+            </button>
+            <div class="accordion-content">
+              <p class="text-[#A7B1D8] pb-5 leading-relaxed">
+                No! GoravAI is designed for everyone. You can build powerful
+                agents using natural language. Simply describe what you want,
+                and our platform handles the rest. For advanced users, we also
+                offer code-level customization.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden"
+          >
+            <button
+              class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
+              onclick="toggleAccordion(this)"
+            >
+              <span class="text-white font-medium"
+                >Can I connect my own tools?</span
+              >
+              <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
+            </button>
+            <div class="accordion-content">
+              <p class="text-[#A7B1D8] pb-5 leading-relaxed">
+                Absolutely. GoravAI integrates with 100+ popular tools and
+                services including Slack, Notion, Google Workspace, Salesforce,
+                and more. You can also connect custom APIs using our webhook
+                system.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden"
+          >
+            <button
+              class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
+              onclick="toggleAccordion(this)"
+            >
+              <span class="text-white font-medium">How does memory work?</span>
+              <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
+            </button>
+            <div class="accordion-content">
+              <p class="text-[#A7B1D8] pb-5 leading-relaxed">
+                Our agents come with built-in memory that persists across
+                conversations and sessions. They can remember context, user
+                preferences, and historical data to provide more personalized
+                and accurate responses over time.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden"
+          >
+            <button
+              class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
+              onclick="toggleAccordion(this)"
+            >
+              <span class="text-white font-medium"
+                >What models are supported?</span
+              >
+              <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
+            </button>
+            <div class="accordion-content">
+              <p class="text-[#A7B1D8] pb-5 leading-relaxed">
+                We support all major LLMs including GPT-4, Claude, Gemini, and
+                open-source models like Llama and Mistral. You can choose the
+                best model for each agent based on your needs and budget.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden"
+          >
+            <button
+              class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
+              onclick="toggleAccordion(this)"
+            >
+              <span class="text-white font-medium">How do I get support?</span>
+              <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
+            </button>
+            <div class="accordion-content">
+              <p class="text-[#A7B1D8] pb-5 leading-relaxed">
+                All plans include email support. Growth and Scale plans get
+                priority support with faster response times. Scale customers
+                also get access to a dedicated account manager and Slack
+                channel.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Final CTA Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0B1120]" style="z-index: 100;">
-        <!-- Background gradient -->
-        <div class="absolute inset-0 bg-gradient-to-b from-[#0B1120] via-[#070A12] to-[#070A12]"></div>
+    <section
+      class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0B1120]"
+      style="z-index: 100"
+    >
+      <!-- Background gradient -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-[#0B1120] via-[#070A12] to-[#070A12]"
+      ></div>
 
-        <!-- Orb -->
-        <div class="cta-orb absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 w-[72vw] h-[72vw] max-w-[980px] max-h-[980px]">
-            <div class="absolute inset-0 rounded-full bg-gradient-radial from-[#4C6BFF]/35 via-[#4C6BFF]/10 to-transparent blur-3xl animate-pulse-glow"></div>
-            <div class="absolute inset-[10%] rounded-full bg-gradient-radial from-[#4C6BFF]/30 via-[#2D3A8C]/15 to-transparent"></div>
-            <div class="absolute inset-[30%] rounded-full bg-gradient-radial from-[#7B8FFF]/50 via-[#4C6BFF]/25 to-transparent blur-xl"></div>
+      <!-- Orb -->
+      <div
+        class="cta-orb absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 w-[72vw] h-[72vw] max-w-[980px] max-h-[980px]"
+      >
+        <div
+          class="absolute inset-0 rounded-full bg-gradient-radial from-[#4C6BFF]/35 via-[#4C6BFF]/10 to-transparent blur-3xl animate-pulse-glow"
+        ></div>
+        <div
+          class="absolute inset-[10%] rounded-full bg-gradient-radial from-[#4C6BFF]/30 via-[#2D3A8C]/15 to-transparent"
+        ></div>
+        <div
+          class="absolute inset-[30%] rounded-full bg-gradient-radial from-[#7B8FFF]/50 via-[#4C6BFF]/25 to-transparent blur-xl"
+        ></div>
+      </div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+      >
+        <h2
+          class="cta-headline font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+        >
+          Ready to ship your<br /><span class="text-gradient"
+            >first agent?</span
+          >
+        </h2>
+
+        <p
+          class="cta-subheadline text-lg md:text-xl text-[#A7B1D8] max-w-xl mx-auto mb-10"
+        >
+          Start building free. Upgrade when you're ready to scale.
+        </p>
+
+        <div
+          class="cta-buttons flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
+        >
+          <a
+            href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat"
+            target="_blank"
+            class="btn-primary inline-flex items-center justify-center px-8 py-4 bg-[#4C6BFF] text-white rounded-xl font-semibold hover:bg-[#3D56CC] group"
+          >
+            Talk to Agent
+            <i
+              class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"
+            ></i>
+          </a>
+          <a
+            href="mailto:parkashdev748@gmail.com"
+            class="btn-outline inline-flex items-center justify-center px-8 py-4 bg-white/[0.04] text-white border border-white/[0.12] rounded-xl font-semibold hover:border-[#4C6BFF] hover:text-[#4C6BFF]"
+          >
+            <i class="fas fa-calendar mr-2"></i> Book a call
+          </a>
         </div>
-
-        <!-- Content -->
-        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-            <h2 class="cta-headline font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Ready to ship your<br><span class="text-gradient">first agent?</span>
-            </h2>
-
-            <p class="cta-subheadline text-lg md:text-xl text-[#A7B1D8] max-w-xl mx-auto mb-10">
-                Start building free. Upgrade when you're ready to scale.
-            </p>
-
-            <div class="cta-buttons flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
-                <a href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat" target="_blank" class="btn-primary inline-flex items-center justify-center px-8 py-4 bg-[#4C6BFF] text-white rounded-xl font-semibold hover:bg-[#3D56CC] group">
-                    Talk to Agent <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                <a href="mailto:parkashdev748@gmail.com" class="btn-outline inline-flex items-center justify-center px-8 py-4 bg-white/[0.04] text-white border border-white/[0.12] rounded-xl font-semibold hover:border-[#4C6BFF] hover:text-[#4C6BFF]">
-                    <i class="fas fa-calendar mr-2"></i> Book a call
-                </a>
-            </div>
-        </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer id="footer" class="relative bg-[#070A12] border-t border-white/[0.06]" style="z-index: 110;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-                <!-- Brand -->
-                <div class="lg:col-span-2">
-                    <a href="index.html" class="flex items-center gap-2 mb-6">
-                        <img src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png" alt="GoravAI Logo" class="h-10 w-auto object-contain rounded-md">
-                        <span class="font-display font-bold text-xl text-white">Gorav<span class="text-[#4C6BFF]">AI</span></span>
-                    </a>
-                    <p class="text-[#A7B1D8] text-sm leading-relaxed mb-6 max-w-sm">
-                        GoravAI delivers modern, scalable, and intelligent digital solutions. Build agents that work while you sleep.
-                    </p>
-                    
-                    <!-- Contact info -->
-                    <div class="space-y-3">
-                        <a href="mailto:parkashdev748@gmail.com" class="flex items-center gap-3 text-sm text-[#A7B1D8] hover:text-white transition-colors">
-                            <i class="fas fa-envelope w-4 h-4 text-[#4C6BFF]"></i>
-                            parkashdev748@gmail.com
-                        </a>
-                        <a href="https://wa.me/923312726787" target="_blank" class="flex items-center gap-3 text-sm text-[#A7B1D8] hover:text-white transition-colors">
-                            <i class="fab fa-whatsapp w-4 h-4 text-[#4C6BFF]"></i>
-                            +92 331 2726787
-                        </a>
-                        <div class="flex items-start gap-3 text-sm text-[#A7B1D8]">
-                            <i class="fas fa-map-marker-alt w-4 h-4 text-[#4C6BFF] flex-shrink-0 mt-0.5"></i>
-                            <span>F-67/1196, Behind United Hotel Qazi Qayoom Road Hyder chowk Hyderabad Sindh</span>
-                        </div>
-                    </div>
-                </div>
+    <footer
+      id="footer"
+      class="relative bg-[#070A12] border-t border-white/[0.06]"
+      style="z-index: 110"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+          <!-- Brand -->
+          <div class="lg:col-span-2">
+            <a href="#" class="flex items-center gap-2 mb-6">
+              <img
+                src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
+                alt="GoravAI Logo"
+                class="h-10 w-auto object-contain rounded-md"
+              />
+              <span class="font-display font-bold text-xl text-white"
+                >Gorav<span class="text-[#4C6BFF]">AI</span></span
+              >
+            </a>
+            <p class="text-[#A7B1D8] text-sm leading-relaxed mb-6 max-w-sm">
+              GoravAI delivers modern, scalable, and intelligent digital
+              solutions. Build agents that work while you sleep.
+            </p>
 
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="font-display font-semibold text-white mb-4">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="index.html" class="text-sm text-[#A7B1D8] hover:text-white transition-colors">Home</a></li>
-                        <li><a href="projects.html" class="text-sm text-[#A7B1D8] hover:text-white transition-colors">Projects</a></li>
-                        <li><a href="pricing.html" class="text-sm text-[#A7B1D8] hover:text-white transition-colors">Pricing</a></li>
-                        <li><a href="#footer" class="text-sm text-[#A7B1D8] hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Services -->
-                <div>
-                    <h4 class="font-display font-semibold text-white mb-4">Services</h4>
-                    <ul class="space-y-3">
-                        <li><a href="services.html" class="text-sm text-[#A7B1D8] hover:text-white transition-colors">Web Development</a></li>
-                        <li><a href="services.html" class="text-sm text-[#A7B1D8] hover:text-white transition-colors">AI Agents</a></li>
-                        <li><a href="services.html" class="text-sm text-[#A7B1D8] hover:text-white transition-colors">Logo Design</a></li>
-                        <li><a href="services.html" class="text-sm text-[#A7B1D8] hover:text-white transition-colors">Digital Marketing</a></li>
-                        <li><a href="services.html" class="text-sm text-[#A7B1D8] hover:text-white transition-colors">Domain Selling</a></li>
-                    </ul>
-                </div>
-
-                <!-- Legal -->
-                <div>
-                    <h4 class="font-display font-semibold text-white mb-4">Legal</h4>
-                    <ul class="space-y-3">
-                        <li><a href="privacypolicy.html" class="text-sm text-[#A7B1D8] hover:text-white transition-colors">Privacy</a></li>
-                        <li><a href="privacypolicy.html" class="text-sm text-[#A7B1D8] hover:text-white transition-colors">Terms</a></li>
-                        <li><a href="#" class="text-sm text-[#A7B1D8] hover:text-white transition-colors">Security</a></li>
-                    </ul>
-                </div>
+            <!-- Contact info -->
+            <div class="space-y-3">
+              <a
+                href="mailto:parkashdev748@gmail.com"
+                class="flex items-center gap-3 text-sm text-[#A7B1D8] hover:text-white transition-colors"
+              >
+                <i class="fas fa-envelope w-4 h-4 text-[#4C6BFF]"></i>
+                parkashdev748@gmail.com
+              </a>
+              <a
+                href="https://wa.me/923312726787"
+                target="_blank"
+                class="flex items-center gap-3 text-sm text-[#A7B1D8] hover:text-white transition-colors"
+              >
+                <i class="fab fa-whatsapp w-4 h-4 text-[#4C6BFF]"></i>
+                +92 331 2726787
+              </a>
+              <div class="flex items-start gap-3 text-sm text-[#A7B1D8]">
+                <i
+                  class="fas fa-map-marker-alt w-4 h-4 text-[#4C6BFF] flex-shrink-0 mt-0.5"
+                ></i>
+                <span
+                  >F-67/1196, Behind United Hotel Qazi Qayoom Road Hyder chowk
+                  Hyderabad Sindh</span
+                >
+              </div>
             </div>
+          </div>
 
-            <!-- Bottom bar -->
-            <div class="mt-16 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p class="text-sm text-[#A7B1D8]/60">© 2025 GoravAI. All rights reserved.</p>
-                <div class="flex items-center gap-4">
-                    <a href="https://www.linkedin.com/in/gorav-kumar-61968a381" target="_blank" rel="noopener noreferrer" class="social-btn social-linkedin w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://x.com/GoravKhemani" target="_blank" rel="noopener noreferrer" class="social-btn social-x w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300">
-                        <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current">
-                            <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.instagram.com/gorav_khemani/" target="_blank" rel="noopener noreferrer" class="social-btn social-instagram w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/share/17VpXx6YjX/" target="_blank" rel="noopener noreferrer" class="social-btn social-facebook w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </div>
-            </div>
+          <!-- Quick Links -->
+          <div>
+            <h4 class="font-display font-semibold text-white mb-4">
+              Quick Links
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#home"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#pricing"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#footer"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h4 class="font-display font-semibold text-white mb-4">Services</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#services"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >AI Agents</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >Logo Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >Domain Selling</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h4 class="font-display font-semibold text-white mb-4">Legal</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >Privacy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >Terms</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >Security</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <!-- Bottom bar -->
+        <div
+          class="mt-16 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4"
+        >
+          <p class="text-sm text-[#A7B1D8]/60">
+            © 2025 GoravAI. All rights reserved.
+          </p>
+          <div class="flex items-center gap-4">
+            <a
+              href="https://www.linkedin.com/in/gorav-kumar-61968a381"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn social-linkedin w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://x.com/GoravKhemani"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn social-x w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
+            >
+              <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current">
+                <path
+                  d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/gorav_khemani/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn social-instagram w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/share/17VpXx6YjX/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn social-facebook w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script>
-        // Register GSAP ScrollTrigger
-        gsap.registerPlugin(ScrollTrigger);
+      // Register GSAP ScrollTrigger
+      gsap.registerPlugin(ScrollTrigger);
 
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Accordion toggle
+      function toggleAccordion(button) {
+        const item = button.parentElement;
+        const isActive = item.classList.contains("active");
+
+        // Close all accordions
+        document.querySelectorAll(".accordion-item").forEach((acc) => {
+          acc.classList.remove("active");
         });
 
-        // Accordion toggle
-        function toggleAccordion(button) {
-            const item = button.parentElement;
-            const isActive = item.classList.contains('active');
-            
-            // Close all accordions
-            document.querySelectorAll('.accordion-item').forEach(acc => {
-                acc.classList.remove('active');
-            });
-            
-            // Open clicked one if it wasn't active
-            if (!isActive) {
-                item.classList.add('active');
-            }
+        // Open clicked one if it wasn't active
+        if (!isActive) {
+          item.classList.add("active");
         }
+      }
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('glass-nav');
-            } else {
-                nav.classList.remove('glass-nav');
-            }
-        });
+      // Navbar scroll effect
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 50) {
+          nav.classList.add("glass-nav");
+        } else {
+          nav.classList.remove("glass-nav");
+        }
+      });
 
-        // Hero Entrance Animation (on page load)
-        window.addEventListener('load', () => {
-            const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      // Set initial states for hero elements
+      gsap.set(".hero-orb", { opacity: 0, scale: 0.85 });
+      gsap.set(".hero-badge", { y: 20, opacity: 0 });
+      gsap.set(".hero-headline", { y: 30, opacity: 0 });
+      gsap.set(".hero-subheadline", { y: 20, opacity: 0 });
+      gsap.set(".hero-cta", { y: 15, opacity: 0 });
+      gsap.set(".hero-scroll", { opacity: 0 });
 
-            heroTl.to('.hero-orb', { opacity: 1, scale: 1, duration: 1.2 });
-            heroTl.to('.hero-badge', { y: 0, opacity: 1, duration: 0.6 }, '-=0.8');
-            heroTl.to('.hero-headline', { y: 0, opacity: 1, duration: 0.8 }, '-=0.5');
-            heroTl.to('.hero-subheadline', { y: 0, opacity: 1, duration: 0.6 }, '-=0.4');
-            heroTl.to('.hero-cta', { y: 0, opacity: 1, duration: 0.5 }, '-=0.3');
-            heroTl.to('.hero-scroll', { opacity: 1, duration: 0.5 }, '-=0.2');
-        });
+      // Hero Entrance Animation (on page load)
+      window.addEventListener("load", () => {
+        const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-        // Set initial states for hero elements
-        gsap.set('.hero-orb', { opacity: 0, scale: 0.85 });
-        gsap.set('.hero-badge', { y: 20, opacity: 0 });
-        gsap.set('.hero-headline', { y: 30, opacity: 0 });
-        gsap.set('.hero-subheadline', { y: 20, opacity: 0 });
-        gsap.set('.hero-cta', { y: 15, opacity: 0 });
-        gsap.set('.hero-scroll', { opacity: 0 });
+        heroTl.to(".hero-orb", { opacity: 1, scale: 1, duration: 1.2 });
+        heroTl.to(".hero-badge", { y: 0, opacity: 1, duration: 0.6 }, "-=0.8");
+        heroTl.to(
+          ".hero-headline",
+          { y: 0, opacity: 1, duration: 0.8 },
+          "-=0.5",
+        );
+        heroTl.to(
+          ".hero-subheadline",
+          { y: 0, opacity: 1, duration: 0.6 },
+          "-=0.4",
+        );
+        heroTl.to(".hero-cta", { y: 0, opacity: 1, duration: 0.5 }, "-=0.3");
+        heroTl.to(".hero-scroll", { opacity: 1, duration: 0.5 }, "-=0.2");
+      });
 
-        // Agent Builder Section Scroll Animation
-        gsap.from('.agent-builder-headline', {
-            scrollTrigger: {
-                trigger: '#agent-builder',
-                start: 'top 80%',
-                end: 'top 40%',
-                scrub: 1
-            },
-            x: -100,
-            opacity: 0
-        });
+      // Agent Builder Section Scroll Animation
+      gsap.from(".agent-builder-headline", {
+        scrollTrigger: {
+          trigger: "#agent-builder",
+          start: "top 80%",
+          end: "top 40%",
+          scrub: 1,
+        },
+        x: -100,
+        opacity: 0,
+      });
 
-        gsap.from('.agent-builder-body', {
-            scrollTrigger: {
-                trigger: '#agent-builder',
-                start: 'top 70%',
-                end: 'top 35%',
-                scrub: 1
-            },
-            x: -80,
-            opacity: 0
-        });
+      gsap.from(".agent-builder-body", {
+        scrollTrigger: {
+          trigger: "#agent-builder",
+          start: "top 70%",
+          end: "top 35%",
+          scrub: 1,
+        },
+        x: -80,
+        opacity: 0,
+      });
 
-        gsap.from('.agent-builder-features li', {
-            scrollTrigger: {
-                trigger: '#agent-builder',
-                start: 'top 60%',
-                end: 'top 30%',
-                scrub: 1
-            },
-            x: -60,
+      gsap.from(".agent-builder-features li", {
+        scrollTrigger: {
+          trigger: "#agent-builder",
+          start: "top 60%",
+          end: "top 30%",
+          scrub: 1,
+        },
+        x: -60,
+        opacity: 0,
+        stagger: 0.1,
+      });
+
+      gsap.from(".agent-builder-card", {
+        scrollTrigger: {
+          trigger: "#agent-builder",
+          start: "top 80%",
+          end: "top 40%",
+          scrub: 1,
+        },
+        x: 100,
+        opacity: 0,
+        scale: 0.95,
+      });
+
+      // === UPDATED: Agent Network Section (Shorter, No Rotation, Center Reveal) ===
+      const networkTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#agent-network",
+          start: "top top",
+          end: "+=1200", // Shorter height
+          pin: true,
+          scrub: 1,
+        },
+      });
+
+      // Phase 1: Entrance (0% - 40%)
+      // 1. Headline drops from top
+      networkTl.to(
+        ".agent-network-headline",
+        { y: 0, opacity: 1, duration: 1 },
+        0,
+      );
+      networkTl.to(
+        ".agent-network-subheadline",
+        { opacity: 1, duration: 1 },
+        0.2,
+      );
+
+      // 2. Hub scales up from center
+      networkTl.to(
+        ".agent-hub",
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 1,
+          ease: "back.out(1.7)",
+        },
+        0.5,
+      );
+
+      // 3. Nodes expand outward from center (0,0) to position
+      // Positions calculated for equal distance (140px radius)
+      const nodePositions = [
+        { x: 140, y: 0 }, // Research (0deg)
+        { x: 70, y: -121 }, // Write (60deg)
+        { x: -70, y: -121 }, // Code (120deg)
+        { x: -140, y: 0 }, // Review (180deg)
+        { x: -70, y: 121 }, // Deploy (240deg)
+        { x: 70, y: 121 }, // Analyze (300deg)
+      ];
+
+      networkTl.to(
+        ".network-node",
+        {
+          x: (i) => nodePositions[i].x,
+          y: (i) => nodePositions[i].y,
+          scale: 1,
+          opacity: 1,
+          stagger: 0.1,
+          ease: "power2.out",
+          duration: 1,
+        },
+        1.2,
+      );
+
+      // 4. Lines draw out
+      networkTl.fromTo(
+        ".connection-line",
+        { scaleX: 0 },
+        { scaleX: 1, duration: 0.8, stagger: 0.05, ease: "power2.inOut" },
+        1.8,
+      );
+
+      // Phase 2: Hold/Settle (40% - 70%)
+      // Just a brief pause, no rotation
+
+      // Phase 3: Exit (70% - 100%)
+      networkTl.to(
+        [".agent-network-headline", ".agent-network-subheadline"],
+        { opacity: 0, y: -20, duration: 0.5 },
+        2.5,
+      );
+      networkTl.to(
+        [".agent-hub", ".network-node", ".connection-line"],
+        { scale: 0, opacity: 0, duration: 0.8 },
+        2.8,
+      );
+
+      // // === END UPDATED SECTION ===
+
+      // Turn tasks into outcomes.
+      // Set initial states
+      gsap.set(".usecases-header, .usecase-card", {
+        opacity: 0,
+        x: (i, t) => (t.classList.contains("usecases-header") ? -50 : 80),
+      });
+
+      // Master timeline function
+      function playEntranceAnimation() {
+        const tl = gsap.timeline();
+
+        tl.to(".usecases-header", {
+          x: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power2.out",
+        }).to(
+          ".usecase-card",
+          {
+            x: 0,
+            opacity: 1,
+            duration: 0.6,
+            stagger: 0.15,
+            ease: "power2.out",
+          },
+          "-=0.4",
+        );
+
+        return tl;
+      }
+
+      // Play immediately on page load
+      const masterTl = playEntranceAnimation();
+
+      // Reset and replay on scroll re-entry
+      ScrollTrigger.create({
+        trigger: "#projects",
+        start: "top 80%",
+        end: "bottom top",
+        onEnter: () => {
+          // Only replay if not already visible from load
+          if (masterTl.progress() === 1) {
+            gsap.set(".usecases-header, .usecase-card", {
+              opacity: 0,
+              x: (i, t) => (t.classList.contains("usecases-header") ? -50 : 80),
+            });
+            playEntranceAnimation();
+          }
+        },
+        onLeave: () => {
+          // Reset when leaving so it can re-animate
+          gsap.set(".usecases-header, .usecase-card", { opacity: 0 });
+        },
+        onEnterBack: () => {
+          gsap.set(".usecases-header, .usecase-card", {
             opacity: 0,
-            stagger: 0.1
-        });
+            x: (i, t) => (t.classList.contains("usecases-header") ? -50 : 80),
+          });
+          playEntranceAnimation();
+        },
+      });
+      // // === END UPDATED SECTION ===
 
-        gsap.from('.agent-builder-card', {
-            scrollTrigger: {
-                trigger: '#agent-builder',
-                start: 'top 80%',
-                end: 'top 40%',
-                scrub: 1
-            },
-            x: 100,
-            opacity: 0,
-            scale: 0.95
-        });
+      // ==================== AGENCY SECTION ====================
 
-        // Agent Network Section Scroll Animation
-        gsap.from('.agent-network-headline', {
-            scrollTrigger: {
-                trigger: '#agent-network',
-                start: 'top 80%',
-                end: 'top 40%',
-                scrub: 1
-            },
-            y: -50,
-            opacity: 0
-        });
+      // Set initial visible state to prevent hidden elements
+      gsap.set(".agency-image, .agency-header, .agency-card", { opacity: 1 });
 
-        gsap.from('.agent-network-subheadline', {
-            scrollTrigger: {
-                trigger: '#agent-network',
-                start: 'top 70%',
-                end: 'top 35%',
-                scrub: 1
-            },
-            y: -30,
-            opacity: 0
-        });
+      // Agency Image - Load Animation + Scroll Effect
+      gsap.fromTo(
+        ".agency-image",
+        { x: -80, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".agency-image",
+            start: "top 85%",
+            toggleActions: "play none none reverse", // play on enter, reverse on leave
+          },
+        },
+      );
 
-        gsap.from('.agent-hub', {
-            scrollTrigger: {
-                trigger: '#agent-network',
-                start: 'top 60%',
-                end: 'top 20%',
-                scrub: 1
-            },
-            scale: 0.5,
-            opacity: 0
-        });
+      // Agency Header - Load Animation + Scroll Effect
+      gsap.fromTo(
+        ".agency-header",
+        { x: 60, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power2.out",
+          delay: 0.2,
+          scrollTrigger: {
+            trigger: ".agency-header",
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        },
+      );
 
-        gsap.from('.network-node', {
-            scrollTrigger: {
-                trigger: '#agent-network',
-                start: 'top 50%',
-                end: 'top 10%',
-                scrub: 1
-            },
-            scale: 0.6,
-            opacity: 0,
-            stagger: 0.05
-        });
+      // Agency Cards - Load Animation + Scroll Effect
+      gsap.fromTo(
+        ".agency-card",
+        { x: 80, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power2.out",
+          delay: 0.3,
+          scrollTrigger: {
+            trigger: ".agency-card",
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        },
+      );
 
-        gsap.from('.connection-line', {
-            scrollTrigger: {
-                trigger: '#agent-network',
-                start: 'top 45%',
-                end: 'top 5%',
-                scrub: 1
-            },
-            scaleX: 0,
-            opacity: 0,
-            stagger: 0.03
-        });
+      // ==================== TESTIMONIALS SECTION ====================
 
-        // Use Cases Section Scroll Animation
-        gsap.from('.usecases-header', {
-            scrollTrigger: {
-                trigger: '#projects',
-                start: 'top 80%',
-                end: 'top 40%',
-                scrub: 1
-            },
-            x: -50,
-            opacity: 0
-        });
+      // Set initial visible state
+      gsap.set(".testimonials-header, .testimonial-card", { opacity: 1 });
 
-        gsap.from('.usecase-card', {
-            scrollTrigger: {
-                trigger: '#projects',
-                start: 'top 60%',
-                end: 'top 10%',
-                scrub: 1
-            },
-            x: 80,
-            opacity: 0,
-            stagger: 0.15
-        });
+      // Testimonials Header - Load Animation + Scroll Effect
+      gsap.fromTo(
+        ".testimonials-header",
+        { y: -30, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".testimonials-header",
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        },
+      );
 
-        // Services Section Scroll Animation
-        gsap.from('.services-header', {
-            scrollTrigger: {
-                trigger: '#services',
-                start: 'top 80%',
-                end: 'top 40%',
-                scrub: 1
-            },
-            y: 30,
-            opacity: 0
-        });
+      // Testimonial Cards - Load Animation + Scroll Effect
+      gsap.fromTo(
+        ".testimonial-card",
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power2.out",
+          delay: 0.2,
+          scrollTrigger: {
+            trigger: ".testimonial-card",
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        },
+      );
 
-        gsap.from('.service-card', {
-            scrollTrigger: {
-                trigger: '#services',
-                start: 'top 60%',
-                end: 'top 10%',
-                scrub: 1
-            },
-            y: 60,
-            opacity: 0,
-            stagger: 0.1
-        });
+      // Services Section Scroll Animation
+      gsap.from(".services-header", {
+        scrollTrigger: {
+          trigger: "#services",
+          start: "top 80%",
+          end: "top 40%",
+          scrub: 1,
+        },
+        y: 30,
+        opacity: 0,
+      });
 
-        // Agency Section Scroll Animation
-        gsap.from('.agency-image', {
-            scrollTrigger: {
-                trigger: '.agency-image',
-                start: 'top 80%',
-                end: 'top 40%',
-                scrub: 1
-            },
-            x: -80,
-            opacity: 0
-        });
+      gsap.from(".service-card", {
+        scrollTrigger: {
+          trigger: "#services",
+          start: "top 60%",
+          end: "top 10%",
+          scrub: 1,
+        },
+        y: 60,
+        opacity: 0,
+        stagger: 0.1,
+      });
 
-        gsap.from('.agency-header', {
-            scrollTrigger: {
-                trigger: '.agency-header',
-                start: 'top 80%',
-                end: 'top 40%',
-                scrub: 1
-            },
-            x: 60,
-            opacity: 0
-        });
+      // agency-grade delivery section
 
-        gsap.from('.agency-card', {
-            scrollTrigger: {
-                trigger: '.agency-card',
-                start: 'top 85%',
-                end: 'top 40%',
-                scrub: 1
-            },
-            x: 80,
-            opacity: 0,
-            stagger: 0.1
-        });
+      // About Section Scroll Animation
+      gsap.from(".about-content", {
+        scrollTrigger: {
+          trigger: "#about",
+          start: "top 80%",
+          end: "top 40%",
+          scrub: 1,
+        },
+        x: -60,
+        opacity: 0,
+      });
 
-        // Testimonials Section Scroll Animation
-        gsap.from('.testimonials-header', {
-            scrollTrigger: {
-                trigger: '.testimonials-header',
-                start: 'top 80%',
-                end: 'top 50%',
-                scrub: 1
-            },
-            y: -30,
-            opacity: 0
-        });
+      gsap.from(".about-image", {
+        scrollTrigger: {
+          trigger: "#about",
+          start: "top 80%",
+          end: "top 40%",
+          scrub: 1,
+        },
+        x: 60,
+        opacity: 0,
+        scale: 0.95,
+      });
 
-        gsap.from('.testimonial-card', {
-            scrollTrigger: {
-                trigger: '.testimonial-card',
-                start: 'top 85%',
-                end: 'top 40%',
-                scrub: 1
-            },
-            y: 50,
-            opacity: 0,
-            stagger: 0.1
-        });
+      // FAQ Section Scroll Animation
+      gsap.from(".faq-header", {
+        scrollTrigger: {
+          trigger: ".faq-header",
+          start: "top 80%",
+          end: "top 50%",
+          scrub: 1,
+        },
+        y: -30,
+        opacity: 0,
+      });
 
-        // About Section Scroll Animation
-        gsap.from('.about-content', {
-            scrollTrigger: {
-                trigger: '#about',
-                start: 'top 80%',
-                end: 'top 40%',
-                scrub: 1
-            },
-            x: -60,
-            opacity: 0
-        });
+      gsap.from(".accordion-item", {
+        scrollTrigger: {
+          trigger: ".accordion-item",
+          start: "top 85%",
+          end: "top 50%",
+          scrub: 1,
+        },
+        y: 30,
+        opacity: 0,
+        stagger: 0.05,
+      });
 
-        gsap.from('.about-image', {
-            scrollTrigger: {
-                trigger: '#about',
-                start: 'top 80%',
-                end: 'top 40%',
-                scrub: 1
-            },
-            x: 60,
-            opacity: 0,
-            scale: 0.95
-        });
+      // Final CTA Section Scroll Animation
+      gsap.from(".cta-orb", {
+        scrollTrigger: {
+          trigger: ".cta-orb",
+          start: "top 80%",
+          end: "top 40%",
+          scrub: 1,
+        },
+        scale: 0.8,
+        opacity: 0,
+      });
 
-        // FAQ Section Scroll Animation
-        gsap.from('.faq-header', {
-            scrollTrigger: {
-                trigger: '.faq-header',
-                start: 'top 80%',
-                end: 'top 50%',
-                scrub: 1
-            },
-            y: -30,
-            opacity: 0
-        });
+      gsap.from(".cta-headline", {
+        scrollTrigger: {
+          trigger: ".cta-headline",
+          start: "top 80%",
+          end: "top 50%",
+          scrub: 1,
+        },
+        y: -50,
+        opacity: 0,
+      });
 
-        gsap.from('.accordion-item', {
-            scrollTrigger: {
-                trigger: '.accordion-item',
-                start: 'top 85%',
-                end: 'top 50%',
-                scrub: 1
-            },
-            y: 30,
-            opacity: 0,
-            stagger: 0.05
-        });
+      gsap.from(".cta-subheadline", {
+        scrollTrigger: {
+          trigger: ".cta-subheadline",
+          start: "top 85%",
+          end: "top 55%",
+          scrub: 1,
+        },
+        y: -30,
+        opacity: 0,
+      });
 
-        // Final CTA Section Scroll Animation
-        gsap.from('.cta-orb', {
-            scrollTrigger: {
-                trigger: '.cta-orb',
-                start: 'top 80%',
-                end: 'top 40%',
-                scrub: 1
-            },
-            scale: 0.8,
-            opacity: 0
-        });
-
-        gsap.from('.cta-headline', {
-            scrollTrigger: {
-                trigger: '.cta-headline',
-                start: 'top 80%',
-                end: 'top 50%',
-                scrub: 1
-            },
-            y: -50,
-            opacity: 0
-        });
-
-        gsap.from('.cta-subheadline', {
-            scrollTrigger: {
-                trigger: '.cta-subheadline',
-                start: 'top 85%',
-                end: 'top 55%',
-                scrub: 1
-            },
-            y: -30,
-            opacity: 0
-        });
-
-        gsap.from('.cta-buttons', {
-            scrollTrigger: {
-                trigger: '.cta-buttons',
-                start: 'top 90%',
-                end: 'top 60%',
-                scrub: 1
-            },
-            y: 30,
-            opacity: 0
-        });
+      gsap.from(".cta-buttons", {
+        scrollTrigger: {
+          trigger: ".cta-buttons",
+          start: "top 90%",
+          end: "top 60%",
+          scrub: 1,
+        },
+        y: 30,
+        opacity: 0,
+      });
     </script>
-</body>
+  </body>
 </html>
