@@ -211,6 +211,39 @@
         background-clip: text;
       }
 
+      .social-btn {
+        transition: all 0.3s ease;
+        transform-style: preserve-3d;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .social-btn:hover {
+        transform: translateY(-3px);
+      }
+
+      .social-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.5) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: skewX(-20deg) translateX(-150%);
+        transition: transform 0.6s ease;
+        z-index: 10;
+      }
+
+      .social-btn:hover::before {
+        transform: skewX(-20deg) translateX(300%);
+      }
+
       /* Social icon hover colors */
       .social-linkedin:hover {
         background-color: #0077b5 !important;
@@ -265,7 +298,7 @@
 
           <div class="hidden md:flex items-center space-x-8">
             <a
-              href="#home"
+              href="index.html"
               class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
               >Home</a
             >
@@ -318,7 +351,7 @@
       >
         <div class="px-4 pt-2 pb-6 space-y-2">
           <a
-            href="#home"
+            href="index.html"
             class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
             >Home</a
           >
@@ -458,7 +491,7 @@
             <ul class="space-y-3">
               <li>
                 <a
-                  href="#home"
+                  href="index.html"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
                   >Home</a
                 >
@@ -512,23 +545,23 @@
             <ul class="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="privacy.html"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
                   >Privacy</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Privacy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
+                  href="privacy.html"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
                   >Terms</a
+                >
+              </li>
+              <li>
+                <a
+                  href="privacy.html"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >Security</a
                 >
               </li>
             </ul>
@@ -542,7 +575,7 @@
           </p>
           <div class="flex items-center gap-4">
             <a
-              href="https://www.linkedin.com/in/gorav-kumar-61968a381"
+              href="https://www.linkedin.com/company/gorav-ai/?viewAsMember=true"
               target="_blank"
               class="social-btn social-linkedin w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
             >
@@ -567,7 +600,7 @@
               <i class="fab fa-instagram"></i>
             </a>
             <a
-              href="https://www.facebook.com/share/17VpXx6YjX/"
+              href="https://www.facebook.com/profile.php?id=61585322057102"
               target="_blank"
               class="social-btn social-facebook w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
             >
