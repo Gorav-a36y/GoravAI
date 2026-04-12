@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects | GoravAI - Web, AI & Brand Solutions</title>
+    <title>AI Solutions | GoravAI - Agentic AI & Vibe AI Software</title>
     <meta
       name="description"
-      content="Explore GoravAI's portfolio of enterprise solutions including web development, AI automation agents, and professional brand identity design services."
+      content="Explore GoravAI's cutting-edge AI solutions including Agentic AI automation for Shopify, healthcare, education, and Vibe AI Software like LeadGen Pro, House Map Generator, Content Studio, Data Insights, and Auto Code."
     />
     <meta name="robots" content="index, follow" />
     <link
@@ -18,11 +18,11 @@
     <!-- OpenGraph Metadata -->
     <meta
       property="og:title"
-      content="Projects | GoravAI - Web, AI & Brand Solutions"
+      content="AI Solutions | GoravAI - Agentic AI & Vibe AI Software"
     />
     <meta
       property="og:description"
-      content="Explore GoravAI's portfolio of enterprise solutions including web development, AI automation agents, and professional brand identity design services."
+      content="Explore GoravAI's AI solutions including 24/7 Shopify agents, LeadGen Pro, House Map Generator, and productivity software suite."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -39,11 +39,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Projects | GoravAI - Web, AI & Brand Solutions"
+      content="AI Solutions | GoravAI - Agentic AI & Vibe AI Software"
     />
     <meta
       name="twitter:description"
-      content="Explore GoravAI's portfolio of enterprise solutions including web development, AI automation agents, and professional brand identity design services."
+      content="Explore GoravAI's AI solutions including 24/7 Shopify agents, LeadGen Pro, House Map Generator, and productivity software suite."
     />
     <meta
       name="twitter:image"
@@ -58,7 +58,7 @@
         "name": "GoravAI",
         "url": "https://gorav-a36y.github.io/GoravAI/",
         "logo": "https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png",
-        "description": "GoravAI delivers modern, scalable, and intelligent digital solutions including web development, AI agents, and brand design.",
+        "description": "GoravAI delivers intelligent Agentic AI solutions and Vibe AI Software for enterprise automation, lead generation, content creation, and development.",
         "sameAs": [
           "https://www.linkedin.com/company/gorav-ai/",
           "https://x.com/GoravKhemani",
@@ -195,10 +195,12 @@
         justify-content: center;
         text-align: center;
         padding: 2rem;
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
-        opacity: 0.5;
+        opacity: 0.4;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transform-style: preserve-3d;
+        will-change: transform, opacity;
       }
 
       .carousel-card.center {
@@ -212,11 +214,20 @@
       .carousel-card.left {
         transform: translateX(-320px) scale(0.9) rotateY(10deg);
         z-index: 5;
+        opacity: 0.6;
       }
 
       .carousel-card.right {
         transform: translateX(320px) scale(0.9) rotateY(-10deg);
         z-index: 5;
+        opacity: 0.6;
+      }
+
+      .carousel-card.hidden {
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.6) rotateY(0deg);
+        z-index: 0;
       }
 
       .workflow-node {
@@ -313,7 +324,6 @@
         transform: skewX(-20deg) translateX(300%);
       }
 
-      /* Social icon hover colors */
       .social-linkedin:hover {
         background-color: #0077b5 !important;
         color: white !important;
@@ -372,7 +382,7 @@
               >Home</a
             >
             <a
-              href="#services"
+              href="index.html#services"
               class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
               >Services</a
             >
@@ -382,7 +392,7 @@
               >Projects</a
             >
             <a
-              href="#about"
+              href="index.html#about"
               class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
               >About</a
             >
@@ -425,12 +435,12 @@
             >Home</a
           >
           <a
-            href="#services"
+            href="index.html#services"
             class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
             >Services</a
           >
           <a
-            href="#projects"
+            href="index.html#projects"
             class="block px-3 py-2 text-base font-medium text-white bg-white/[0.04] rounded-md"
             >Projects</a
           >
@@ -447,11 +457,12 @@
       <!-- Hero Section -->
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
         <h1 class="font-display text-5xl md:text-6xl font-bold mb-6">
-          Our <span class="gradient-text">Projects</span>
+          Our <span class="gradient-text">AI Solutions</span>
         </h1>
         <p class="text-[#A7B1D8] text-lg max-w-2xl mx-auto">
-          Explore our portfolio of enterprise solutions across web development,
-          AI automation, and brand identity.
+          Explore our portfolio of intelligent Agentic AI solutions and Vibe AI
+          Software. From 24/7 Shopify support to automated lead generation,
+          content creation, and architectural design.
         </p>
       </section>
 
@@ -460,12 +471,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-center gap-12 md:gap-24">
             <button
-              class="category-btn text-lg font-display font-medium text-[#A7B1D8] pb-4"
-              onclick="switchCategory('web')"
-            >
-              Web Development
-            </button>
-            <button
               class="category-btn active text-lg font-display font-medium text-white pb-4"
               onclick="switchCategory('ai')"
             >
@@ -473,9 +478,9 @@
             </button>
             <button
               class="category-btn text-lg font-display font-medium text-[#A7B1D8] pb-4"
-              onclick="switchCategory('logo')"
+              onclick="switchCategory('software')"
             >
-              Brand Logo
+              Vibe AI Software
             </button>
           </div>
         </div>
@@ -483,22 +488,16 @@
 
       <!-- Content Container -->
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- WEB DEVELOPMENT SECTION -->
-        <div id="web-section" class="category-content hidden">
-          <div class="carousel-container" id="web-carousel"></div>
-          <div id="web-details" class="mt-16"></div>
-        </div>
-
         <!-- AGENTIC AI SECTION -->
         <div id="ai-section" class="category-content">
           <div class="carousel-container" id="ai-carousel"></div>
           <div id="ai-details" class="mt-16 max-w-4xl mx-auto"></div>
         </div>
 
-        <!-- BRAND LOGO SECTION -->
-        <div id="logo-section" class="category-content hidden">
-          <div class="carousel-container" id="logo-carousel"></div>
-          <div id="logo-details" class="mt-16"></div>
+        <!-- VIBE AI SOFTWARE SECTION -->
+        <div id="software-section" class="category-content hidden">
+          <div class="carousel-container" id="software-carousel"></div>
+          <div id="software-details" class="mt-16 max-w-4xl mx-auto"></div>
         </div>
       </section>
     </main>
@@ -522,8 +521,9 @@
               >
             </a>
             <p class="text-[#A7B1D8] text-sm leading-relaxed mb-6 max-w-sm">
-              GoravAI delivers modern, scalable, and intelligent digital
-              solutions. Build agents that work while you sleep.
+              GoravAI delivers modern, scalable, and intelligent automation
+              solutions for e-commerce sellers. Build Telegram AI agents that
+              work while you sleep.
             </p>
             <div class="space-y-3">
               <a
@@ -567,9 +567,23 @@
               </li>
               <li>
                 <a
-                  href="#projects"
+                  href="index.html#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Projects</a
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#software"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >Software</a
+                >
+              </li>
+              <li>
+                <a
+                  href="projects.html"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >projects</a
                 >
               </li>
               <li>
@@ -587,37 +601,37 @@
             <ul class="space-y-3">
               <li>
                 <a
-                  href="#services"
+                  href="index.html#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Web Development</a
+                  >Telegram AI Agents</a
                 >
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="index.html#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >AI Agents</a
+                  >Shopify Automation</a
                 >
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="index.html#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Logo Design</a
+                  >Vibe Coding</a
                 >
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="index.html#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Digital Marketing</a
+                  >AI Video Ads</a
                 >
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="index.html#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Domain Selling</a
+                  >Brand Design</a
                 >
               </li>
             </ul>
@@ -628,21 +642,21 @@
             <ul class="space-y-3">
               <li>
                 <a
-                  href="privacy.html"
+                  href="privacypolicy.html"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
                   >Privacy</a
                 >
               </li>
               <li>
                 <a
-                  href="privacy.html"
+                  href="privacypolicy.html"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
                   >Terms</a
                 >
               </li>
               <li>
                 <a
-                  href="privacy.html"
+                  href="privacypolicy.html"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
                   >Security</a
                 >
@@ -695,79 +709,85 @@
     </footer>
 
     <script>
-      // Data for all categories
+      /*
+       * HOW TO ADD NEW SOFTWARE TO THE CAROUSEL:
+       *
+       * 1. Find the 'projectsData' object below
+       * 2. Locate the 'software' section (or 'ai' for Agentic AI)
+       * 3. Add your new software name to the 'items' array
+       * 4. Add a corresponding details object to the 'details' array at the SAME index
+       *
+       * Template for new software:
+       * {
+       *   title: "Your Software Name",
+       *   category: "Category Name",
+       *   description: "Description here...",
+       *   capabilities: ["Feature 1", "Feature 2", "Feature 3"],
+       *   downloadLink: "https://your-download-link.com", // Optional: for download button
+       *   showDownload: true, // Set true to show download button
+       *   workflow: [
+       *     {step: 1, title: "Step Name", desc: "Description", color: "blue"},
+       *     {step: 2, title: "Step Name", desc: "Description", color: "cyan"},
+       *     {step: 3, title: "Step Name", desc: "Description", color: "purple"},
+       *     {step: 4, title: "Step Name", desc: "Description", color: "green"}
+       *   ]
+       * }
+       *
+       * Note: The carousel works best with 2-5 items. With 2 items, it shows left+center.
+       * With 3+ items, it shows left+center+right and hides the rest.
+       */
+
+      // Data for AI categories
       const projectsData = {
-        web: {
-          items: ["Basic Website", "Standard Website", "Premium Website"],
-          details: [
-            {
-              title: "Basic Website",
-              price: "Rs 20,000",
-              pages: "Up To 4 Total Pages",
-              delivery: "7 Days",
-              features: [
-                "Basic SEO",
-                "Speed Optimization",
-                "Design Customization",
-                "Mobile Responsive",
-                "Custom Design",
-                "W3C Validation",
-                "Consultation",
-                "Training",
-                "Support",
-              ],
-              description:
-                "Perfect for startups and small businesses looking to establish an online presence with essential features.",
-              image:
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-            },
-            {
-              title: "Standard Website",
-              price: "Rs 25,000",
-              pages: "Up To 6 Total Pages",
-              delivery: "7 Days",
-              features: [
-                "Basic SEO",
-                "Speed Optimization",
-                "Design Customization",
-                "Mobile Responsive",
-                "Custom Design",
-                "W3C Validation",
-                "Consultation",
-                "Training",
-                "Support",
-              ],
-              description:
-                "Ideal for growing businesses that need more pages and professional web presence.",
-              image:
-                "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80 ",
-            },
-            {
-              title: "Premium Website",
-              price: "Rs 30,000",
-              pages: "Up To 10 Total Pages",
-              delivery: "7 Days",
-              features: [
-                "Complete SEO",
-                "Speed Optimization",
-                "Design Customization",
-                "Mobile Responsive",
-                "Custom Design",
-                "W3C Validation",
-                "Consultation",
-                "Training",
-                "Support",
-              ],
-              description:
-                "Enterprise-grade solution with complete SEO and extended page limits for large businesses.",
-              image:
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80 ",
-            },
-          ],
-        },
         ai: {
-          items: ["AI Education", "Sparky Automation", "Hospital Management"],
+          // Shopify Agent is now first (index 0) for priority
+          items: [
+            "Shopify Agent",
+            "AI Education",
+            "Hospital Management",
+            "Sparky Automation",
+          ],
           details: [
+            {
+              title: "Shopify Agent",
+              category: "E-commerce AI",
+              description:
+                "An intelligent AI agent that handles customer service 24/7 for your Shopify store. Specialized in WISMO (Where Is My Order) queries, returns, refunds, and instant support without human intervention.",
+              capabilities: [
+                "24/7 automated customer support",
+                "WISMO handling with real-time tracking",
+                "Order status and return management",
+                "Product recommendations & upselling",
+                "Abandoned cart recovery",
+                "Multi-language customer communication",
+              ],
+              workflow: [
+                {
+                  step: 1,
+                  title: "Customer Query",
+                  desc: "WISMO or support request received",
+                  color: "blue",
+                },
+                {
+                  step: 2,
+                  title: "Order Lookup",
+                  desc: "Fetch real-time order status",
+                  color: "cyan",
+                },
+                {
+                  step: 3,
+                  title: "AI Response",
+                  desc: "Generate helpful contextual reply",
+                  color: "purple",
+                },
+                {
+                  step: 4,
+                  title: "Resolution",
+                  desc: "Update order or escalate to human",
+                  color: "green",
+                },
+              ],
+            },
             {
               title: "AI Education Platform",
               category: "EdTech / AI Tutors",
@@ -803,45 +823,6 @@
                   step: 4,
                   title: "Memory Update",
                   desc: "Save progress to database",
-                  color: "green",
-                },
-              ],
-            },
-            {
-              title: "Sparky Automation",
-              category: "Service Automation",
-              description:
-                "An AI agent that manages electrician jobs, pricing, scheduling, and client communication automatically. Distinguishes between Simple Work and Complex Work.",
-              capabilities: [
-                "AI dispatcher for service calls",
-                "Instant pricing for simple jobs",
-                "Image analysis for complex tasks",
-                "Automated DOC file generation",
-                "Client communication handling",
-              ],
-              workflow: [
-                {
-                  step: 1,
-                  title: "Incoming Call",
-                  desc: "WhatsApp/Voice intake",
-                  color: "blue",
-                },
-                {
-                  step: 2,
-                  title: "Job Classifier",
-                  desc: "Simple vs Complex analysis",
-                  color: "cyan",
-                },
-                {
-                  step: 3,
-                  title: "Quote Engine",
-                  desc: "Generate pricing instantly",
-                  color: "purple",
-                },
-                {
-                  step: 4,
-                  title: "Scheduler",
-                  desc: "Book appointment automatically",
                   color: "green",
                 },
               ],
@@ -885,78 +866,274 @@
                 },
               ],
             },
+            {
+              title: "Sparky Automation",
+              category: "Service Automation",
+              description:
+                "An AI agent that manages electrician jobs, pricing, scheduling, and client communication automatically. Distinguishes between Simple Work and Complex Work.",
+              capabilities: [
+                "AI dispatcher for service calls",
+                "Instant pricing for simple jobs",
+                "Image analysis for complex tasks",
+                "Automated DOC file generation",
+                "Client communication handling",
+              ],
+              workflow: [
+                {
+                  step: 1,
+                  title: "Incoming Call",
+                  desc: "WhatsApp/Voice intake",
+                  color: "blue",
+                },
+                {
+                  step: 2,
+                  title: "Job Classifier",
+                  desc: "Simple vs Complex analysis",
+                  color: "cyan",
+                },
+                {
+                  step: 3,
+                  title: "Quote Engine",
+                  desc: "Generate pricing instantly",
+                  color: "purple",
+                },
+                {
+                  step: 4,
+                  title: "Scheduler",
+                  desc: "Book appointment automatically",
+                  color: "green",
+                },
+              ],
+            },
           ],
         },
-        logo: {
+        software: {
+          // Priority order: LeadGen Pro first, then House Map Generator, then others
           items: [
-            "Basic Logo Package",
-            "Standard Logo Package",
-            "Premium Logo Package",
+            "LeadGen Pro",
+            "House Map Generator",
+            "Content Studio",
+            "Data Insights",
+            "Auto Code",
           ],
           details: [
             {
-              title: "Basic Logo Package",
-              price: "$12",
-              features: [
-                "3 Logo Concepts",
-                "2 Revisions",
-                "PNG & JPG Files",
-                "48h Delivery",
-              ],
+              title: "LeadGen Pro",
+              category: "Lead Generation Tool",
               description:
-                "Quick and professional logo solution for new businesses.",
-              image:
-                "https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/basiclogo%20design.png",
+                "Desktop application for local businesses who need fresh leads everyday without paying for expensive Google Maps API or other lead scraping tools. Automatically scans Google Maps and finds fresh leads—no manual copy-paste, no wasting time, no API key needed.",
+              capabilities: [
+                "Google Maps auto-scraping",
+                "No API key required",
+                "CSV/Excel export",
+                "Targeted local business search",
+                "Fresh daily leads",
+                "One-click export",
+              ],
+              showDownload: true,
+              downloadLink: "#", // Replace with actual download URL
+              workflow: [
+                {
+                  step: 1,
+                  title: "Search",
+                  desc: "Enter location & niche",
+                  color: "blue",
+                },
+                {
+                  step: 2,
+                  title: "Scan",
+                  desc: "AI scans Google Maps",
+                  color: "cyan",
+                },
+                {
+                  step: 3,
+                  title: "Extract",
+                  desc: "Gather contact details",
+                  color: "purple",
+                },
+                {
+                  step: 4,
+                  title: "Export",
+                  desc: "Download CSV file",
+                  color: "green",
+                },
+              ],
             },
             {
-              title: "Standard Logo Package",
-              price: "$17",
-              features: [
-                "5 Logo Concepts",
-                "Unlimited Revisions",
-                "Source Files (AI)",
-                "Brand Guidelines",
-                "Social Media Kit",
-              ],
+              title: "House Map Generator",
+              category: "Architecture AI",
               description:
-                "Complete brand identity package for established businesses.",
-              image:
-                "https://github.com/Gorav-a36y/GoravAI/blob/main/a-clean-professional-logo-design-featuri_Lfy4uoOKS6Gj8WdqbjpFyA_IxtX4kYiTv6TrVzyKmtIwA_sd.jpeg?raw=true ",
+                "Professional tool for engineers who don't have time to draw and think about maps. Simply add information about the plot and house requirements, and it creates full detailed house map with front elevation, 2D plan, and text details in minutes—not hours.",
+              capabilities: [
+                "2D floor plan generation",
+                "Front elevation design",
+                "Plot optimization",
+                "Text annotations",
+                "Export to PDF/DWG",
+                "Multiple design styles",
+              ],
+              showDownload: true,
+              isComingSoon: true, // This triggers the alert
+              workflow: [
+                {
+                  step: 1,
+                  title: "Input",
+                  desc: "Enter plot dimensions",
+                  color: "blue",
+                },
+                {
+                  step: 2,
+                  title: "Design",
+                  desc: "AI generates layout",
+                  color: "cyan",
+                },
+                {
+                  step: 3,
+                  title: "Elevate",
+                  desc: "Create 3D elevation",
+                  color: "purple",
+                },
+                {
+                  step: 4,
+                  title: "Export",
+                  desc: "Download full plans",
+                  color: "green",
+                },
+              ],
             },
             {
-              title: "Premium Logo Package",
-              price: "$21",
-              features: [
-                "10 Logo Concepts",
-                "Unlimited Revisions",
-                "Full Brand Book",
-                "Stationery Design",
-                "Merchandise Mockups",
-                "Priority Support",
-              ],
+              title: "Content Studio",
+              category: "Content Creation Suite",
               description:
-                "Enterprise-level branding with comprehensive guidelines and assets.",
-              image:
-                "https://github.com/Gorav-a36y/GoravAI/blob/main/ChatGPT%20Image%20Feb%205,%202026,%2007_06_19%20PM.png?raw=true",
+                "Vibe AI-powered content generation platform that creates SEO-optimized blogs, social media posts, and marketing copy with your brand voice. Features real-time collaboration and plagiarism-free output.",
+              capabilities: [
+                "SEO-optimized content generation",
+                "Brand voice consistency training",
+                "Multi-format output (blog, social, email)",
+                "Real-time collaboration tools",
+                "Plagiarism detection & originality scoring",
+              ],
+              workflow: [
+                {
+                  step: 1,
+                  title: "Topic Input",
+                  desc: "Keyword or brief provided",
+                  color: "blue",
+                },
+                {
+                  step: 2,
+                  title: "Research",
+                  desc: "AI gathers relevant data",
+                  color: "cyan",
+                },
+                {
+                  step: 3,
+                  title: "Content Generation",
+                  desc: "Create draft with brand voice",
+                  color: "purple",
+                },
+                {
+                  step: 4,
+                  title: "Optimization",
+                  desc: "SEO polish & final output",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              title: "Data Insights",
+              category: "Analytics AI",
+              description:
+                "Advanced data analysis platform that transforms raw business data into actionable insights. Automatically generates reports, predicts trends, and identifies growth opportunities using machine learning.",
+              capabilities: [
+                "Automated report generation",
+                "Predictive trend analysis",
+                "Anomaly detection",
+                "Natural language queries",
+                "Visual dashboard creation",
+              ],
+              workflow: [
+                {
+                  step: 1,
+                  title: "Data Ingestion",
+                  desc: "Connect data sources",
+                  color: "blue",
+                },
+                {
+                  step: 2,
+                  title: "Processing",
+                  desc: "Clean & structure data",
+                  color: "cyan",
+                },
+                {
+                  step: 3,
+                  title: "Analysis",
+                  desc: "ML models identify patterns",
+                  color: "purple",
+                },
+                {
+                  step: 4,
+                  title: "Visualization",
+                  desc: "Generate insights dashboard",
+                  color: "green",
+                },
+              ],
+            },
+            {
+              title: "Auto Code",
+              category: "Development AI",
+              description:
+                "Intelligent code generation and review assistant that helps developers write, debug, and optimize code faster. Supports multiple programming languages with context-aware suggestions.",
+              capabilities: [
+                "Multi-language code generation",
+                "Automated bug detection",
+                "Code review & optimization",
+                "Documentation generation",
+                "Test case creation",
+              ],
+              workflow: [
+                {
+                  step: 1,
+                  title: "Requirement",
+                  desc: "Natural language description",
+                  color: "blue",
+                },
+                {
+                  step: 2,
+                  title: "Generation",
+                  desc: "AI writes code blocks",
+                  color: "cyan",
+                },
+                {
+                  step: 3,
+                  title: "Review",
+                  desc: "Check for bugs & optimization",
+                  color: "purple",
+                },
+                {
+                  step: 4,
+                  title: "Integration",
+                  desc: "Merge with existing codebase",
+                  color: "green",
+                },
+              ],
             },
           ],
         },
       };
 
+      // Priority indices: 0 means first item (Shopify Agent for AI, LeadGen Pro for Software)
       let activeIndices = {
-        web: 1,
-        ai: 1,
-        logo: 1,
+        ai: 0,
+        software: 0,
       };
 
       let currentCategory = "ai";
 
       // Initialize
       document.addEventListener("DOMContentLoaded", () => {
-        initCategory("web");
         initCategory("ai");
-        initCategory("logo");
-        showDetails("ai", 1);
+        initCategory("software");
 
         document
           .getElementById("mobile-menu-btn")
@@ -973,18 +1150,27 @@
 
         items.forEach((item, index) => {
           const card = document.createElement("div");
-          card.className = `carousel-card ${index === 1 ? "center" : index === 0 ? "left" : "right"}`;
+          card.className = "carousel-card";
           card.onclick = () => selectCard(category, index);
 
           let icon = "";
-          if (category === "web") {
-            icon = '<i class="fas fa-globe text-4xl text-[#4C6BFF] mb-4"></i>';
-          } else if (category === "ai") {
-            const icons = ["fa-graduation-cap", "fa-bolt", "fa-hospital"];
+          if (category === "ai") {
+            const icons = [
+              "fa-shopping-bag",
+              "fa-graduation-cap",
+              "fa-hospital",
+              "fa-bolt",
+            ];
             icon = `<i class="fas ${icons[index]} text-4xl text-[#4C6BFF] mb-4"></i>`;
-          } else {
-            icon =
-              '<i class="fas fa-pen-nib text-4xl text-[#4C6BFF] mb-4"></i>';
+          } else if (category === "software") {
+            const icons = [
+              "fa-address-book",
+              "fa-drafting-compass",
+              "fa-pen-nib",
+              "fa-chart-pie",
+              "fa-code",
+            ];
+            icon = `<i class="fas ${icons[index]} text-4xl text-[#4C6BFF] mb-4"></i>`;
           }
 
           card.innerHTML = `
@@ -995,6 +1181,9 @@
 
           carousel.appendChild(card);
         });
+
+        // Initialize with priority item (index 0 or activeIndices[category])
+        selectCard(category, activeIndices[category]);
       }
 
       function switchCategory(category) {
@@ -1021,24 +1210,33 @@
           { opacity: 0, y: 20 },
           { opacity: 1, y: 0, duration: 0.5 },
         );
-
-        showDetails(category, activeIndices[category]);
       }
 
+      // Smooth carousel transition logic
       function selectCard(category, index) {
         activeIndices[category] = index;
 
         const cards = document.querySelectorAll(
           `#${category}-carousel .carousel-card`,
         );
+        const total = cards.length;
+
         cards.forEach((card, i) => {
+          // Reset all classes first
           card.className = "carousel-card";
+
           if (i === index) {
+            // Center card (active)
             card.classList.add("center");
-          } else if (i === (index - 1 + cards.length) % cards.length) {
+          } else if (i === (index - 1 + total) % total) {
+            // Left card (previous)
             card.classList.add("left");
-          } else if (i === (index + 1) % cards.length) {
+          } else if (total > 2 && i === (index + 1) % total) {
+            // Right card (next) - only if we have more than 2 items
             card.classList.add("right");
+          } else {
+            // Hide all others with smooth fade
+            card.classList.add("hidden");
           }
         });
 
@@ -1049,10 +1247,10 @@
         const detailsContainer = document.getElementById(`${category}-details`);
         const data = projectsData[category].details[index];
 
-        if (category === "ai") {
-          const workflowHTML = data.workflow
-            .map(
-              (node, i) => `
+        // Generate workflow HTML (used by both categories)
+        const workflowHTML = data.workflow
+          .map(
+            (node, i) => `
                     <div class="flex items-center gap-4 ${i % 2 === 0 ? "flex-row" : "flex-row-reverse"}">
                         <div class="workflow-node rounded-xl p-4 flex-1">
                             <div class="flex items-center gap-3">
@@ -1076,20 +1274,81 @@
                         }
                     </div>
                 `,
-            )
-            .join("");
+          )
+          .join("");
 
-          const capabilitiesHTML = data.capabilities
-            .map(
-              (cap) => `
+        // Generate capabilities HTML
+        const capabilitiesHTML = data.capabilities
+          .map(
+            (cap) => `
                     <div class="flex items-center gap-3 p-3 rounded-lg bg-white/[0.04] border border-white/[0.08]">
                         <i class="fas fa-check-circle text-[#4C6BFF]"></i>
                         <span class="text-[#A7B1D8] text-sm">${cap}</span>
                     </div>
                 `,
-            )
-            .join("");
+          )
+          .join("");
 
+        if (category === "software") {
+          // Determine button HTML based on software type
+          let actionButton = "";
+
+          if (data.showDownload) {
+            if (data.isComingSoon) {
+              // House Map Generator - Download button with alert
+              actionButton = `
+                <button onclick="alert('This software is not available currently. You can explore our other projects.')" 
+                  class="w-full sm:w-auto px-8 py-4 bg-[#4C6BFF] text-white font-bold rounded-xl hover:bg-[#3D56CC] transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-[#4C6BFF]/30">
+                  <i class="fas fa-download"></i> 
+                  Download
+                </button>
+              `;
+            } else {
+              // LeadGen Pro - Working download button
+              actionButton = `
+                <a href="${data.downloadLink || "#"}" 
+                  class="w-full sm:w-auto px-8 py-4 bg-[#4C6BFF] text-white font-bold rounded-xl hover:bg-[#3D56CC] transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-[#4C6BFF]/30">
+                  <i class="fas fa-download"></i> 
+                  Download Now
+                </a>
+              `;
+            }
+          }
+          // Content Studio, Data Insights, Auto Code have no buttons (no showDownload property)
+
+          detailsContainer.innerHTML = `
+                    <div class="glass-card rounded-3xl p-8 md:p-12">
+                        <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <span class="px-3 py-1 rounded-full bg-[#4C6BFF]/10 text-[#4C6BFF] text-xs font-bold uppercase tracking-wider mb-4 inline-block">
+                                    ${data.category}
+                                </span>
+                                <h2 class="font-display text-3xl font-bold text-white mb-4">${data.title}</h2>
+                                <p class="text-[#A7B1D8] leading-relaxed mb-6">${data.description}</p>
+                                
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                                    ${capabilitiesHTML}
+                                </div>
+                                
+                                ${actionButton ? `<div class="flex flex-col sm:flex-row gap-4">${actionButton}</div>` : ""}
+                            </div>
+                            <div class="relative">
+                                <div class="absolute inset-0 bg-[#4C6BFF]/20 rounded-3xl blur-3xl"></div>
+                                <div class="relative glass-card rounded-2xl p-6 border border-[#4C6BFF]/30">
+                                    <h4 class="text-white font-semibold mb-6 flex items-center gap-2">
+                                        <i class="fas fa-cogs text-[#4C6BFF]"></i>
+                                        How It Works
+                                    </h4>
+                                    <div class="space-y-2">
+                                        ${workflowHTML}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+        } else {
+          // Agentic AI layout (workflow focused, no buttons)
           detailsContainer.innerHTML = `
                     <div class="glass-card rounded-3xl p-8 md:p-12">
                         <div class="grid lg:grid-cols-2 gap-12">
@@ -1103,78 +1362,18 @@
                                 <div class="space-y-3">
                                     ${capabilitiesHTML}
                                 </div>
-                                
-                                <div class="mt-8 flex gap-4">
-                                    <a href="#" class="px-6 py-3 bg-[#4C6BFF] text-white font-semibold rounded-xl hover:bg-[#3D56CC] transition-colors inline-flex items-center">
-                                        View Case Study
-                                    </a>
-                                    <a href="#" class="px-6 py-3 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/5 transition-colors inline-flex items-center">
-                                        Live Demo
-                                    </a>
-                                </div>
                             </div>
                             <div class="relative">
                                 <div class="absolute inset-0 bg-[#4C6BFF]/20 rounded-3xl blur-3xl"></div>
                                 <div class="relative glass-card rounded-2xl p-6 border border-[#4C6BFF]/30">
                                     <h4 class="text-white font-semibold mb-6 flex items-center gap-2">
                                         <i class="fas fa-project-diagram text-[#4C6BFF]"></i>
-                                        n8n Workflow
+                                        AI Workflow
                                     </h4>
                                     <div class="space-y-2">
                                         ${workflowHTML}
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-        } else {
-          const featuresHTML = data.features
-            .map(
-              (feat) => `
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-check text-[#4C6BFF]"></i>
-                        <span class="text-[#A7B1D8]">${feat}</span>
-                    </div>
-                `,
-            )
-            .join("");
-
-          const badgeColor =
-            category === "web"
-              ? index === 0
-                ? "bg-blue-600"
-                : index === 1
-                  ? "bg-green-600"
-                  : "bg-yellow-500"
-              : "bg-[#4C6BFF]";
-
-          detailsContainer.innerHTML = `
-                    <div class="glass-card rounded-3xl p-8 md:p-12 max-w-5xl mx-auto">
-                        <div class="grid md:grid-cols-2 gap-12 items-center">
-                            <div>
-                                <div class="${badgeColor} text-white text-center py-2 px-4 rounded-lg font-bold mb-6 inline-block">
-                                    <i class="fas fa-check-circle mr-2"></i>${category === "web" ? data.pages : "Package " + (index + 1)}
-                                </div>
-                                <h2 class="font-display text-3xl font-bold text-white mb-2">${data.title}</h2>
-                                <div class="text-4xl font-bold text-[#4C6BFF] mb-4">${data.price}</div>
-                                <p class="text-[#A7B1D8] mb-8">${data.description}</p>
-                                
-                                <div class="grid grid-cols-2 gap-4 mb-8">
-                                    ${featuresHTML}
-                                </div>
-                                
-                                <div class="flex gap-4">
-                                    <a href="#" class="px-8 py-4 bg-[#4C6BFF] text-white font-bold rounded-xl hover:bg-[#3D56CC] transition-colors inline-flex items-center">
-                                        Get Started
-                                    </a>
-                                    <a href="#" class="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/5 transition-colors inline-flex items-center">
-                                        View Demo
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="relative h-80 rounded-2xl overflow-hidden border border-white/10">
-                                <img src="${data.image}" alt="${data.title}" class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
