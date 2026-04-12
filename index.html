@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>GoravAI | Intelligent Web Development, AI, and Automation</title>
+    <title>GoravAI | Custom AI Agents for Telegram & E-Commerce</title>
 
     <meta
       name="description"
-      content="GoravAI empowers businesses with powerful web development, custom AI agents, branding, and high-impact digital solutions designed for modern growth."
+      content="GoravAI builds smart Telegram AI agents that handle customer support, order tracking, and sales — 24/7, automatically. Built for e-commerce sellers in Pakistan, Dubai & Saudi Arabia."
+    />
+
+    <meta
+      name="keywords"
+      content="Telegram AI agent, ecommerce automation, Shopify chatbot Pakistan, Daraz seller tools, 24/7 customer support bot, Dubai AI agency, Saudi Arabia ecommerce automation, order tracking bot, WhatsApp business API, conversational commerce, AI sales assistant, multilingual chatbot, lead generation bot, vibe coding, AI brand design"
     />
 
     <link rel="canonical" href="https://gorav-a36y.github.io/GoravAI/" />
@@ -26,11 +31,11 @@
     <!-- Social Sharing: OpenGraph -->
     <meta
       property="og:title"
-      content="GoravAI | Intelligent Web Development, AI, and Automation"
+      content="GoravAI | Custom AI Agents for Telegram & E-Commerce"
     />
     <meta
       property="og:description"
-      content="GoravAI empowers businesses with powerful web development, custom AI agents, branding, and high-impact digital solutions designed for modern growth."
+      content="GoravAI builds smart Telegram AI agents that handle customer support, order tracking, and sales — 24/7, automatically. Built for e-commerce sellers in Pakistan, Dubai & Saudi Arabia."
     />
     <meta property="og:url" content="https://gorav-a36y.github.io/GoravAI/" />
     <meta property="og:type" content="website" />
@@ -43,11 +48,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="GoravAI | Intelligent Web Development, AI, and Automation"
+      content="GoravAI | Custom AI Agents for Telegram & E-Commerce"
     />
     <meta
       name="twitter:description"
-      content="GoravAI empowers businesses with powerful web development, custom AI agents, branding, and high-impact digital solutions designed for modern growth."
+      content="GoravAI builds smart Telegram AI agents that handle customer support, order tracking, and sales — 24/7, automatically. Built for e-commerce sellers in Pakistan, Dubai & Saudi Arabia."
     />
     <meta
       name="twitter:image"
@@ -62,6 +67,8 @@
         "name": "GoravAI",
         "url": "https://gorav-a36y.github.io/GoravAI/",
         "logo": "https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png",
+        "description": "GoravAI builds smart Telegram AI agents that handle customer support, order tracking, and sales — 24/7, automatically.",
+        "areaServed": ["Pakistan", "Dubai", "Saudi Arabia", "UAE"],
         "sameAs": [
           "https://www.linkedin.com/in/gorav-kumar-61968a381",
           "https://www.facebook.com/share/17VpXx6YjX/"
@@ -73,6 +80,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -98,6 +109,16 @@
               foreground: "#F4F6FF",
               accent: "#4C6BFF",
               muted: "#A7B1D8",
+              surface: "#10131c",
+              "surface-container": "#1c1f28",
+              "surface-container-high": "#272a33",
+              "on-surface": "#e0e2ee",
+              "on-surface-variant": "#c4c5d8",
+              primary: "#bac3ff",
+              "primary-container": "#7087ff",
+              secondary: "#bbc5ed",
+              tertiary: "#c8bfff",
+              error: "#ffb4ab",
             },
           },
         },
@@ -154,6 +175,12 @@
         backdrop-filter: blur(12px);
       }
 
+      .glass-panel {
+        backdrop-filter: blur(16px);
+        background: rgba(49, 53, 62, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
       .social-btn {
         transition: all 0.3s ease;
         transform-style: preserve-3d;
@@ -187,70 +214,21 @@
         transform: skewX(-20deg) translateX(300%);
       }
 
-      .service-card {
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease,
-          border-color 0.3s ease;
-      }
-
-      .service-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 25px 50px -12px rgba(76, 107, 255, 0.25);
-        border-color: rgba(76, 107, 255, 0.4);
-      }
-
-      .service-icon-container {
+      .bento-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
         transition: all 0.3s ease;
       }
-
-      .service-card:hover .service-icon-container {
-        transform: scale(1.1);
+      .bento-card:hover {
+        border-color: rgba(76, 107, 255, 0.4);
+        transform: translateY(-4px);
       }
 
-      .icon-web-dev {
-        background-color: rgba(76, 107, 255, 0.1);
-        color: #4c6bff;
-      }
-      .service-card:hover .icon-web-dev {
-        background-color: #4c6bff;
-        color: white;
-      }
-
-      .icon-ai-agent {
-        background-color: rgba(76, 107, 255, 0.1);
-        color: #4c6bff;
-      }
-      .service-card:hover .icon-ai-agent {
-        background-color: #4c6bff;
-        color: white;
-      }
-
-      .icon-logo-design {
-        background-color: rgba(147, 51, 234, 0.1);
-        color: #9333ea;
-      }
-      .service-card:hover .icon-logo-design {
-        background-color: #9333ea;
-        color: white;
-      }
-
-      .icon-digital-mkt {
-        background-color: rgba(5, 150, 105, 0.1);
-        color: #059669;
-      }
-      .service-card:hover .icon-digital-mkt {
-        background-color: #059669;
-        color: white;
-      }
-
-      .icon-domain-sell {
-        background-color: rgba(249, 115, 22, 0.1);
-        color: #f97316;
-      }
-      .service-card:hover .icon-domain-sell {
-        background-color: #f97316;
-        color: white;
+      .gradient-text {
+        background: linear-gradient(135deg, #bac3ff 0%, #4c6bff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       /* Grain overlay */
@@ -320,6 +298,18 @@
 
       .animate-pulse-glow {
         animation: pulse-glow 6s ease-in-out infinite;
+      }
+
+      @keyframes spin-slow {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 12s linear infinite;
       }
 
       /* Social icon hover colors */
@@ -398,26 +388,7 @@
       }
 
       .network-node:hover {
-        transform: scale(1.1);
-      }
-
-      .network-node:hover .node-circle {
-        border-color: rgba(76, 107, 255, 0.6);
-        background: rgba(76, 107, 255, 0.2);
-      }
-
-      /* Use case card hover */
-      .usecase-card {
-        transition: all 0.4s ease;
-      }
-
-      .usecase-card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(76, 107, 255, 0.4);
-      }
-
-      .usecase-card:hover img {
-        transform: scale(1.05);
+        transform: scale(1.1) !important;
       }
 
       /* Nav link hover */
@@ -440,12 +411,59 @@
         width: 100%;
       }
 
-      /* Pinned section styles */
-      .pinned-section {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
+      /* Software scroll section */
+      /* Add this to your style section */
+      #software {
+        width: 100%;
+        max-width: 100vw;
         overflow: hidden;
+      }
+
+      #software > div {
+        width: 100%;
+        max-width: 1280px; /* matches max-w-7xl */
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      @media (min-width: 640px) {
+        #software > div {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        #software > div {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+
+      /* Critical: constrain the scroll container */
+      #software #scrollContainer {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .hide-scroll-bar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .hide-scroll-bar::-webkit-scrollbar {
+        display: none;
+      }
+      .smooth-scroll {
+        scroll-behavior: smooth;
       }
     </style>
   </head>
@@ -484,9 +502,9 @@
               >Services</a
             >
             <a
-              href="projects.html"
+              href="#software"
               class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
-              >Projects</a
+              >Software</a
             >
             <a
               href="#about"
@@ -537,14 +555,9 @@
             >Services</a
           >
           <a
-            href="#projects"
+            href="#software"
             class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
-            >Projects</a
-          >
-          <a
-            href="#pricing"
-            class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
-            >Pricing</a
+            >Software</a
           >
           <a
             href="#about"
@@ -571,12 +584,10 @@
       id="home"
       class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#070A12]"
     >
-      <!-- Background gradient -->
       <div
         class="absolute inset-0 bg-gradient-to-b from-[#070A12] via-[#0B1120] to-[#070A12]"
       ></div>
 
-      <!-- Orb -->
       <div
         class="hero-orb absolute left-1/2 top-[52%] -translate-x-1/2 -translate-y-1/2 w-[62vw] h-[62vw] max-w-[900px] max-h-[900px] opacity-0"
       >
@@ -589,24 +600,11 @@
         <div
           class="absolute inset-[35%] rounded-full bg-gradient-radial from-[#7B8FFF]/60 via-[#4C6BFF]/30 to-transparent blur-xl"
         ></div>
-        <div
-          class="absolute top-[20%] left-[15%] w-2 h-2 rounded-full bg-white/60 float-animation"
-        ></div>
-        <div
-          class="absolute top-[30%] right-[20%] w-1.5 h-1.5 rounded-full bg-[#4C6BFF]/80 float-animation"
-          style="animation-delay: 1s"
-        ></div>
-        <div
-          class="absolute bottom-[25%] left-[25%] w-1 h-1 rounded-full bg-white/40 float-animation"
-          style="animation-delay: 2s"
-        ></div>
       </div>
 
-      <!-- Content -->
       <div
         class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto pt-20"
       >
-        <!-- Badge -->
         <div
           class="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] mb-8 opacity-0"
         >
@@ -617,7 +615,6 @@
           >
         </div>
 
-        <!-- Headline -->
         <h1
           class="hero-headline font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.05] opacity-0"
         >
@@ -625,16 +622,14 @@
           <span class="text-gradient">sleep.</span>
         </h1>
 
-        <!-- Subheadline -->
         <p
           class="hero-subheadline text-lg md:text-xl text-[#A7B1D8] max-w-2xl mx-auto mb-10 leading-relaxed opacity-0"
         >
-          GoravAI empowers businesses with powerful web development, custom AI
-          agents, branding, and high-impact digital solutions designed for
-          modern growth.
+          GoravAI empowers businesses with powerful Telegram AI agents,
+          e-commerce automation, and high-impact digital solutions designed for
+          modern growth in Pakistan, Dubai & Saudi Arabia.
         </p>
 
-        <!-- CTAs -->
         <div
           class="hero-cta flex flex-col sm:flex-row justify-center gap-4 opacity-0"
         >
@@ -649,15 +644,14 @@
             ></i>
           </a>
           <a
-            href="#pricing"
+            href="#services"
             class="btn-outline inline-flex items-center justify-center px-8 py-4 bg-white/[0.04] text-white border border-white/[0.12] rounded-xl font-semibold"
           >
-            View Pricing
+            Explore Services
           </a>
         </div>
       </div>
 
-      <!-- Scroll indicator -->
       <div
         class="hero-scroll absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0"
       >
@@ -670,20 +664,18 @@
       </div>
     </section>
 
-    <!-- Agent Builder Section (Describe it. We build it.) -->
+    <!-- Agent Builder Section -->
     <section
       id="agent-builder"
       class="relative min-h-screen flex items-center overflow-hidden bg-[#070A12]"
       style="z-index: 20"
     >
-      <!-- Background glow -->
       <div
         class="absolute top-[10%] right-[6%] w-[50vw] h-[50vw] rounded-full bg-[#4C6BFF]/10 blur-[100px] pointer-events-none"
       ></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <!-- Left content -->
           <div class="space-y-8">
             <div class="agent-builder-headline">
               <h2
@@ -729,27 +721,23 @@
                   <i class="fas fa-globe text-[#4C6BFF] text-sm"></i>
                 </div>
                 <span class="text-sm font-medium"
-                  >Deploy anywhere (API, chat, webhook)</span
+                  >Deploy anywhere (Telegram, WhatsApp, Web)</span
                 >
               </li>
             </ul>
           </div>
 
-          <!-- Right - UI Card -->
           <div class="agent-builder-card relative">
             <div
               class="glass-card rounded-3xl p-6 sm:p-8 h-[500px] flex flex-col relative overflow-hidden"
             >
-              <!-- Card header dots -->
               <div class="flex items-center gap-2 mb-6">
                 <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
                 <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                 <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
               </div>
 
-              <!-- Chat-like content -->
               <div class="flex-1 space-y-4 overflow-hidden">
-                <!-- AI message -->
                 <div class="flex items-start gap-3">
                   <div
                     class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center flex-shrink-0"
@@ -760,19 +748,19 @@
                     class="glass-card rounded-2xl rounded-tl-sm px-4 py-3 max-w-[80%]"
                   >
                     <p class="text-sm text-white/90">
-                      I'll create a research agent that gathers market data,
-                      summarizes sources, and delivers insights daily at 9 AM.
+                      I'll create a Telegram bot for your Shopify store that
+                      handles orders, tracks shipments, and answers customer
+                      queries 24/7.
                     </p>
                   </div>
                 </div>
 
-                <!-- User message -->
                 <div class="flex items-start gap-3 justify-end">
                   <div
                     class="bg-[#4C6BFF] rounded-2xl rounded-tr-sm px-4 py-3 max-w-[80%]"
                   >
                     <p class="text-sm text-white">
-                      Perfect! Connect it to my Slack and email.
+                      Perfect! Connect it to my Daraz store too.
                     </p>
                   </div>
                   <div
@@ -782,7 +770,6 @@
                   </div>
                 </div>
 
-                <!-- AI response -->
                 <div class="flex items-start gap-3">
                   <div
                     class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center flex-shrink-0"
@@ -793,23 +780,27 @@
                     class="glass-card rounded-2xl rounded-tl-sm px-4 py-3 max-w-[80%]"
                   >
                     <p class="text-sm text-white/90">
-                      Done! Your agent is now live. Here's the dashboard link.
+                      Done! Your e-commerce agent is now live. Here's the
+                      dashboard link.
                     </p>
                     <div
                       class="mt-3 flex items-center gap-2 text-xs text-[#4C6BFF]"
                     >
                       <i class="fas fa-check text-xs"></i>
-                      <span>Connected to Slack #research</span>
+                      <span>Connected to Shopify</span>
                     </div>
                     <div class="flex items-center gap-2 text-xs text-[#4C6BFF]">
                       <i class="fas fa-check text-xs"></i>
-                      <span>Email notifications enabled</span>
+                      <span>Daraz integration active</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-[#4C6BFF]">
+                      <i class="fas fa-check text-xs"></i>
+                      <span>Telegram bot deployed</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Input pill -->
               <div class="mt-6">
                 <div
                   class="flex items-center gap-3 px-5 py-4 rounded-full bg-white/[0.04] border border-white/[0.08]"
@@ -827,7 +818,6 @@
               </div>
             </div>
 
-            <!-- Decorative elements -->
             <div
               class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#4C6BFF]/20 blur-2xl"
             ></div>
@@ -839,23 +829,15 @@
       </div>
     </section>
 
-    <!-- Agent Network Section (One hub. Many agents.) - UPDATED -->
+    <!-- AGENT NETWORK SECTION - MOVED HERE (After Agent Builder) -->
+    <!-- AGENT NETWORK SECTION - EXPAND FROM CENTER ANIMATION -->
     <section
       id="agent-network"
-      class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#070A12]"
-      style="z-index: 50"
+      class="relative py-24 bg-[#070A12] overflow-hidden"
+      style="z-index: 25"
     >
-      <!-- Background gradient -->
-      <div
-        class="absolute inset-0 bg-gradient-radial from-[#0B1120] via-[#070A12] to-[#070A12]"
-      ></div>
-
-      <!-- Content -->
-      <div
-        class="relative z-10 text-center px-4 w-full h-screen flex flex-col justify-center items-center"
-      >
-        <!-- Headline -->
-        <div class="agent-network-headline mb-4 opacity-0 -translate-y-10">
+      <div class="relative z-10 text-center px-4 max-w-6xl mx-auto">
+        <div class="agent-network-headline mb-4 opacity-0">
           <h2
             class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white"
           >
@@ -863,196 +845,172 @@
           </h2>
         </div>
 
-        <!-- Subheadline -->
         <p
           class="agent-network-subheadline text-lg text-[#A7B1D8] max-w-xl mx-auto mb-16 opacity-0"
         >
           Orchestrate a team of specialized agents that hand off tasks, share
-          memory, and stay consistent.
+          memory, and stay consistent across your e-commerce stack.
         </p>
 
-        <!-- Network visualization -->
         <div
-          class="network-container relative w-[320px] h-[320px] sm:w-[400px] sm:h-[400px]"
+          class="relative w-full max-w-2xl mx-auto h-80 md:h-96 flex items-center justify-center"
         >
-          <!-- Connection lines -->
+          <!-- Connection Lines (initially hidden) -->
           <div
-            class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left"
-            style="transform: translate(-50%, -50%) rotate(0deg)"
-          ></div>
-          <div
-            class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left"
-            style="transform: translate(-50%, -50%) rotate(60deg)"
-          ></div>
-          <div
-            class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left"
-            style="transform: translate(-50%, -50%) rotate(120deg)"
-          ></div>
-          <div
-            class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left"
-            style="transform: translate(-50%, -50%) rotate(180deg)"
-          ></div>
-          <div
-            class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left"
-            style="transform: translate(-50%, -50%) rotate(240deg)"
-          ></div>
-          <div
-            class="connection-line absolute left-1/2 top-1/2 h-[1.5px] w-[140px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left"
-            style="transform: translate(-50%, -50%) rotate(300deg)"
-          ></div>
-
-          <!-- Central Hub -->
-          <div
-            class="agent-hub absolute left-1/2 top-1/2 z-20 opacity-0 scale-0"
+            class="connection-lines absolute inset-0 pointer-events-none opacity-0"
           >
             <div
-              class="relative w-[130px] h-[130px] sm:w-[180px] sm:h-[180px] -translate-x-1/2 -translate-y-1/2"
+              class="absolute left-1/2 top-1/2 w-[140px] h-[1px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left -translate-y-1/2 rotate-0"
+            ></div>
+            <div
+              class="absolute left-1/2 top-1/2 w-[140px] h-[1px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left -translate-y-1/2 rotate-60"
+            ></div>
+            <div
+              class="absolute left-1/2 top-1/2 w-[140px] h-[1px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left -translate-y-1/2 rotate-120"
+            ></div>
+            <div
+              class="absolute left-1/2 top-1/2 w-[140px] h-[1px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left -translate-y-1/2 rotate-180"
+            ></div>
+            <div
+              class="absolute left-1/2 top-1/2 w-[140px] h-[1px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left -translate-y-1/2 rotate-240"
+            ></div>
+            <div
+              class="absolute left-1/2 top-1/2 w-[140px] h-[1px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left -translate-y-1/2 rotate-300"
+            ></div>
+          </div>
+
+          <!-- Central Hub -->
+          <div class="agent-hub relative z-20 opacity-0 scale-50">
+            <div class="relative w-32 h-32 sm:w-40 sm:h-40">
+              <div
+                class="absolute inset-0 rounded-full bg-[#4C6BFF]/20 blur-2xl animate-pulse"
+              ></div>
+              <div
+                class="absolute inset-0 rounded-full bg-gradient-to-br from-[#4C6BFF] to-[#2D3A8C] flex flex-col items-center justify-center border border-white/10 shadow-[0_0_30px_rgba(76,107,255,0.3)]"
+              >
+                <i class="fas fa-microchip text-3xl text-white mb-2"></i>
+                <span class="text-sm font-semibold text-white">Agent Hub</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Satellite nodes - START AT CENTER (will expand outward) -->
+          <!-- Sales (0 deg) -->
+          <div
+            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0"
+            data-angle="0"
+          >
+            <div
+              class="group cursor-pointer flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
             >
               <div
-                class="absolute inset-0 rounded-full bg-[#4C6BFF]/20 blur-2xl"
-              ></div>
-              <div
-                class="absolute inset-0 rounded-full bg-gradient-to-br from-[#4C6BFF] to-[#2D3A8C] flex flex-col items-center justify-center border border-white/10"
+                class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300 shadow-lg"
               >
-                <i
-                  class="fas fa-microchip w-8 h-8 sm:w-10 sm:h-10 text-white mb-2 text-2xl"
-                ></i>
-                <span class="text-xs sm:text-sm font-semibold text-white"
-                  >Agent Hub</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Satellite nodes (Starting at center 0,0) -->
-          <!-- Research (0 deg) -->
-          <div
-            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0 scale-0"
-          >
-            <div class="group cursor-pointer">
-              <div
-                class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"
-              ></div>
-              <div
-                class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300"
-              >
-                <i
-                  class="fas fa-search w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"
-                ></i>
+                <i class="fas fa-shopping-cart text-[#4C6BFF] text-lg"></i>
               </div>
               <span
-                class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap"
-                >Research</span
+                class="mt-2 text-xs text-[#A7B1D8] whitespace-nowrap bg-[#070A12]/80 px-2 py-1 rounded"
+                >Sales</span
               >
             </div>
           </div>
 
-          <!-- Write (60 deg) -->
+          <!-- Support (60 deg) -->
           <div
-            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0 scale-0"
+            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0"
+            data-angle="60"
           >
-            <div class="group cursor-pointer">
+            <div
+              class="group cursor-pointer flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
+            >
               <div
-                class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"
-              ></div>
-              <div
-                class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300"
+                class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300 shadow-lg"
               >
-                <i
-                  class="fas fa-pen-nib w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"
-                ></i>
+                <i class="fas fa-headset text-[#4C6BFF] text-lg"></i>
               </div>
               <span
-                class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap"
-                >Write</span
+                class="mt-2 text-xs text-[#A7B1D8] whitespace-nowrap bg-[#070A12]/80 px-2 py-1 rounded"
+                >Support</span
               >
             </div>
           </div>
 
-          <!-- Code (120 deg) -->
+          <!-- Inventory (120 deg) -->
           <div
-            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0 scale-0"
+            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0"
+            data-angle="120"
           >
-            <div class="group cursor-pointer">
+            <div
+              class="group cursor-pointer flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
+            >
               <div
-                class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"
-              ></div>
-              <div
-                class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300"
+                class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300 shadow-lg"
               >
-                <i
-                  class="fas fa-code w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"
-                ></i>
+                <i class="fas fa-box text-[#4C6BFF] text-lg"></i>
               </div>
               <span
-                class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap"
-                >Code</span
+                class="mt-2 text-xs text-[#A7B1D8] whitespace-nowrap bg-[#070A12]/80 px-2 py-1 rounded"
+                >Inventory</span
               >
             </div>
           </div>
 
-          <!-- Review (180 deg) -->
+          <!-- Shipping (180 deg) -->
           <div
-            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0 scale-0"
+            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0"
+            data-angle="180"
           >
-            <div class="group cursor-pointer">
+            <div
+              class="group cursor-pointer flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
+            >
               <div
-                class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"
-              ></div>
-              <div
-                class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300"
+                class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300 shadow-lg"
               >
-                <i
-                  class="fas fa-eye w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"
-                ></i>
+                <i class="fas fa-truck text-[#4C6BFF] text-lg"></i>
               </div>
               <span
-                class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap"
-                >Review</span
+                class="mt-2 text-xs text-[#A7B1D8] whitespace-nowrap bg-[#070A12]/80 px-2 py-1 rounded"
+                >Shipping</span
               >
             </div>
           </div>
 
-          <!-- Deploy (240 deg) -->
+          <!-- Analytics (240 deg) -->
           <div
-            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0 scale-0"
+            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0"
+            data-angle="240"
           >
-            <div class="group cursor-pointer">
+            <div
+              class="group cursor-pointer flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
+            >
               <div
-                class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"
-              ></div>
-              <div
-                class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300"
+                class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300 shadow-lg"
               >
-                <i
-                  class="fas fa-rocket w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"
-                ></i>
+                <i class="fas fa-chart-line text-[#4C6BFF] text-lg"></i>
               </div>
               <span
-                class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap"
-                >Deploy</span
+                class="mt-2 text-xs text-[#A7B1D8] whitespace-nowrap bg-[#070A12]/80 px-2 py-1 rounded"
+                >Analytics</span
               >
             </div>
           </div>
 
-          <!-- Analyze (300 deg) -->
+          <!-- Automation (300 deg) -->
           <div
-            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0 scale-0"
+            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0"
+            data-angle="300"
           >
-            <div class="group cursor-pointer">
+            <div
+              class="group cursor-pointer flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
+            >
               <div
-                class="absolute inset-0 rounded-full bg-[#4C6BFF]/10 blur-xl group-hover:bg-[#4C6BFF]/20 transition-all duration-300"
-              ></div>
-              <div
-                class="node-circle relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex flex-col items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300"
+                class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300 shadow-lg"
               >
-                <i
-                  class="fas fa-chart-bar w-5 h-5 sm:w-6 sm:h-6 text-[#4C6BFF] group-hover:text-white transition-colors"
-                ></i>
+                <i class="fas fa-robot text-[#4C6BFF] text-lg"></i>
               </div>
               <span
-                class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#A7B1D8] whitespace-nowrap"
-                >Analyze</span
+                class="mt-2 text-xs text-[#A7B1D8] whitespace-nowrap bg-[#070A12]/80 px-2 py-1 rounded"
+                >Automation</span
               >
             </div>
           </div>
@@ -1060,221 +1018,627 @@
       </div>
     </section>
 
-    <!-- Use Cases Section (Turn tasks into outcomes.) -->
-    <section id="projects" class="py-24 bg-[#070A12]" style="z-index: 40">
+    <!-- Turn Tasks into Outcomes Section -->
+    <section class="py-20 md:py-32 bg-[#0B1120]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Header -->
-        <div class="usecases-header mb-16">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="space-y-6 outcomes-content">
+            <h2
+              class="font-display text-4xl md:text-5xl font-bold tracking-tight text-white"
+            >
+              Turn <span class="text-[#4C6BFF]">tasks</span> into outcomes.
+            </h2>
+            <p class="text-[#A7B1D8] text-lg leading-relaxed">
+              Stop managing tools and start managing results. Our autonomous
+              agents don't just prompt—they execute, monitor, and optimize your
+              e-commerce operations 24/7 across Pakistan, Dubai, and Saudi
+              Arabia.
+            </p>
+            <ul class="space-y-4 pt-4">
+              <li class="flex items-center gap-4 text-white">
+                <div
+                  class="h-8 w-8 rounded-full bg-[#4C6BFF]/20 flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-[#4C6BFF] text-[18px]"
+                    >check_circle</span
+                  >
+                </div>
+                <span class="font-medium"
+                  >Multi-step autonomous workflow execution</span
+                >
+              </li>
+              <li class="flex items-center gap-4 text-white">
+                <div
+                  class="h-8 w-8 rounded-full bg-[#4C6BFF]/20 flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-[#4C6BFF] text-[18px]"
+                    >check_circle</span
+                  >
+                </div>
+                <span class="font-medium"
+                  >Real-time sync with Shopify, Daraz & WhatsApp Business
+                  API</span
+                >
+              </li>
+              <li class="flex items-center gap-4 text-white">
+                <div
+                  class="h-8 w-8 rounded-full bg-[#4C6BFF]/20 flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-[#4C6BFF] text-[18px]"
+                    >check_circle</span
+                  >
+                </div>
+                <span class="font-medium"
+                  >Self-correcting error handling in Urdu, Arabic &
+                  English</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="relative group outcomes-image">
+            <div
+              class="absolute -inset-1 bg-gradient-to-r from-[#4C6BFF] to-[#bac3ff] rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"
+            ></div>
+            <div
+              class="relative bg-[#10131c] rounded-2xl p-2 overflow-hidden border border-white/[0.08]"
+            >
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuABarw50d4KIfpMMgrDBtX1rVLVGB3CeCmZ_W4D4nD10-F1NAikMbGexFVJEeJ43-raTOrBxtIcZUMIWtodDJBZWf-f-dnB2nBf4sNCb32zYGGm7vxg4MI6L5xcUoD1cEf1xA5bgGkJ7qLqLYOkyUimDOxfkDXcElqYGy-V_kbwbXCzqiNRGc8anqVgrKplXhwDTDrHAGfI2Jlpx-KTN9uNIYFdrU3R8Xm6Ea_wqtw7tpV7lFF_CYlA5prjtCgJtR77k1wuJ-lbhBM"
+                alt="AI Agent Dashboard"
+                class="w-full h-auto rounded-lg shadow-inner"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Bento Grid -->
+    <section id="services" class="py-24 bg-[#070A12]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 services-header opacity-0">
           <h2
-            class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
+            class="font-display text-4xl md:text-6xl font-bold text-white mb-4"
           >
-            Turn tasks into <span class="text-gradient">outcomes.</span>
+            The <span class="gradient-text">GoravAI Suite</span>
           </h2>
-          <p class="text-lg text-[#A7B1D8] max-w-xl">
-            From research to revenue—deploy agents that move work forward.
+          <p class="text-[#A7B1D8] max-w-2xl mx-auto text-lg">
+            Next-gen AI services designed to move your e-commerce brand at the
+            speed of intelligence across Pakistan, Dubai & Saudi Arabia.
           </p>
         </div>
 
-        <!-- Cards -->
-        <div class="space-y-6">
-          <!-- Research Agent -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
+          <!-- Shopify & Telegram Card -->
           <div
-            class="usecase-card glass-card rounded-3xl overflow-hidden hover:border-[#4C6BFF]/30 transition-all duration-500"
+            class="md:col-span-7 relative group overflow-hidden rounded-[2rem] bg-[#1c1f28] border border-white/[0.08] p-8 md:p-10 flex flex-col justify-between bento-card opacity-0 translate-y-8"
           >
-            <div class="flex flex-col md:flex-row">
-              <div class="md:w-2/5 h-48 md:h-64 overflow-hidden">
-                <div class="relative w-full h-full">
-                  <img
-                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop"
-                    alt="Research Agent"
-                    class="w-full h-full object-cover transition-transform duration-700"
-                  />
+            <div
+              class="flex flex-col md:flex-row gap-8 items-start relative z-10 h-full"
+            >
+              <div class="flex-1 flex flex-col h-full">
+                <div>
                   <div
-                    class="absolute inset-0 bg-gradient-to-r from-transparent to-[#070A12]/80"
-                  ></div>
-                </div>
-              </div>
-              <div class="md:w-3/5 p-6 sm:p-8 flex flex-col justify-center">
-                <div class="flex items-center gap-3 mb-4">
-                  <div
-                    class="w-10 h-10 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center"
+                    class="h-14 w-14 rounded-2xl bg-[#4C6BFF]/10 flex items-center justify-center mb-6 border border-[#4C6BFF]/20"
                   >
-                    <i class="fas fa-search w-5 h-5 text-[#4C6BFF]"></i>
+                    <span
+                      class="material-symbols-outlined text-[#4C6BFF] text-3xl"
+                      >smart_toy</span
+                    >
                   </div>
                   <h3
-                    class="font-display text-xl sm:text-2xl font-bold text-white"
+                    class="font-display text-2xl md:text-3xl font-bold text-white mb-4"
                   >
-                    Research Agent
+                    Shopify & Telegram E-Commerce Agents
                   </h3>
+                  <p
+                    class="text-[#A7B1D8] max-w-sm leading-relaxed text-base md:text-lg mb-6"
+                  >
+                    Deploy AI sales assistants that handle customer support,
+                    order tracking, and inventory management 24/7. Integrated
+                    with Shopify, Daraz, and WhatsApp Business API for seamless
+                    conversational commerce.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mb-6">
+                    <span
+                      class="px-3 py-1 bg-[#4C6BFF]/10 border border-[#4C6BFF]/20 rounded-full text-xs text-[#4C6BFF]"
+                      >Telegram Bot Automation</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-[#4C6BFF]/10 border border-[#4C6BFF]/20 rounded-full text-xs text-[#4C6BFF]"
+                      >Shopify Integration</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-[#4C6BFF]/10 border border-[#4C6BFF]/20 rounded-full text-xs text-[#4C6BFF]"
+                      >Daraz Seller Tools</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-[#4C6BFF]/10 border border-[#4C6BFF]/20 rounded-full text-xs text-[#4C6BFF]"
+                      >24/7 Customer Support</span
+                    >
+                  </div>
                 </div>
-                <p class="text-[#A7B1D8] leading-relaxed">
-                  Gather market data, summarize sources, and deliver insights on
-                  schedule.
-                </p>
+                <div
+                  class="mt-auto flex items-center gap-4 text-[#4C6BFF] font-bold group-hover:gap-6 transition-all cursor-pointer"
+                >
+                  Learn More
+                  <span class="material-symbols-outlined">arrow_forward</span>
+                </div>
+              </div>
+              <div
+                class="w-full md:w-1/2 h-64 md:h-full relative overflow-hidden rounded-2xl"
+              >
+                <img
+                  src="https://lh3.googleusercontent.com/aida/ADBb0uhN1Tv3frPAK4ID55xWcIN6gczcfwTbRkMsTorgxFlBvyQZR_WsQWoctioKu4EVQhBtS13nfPNi1Gg4R-0UOyPXwcxsk-FPO2pynn1jGmJhU4ZQenKSea5GXaI1BDBBh9HFS6Szid6Tziuatg1Yig-FF3fEk4mdaM_cxEmuVXim_2HTAAFjwGjwVqgZpYg4F1o2xX2PrNo1fjVOIQxK5pp5_JNa7iWTE3kN-nf5y7_voIOTyub0IwP3vgbhkK1ST18qi_HcFjk7tw"
+                  alt="AI Interface"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#1c1f28]/80"
+                ></div>
               </div>
             </div>
           </div>
 
-          <!-- Content Agent -->
+          <!-- Vibe Coding -->
           <div
-            class="usecase-card glass-card rounded-3xl overflow-hidden hover:border-[#4C6BFF]/30 transition-all duration-500"
+            class="md:col-span-5 relative group overflow-hidden rounded-[2rem] bg-[#1c1f28] border border-white/[0.08] p-8 md:p-10 flex flex-col bento-card opacity-0 translate-y-8"
           >
-            <div class="flex flex-col md:flex-row">
-              <div class="md:w-2/5 h-48 md:h-64 overflow-hidden">
-                <div class="relative w-full h-full">
-                  <img
-                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&h=600&fit=crop"
-                    alt="Content Agent"
-                    class="w-full h-full object-cover transition-transform duration-700"
-                  />
-                  <div
-                    class="absolute inset-0 bg-gradient-to-r from-transparent to-[#070A12]/80"
-                  ></div>
-                </div>
-              </div>
-              <div class="md:w-3/5 p-6 sm:p-8 flex flex-col justify-center">
-                <div class="flex items-center gap-3 mb-4">
-                  <div
-                    class="w-10 h-10 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center"
-                  >
-                    <i class="fas fa-file-alt w-5 h-5 text-[#4C6BFF]"></i>
-                  </div>
-                  <h3
-                    class="font-display text-xl sm:text-2xl font-bold text-white"
-                  >
-                    Content Agent
-                  </h3>
-                </div>
-                <p class="text-[#A7B1D8] leading-relaxed">
-                  Draft, rewrite, and publish across channels with your brand
-                  voice.
-                </p>
-              </div>
+            <div
+              class="h-14 w-14 rounded-2xl bg-[#bac3ff]/10 flex items-center justify-center mb-6 border border-[#bac3ff]/20"
+            >
+              <span class="material-symbols-outlined text-[#bac3ff] text-3xl"
+                >code_blocks</span
+              >
+            </div>
+            <h3
+              class="font-display text-2xl md:text-3xl font-bold text-white mb-4"
+            >
+              Vibe Coding
+            </h3>
+            <p
+              class="text-[#A7B1D8] leading-relaxed mb-6 flex-grow text-base md:text-lg"
+            >
+              Transforming e-commerce concepts into high-performance web and
+              mobile apps using AI-accelerated development cycles.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="px-3 py-1 bg-[#bac3ff]/10 border border-[#bac3ff]/20 rounded-full text-xs text-[#bac3ff]"
+                >Rapid Prototyping</span
+              >
+              <span
+                class="px-3 py-1 bg-[#bac3ff]/10 border border-[#bac3ff]/20 rounded-full text-xs text-[#bac3ff]"
+                >AI Code Generation</span
+              >
+              <span
+                class="px-3 py-1 bg-[#bac3ff]/10 border border-[#bac3ff]/20 rounded-full text-xs text-[#bac3ff]"
+                >E-commerce Development</span
+              >
+            </div>
+            <div
+              class="rounded-xl overflow-hidden border border-white/[0.08] shadow-2xl h-48"
+            >
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa__GIWCmsv5ehoCyA9HfD41PUlMmxbulGezUKCphYOe2081Z6nNa2F5IPvzirQFAbeimVihZfGCYKjzLRMVbaueW89T7RdNNjopNGwXgw6JRQcJOYDvqHrsUAZlXHcvfkkzLI0xOTpsOcvL7fL3wEzoyeklJ7vri7Dib7P7LKQ1xk38BRU03yJ_PicPQdm1113y7hSWXPJoUnNroUtyxn4xrc3yM33NxEbcK7jAOKLCR6j6i_dZSe2yFG7ZGuI5goJUYUsgZfo2A"
+                alt="Vibe Coding"
+                class="w-full h-full object-cover"
+              />
             </div>
           </div>
 
-          <!-- Ops Agent -->
+          <!-- AI Brand Logo -->
           <div
-            class="usecase-card glass-card rounded-3xl overflow-hidden hover:border-[#4C6BFF]/30 transition-all duration-500"
+            class="md:col-span-6 relative group overflow-hidden rounded-[2rem] bg-[#1c1f28] border border-white/[0.08] p-8 flex flex-col md:flex-row gap-6 items-center bento-card opacity-0 translate-y-8"
           >
-            <div class="flex flex-col md:flex-row">
-              <div class="md:w-2/5 h-48 md:h-64 overflow-hidden">
-                <div class="relative w-full h-full">
-                  <img
-                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop"
-                    alt="Ops Agent"
-                    class="w-full h-full object-cover transition-transform duration-700"
-                  />
-                  <div
-                    class="absolute inset-0 bg-gradient-to-r from-transparent to-[#070A12]/80"
-                  ></div>
-                </div>
+            <div class="flex-1">
+              <div
+                class="h-14 w-14 rounded-2xl bg-[#c8bfff]/10 flex items-center justify-center mb-4 border border-[#c8bfff]/20"
+              >
+                <span class="material-symbols-outlined text-[#c8bfff] text-3xl"
+                  >token</span
+                >
               </div>
-              <div class="md:w-3/5 p-6 sm:p-8 flex flex-col justify-center">
-                <div class="flex items-center gap-3 mb-4">
-                  <div
-                    class="w-10 h-10 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center"
-                  >
-                    <i class="fas fa-cog w-5 h-5 text-[#4C6BFF]"></i>
-                  </div>
-                  <h3
-                    class="font-display text-xl sm:text-2xl font-bold text-white"
-                  >
-                    Ops Agent
-                  </h3>
-                </div>
-                <p class="text-[#A7B1D8] leading-relaxed">
-                  Validate data, trigger workflows, and keep systems in sync.
-                </p>
+              <h3
+                class="font-display text-xl md:text-2xl font-bold text-white mb-3"
+              >
+                AI Brand Logo Generation
+              </h3>
+              <p class="text-[#A7B1D8] text-sm leading-relaxed mb-4">
+                High-end, vector-perfect identity systems crafted by specialized
+                design models for e-commerce brands in Middle East & South Asia
+                markets.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-[#c8bfff]/10 rounded text-[10px] text-[#c8bfff]"
+                  >Brand Identity AI</span
+                >
+                <span
+                  class="px-2 py-1 bg-[#c8bfff]/10 rounded text-[10px] text-[#c8bfff]"
+                  >Logo Automation</span
+                >
+                <span
+                  class="px-2 py-1 bg-[#c8bfff]/10 rounded text-[10px] text-[#c8bfff]"
+                  >Vector Design</span
+                >
               </div>
+            </div>
+            <div
+              class="w-32 h-32 rounded-full border-4 border-white/[0.08] p-4 animate-spin-slow flex-shrink-0"
+            >
+              <div
+                class="w-full h-full rounded-full bg-gradient-to-tr from-[#4C6BFF] to-[#c8bfff] shadow-[0_0_15px_rgba(186,195,255,0.3)]"
+              ></div>
+            </div>
+          </div>
+
+          <!-- AI Video Ads -->
+          <div
+            class="md:col-span-6 relative group overflow-hidden rounded-[2rem] bg-[#1c1f28] border border-white/[0.08] p-8 flex flex-col md:flex-row gap-6 items-center bento-card opacity-0 translate-y-8"
+          >
+            <div class="flex-1">
+              <div
+                class="h-14 w-14 rounded-2xl bg-[#ffb4ab]/10 flex items-center justify-center mb-4 border border-[#ffb4ab]/20"
+              >
+                <span class="material-symbols-outlined text-[#ffb4ab] text-3xl"
+                  >movie_filter</span
+                >
+              </div>
+              <h3
+                class="font-display text-xl md:text-2xl font-bold text-white mb-3"
+              >
+                AI Video Ads
+              </h3>
+              <p class="text-[#A7B1D8] text-sm leading-relaxed mb-4">
+                Cinematic product commercials and social content generated in
+                minutes for TikTok, Instagram Reels, and YouTube Shorts
+                marketing.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-[#ffb4ab]/10 rounded text-[10px] text-[#ffb4ab]"
+                  >Video Generation AI</span
+                >
+                <span
+                  class="px-2 py-1 bg-[#ffb4ab]/10 rounded text-[10px] text-[#ffb4ab]"
+                  >Social Media Content</span
+                >
+                <span
+                  class="px-2 py-1 bg-[#ffb4ab]/10 rounded text-[10px] text-[#ffb4ab]"
+                  >Product Marketing</span
+                >
+              </div>
+            </div>
+            <div
+              class="flex-1 relative rounded-xl overflow-hidden aspect-video border border-white/[0.08] bg-gradient-to-br from-[#272a33] to-[#10131c] flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined text-4xl text-[#ffb4ab]/20"
+                >play_circle</span
+              >
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-24 bg-[#070A12]" style="z-index: 50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16 services-header">
-          <h2
-            class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
-          >
-            Our <span class="text-gradient">Services</span>
-          </h2>
-          <div class="h-1 w-20 bg-[#4C6BFF] mx-auto rounded-full"></div>
+    <!-- Software that feels like magic Section -->
+    <section id="software" class="py-24 bg-[#0B1120] overflow-hidden relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 software-header opacity-0"
+        >
+          <div class="max-w-2xl space-y-4">
+            <h2
+              class="font-display text-4xl md:text-5xl font-bold tracking-tight text-white"
+            >
+              Software that <span class="gradient-text">feels like magic.</span>
+            </h2>
+            <p class="text-[#A7B1D8] text-lg">
+              Custom desktop and web applications built with "Vibe Coding"—where
+              your intent drives the architecture for e-commerce automation.
+            </p>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="hidden md:flex items-center gap-3 mr-4">
+              <button
+                class="p-3 rounded-full border border-white/[0.12] hover:border-[#4C6BFF]/50 text-[#A7B1D8] hover:text-[#4C6BFF] transition-all glass-panel"
+                onclick="
+                  document
+                    .getElementById('scrollContainer')
+                    .scrollBy({ left: -400, behavior: 'smooth' })
+                "
+              >
+                <span class="material-symbols-outlined">chevron_left</span>
+              </button>
+              <button
+                class="p-3 rounded-full border border-white/[0.12] hover:border-[#4C6BFF]/50 text-[#A7B1D8] hover:text-[#4C6BFF] transition-all glass-panel"
+                onclick="
+                  document
+                    .getElementById('scrollContainer')
+                    .scrollBy({ left: 400, behavior: 'smooth' })
+                "
+              >
+                <span class="material-symbols-outlined">chevron_right</span>
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="service-card glass-card p-8 rounded-2xl">
-            <div
-              class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-web-dev"
-            >
-              <i class="fas fa-laptop-code"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">Web Development</h3>
-            <p class="text-[#A7B1D8]">
-              Professional, responsive websites, portals, and custom systems
-              tailored for any business need.
-            </p>
-          </div>
-
-          <div class="service-card glass-card p-8 rounded-2xl">
-            <div
-              class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-ai-agent"
-            >
-              <i class="fas fa-robot"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">
-              AI Agents & Automation
-            </h3>
-            <p class="text-[#A7B1D8]">
-              Custom AI bots for chat, workflow automation, customer support,
-              and business optimization.
-            </p>
-          </div>
-
-          <div class="service-card glass-card p-8 rounded-2xl">
-            <div
-              class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-logo-design"
-            >
-              <i class="fas fa-pen-nib"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">
-              Logo & Brand Design
-            </h3>
-            <p class="text-[#A7B1D8]">
-              Unique, modern, and memorable logos that elevate your brand
-              identity.
-            </p>
-          </div>
-
-          <div class="service-card glass-card p-8 rounded-2xl">
-            <div
-              class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-digital-mkt"
-            >
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">Digital Marketing</h3>
-            <p class="text-[#A7B1D8]">
-              SEO, social media marketing, ad campaigns, and strategies to grow
-              your business.
-            </p>
-          </div>
-
+        <!-- WIDTH FIXED: Added max-w-full and proper overflow -->
+        <div
+          class="relative w-full max-w-full software-cards opacity-0"
+          style="max-width: 100%"
+        >
           <div
-            class="service-card glass-card p-8 rounded-2xl md:col-span-2 lg:col-span-1"
+            class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0B1120] to-transparent z-10 pointer-events-none md:block hidden"
+          ></div>
+          <div
+            class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#0B1120] to-transparent z-10 pointer-events-none md:block hidden"
+          ></div>
+
+          <!-- Cards container with proper width constraint -->
+          <div
+            class="flex gap-6 pb-12 overflow-x-auto snap-x snap-mandatory hide-scroll-bar"
+            id="scrollContainer"
+            style="scrollbar-width: none; -ms-overflow-style: none"
           >
+            <!-- Card 1: AI Driver Alert -->
             <div
-              class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-6 service-icon-container icon-domain-sell"
+              class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
             >
-              <i class="fas fa-globe"></i>
+              <div
+                class="h-64 rounded-2xl overflow-hidden mb-6 bg-[#10131c] relative group-hover:scale-[1.02] transition-transform duration-500"
+              >
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC8Ia_RbkkvJMObg5Icea6UGm5O5uBJaJuZmRZoKwM7U4YFDxNUMHZ-Yf_uJxhL3T1o7H2KCaWSjiXnom1QwtddRSQtyfnwV2jNNg4ABV9VQeeZlTO3M6ZwH-ZvrXi7jy6vPCHXdsLs3-I8HG8EVCpsgxycmlR2aVUxJEx4iSKt2kF8gp7yTf7KWRqS9RHmOvHsRpvBmmcyA-DLAemCdi7F6pceLA71TiJaj1Mf0lCQ11SyGz2oaTIxq2il4wpelWa5ZacszC1_NY"
+                  alt="AI Driver Alert System"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">
+                AI Driver Alert System
+              </h3>
+              <p class="text-[#A7B1D8] text-sm mb-6 flex-grow">
+                Real-time drowsiness detection utilizing computer vision to
+                ensure road safety for fleet operations.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Fleet Safety AI</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Computer Vision</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Drowsiness Detection</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Transport Automation</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
+              >
+                <button
+                  class="flex items-center gap-2 px-5 py-2 rounded-xl bg-[#4C6BFF] text-white text-sm font-bold hover:brightness-110 transition-all"
+                >
+                  <span class="material-symbols-outlined text-sm"
+                    >download</span
+                  >
+                  Download
+                </button>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-3">Domain Selling</h3>
-            <p class="text-[#A7B1D8]">
-              Premium domain suggestions, purchasing support, and domain
-              marketplace services.
-            </p>
+
+            <!-- Card 2: House Map Generator -->
+            <div
+              class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
+            >
+              <div
+                class="h-64 rounded-2xl overflow-hidden mb-6 bg-[#10131c] relative group-hover:scale-[1.02] transition-transform duration-500"
+              >
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa__GIWCmsv5ehoCyA9HfD41PUlMmxbulGezUKCphYOe2081Z6nNa2F5IPvzirQFAbeimVihZfGCYKjzLRMVbaueW89T7RdNNjopNGwXgw6JRQcJOYDvqHrsUAZlXHcvfkkzLI0xOTpsOcvL7fL3wEzoyeklJ7vri7Dib7P7LKQ1xk38BRU03yJ_PicPQdm1113y7hSWXPJoUnNroUtyxn4xrc3yM33NxEbcK7jAOKLCR6j6i_dZSe2yFG7ZGuI5goJUYUsgZfo2A"
+                  alt="House Map Generator"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">
+                House Map Generator
+              </h3>
+              <p class="text-[#A7B1D8] text-sm mb-6 flex-grow">
+                Instant 2D floor plans generated from natural language
+                descriptions for architects and realtors.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Architectural AI</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Floor Plan Generator</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Real Estate Tech</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >2D Visualization</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
+              >
+                <button
+                  class="flex items-center gap-2 px-5 py-2 rounded-xl border border-white/[0.12] text-white text-sm font-bold hover:bg-white/[0.04] transition-all"
+                >
+                  <span class="material-symbols-outlined text-sm">code</span>
+                  GitHub
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 3: Mini Perplexity -->
+            <div
+              class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
+            >
+              <div
+                class="h-64 rounded-2xl overflow-hidden mb-6 bg-[#10131c] relative group-hover:scale-[1.02] transition-transform duration-500"
+              >
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsdZFis5lMTgyvzxRga5snuiGKp5Xyjr-y0oqbwYCV5qFJ9V2cLqkFY9uix83E8z3I1O4apt1s3elPuvLuJFjCBdshoMOdbqw5JnWVYmZMqXb9MOLBTewkFIpD7jlwLUNhyiMMTUD2EjxiqzUHyf-6OUa3HknpnrA38Nl-5Gi5-YkmGxUTO6sjlPbRmYr9XdSOhAKui_f9LuPeL9sVxLHjiKTjgVsPiahN1nk2103JalO-att37UXHE0TQ2gMxHO2S5yUL3p5e_IQ"
+                  alt="Mini Perplexity"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">
+                Mini Perplexity
+              </h3>
+              <p class="text-[#A7B1D8] text-sm mb-6 flex-grow">
+                AI-powered research tool that scrapes and synthesizes web data
+                for immediate fact-based responses.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >AI Research Tool</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Web Scraping Bot</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Knowledge Assistant</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Data Synthesis</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
+              >
+                <button
+                  class="flex items-center gap-2 px-5 py-2 rounded-xl bg-[#4C6BFF] text-white text-sm font-bold hover:brightness-110 transition-all"
+                >
+                  <span class="material-symbols-outlined text-sm"
+                    >rocket_launch</span
+                  >
+                  Access
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 4: Google Maps Scraper -->
+            <div
+              class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
+            >
+              <div
+                class="h-64 rounded-2xl overflow-hidden mb-6 bg-[#10131c] relative group-hover:scale-[1.02] transition-transform duration-500"
+              >
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_5W1n53m9u0-f7rS_0R5-I3W6zYqD9R-m4yTfXl6f_uJxhL3T1o7H2KCaWSjiXnom1QwtddRSQtyfnwV2jNNg4ABV9VQeeZlTO3M6ZwH-ZvrXi7jy6vPCHXdsLs3-I8HG8EVCpsgxycmlR2aVUxJEx4iSKt2kF8rp7yTf7KWRqS9RHmOvHsRpvBmmcyA-DLAemCdi7F6pceLA71TiJaj1Mf0lCQ11SyGz2oaTIxq2il4wpelWa5ZacszC1_NY"
+                  alt="Google Maps Scraper"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">
+                Google Maps Scraper
+              </h3>
+              <p class="text-[#A7B1D8] text-sm mb-6 flex-grow">
+                Human-like lead generation tool requiring no API keys.
+                Efficiently extracts business data from maps.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Lead Generation Bot</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >B2B Prospecting</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Local Business Data</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Sales Intelligence</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
+              >
+                <button
+                  class="flex items-center gap-2 px-5 py-2 rounded-xl border border-white/[0.12] text-white text-sm font-bold hover:bg-white/[0.04] transition-all"
+                >
+                  <span class="material-symbols-outlined text-sm">code</span>
+                  GitHub
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 5: Object Counter -->
+            <div
+              class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
+            >
+              <div
+                class="h-64 rounded-2xl overflow-hidden mb-6 bg-[#10131c] relative group-hover:scale-[1.02] transition-transform duration-500"
+              >
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDctv_Zi5g7tk_l3MInryDJ4cSLNbQYwz2eXOY4mvzpTgUGw_LX8fey2wqpessTU7tvXfJyOu2qSqGMrl3nWgdYroOruYKRbij72uPwsuWfeiozjjUSKdDLvvd67Oyc09AV_nMGPolUpsj5Ca10phH8AZPBWmnEc2G_GaYZS_gQjrT0gUYFVXVbjKyUAtCxyxoJ8ASzNBHbcX4OrFze6OKOih2a1--fQFUDNfmgRgyx2gQLm3OcQrPm3Wg0mI8hCIJdpXhLBZjyT_g"
+                  alt="Object Counter"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Object Counter</h3>
+              <p class="text-[#A7B1D8] text-sm mb-6 flex-grow">
+                Advanced detection and counting for traffic and logistics.
+                High-precision computer vision implementation.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Inventory AI</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Warehouse Automation</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Computer Vision</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Stock Management</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
+              >
+                <button
+                  class="flex items-center gap-2 px-5 py-2 rounded-xl bg-[#4C6BFF] text-white text-sm font-bold hover:brightness-110 transition-all"
+                >
+                  <span class="material-symbols-outlined text-sm"
+                    >download</span
+                  >
+                  Download
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1284,8 +1648,7 @@
     <section class="py-24 bg-[#070A12]" style="z-index: 60">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          <!-- Left - Sticky Image -->
-          <div class="lg:sticky lg:top-24 agency-image">
+          <div class="lg:sticky lg:top-24 agency-image opacity-0">
             <div
               class="relative rounded-3xl overflow-hidden"
               style="max-height: 800px"
@@ -1309,22 +1672,22 @@
             </div>
           </div>
 
-          <!-- Right - Services -->
           <div class="space-y-8 lg:pt-12">
-            <div class="mb-12 agency-header">
+            <div class="mb-12 agency-header opacity-0">
               <h2
                 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
               >
                 Agency-grade <span class="text-gradient">delivery.</span>
               </h2>
               <p class="text-lg text-[#A7B1D8] leading-relaxed">
-                We design, tune, and ship agents that match your workflows—not
-                the other way around.
+                We design, tune, and ship agents that match your e-commerce
+                workflows—not the other way around. Specialized for Pakistan,
+                Dubai & Saudi Arabia markets.
               </p>
             </div>
 
             <div
-              class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500"
+              class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500 opacity-0 translate-x-8"
             >
               <div class="flex items-start gap-4">
                 <div
@@ -1338,14 +1701,14 @@
                   </h3>
                   <p class="text-[#A7B1D8] leading-relaxed">
                     Map your workflow, define guardrails, and choose the right
-                    model stack.
+                    model stack for your Telegram and Shopify operations.
                   </p>
                 </div>
               </div>
             </div>
 
             <div
-              class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500"
+              class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500 opacity-0 translate-x-8"
             >
               <div class="flex items-start gap-4">
                 <div
@@ -1358,14 +1721,15 @@
                     Build & Integrate
                   </h3>
                   <p class="text-[#A7B1D8] leading-relaxed">
-                    Connect APIs, add memory, and ship secure endpoints.
+                    Connect Shopify, Daraz, WhatsApp Business API, add memory,
+                    and ship secure endpoints.
                   </p>
                 </div>
               </div>
             </div>
 
             <div
-              class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500"
+              class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500 opacity-0 translate-x-8"
             >
               <div class="flex items-start gap-4">
                 <div
@@ -1378,93 +1742,10 @@
                     Run & Improve
                   </h3>
                   <p class="text-[#A7B1D8] leading-relaxed">
-                    Monitor runs, collect feedback, and iterate prompts.
+                    Monitor runs, collect feedback, and iterate prompts for
+                    better conversion rates.
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section - NO ANIMATION -->
-    <section class="py-24 bg-[#070A12]" style="z-index: 70">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16 testimonials-header">
-          <h2
-            class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white"
-          >
-            Loved by <span class="text-gradient">builders</span> and
-            <span class="text-gradient">operators.</span>
-          </h2>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
-          <div
-            class="testimonial-card glass-card rounded-3xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500"
-          >
-            <div class="mb-6">
-              <i class="fas fa-quote-left text-[#4C6BFF]/40 text-2xl"></i>
-            </div>
-            <p class="text-white/90 text-lg leading-relaxed mb-8">
-              "We shipped a research agent in days. It now runs 200+ queries a
-              week."
-            </p>
-            <div class="flex items-center gap-3">
-              <div
-                class="w-10 h-10 rounded-full bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center"
-              >
-                <span class="text-sm font-semibold text-white">AR</span>
-              </div>
-              <div>
-                <p class="font-medium text-white">Ava R.</p>
-                <p class="text-sm text-[#A7B1D8]">Product</p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="testimonial-card glass-card rounded-3xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500"
-          >
-            <div class="mb-6">
-              <i class="fas fa-quote-left text-[#4C6BFF]/40 text-2xl"></i>
-            </div>
-            <p class="text-white/90 text-lg leading-relaxed mb-8">
-              "The agency turned our messy workflow into a reliable agent
-              pipeline."
-            </p>
-            <div class="flex items-center gap-3">
-              <div
-                class="w-10 h-10 rounded-full bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center"
-              >
-                <span class="text-sm font-semibold text-white">MT</span>
-              </div>
-              <div>
-                <p class="font-medium text-white">Marcus T.</p>
-                <p class="text-sm text-[#A7B1D8]">Ops</p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="testimonial-card glass-card rounded-3xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500"
-          >
-            <div class="mb-6">
-              <i class="fas fa-quote-left text-[#4C6BFF]/40 text-2xl"></i>
-            </div>
-            <p class="text-white/90 text-lg leading-relaxed mb-8">
-              "Finally, an AI layer that feels like real infrastructure."
-            </p>
-            <div class="flex items-center gap-3">
-              <div
-                class="w-10 h-10 rounded-full bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center"
-              >
-                <span class="text-sm font-semibold text-white">LK</span>
-              </div>
-              <div>
-                <p class="font-medium text-white">Leo K.</p>
-                <p class="text-sm text-[#A7B1D8]">Engineering</p>
               </div>
             </div>
           </div>
@@ -1476,8 +1757,7 @@
     <section id="about" class="py-24 bg-[#070A12]" style="z-index: 80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <!-- Left content -->
-          <div class="space-y-8 about-content">
+          <div class="space-y-8 about-content opacity-0">
             <div>
               <h2
                 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6"
@@ -1485,19 +1765,19 @@
                 About <span class="text-gradient">GoravAI</span>
               </h2>
               <p class="text-lg text-[#A7B1D8] leading-relaxed mb-6">
-                GoravAI is a forward-thinking digital agency led by experienced
-                developers and AI engineers. We specialize in building powerful
-                web solutions, intelligent AI agents, creative branding, and
-                high-impact digital marketing strategies.
+                GoravAI is a forward-thinking AI automation agency led by
+                experienced developers and AI engineers. We specialize in
+                building intelligent Telegram agents, Shopify automation, and
+                conversational commerce solutions for e-commerce sellers in
+                Pakistan, Dubai & Saudi Arabia.
               </p>
               <p class="text-lg text-[#A7B1D8] leading-relaxed">
-                Our mission is to democratize AI automation, making it
-                accessible to businesses of all sizes. We believe in the power
-                of autonomous agents to transform how work gets done.
+                Our mission is to democratize AI automation, making 24/7
+                customer support and sales automation accessible to businesses
+                of all sizes across the Middle East and South Asia.
               </p>
             </div>
 
-            <!-- Stats -->
             <div class="grid grid-cols-2 gap-6 pt-6">
               <div class="border-l-2 border-[#4C6BFF] pl-4">
                 <div
@@ -1505,26 +1785,26 @@
                 >
                   50+
                 </div>
-                <div class="text-sm text-[#A7B1D8]">Projects Delivered</div>
+                <div class="text-sm text-[#A7B1D8]">
+                  E-commerce Bots Deployed
+                </div>
               </div>
               <div class="border-l-2 border-[#7B8FFF] pl-4">
                 <div
                   class="font-display text-3xl sm:text-4xl font-bold text-white mb-1"
                 >
-                  100%
+                  24/7
                 </div>
-                <div class="text-sm text-[#A7B1D8]">Client Satisfaction</div>
+                <div class="text-sm text-[#A7B1D8]">Automated Support</div>
               </div>
             </div>
           </div>
 
-          <!-- Right - Founder card -->
-          <div class="relative flex justify-center about-image">
+          <div class="relative flex justify-center about-image opacity-0">
             <div
               class="glass-card rounded-3xl overflow-hidden"
               style="width: 400px"
             >
-              <!-- Image -->
               <div style="width: 400px; height: 400px; overflow: hidden">
                 <img
                   src="https://pbs.twimg.com/profile_images/1997316190642061312/tq0oVJQs_400x400.jpg"
@@ -1533,7 +1813,6 @@
                 />
               </div>
 
-              <!-- Content -->
               <div class="p-6 sm:p-8">
                 <h3 class="font-display text-2xl font-bold text-white mb-1">
                   Gorav Khemani
@@ -1542,18 +1821,16 @@
                   Founder of GoravAI
                 </p>
 
-                <!-- Quote -->
                 <div class="border-l-2 border-[#4C6BFF] pl-4 mb-6">
                   <i
                     class="fas fa-quote-left text-[#4C6BFF]/40 mb-2 text-sm"
                   ></i>
                   <p class="text-sm text-[#A7B1D8] italic">
                     "A visionary leader focused on combining creative design
-                    with powerful automation."
+                    with powerful automation for e-commerce growth."
                   </p>
                 </div>
 
-                <!-- Social links -->
                 <div class="flex gap-3">
                   <a
                     href="https://www.linkedin.com/company/gorav-ai/?viewAsMember=true"
@@ -1579,7 +1856,6 @@
               </div>
             </div>
 
-            <!-- Decorative elements -->
             <div
               class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#4C6BFF]/10 blur-2xl"
             ></div>
@@ -1594,7 +1870,7 @@
     <!-- FAQ Section -->
     <section id="faq" class="py-24 bg-[#070A12]" style="z-index: 90">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12 faq-header">
+        <div class="text-center mb-12 faq-header opacity-0">
           <h2
             class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
           >
@@ -1604,7 +1880,7 @@
 
         <div class="space-y-4">
           <div
-            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden"
+            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden opacity-0"
           >
             <button
               class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
@@ -1617,79 +1893,82 @@
             </button>
             <div class="accordion-content">
               <p class="text-[#A7B1D8] pb-5 leading-relaxed">
-                No! GoravAI is designed for everyone. You can build powerful
-                agents using natural language. Simply describe what you want,
-                and our platform handles the rest. For advanced users, we also
-                offer code-level customization.
+                No! GoravAI is designed for e-commerce sellers. You can build
+                powerful Telegram and WhatsApp bots using natural language.
+                Simply describe what you want, and our platform handles the
+                rest. For advanced users, we also offer API-level customization.
               </p>
             </div>
           </div>
 
           <div
-            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden"
+            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden opacity-0"
           >
             <button
               class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
               onclick="toggleAccordion(this)"
             >
               <span class="text-white font-medium"
-                >Can I connect my own tools?</span
+                >Can I connect my Shopify or Daraz store?</span
               >
               <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
             </button>
             <div class="accordion-content">
               <p class="text-[#A7B1D8] pb-5 leading-relaxed">
-                Absolutely. GoravAI integrates with 100+ popular tools and
-                services including Slack, Notion, Google Workspace, Salesforce,
-                and more. You can also connect custom APIs using our webhook
-                system.
+                Absolutely. GoravAI integrates with Shopify, Daraz, WooCommerce,
+                and major e-commerce platforms. We also support WhatsApp
+                Business API, Telegram Bot API, and custom webhook integrations
+                for seamless order management.
               </p>
             </div>
           </div>
 
           <div
-            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden"
-          >
-            <button
-              class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
-              onclick="toggleAccordion(this)"
-            >
-              <span class="text-white font-medium">How does memory work?</span>
-              <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
-            </button>
-            <div class="accordion-content">
-              <p class="text-[#A7B1D8] pb-5 leading-relaxed">
-                Our agents come with built-in memory that persists across
-                conversations and sessions. They can remember context, user
-                preferences, and historical data to provide more personalized
-                and accurate responses over time.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden"
+            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden opacity-0"
           >
             <button
               class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
               onclick="toggleAccordion(this)"
             >
               <span class="text-white font-medium"
-                >What models are supported?</span
+                >Does it support Urdu and Arabic?</span
               >
               <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
             </button>
             <div class="accordion-content">
               <p class="text-[#A7B1D8] pb-5 leading-relaxed">
-                We support all major LLMs including GPT-4, Claude, Gemini, and
-                open-source models like Llama and Mistral. You can choose the
-                best model for each agent based on your needs and budget.
+                Yes! Our AI agents support multilingual conversations including
+                English, Urdu, and Arabic—perfect for customers in Pakistan,
+                Dubai, and Saudi Arabia. The AI automatically detects language
+                and responds appropriately.
               </p>
             </div>
           </div>
 
           <div
-            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden"
+            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden opacity-0"
+          >
+            <button
+              class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
+              onclick="toggleAccordion(this)"
+            >
+              <span class="text-white font-medium"
+                >How does the 24/7 support work?</span
+              >
+              <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
+            </button>
+            <div class="accordion-content">
+              <p class="text-[#A7B1D8] pb-5 leading-relaxed">
+                Once deployed, your AI agent handles customer queries, order
+                tracking, and sales automatically—day and night. It can answer
+                FAQs, process returns, check inventory, and escalate complex
+                issues to your human team when needed.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden opacity-0"
           >
             <button
               class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
@@ -1700,10 +1979,10 @@
             </button>
             <div class="accordion-content">
               <p class="text-[#A7B1D8] pb-5 leading-relaxed">
-                All plans include email support. Growth and Scale plans get
-                priority support with faster response times. Scale customers
-                also get access to a dedicated account manager and Slack
-                channel.
+                All plans include email and WhatsApp support. Enterprise clients
+                get priority support with faster response times and a dedicated
+                account manager familiar with Middle East & South Asian
+                e-commerce markets.
               </p>
             </div>
           </div>
@@ -1716,14 +1995,12 @@
       class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0B1120]"
       style="z-index: 100"
     >
-      <!-- Background gradient -->
       <div
         class="absolute inset-0 bg-gradient-to-b from-[#0B1120] via-[#070A12] to-[#070A12]"
       ></div>
 
-      <!-- Orb -->
       <div
-        class="cta-orb absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 w-[72vw] h-[72vw] max-w-[980px] max-h-[980px]"
+        class="cta-orb absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 w-[72vw] h-[72vw] max-w-[980px] max-h-[980px] opacity-0"
       >
         <div
           class="absolute inset-0 rounded-full bg-gradient-radial from-[#4C6BFF]/35 via-[#4C6BFF]/10 to-transparent blur-3xl animate-pulse-glow"
@@ -1736,26 +2013,27 @@
         ></div>
       </div>
 
-      <!-- Content -->
       <div
         class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
       >
         <h2
-          class="cta-headline font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+          class="cta-headline font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 opacity-0"
         >
-          Ready to ship your<br /><span class="text-gradient"
-            >first agent?</span
+          Ready to automate your<br /><span class="text-gradient"
+            >e-commerce store?</span
           >
         </h2>
 
         <p
-          class="cta-subheadline text-lg md:text-xl text-[#A7B1D8] max-w-xl mx-auto mb-10"
+          class="cta-subheadline text-lg md:text-xl text-[#A7B1D8] max-w-xl mx-auto mb-10 opacity-0"
         >
-          Start building free. Upgrade when you're ready to scale.
+          Start building your Telegram AI agent today. Join 50+ sellers in
+          Pakistan, Dubai & Saudi Arabia saving 20+ hours weekly with
+          automation.
         </p>
 
         <div
-          class="cta-buttons flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
+          class="cta-buttons flex flex-col sm:flex-row items-center justify-center gap-4 mb-20 opacity-0"
         >
           <a
             href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat"
@@ -1785,7 +2063,6 @@
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          <!-- Brand -->
           <div class="lg:col-span-2">
             <a href="#" class="flex items-center gap-2 mb-6">
               <img
@@ -1798,11 +2075,11 @@
               >
             </a>
             <p class="text-[#A7B1D8] text-sm leading-relaxed mb-6 max-w-sm">
-              GoravAI delivers modern, scalable, and intelligent digital
-              solutions. Build agents that work while you sleep.
+              GoravAI delivers modern, scalable, and intelligent automation
+              solutions for e-commerce sellers. Build Telegram AI agents that
+              work while you sleep.
             </p>
 
-            <!-- Contact info -->
             <div class="space-y-3">
               <a
                 href="mailto:goravai787@gmail.com"
@@ -1825,13 +2102,12 @@
                 ></i>
                 <span
                   >F-67/1196, Behind United Hotel Qazi Qayoom Road Hyder chowk
-                  Hyderabad Sindh</span
+                  Hyderabad Sindh, Pakistan</span
                 >
               </div>
             </div>
           </div>
 
-          <!-- Quick Links -->
           <div>
             <h4 class="font-display font-semibold text-white mb-4">
               Quick Links
@@ -1846,9 +2122,16 @@
               </li>
               <li>
                 <a
-                  href="projects.html"
+                  href="#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Projects</a
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#software"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >Software</a
                 >
               </li>
               <li>
@@ -1861,7 +2144,6 @@
             </ul>
           </div>
 
-          <!-- Services -->
           <div>
             <h4 class="font-display font-semibold text-white mb-4">Services</h4>
             <ul class="space-y-3">
@@ -1869,61 +2151,60 @@
                 <a
                   href="#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Web Development</a
+                  >Telegram AI Agents</a
                 >
               </li>
               <li>
                 <a
                   href="#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >AI Agents</a
+                  >Shopify Automation</a
                 >
               </li>
               <li>
                 <a
                   href="#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Logo Design</a
+                  >Vibe Coding</a
                 >
               </li>
               <li>
                 <a
                   href="#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Digital Marketing</a
+                  >AI Video Ads</a
                 >
               </li>
               <li>
                 <a
                   href="#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Domain Selling</a
+                  >Brand Design</a
                 >
               </li>
             </ul>
           </div>
 
-          <!-- Legal -->
           <div>
             <h4 class="font-display font-semibold text-white mb-4">Legal</h4>
             <ul class="space-y-3">
               <li>
                 <a
-                  href="privacy.html"
+                  href="privacypolicy.html"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
                   >Privacy</a
                 >
               </li>
               <li>
                 <a
-                  href="privacy.html"
+                  href="privacypolicy.html"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
                   >Terms</a
                 >
               </li>
               <li>
                 <a
-                  href="privacy.html"
+                  href="privacypolicy.html"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
                   >Security</a
                 >
@@ -1932,7 +2213,6 @@
           </div>
         </div>
 
-        <!-- Bottom bar -->
         <div
           class="mt-16 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4"
         >
@@ -1993,7 +2273,6 @@
         mobileMenu.classList.toggle("hidden");
       });
 
-      // Close mobile menu when clicking a link
       document.querySelectorAll("#mobile-menu a").forEach((link) => {
         link.addEventListener("click", () => {
           mobileMenu.classList.add("hidden");
@@ -2005,12 +2284,10 @@
         const item = button.parentElement;
         const isActive = item.classList.contains("active");
 
-        // Close all accordions
         document.querySelectorAll(".accordion-item").forEach((acc) => {
           acc.classList.remove("active");
         });
 
-        // Open clicked one if it wasn't active
         if (!isActive) {
           item.classList.add("active");
         }
@@ -2034,7 +2311,7 @@
       gsap.set(".hero-cta", { y: 15, opacity: 0 });
       gsap.set(".hero-scroll", { opacity: 0 });
 
-      // Hero Entrance Animation (on page load)
+      // Hero Entrance Animation
       window.addEventListener("load", () => {
         const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
@@ -2054,419 +2331,351 @@
         heroTl.to(".hero-scroll", { opacity: 1, duration: 0.5 }, "-=0.2");
       });
 
-      // Agent Builder Section Scroll Animation
+      // FIXED: Agent Builder - Using toggleActions instead of scrub for entrance
       gsap.from(".agent-builder-headline", {
         scrollTrigger: {
           trigger: "#agent-builder",
           start: "top 80%",
-          end: "top 40%",
-          scrub: 1,
+          toggleActions: "play none none reverse",
         },
         x: -100,
         opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
       });
 
       gsap.from(".agent-builder-body", {
         scrollTrigger: {
           trigger: "#agent-builder",
-          start: "top 70%",
-          end: "top 35%",
-          scrub: 1,
+          start: "top 75%",
+          toggleActions: "play none none reverse",
         },
         x: -80,
         opacity: 0,
+        duration: 0.8,
+        delay: 0.1,
+        ease: "power2.out",
       });
 
       gsap.from(".agent-builder-features li", {
         scrollTrigger: {
           trigger: "#agent-builder",
-          start: "top 60%",
-          end: "top 30%",
-          scrub: 1,
+          start: "top 70%",
+          toggleActions: "play none none reverse",
         },
         x: -60,
         opacity: 0,
         stagger: 0.1,
+        duration: 0.6,
+        ease: "power2.out",
       });
 
       gsap.from(".agent-builder-card", {
         scrollTrigger: {
           trigger: "#agent-builder",
           start: "top 80%",
-          end: "top 40%",
-          scrub: 1,
+          toggleActions: "play none none reverse",
         },
         x: 100,
         opacity: 0,
         scale: 0.95,
+        duration: 1,
+        ease: "power2.out",
       });
 
-      // === UPDATED: Agent Network Section (Shorter, No Rotation, Center Reveal) ===
+      // FIXED: Agent Network - Simplified animation without scrub
+      // Agent Network - EXPAND FROM CENTER ANIMATION
       const networkTl = gsap.timeline({
         scrollTrigger: {
           trigger: "#agent-network",
-          start: "top top",
-          end: "+=1200", // Shorter height
-          pin: true,
-          scrub: 1,
+          start: "top 75%",
+          toggleActions: "play none none reverse",
         },
       });
 
-      // Phase 1: Entrance (0% - 40%)
-      // 1. Headline drops from top
-      networkTl.to(
-        ".agent-network-headline",
-        { y: 0, opacity: 1, duration: 1 },
-        0,
-      );
-      networkTl.to(
-        ".agent-network-subheadline",
-        { opacity: 1, duration: 1 },
-        0.2,
-      );
-
-      // 2. Hub scales up from center
-      networkTl.to(
-        ".agent-hub",
-        {
-          scale: 1,
+      // Headlines fade in
+      networkTl
+        .to(".agent-network-headline", {
+          y: 0,
           opacity: 1,
-          duration: 1,
-          ease: "back.out(1.7)",
-        },
-        0.5,
-      );
-
-      // 3. Nodes expand outward from center (0,0) to position
-      // Positions calculated for equal distance (140px radius)
-      const nodePositions = [
-        { x: 140, y: 0 }, // Research (0deg)
-        { x: 70, y: -121 }, // Write (60deg)
-        { x: -70, y: -121 }, // Code (120deg)
-        { x: -140, y: 0 }, // Review (180deg)
-        { x: -70, y: 121 }, // Deploy (240deg)
-        { x: 70, y: 121 }, // Analyze (300deg)
-      ];
-
-      networkTl.to(
-        ".network-node",
-        {
-          x: (i) => nodePositions[i].x,
-          y: (i) => nodePositions[i].y,
-          scale: 1,
-          opacity: 1,
-          stagger: 0.1,
+          duration: 0.6,
           ease: "power2.out",
-          duration: 1,
-        },
-        1.2,
-      );
-
-      // 4. Lines draw out
-      networkTl.fromTo(
-        ".connection-line",
-        { scaleX: 0 },
-        { scaleX: 1, duration: 0.8, stagger: 0.05, ease: "power2.inOut" },
-        1.8,
-      );
-
-      // Phase 2: Hold/Settle (40% - 70%)
-      // Just a brief pause, no rotation
-
-      // Phase 3: Exit (70% - 100%)
-      networkTl.to(
-        [".agent-network-headline", ".agent-network-subheadline"],
-        { opacity: 0, y: -20, duration: 0.5 },
-        2.5,
-      );
-      networkTl.to(
-        [".agent-hub", ".network-node", ".connection-line"],
-        { scale: 0, opacity: 0, duration: 0.8 },
-        2.8,
-      );
-
-      // // === END UPDATED SECTION ===
-
-      // Turn tasks into outcomes.
-      // Set initial states
-      gsap.set(".usecases-header, .usecase-card", {
-        opacity: 0,
-        x: (i, t) => (t.classList.contains("usecases-header") ? -50 : 80),
-      });
-
-      // Master timeline function
-      function playEntranceAnimation() {
-        const tl = gsap.timeline();
-
-        tl.to(".usecases-header", {
-          x: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: "power2.out",
-        }).to(
-          ".usecase-card",
+        })
+        .to(
+          ".agent-network-subheadline",
           {
-            x: 0,
+            y: 0,
             opacity: 1,
             duration: 0.6,
-            stagger: 0.15,
             ease: "power2.out",
           },
           "-=0.4",
+        )
+
+        // Hub scales up from center
+        .to(
+          ".agent-hub",
+          {
+            scale: 1,
+            opacity: 1,
+            duration: 0.8,
+            ease: "back.out(1.7)",
+          },
+          "-=0.2",
+        )
+
+        // Lines fade in
+        .to(
+          ".connection-lines",
+          {
+            opacity: 1,
+            duration: 0.4,
+          },
+          "-=0.4",
+        )
+
+        // Nodes expand from center to their positions
+        .to(
+          ".network-node",
+          {
+            duration: 1.2,
+            ease: "power3.out",
+            stagger: 0.1,
+            opacity: 1,
+            scale: 1,
+            x: function (i, target) {
+              const angle = parseInt(target.getAttribute("data-angle"));
+              const radius = window.innerWidth < 640 ? 110 : 140; // Smaller radius on mobile
+              return Math.cos((angle * Math.PI) / 180) * radius;
+            },
+            y: function (i, target) {
+              const angle = parseInt(target.getAttribute("data-angle"));
+              const radius = window.innerWidth < 640 ? 110 : 140;
+              return Math.sin((angle * Math.PI) / 180) * radius;
+            },
+          },
+          "-=0.6",
         );
 
-        return tl;
-      }
-
-      // Play immediately on page load
-      const masterTl = playEntranceAnimation();
-
-      // Reset and replay on scroll re-entry
-      ScrollTrigger.create({
-        trigger: "#projects",
-        start: "top 80%",
-        end: "bottom top",
-        onEnter: () => {
-          // Only replay if not already visible from load
-          if (masterTl.progress() === 1) {
-            gsap.set(".usecases-header, .usecase-card", {
-              opacity: 0,
-              x: (i, t) => (t.classList.contains("usecases-header") ? -50 : 80),
-            });
-            playEntranceAnimation();
-          }
-        },
-        onLeave: () => {
-          // Reset when leaving so it can re-animate
-          gsap.set(".usecases-header, .usecase-card", { opacity: 0 });
-        },
-        onEnterBack: () => {
-          gsap.set(".usecases-header, .usecase-card", {
-            opacity: 0,
-            x: (i, t) => (t.classList.contains("usecases-header") ? -50 : 80),
-          });
-          playEntranceAnimation();
-        },
-      });
-      // // === END UPDATED SECTION ===
-
-      // ==================== AGENCY SECTION ====================
-
-      // Set initial visible state to prevent hidden elements
-      gsap.set(".agency-image, .agency-header, .agency-card", { opacity: 1 });
-
-      // Agency Image - Load Animation + Scroll Effect
-      gsap.fromTo(
-        ".agency-image",
-        { x: -80, opacity: 0 },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: ".agency-image",
-            start: "top 85%",
-            toggleActions: "play none none reverse", // play on enter, reverse on leave
-          },
-        },
-      );
-
-      // Agency Header - Load Animation + Scroll Effect
-      gsap.fromTo(
-        ".agency-header",
-        { x: 60, opacity: 0 },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: "power2.out",
-          delay: 0.2,
-          scrollTrigger: {
-            trigger: ".agency-header",
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-        },
-      );
-
-      // Agency Cards - Load Animation + Scroll Effect
-      gsap.fromTo(
-        ".agency-card",
-        { x: 80, opacity: 0 },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: "power2.out",
-          delay: 0.3,
-          scrollTrigger: {
-            trigger: ".agency-card",
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-        },
-      );
-
-      // ==================== TESTIMONIALS SECTION ====================
-
-      // Set initial visible state
-      gsap.set(".testimonials-header, .testimonial-card", { opacity: 1 });
-
-      // Testimonials Header - Load Animation + Scroll Effect
-      gsap.fromTo(
-        ".testimonials-header",
-        { y: -30, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: ".testimonials-header",
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-        },
-      );
-
-      // Testimonial Cards - Load Animation + Scroll Effect
-      gsap.fromTo(
-        ".testimonial-card",
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: "power2.out",
-          delay: 0.2,
-          scrollTrigger: {
-            trigger: ".testimonial-card",
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-        },
-      );
-
-      // Services Section Scroll Animation
-      gsap.from(".services-header", {
+      // Turn Tasks into Outcomes - FIXED
+      gsap.from(".outcomes-content", {
         scrollTrigger: {
-          trigger: "#services",
+          trigger: ".outcomes-content",
           start: "top 80%",
-          end: "top 40%",
-          scrub: 1,
-        },
-        y: 30,
-        opacity: 0,
-      });
-
-      gsap.from(".service-card", {
-        scrollTrigger: {
-          trigger: "#services",
-          start: "top 60%",
-          end: "top 10%",
-          scrub: 1,
-        },
-        y: 60,
-        opacity: 0,
-        stagger: 0.1,
-      });
-
-      // agency-grade delivery section
-
-      // About Section Scroll Animation
-      gsap.from(".about-content", {
-        scrollTrigger: {
-          trigger: "#about",
-          start: "top 80%",
-          end: "top 40%",
-          scrub: 1,
+          toggleActions: "play none none reverse",
         },
         x: -60,
         opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
       });
 
-      gsap.from(".about-image", {
+      gsap.from(".outcomes-image", {
         scrollTrigger: {
-          trigger: "#about",
+          trigger: ".outcomes-image",
           start: "top 80%",
-          end: "top 40%",
-          scrub: 1,
+          toggleActions: "play none none reverse",
         },
         x: 60,
         opacity: 0,
-        scale: 0.95,
+        duration: 0.8,
+        ease: "power2.out",
       });
 
-      // FAQ Section Scroll Animation
-      gsap.from(".faq-header", {
+      // Services Bento Grid - FIXED (No scrub, proper toggleActions)
+      gsap.to(".services-header", {
+        scrollTrigger: {
+          trigger: "#services",
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+
+      gsap.to(".bento-card", {
+        scrollTrigger: {
+          trigger: "#services",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+        y: 0,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power2.out",
+      });
+
+      // Software Section - FIXED
+      gsap.to(".software-header", {
+        scrollTrigger: {
+          trigger: "#software",
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+
+      gsap.to(".software-cards", {
+        scrollTrigger: {
+          trigger: "#software",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        delay: 0.2,
+        ease: "power2.out",
+      });
+
+      // Agency-grade delivery - FIXED (Proper toggleActions with duration)
+      gsap.to(".agency-image", {
+        scrollTrigger: {
+          trigger: ".agency-image",
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+      });
+
+      gsap.to(".agency-header", {
+        scrollTrigger: {
+          trigger: ".agency-header",
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+        y: 0,
+        x: 0,
+        opacity: 1,
+        duration: 0.8,
+        delay: 0.2,
+        ease: "power2.out",
+      });
+
+      gsap.to(".agency-card", {
+        scrollTrigger: {
+          trigger: ".agency-card",
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+        x: 0,
+        opacity: 1,
+        duration: 0.6,
+        stagger: 0.1,
+        delay: 0.3,
+        ease: "power2.out",
+      });
+
+      // About Section - FIXED
+      gsap.to(".about-content", {
+        scrollTrigger: {
+          trigger: "#about",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+        x: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+
+      gsap.to(".about-image", {
+        scrollTrigger: {
+          trigger: "#about",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+        x: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+
+      // FAQ Section - FIXED
+      gsap.to(".faq-header", {
         scrollTrigger: {
           trigger: ".faq-header",
-          start: "top 80%",
-          end: "top 50%",
-          scrub: 1,
-        },
-        y: -30,
-        opacity: 0,
-      });
-
-      gsap.from(".accordion-item", {
-        scrollTrigger: {
-          trigger: ".accordion-item",
           start: "top 85%",
-          end: "top 50%",
-          scrub: 1,
+          toggleActions: "play none none reverse",
         },
-        y: 30,
-        opacity: 0,
-        stagger: 0.05,
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power2.out",
       });
 
-      // Final CTA Section Scroll Animation
-      gsap.from(".cta-orb", {
+      gsap.to(".accordion-item", {
+        scrollTrigger: {
+          trigger: "#faq",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+        y: 0,
+        opacity: 1,
+        stagger: 0.05,
+        duration: 0.5,
+        ease: "power2.out",
+      });
+
+      // Final CTA - FIXED
+      gsap.to(".cta-orb", {
         scrollTrigger: {
           trigger: ".cta-orb",
-          start: "top 80%",
-          end: "top 40%",
-          scrub: 1,
+          start: "top 90%",
+          toggleActions: "play none none reverse",
         },
-        scale: 0.8,
-        opacity: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power2.out",
       });
 
-      gsap.from(".cta-headline", {
+      gsap.to(".cta-headline", {
         scrollTrigger: {
           trigger: ".cta-headline",
-          start: "top 80%",
-          end: "top 50%",
-          scrub: 1,
+          start: "top 85%",
+          toggleActions: "play none none reverse",
         },
-        y: -50,
-        opacity: 0,
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power2.out",
       });
 
-      gsap.from(".cta-subheadline", {
+      gsap.to(".cta-subheadline", {
         scrollTrigger: {
           trigger: ".cta-subheadline",
           start: "top 85%",
-          end: "top 55%",
-          scrub: 1,
+          toggleActions: "play none none reverse",
         },
-        y: -30,
-        opacity: 0,
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        delay: 0.1,
+        ease: "power2.out",
       });
 
-      gsap.from(".cta-buttons", {
+      gsap.to(".cta-buttons", {
         scrollTrigger: {
           trigger: ".cta-buttons",
           start: "top 90%",
-          end: "top 60%",
-          scrub: 1,
+          toggleActions: "play none none reverse",
         },
-        y: 30,
-        opacity: 0,
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        delay: 0.2,
+        ease: "power2.out",
       });
     </script>
   </body>
