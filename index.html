@@ -508,11 +508,6 @@
               >Projects</a
             >
             <a
-              href="#software"
-              class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
-              >Software</a
-            >
-            <a
               href="#about"
               class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
               >About</a
@@ -564,11 +559,6 @@
             href="projects.html"
             class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
             >Projects</a
-          >
-          <a
-            href="#software"
-            class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
-            >Software</a
           >
           <a
             href="#about"
@@ -1377,8 +1367,21 @@
               your intent drives the architecture for e-commerce automation.
             </p>
           </div>
-          <div class="flex items-center gap-4">
-            <div class="hidden md:flex items-center gap-3 mr-4">
+
+          <!-- EXPLORE GALLERY BUTTON ADDED HERE -->
+          <div class="flex flex-col items-end gap-4">
+            <a
+              href="https://gorav-a36y.github.io/GoravAI/projects.html"
+              class="px-6 py-3 rounded-xl bg-[#4C6BFF] text-white text-sm font-bold hover:bg-[#3D56CC] transition-all flex items-center gap-2 group whitespace-nowrap"
+            >
+              Explore Gallery
+              <span
+                class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform"
+                >arrow_forward</span
+              >
+            </a>
+
+            <div class="hidden md:flex items-center gap-3">
               <button
                 class="p-3 rounded-full border border-white/[0.12] hover:border-[#4C6BFF]/50 text-[#A7B1D8] hover:text-[#4C6BFF] transition-all glass-panel"
                 onclick="
@@ -1403,7 +1406,6 @@
           </div>
         </div>
 
-        <!-- WIDTH FIXED: Added max-w-full and proper overflow -->
         <div
           class="relative w-full max-w-full software-cards opacity-0"
           style="max-width: 100%"
@@ -1415,13 +1417,12 @@
             class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#0B1120] to-transparent z-10 pointer-events-none md:block hidden"
           ></div>
 
-          <!-- Cards container with proper width constraint -->
           <div
             class="flex gap-6 pb-12 overflow-x-auto snap-x snap-mandatory hide-scroll-bar"
             id="scrollContainer"
             style="scrollbar-width: none; -ms-overflow-style: none"
           >
-            <!-- Card 1: AI Driver Alert -->
+            <!-- Card 1: AI Driver Alert - GitHub Button -->
             <div
               class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
             >
@@ -1463,17 +1464,15 @@
                 class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
               >
                 <button
-                  class="flex items-center gap-2 px-5 py-2 rounded-xl bg-[#4C6BFF] text-white text-sm font-bold hover:brightness-110 transition-all"
+                  class="flex items-center gap-2 px-5 py-2 rounded-xl border border-white/[0.12] text-white text-sm font-bold hover:bg-white/[0.04] transition-all"
                 >
-                  <span class="material-symbols-outlined text-sm"
-                    >download</span
-                  >
-                  Download
+                  <span class="material-symbols-outlined text-sm">code</span>
+                  GitHub
                 </button>
               </div>
             </div>
 
-            <!-- Card 2: House Map Generator -->
+            <!-- Card 2: House Map Generator - Access Button -->
             <div
               class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
             >
@@ -1515,10 +1514,12 @@
                 class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
               >
                 <button
-                  class="flex items-center gap-2 px-5 py-2 rounded-xl border border-white/[0.12] text-white text-sm font-bold hover:bg-white/[0.04] transition-all"
+                  class="flex items-center gap-2 px-5 py-2 rounded-xl bg-[#4C6BFF] text-white text-sm font-bold hover:brightness-110 transition-all"
                 >
-                  <span class="material-symbols-outlined text-sm">code</span>
-                  GitHub
+                  <span class="material-symbols-outlined text-sm"
+                    >rocket_launch</span
+                  >
+                  Access
                 </button>
               </div>
             </div>
@@ -1575,7 +1576,7 @@
               </div>
             </div>
 
-            <!-- Card 4: Google Maps Scraper -->
+            <!-- Card 4: Google Maps Scraper - Download Button with Alert -->
             <div
               class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
             >
@@ -1617,15 +1618,18 @@
                 class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
               >
                 <button
-                  class="flex items-center gap-2 px-5 py-2 rounded-xl border border-white/[0.12] text-white text-sm font-bold hover:bg-white/[0.04] transition-all"
+                  onclick="showDownloadAlert()"
+                  class="flex items-center gap-2 px-5 py-2 rounded-xl bg-[#4C6BFF] text-white text-sm font-bold hover:brightness-110 transition-all"
                 >
-                  <span class="material-symbols-outlined text-sm">code</span>
-                  GitHub
+                  <span class="material-symbols-outlined text-sm"
+                    >download</span
+                  >
+                  Download
                 </button>
               </div>
             </div>
 
-            <!-- Card 5: Object Counter -->
+            <!-- Card 5: Object Counter - GitHub Button -->
             <div
               class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
             >
@@ -1665,12 +1669,54 @@
                 class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
               >
                 <button
+                  class="flex items-center gap-2 px-5 py-2 rounded-xl border border-white/[0.12] text-white text-sm font-bold hover:bg-white/[0.04] transition-all"
+                >
+                  <span class="material-symbols-outlined text-sm">code</span>
+                  GitHub
+                </button>
+              </div>
+            </div>
+
+            <!-- NEW Card 6: Add your new project here -->
+            <div
+              class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
+            >
+              <div
+                class="h-64 rounded-2xl overflow-hidden mb-6 bg-[#10131c] relative group-hover:scale-[1.02] transition-transform duration-500"
+              >
+                <!-- Add your new image URL here -->
+                <img
+                  src="YOUR_NEW_IMAGE_URL"
+                  alt="New Project"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">
+                Your New Project
+              </h3>
+              <p class="text-[#A7B1D8] text-sm mb-6 flex-grow">
+                Description of your new project goes here.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Tag 1</span
+                >
+                <span
+                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
+                  >Tag 2</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
+              >
+                <button
                   class="flex items-center gap-2 px-5 py-2 rounded-xl bg-[#4C6BFF] text-white text-sm font-bold hover:brightness-110 transition-all"
                 >
                   <span class="material-symbols-outlined text-sm"
-                    >download</span
+                    >rocket_launch</span
                   >
-                  Download
+                  Access
                 </button>
               </div>
             </div>
@@ -1818,10 +1864,10 @@
                 <div
                   class="font-display text-3xl sm:text-4xl font-bold text-white mb-1"
                 >
-                  50+
+                  10+
                 </div>
                 <div class="text-sm text-[#A7B1D8]">
-                  E-commerce Bots Deployed
+                  E-commerce Agents Deployed
                 </div>
               </div>
               <div class="border-l-2 border-[#7B8FFF] pl-4">
@@ -2719,6 +2765,12 @@
         delay: 0.2,
         ease: "power2.out",
       });
+      // Add this inside your <script> tag, before the closing tag
+      function showDownloadAlert() {
+        alert(
+          "This software is currently unavailable for download. You can learn more about it on our Projects page.",
+        );
+      }
     </script>
   </body>
 </html>
