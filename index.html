@@ -1,130 +1,64 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>GoravAI | Custom AI Agents for Telegram & E-Commerce</title>
-
+    <title>GoravAI | AI Agents & Automation for Smart Businesses</title>
     <meta
       name="description"
-      content="GoravAI builds smart Telegram AI agents that handle customer support, order tracking, and sales — 24/7, automatically. Built for e-commerce sellers in Pakistan, Dubai & Saudi Arabia."
+      content="GoravAI builds smart AI agents, automation systems, and custom AI software to help businesses reduce manual work and grow faster. Based in Hyderabad, Sindh, Pakistan."
     />
-
     <meta
       name="keywords"
-      content="Telegram AI agent, ecommerce automation, Shopify chatbot Pakistan, Daraz seller tools, 24/7 customer support bot, Dubai AI agency, Saudi Arabia ecommerce automation, order tracking bot, WhatsApp business API, conversational commerce, AI sales assistant, multilingual chatbot, lead generation bot, vibe coding, AI brand design"
+      content="AI agents, n8n automation, business automation, AI software, Hyderabad Pakistan, GoravAI, digital transformation"
     />
-
-    <link rel="canonical" href="https://gorav-a36y.github.io/GoravAI/" />
-
-    <meta name="robots" content="index, follow" />
-
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      href="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
-      type="image/png"
-    />
-
-    <!-- Social Sharing: OpenGraph -->
+    <meta name="author" content="GoravAI" />
+    <meta name="geo.region" content="PK-SD" />
+    <meta name="geo.placename" content="Hyderabad, Sindh, Pakistan" />
     <meta
       property="og:title"
-      content="GoravAI | Custom AI Agents for Telegram & E-Commerce"
+      content="GoravAI | AI Agents & Automation for Smart Businesses"
     />
     <meta
       property="og:description"
-      content="GoravAI builds smart Telegram AI agents that handle customer support, order tracking, and sales — 24/7, automatically. Built for e-commerce sellers in Pakistan, Dubai & Saudi Arabia."
+      content="Build agents that work while you sleep. GoravAI creates practical AI solutions for real business problems."
     />
-    <meta property="og:url" content="https://gorav-a36y.github.io/GoravAI/" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
-    />
-
-    <!-- Social Sharing: Twitter Card -->
+    <meta property="og:url" content="https://goravai.com" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="GoravAI | Custom AI Agents for Telegram & E-Commerce"
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
     />
-    <meta
-      name="twitter:description"
-      content="GoravAI builds smart Telegram AI agents that handle customer support, order tracking, and sales — 24/7, automatically. Built for e-commerce sellers in Pakistan, Dubai & Saudi Arabia."
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <meta
-      name="twitter:image"
-      content="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
-    />
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "GoravAI",
-        "url": "https://gorav-a36y.github.io/GoravAI/",
-        "logo": "https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png",
-        "description": "GoravAI builds smart Telegram AI agents that handle customer support, order tracking, and sales — 24/7, automatically.",
-        "areaServed": ["Pakistan", "Dubai", "Saudi Arabia", "UAE"],
-        "sameAs": [
-          "https://www.linkedin.com/in/gorav-kumar-61968a381",
-          "https://www.facebook.com/share/17VpXx6YjX/"
-        ]
-      }
-    </script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-              display: ["Space Grotesk", "sans-serif"],
-            },
-            colors: {
-              background: "#070A12",
-              foreground: "#F4F6FF",
-              accent: "#4C6BFF",
-              muted: "#A7B1D8",
-              surface: "#10131c",
-              "surface-container": "#1c1f28",
-              "surface-container-high": "#272a33",
-              "on-surface": "#e0e2ee",
-              "on-surface-variant": "#c4c5d8",
-              primary: "#bac3ff",
-              "primary-container": "#7087ff",
-              secondary: "#bbc5ed",
-              tertiary: "#c8bfff",
-              error: "#ffb4ab",
-            },
-          },
-        },
-      };
-    </script>
     <style>
+      :root {
+        --primary-blue: #3b82f6;
+        --primary-blue-light: #60a5fa;
+        --primary-blue-dark: #2563eb;
+        --accent-cyan: #06b6d4;
+        --bg-dark: #0a0f1c;
+        --bg-darker: #070b14;
+        --bg-card: #111827;
+        --bg-card-hover: #1a2236;
+        --text-white: #f8fafc;
+        --text-gray: #94a3b8;
+        --text-muted: #64748b;
+        --border-subtle: rgba(59, 130, 246, 0.15);
+        --glow-blue: rgba(59, 130, 246, 0.4);
+        --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -136,63 +70,1251 @@
       }
 
       body {
-        font-family: "Inter", sans-serif;
-        background-color: #070a12;
-        color: #f4f6ff;
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-white);
+        line-height: 1.7;
         overflow-x: hidden;
       }
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Space Grotesk", sans-serif;
-      }
-
-      .text-gradient {
-        background: linear-gradient(
-          135deg,
-          #4c6bff 0%,
-          #7b8fff 50%,
-          #a5b4ff 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .glass-nav {
-        background: rgba(7, 10, 18, 0.95);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      }
-
-      .glass-card {
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(12px);
-      }
-
-      .glass-panel {
-        backdrop-filter: blur(16px);
-        background: rgba(49, 53, 62, 0.4);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      .social-btn {
-        transition: all 0.3s ease;
-        transform-style: preserve-3d;
-        position: relative;
+      /* ===== DIAGONAL LINE EFFECT ===== */
+      .diagonal-lines {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
         overflow: hidden;
       }
 
-      .social-btn:hover {
+      .diagonal-lines::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: repeating-linear-gradient(
+          135deg,
+          transparent,
+          transparent 120px,
+          rgba(59, 130, 246, 0.03) 120px,
+          rgba(59, 130, 246, 0.03) 121px
+        );
+        animation: diagonalMove 25s linear infinite;
+      }
+
+      @keyframes diagonalMove {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(85px, 85px);
+        }
+      }
+
+      /* ===== PARTICLES ===== */
+      .particles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+
+        z-index: 1;
+      }
+
+      .particle {
+        position: absolute;
+
+        width: 3px;
+
+        height: 3px;
+
+        background: var(--primary-blue);
+
+        border-radius: 50%;
+
+        opacity: 0.3;
+
+        animation: floatParticle 15s infinite ease-in-out;
+      }
+
+      @keyframes floatParticle {
+        0%,
+        100% {
+          transform: translateY(0) translateX(0);
+          opacity: 0.2;
+        }
+
+        25% {
+          transform: translateY(-30px) translateX(15px);
+          opacity: 0.5;
+        }
+
+        50% {
+          transform: translateY(-15px) translateX(-10px);
+          opacity: 0.3;
+        }
+
+        75% {
+          transform: translateY(-40px) translateX(20px);
+          opacity: 0.4;
+        }
+      }
+
+      /* ===== NAVIGATION ===== */
+
+      .navbar {
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        z-index: 1000;
+
+        padding: 1.2rem 0;
+
+        transition: var(--transition-smooth);
+
+        backdrop-filter: blur(0px);
+      }
+
+      .navbar.scrolled {
+        background: rgba(10, 15, 28, 0.92);
+
+        backdrop-filter: blur(20px);
+
+        padding: 0.8rem 0;
+
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      .nav-container {
+        max-width: 1280px;
+
+        margin: 0 auto;
+
+        padding: 0 2rem;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.6rem;
+
+        font-weight: 800;
+
+        letter-spacing: -0.5px;
+
+        text-decoration: none;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 0;
+
+        white-space: nowrap;
+      }
+
+      .logo .gorav,
+      .logo .ai {
+        display: inline;
+
+        letter-spacing: -0.5px;
+      }
+
+      .logo .gorav {
+        color: var(--text-white);
+      }
+
+      .logo .ai {
+        color: var(--primary-blue);
+      }
+
+      .nav-links {
+        display: flex;
+
+        gap: 2.5rem;
+
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: var(--text-gray);
+
+        text-decoration: none;
+
+        font-size: 0.9rem;
+
+        font-weight: 500;
+
+        transition: var(--transition-smooth);
+
+        position: relative;
+      }
+
+      .nav-links a::after {
+        content: "";
+
+        position: absolute;
+
+        bottom: -4px;
+
+        left: 0;
+
+        width: 0;
+
+        height: 2px;
+
+        background: var(--primary-blue);
+
+        transition: var(--transition-smooth);
+      }
+
+      .nav-links a:hover {
+        color: var(--text-white);
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .nav-cta {
+        background: var(--primary-blue);
+
+        color: white;
+
+        padding: 0.6rem 1.4rem;
+
+        border-radius: 8px;
+
+        text-decoration: none;
+
+        font-size: 0.85rem;
+
+        font-weight: 600;
+
+        transition: var(--transition-smooth);
+
+        border: 1px solid transparent;
+      }
+
+      .nav-cta:hover {
+        background: var(--primary-blue-dark);
+
+        box-shadow: 0 0 25px var(--glow-blue);
+
+        transform: translateY(-2px);
+      }
+
+      .mobile-menu-btn {
+        display: none;
+
+        background: none;
+
+        border: none;
+
+        color: var(--text-white);
+
+        font-size: 1.4rem;
+
+        cursor: pointer;
+      }
+
+      /* ===== HERO SECTION ===== */
+
+      .hero {
+        min-height: 100vh;
+
+        display: flex;
+
+        align-items: center;
+
+        position: relative;
+
+        overflow: hidden;
+
+        padding-top: 120px;
+
+        padding-bottom: 6rem;
+      }
+
+      .hero-bg {
+        position: absolute;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        z-index: 0;
+      }
+
+      .hero-bg img {
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+        opacity: 0.35;
+      }
+
+      .hero-overlay {
+        position: absolute;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        background: linear-gradient(
+          180deg,
+          rgba(10, 15, 28, 0.7) 0%,
+          rgba(10, 15, 28, 0.95) 100%
+        );
+
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+
+        z-index: 2;
+
+        max-width: 1280px;
+
+        margin: 0 auto;
+
+        padding: 0 2rem;
+
+        width: 100%;
+
+        text-align: center;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 0.5rem;
+
+        background: rgba(59, 130, 246, 0.1);
+
+        border: 1px solid var(--border-subtle);
+
+        padding: 0.6rem 1.2rem;
+
+        border-radius: 50px;
+
+        font-size: 0.8rem;
+
+        color: var(--primary-blue-light);
+
+        margin-bottom: 2.5rem;
+
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      .hero-badge i {
+        font-size: 0.7rem;
+      }
+
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+
+        font-size: clamp(3rem, 7vw, 5rem);
+
+        font-weight: 700;
+
+        line-height: 1.1;
+
+        margin-bottom: 2rem;
+
+        animation: fadeInUp 0.8s ease-out 0.1s both;
+
+        text-align: center;
+      }
+
+      .hero h1 .highlight {
+        color: var(--primary-blue);
+
+        position: relative;
+      }
+
+      .hero h1 .highlight::after {
+        content: "";
+
+        position: absolute;
+
+        bottom: 5px;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 8px;
+
+        background: rgba(59, 130, 246, 0.2);
+
+        z-index: -1;
+
+        border-radius: 2px;
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+
+        color: var(--text-gray);
+
+        max-width: 620px;
+
+        margin: 0 auto 2.5rem;
+
+        animation: fadeInUp 0.8s ease-out 0.2s both;
+
+        font-weight: 400;
+
+        text-align: center;
+
+        line-height: 1.7;
+      }
+
+      .hero-cta-group {
+        display: flex;
+
+        gap: 1rem;
+
+        flex-wrap: wrap;
+
+        animation: fadeInUp 0.8s ease-out 0.3s both;
+
+        justify-content: center;
+      }
+
+      .btn-primary {
+        background: var(--primary-blue);
+
+        color: white;
+
+        padding: 1rem 2rem;
+
+        border-radius: 10px;
+
+        text-decoration: none;
+
+        font-weight: 600;
+
+        font-size: 0.95rem;
+
+        transition: var(--transition-smooth);
+
+        border: 1px solid transparent;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 0.5rem;
+
+        cursor: pointer;
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-blue-dark);
+
+        box-shadow: 0 0 30px var(--glow-blue);
+
         transform: translateY(-3px);
       }
 
-      .social-btn::before {
+      .btn-secondary {
+        background: transparent;
+
+        color: var(--text-white);
+
+        padding: 1rem 2rem;
+
+        border-radius: 10px;
+
+        text-decoration: none;
+
+        font-weight: 600;
+
+        font-size: 0.95rem;
+
+        transition: var(--transition-smooth);
+
+        border: 1px solid rgba(255, 255, 255, 0.2);
+
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 0.5rem;
+
+        cursor: pointer;
+      }
+
+      .btn-secondary:hover {
+        border-color: var(--primary-blue);
+
+        color: var(--primary-blue);
+
+        transform: translateY(-3px);
+      }
+
+      .hero-stats {
+        display: flex;
+
+        gap: 4rem;
+
+        margin-top: 5rem;
+
+        animation: fadeInUp 0.8s ease-out 0.5s both;
+
+        justify-content: center;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2.2rem;
+
+        font-weight: 700;
+
+        color: var(--primary-blue);
+
+        display: block;
+
+        margin-bottom: 0.3rem;
+      }
+
+      .stat-label {
+        font-size: 0.8rem;
+
+        color: var(--text-muted);
+
+        text-transform: uppercase;
+
+        letter-spacing: 1.5px;
+      }
+
+      /* ===== SECTION COMMON ===== */
+
+      section {
+        position: relative;
+
+        z-index: 2;
+      }
+
+      .section-padding {
+        padding: 6rem 0;
+      }
+
+      .container {
+        max-width: 1280px;
+
+        margin: 0 auto;
+
+        padding: 0 2rem;
+      }
+
+      .section-header {
+        text-align: center;
+
+        margin-bottom: 4rem;
+      }
+
+      .section-tag {
+        display: inline-block;
+
+        color: var(--primary-blue);
+
+        font-size: 0.9rem;
+
+        font-weight: 700;
+
+        text-transform: uppercase;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 1.2rem;
+      }
+
+      .section-title {
+        font-family: "Playfair Display", serif;
+
+        font-size: clamp(2rem, 4vw, 2.8rem);
+
+        font-weight: 700;
+
+        margin-bottom: 1rem;
+
+        line-height: 1.2;
+      }
+
+      .section-desc {
+        color: var(--text-gray);
+
+        max-width: 600px;
+
+        margin: 0 auto;
+
+        font-size: 1.05rem;
+      }
+
+      /* ===== ABOUT SECTION ===== */
+
+      .about {
+        background: var(--bg-darker);
+      }
+
+      .about-grid {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 4rem;
+
+        align-items: center;
+      }
+
+      .about-image {
+        position: relative;
+
+        border-radius: 16px;
+
+        overflow: hidden;
+      }
+
+      .about-image img {
+        width: 100%;
+
+        height: auto;
+
+        border-radius: 16px;
+
+        transition: var(--transition-smooth);
+      }
+
+      .about-image::before {
+        content: "";
+
+        position: absolute;
+
+        inset: -2px;
+
+        background: linear-gradient(
+          135deg,
+          var(--primary-blue),
+          var(--accent-cyan)
+        );
+
+        border-radius: 18px;
+
+        z-index: -1;
+
+        opacity: 0.5;
+      }
+
+      .about-content h2 {
+        font-family: "Playfair Display", serif;
+
+        font-size: 2.2rem;
+
+        margin-bottom: 1.5rem;
+
+        line-height: 1.3;
+      }
+
+      .about-content p {
+        color: var(--text-gray);
+
+        margin-bottom: 1.2rem;
+
+        font-size: 1.02rem;
+      }
+
+      .about-features {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 1rem;
+
+        margin-top: 2rem;
+      }
+
+      .about-feature {
+        display: flex;
+
+        align-items: center;
+
+        gap: 0.8rem;
+      }
+
+      .about-feature i {
+        color: var(--primary-blue);
+
+        font-size: 1.1rem;
+      }
+
+      .about-feature span {
+        font-size: 0.9rem;
+
+        color: var(--text-gray);
+      }
+
+      /* ===== SERVICES SECTION ===== */
+
+      .services-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 2rem;
+      }
+
+      .service-card {
+        background: var(--bg-card);
+
+        border: 1px solid var(--border-subtle);
+
+        border-radius: 16px;
+
+        padding: 3rem 2rem;
+
+        transition: var(--transition-smooth);
+
+        position: relative;
+
+        overflow: hidden;
+
+        min-height: 360px;
+
+        display: flex;
+
+        flex-direction: column;
+      }
+
+      .service-card::before {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 3px;
+
+        background: linear-gradient(
+          90deg,
+          var(--primary-blue),
+          var(--accent-cyan)
+        );
+
+        transform: scaleX(0);
+
+        transition: var(--transition-smooth);
+      }
+
+      .service-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .service-card:hover {
+        background: var(--bg-card-hover);
+
+        transform: translateY(-8px);
+
+        box-shadow:
+          0 20px 40px rgba(0, 0, 0, 0.4),
+          0 0 30px rgba(59, 130, 246, 0.1);
+
+        border-color: rgba(59, 130, 246, 0.3);
+      }
+
+      .service-icon {
+        width: 60px;
+
+        height: 60px;
+
+        background: rgba(59, 130, 246, 0.1);
+
+        border-radius: 14px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        margin-bottom: 1.5rem;
+
+        transition: var(--transition-smooth);
+      }
+
+      .service-card:hover .service-icon {
+        background: rgba(59, 130, 246, 0.2);
+
+        box-shadow: 0 0 20px var(--glow-blue);
+      }
+
+      .service-icon i {
+        font-size: 1.5rem;
+
+        color: var(--primary-blue);
+
+        transition: var(--transition-smooth);
+      }
+
+      .service-card:hover .service-icon i {
+        transform: scale(1.1);
+      }
+      .service-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .service-card p {
+        color: var(--text-gray);
+        font-size: 0.92rem;
+        line-height: 1.7;
+      } /* ===== PROJECTS SECTION ===== */
+      .projects {
+        background: var(--bg-darker);
+      }
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+      .project-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: 16px;
+        overflow: hidden;
+        transition: var(--transition-smooth);
+        position: relative;
+      }
+      .project-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        border-color: rgba(59, 130, 246, 0.25);
+      }
+      .project-image {
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+        position: relative;
+      }
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition-smooth);
+      }
+      .project-card:hover .project-image img {
+        transform: scale(1.05);
+      }
+      .project-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(10, 15, 28, 0.9), transparent);
+        opacity: 0;
+        transition: var(--transition-smooth);
+        display: flex;
+        align-items: flex-end;
+        padding: 1.5rem;
+      }
+      .project-card:hover .project-overlay {
+        opacity: 1;
+      }
+      .project-tag {
+        display: inline-block;
+        background: var(--primary-blue);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 2;
+      }
+      .project-content {
+        padding: 1.8rem;
+      }
+      .project-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.6rem;
+        font-weight: 600;
+      }
+      .project-content p {
+        color: var(--text-gray);
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+      .project-link {
+        color: var(--primary-blue);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        transition: var(--transition-smooth);
+      }
+      .project-link:hover {
+        gap: 0.8rem;
+        color: var(--primary-blue-light);
+      } /* ===== FOUNDER SECTION ===== */
+      .founder-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 4rem;
+        align-items: center;
+      }
+      .founder-image-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .founder-image {
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid var(--primary-blue);
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
+        position: relative;
+        z-index: 2;
+      }
+      .founder-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .founder-glow {
+        position: absolute;
+        width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(59, 130, 246, 0.3),
+          transparent 70%
+        );
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        animation: pulseGlow 3s ease-in-out infinite;
+      }
+      @keyframes pulseGlow {
+        0%,
+        100% {
+          opacity: 0.5;
+          transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+          opacity: 0.8;
+          transform: translate(-50%, -50%) scale(1.05);
+        }
+      }
+      .founder-content h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+      }
+      .founder-role {
+        color: var(--primary-blue);
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        display: block;
+      }
+      .founder-content p {
+        color: var(--text-gray);
+        margin-bottom: 1.2rem;
+        font-size: 1.02rem;
+      }
+      .founder-social {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .founder-social a {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-gray);
+        text-decoration: none;
+        transition: var(--transition-smooth);
+        font-size: 1.1rem;
+      }
+      .founder-social a:hover {
+        background: var(--primary-blue);
+        color: white;
+        border-color: var(--primary-blue);
+        box-shadow: 0 0 20px var(--glow-blue);
+        transform: translateY(-3px);
+      } /* ===== CONTACT SECTION ===== */
+      .contact {
+        background: var(--bg-darker);
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+      .contact-info h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+      }
+      .contact-info > p {
+        color: var(--text-gray);
+        margin-bottom: 2.5rem;
+        font-size: 1.02rem;
+      }
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.2rem;
+        margin-bottom: 1.8rem;
+      }
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        border-radius: 12px;
+        background: rgba(59, 130, 246, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-blue);
+        font-size: 1.1rem;
+        transition: var(--transition-smooth);
+      }
+      .contact-item:hover .contact-icon {
+        background: var(--primary-blue);
+        color: white;
+        box-shadow: 0 0 20px var(--glow-blue);
+      }
+      .contact-details h4 {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+        font-weight: 600;
+      }
+      .contact-details a,
+      .contact-details p {
+        color: var(--text-gray);
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: var(--transition-smooth);
+      }
+      .contact-details a:hover {
+        color: var(--primary-blue);
+      }
+      .contact-form {
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: 16px;
+        padding: 2.5rem;
+      }
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-gray);
+      }
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.9rem 1rem;
+        background: var(--bg-dark);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        color: var(--text-white);
+        font-family: inherit;
+        font-size: 0.95rem;
+        transition: var(--transition-smooth);
+      }
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary-blue);
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
+      }
+      .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+      .form-submit {
+        width: 100%;
+        background: var(--primary-blue);
+        color: white;
+        padding: 1rem;
+        border: none;
+        border-radius: 10px;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition-smooth);
+      }
+      .form-submit:hover {
+        background: var(--primary-blue-dark);
+        box-shadow: 0 0 25px var(--glow-blue);
+      } /* ===== FOOTER ===== */
+      .footer {
+        background: var(--bg-darker);
+        border-top: 1px solid var(--border-subtle);
+        padding: 4rem 0 2rem;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 3rem;
+        margin-bottom: 3rem;
+      }
+      .footer-brand .logo {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+      }
+      .footer-brand p {
+        color: var(--text-gray);
+        font-size: 0.9rem;
+        line-height: 1.8;
+        max-width: 300px;
+      }
+      .footer-column h4 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: var(--text-white);
+      }
+      .footer-column ul {
+        list-style: none;
+      }
+      .footer-column ul li {
+        margin-bottom: 0.8rem;
+      }
+      .footer-column ul li a {
+        color: var(--text-gray);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: var(--transition-smooth);
+      }
+      .footer-column ul li a:hover {
+        color: var(--primary-blue);
+        padding-left: 4px;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid var(--border-subtle);
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .footer-copyright {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 0.8rem;
+      }
+
+      .footer-social a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-gray);
+        text-decoration: none;
+        transition: var(--transition-smooth);
+        font-size: 0.95rem;
+      }
+
+      .footer-social a:hover {
+        background: var(--primary-blue);
+        color: white;
+        border-color: var(--primary-blue);
+        box-shadow: 0 0 15px var(--glow-blue);
+        transform: translateY(-3px);
+      }
+
+      /* ===== SHINE HOVER EFFECT FOR SOCIAL ICONS ===== */
+      @keyframes shineAnimation {
+        0% {
+          transform: skewX(-20deg) translateX(-150%);
+        }
+        100% {
+          transform: skewX(-20deg) translateX(300%);
+        }
+      }
+
+      .footer-social a,
+      .founder-social a {
+        position: relative;
+        overflow: hidden;
+        transform-style: preserve-3d;
+      }
+
+      .footer-social a::before,
+      .founder-social a::before {
         content: "";
         position: absolute;
         top: 0;
@@ -202,2577 +1324,1034 @@
         background: linear-gradient(
           90deg,
           rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 0.5) 50%,
+          rgba(255, 255, 255, 0.6) 50%,
           rgba(255, 255, 255, 0) 100%
         );
         transform: skewX(-20deg) translateX(-150%);
-        transition: transform 0.6s ease;
         z-index: 10;
+        pointer-events: none;
       }
 
-      .social-btn:hover::before {
-        transform: skewX(-20deg) translateX(300%);
+      .footer-social a:hover::before,
+      .founder-social a:hover::before {
+        animation: shineAnimation 0.6s ease forwards;
       }
 
-      .bento-card {
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(12px);
-        transition: all 0.3s ease;
-      }
-      .bento-card:hover {
-        border-color: rgba(76, 107, 255, 0.4);
-        transform: translateY(-4px);
+      .footer-social a:hover,
+      .founder-social a:hover {
+        transform: translateY(-3px);
       }
 
-      .gradient-text {
-        background: linear-gradient(135deg, #bac3ff 0%, #4c6bff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+      /* Brand colors on hover */
+      .footer-social a[title="LinkedIn"]:hover,
+      .founder-social a[title="LinkedIn"]:hover {
+        background-color: #0077b5 !important;
+        color: #ffffff !important;
+        border-color: #0077b5 !important;
       }
 
-      /* Grain overlay */
-      .grain-overlay {
+      .footer-social a[title="Facebook"]:hover,
+      .founder-social a[title="Facebook"]:hover {
+        background-color: #1877f2 !important;
+        color: #ffffff !important;
+        border-color: #1877f2 !important;
+      }
+
+      .footer-social a[title="Instagram"]:hover {
+        background-color: #e1306c !important;
+        color: #ffffff !important;
+        border-color: #e1306c !important;
+      }
+
+      .footer-social a[title="YouTube"]:hover {
+        background-color: #ff0000 !important;
+        color: #ffffff !important;
+        border-color: #ff0000 !important;
+      }
+
+      /* ===== FLOATING WHATSAPP ===== */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.6rem;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        z-index: 999;
+        transition: var(--transition-smooth);
+        animation: whatsappPulse 2s ease-in-out infinite;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1) translateY(-3px);
+        box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+      }
+
+      @keyframes whatsappPulse {
+        0%,
+        100% {
+          box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        }
+        50% {
+          box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
+        }
+      }
+
+      /* ===== ANIMATIONS ===== */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .delay-1 {
+        transition-delay: 0.1s;
+      }
+      .delay-2 {
+        transition-delay: 0.2s;
+      }
+      .delay-3 {
+        transition-delay: 0.3s;
+      }
+      .delay-4 {
+        transition-delay: 0.4s;
+      }
+
+      /* ===== MOBILE RESPONSIVE ===== */
+      @media (max-width: 1024px) {
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        .mobile-menu-btn {
+          display: block;
+        }
+        .hero-stats {
+          gap: 1.5rem;
+        }
+        .about-grid,
+        .founder-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .services-grid,
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+        .about-features {
+          grid-template-columns: 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+        .section-padding {
+          padding: 4rem 0;
+        }
+        .founder-image {
+          width: 250px;
+          height: 250px;
+        }
+        .founder-glow {
+          width: 270px;
+          height: 270px;
+        }
+      }
+
+      /* Mobile Menu */
+      .mobile-menu {
         position: fixed;
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 9999;
-        opacity: 0.04;
-        mix-blend-mode: overlay;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background: var(--bg-card);
+        z-index: 1001;
+        padding: 5rem 2rem 2rem;
+        transition: right 0.4s ease;
+        border-left: 1px solid var(--border-subtle);
       }
 
-      /* Custom scrollbar */
+      .mobile-menu.open {
+        right: 0;
+      }
+
+      .mobile-menu-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+      }
+
+      .mobile-menu-overlay.open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .mobile-menu ul {
+        list-style: none;
+      }
+
+      .mobile-menu ul li {
+        margin-bottom: 1.5rem;
+      }
+
+      .mobile-menu ul li a {
+        color: var(--text-white);
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        display: block;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      .mobile-menu-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: none;
+        border: none;
+        color: var(--text-white);
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
       }
-
       ::-webkit-scrollbar-track {
-        background: #070a12;
+        background: var(--bg-darker);
       }
-
       ::-webkit-scrollbar-thumb {
-        background: #1e293b;
+        background: var(--primary-blue);
         border-radius: 4px;
       }
-
       ::-webkit-scrollbar-thumb:hover {
-        background: #334155;
-      }
-
-      /* Selection */
-      ::selection {
-        background: rgba(76, 107, 255, 0.3);
-        color: #f4f6ff;
-      }
-
-      /* Animations */
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-6px);
-        }
-      }
-
-      .float-animation {
-        animation: float 4s ease-in-out infinite;
-      }
-
-      @keyframes pulse-glow {
-        0%,
-        100% {
-          opacity: 0.6;
-          transform: scale(1);
-        }
-        50% {
-          opacity: 1;
-          transform: scale(1.05);
-        }
-      }
-
-      .animate-pulse-glow {
-        animation: pulse-glow 6s ease-in-out infinite;
-      }
-
-      @keyframes spin-slow {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      .animate-spin-slow {
-        animation: spin-slow 12s linear infinite;
-      }
-
-      /* Social icon hover colors */
-      .social-linkedin:hover {
-        background-color: #0077b5 !important;
-        color: white !important;
-        box-shadow: 0 0 20px rgba(0, 119, 181, 0.5);
-      }
-
-      .social-x:hover {
-        background-color: #000000 !important;
-        color: white !important;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      }
-
-      .social-instagram:hover {
-        background-color: #e1306c !important;
-        color: white !important;
-        box-shadow: 0 0 20px rgba(225, 48, 108, 0.5);
-      }
-
-      .social-facebook:hover {
-        background-color: #1877f2 !important;
-        color: white !important;
-        box-shadow: 0 0 20px rgba(24, 119, 242, 0.5);
-      }
-
-      .social-whatsapp:hover {
-        background-color: #25d366 !important;
-        color: white !important;
-        box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
-      }
-
-      /* Accordion styles */
-      .accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-      }
-
-      .accordion-item.active .accordion-content {
-        max-height: 500px;
-      }
-
-      .accordion-icon {
-        transition: transform 0.3s ease;
-      }
-
-      .accordion-item.active .accordion-icon {
-        transform: rotate(180deg);
-      }
-
-      /* Button hover effects */
-      .btn-primary {
-        transition: all 0.3s ease;
-      }
-
-      .btn-primary:hover {
-        transform: translateY(-2px) scale(1.02);
-        box-shadow: 0 10px 40px rgba(76, 107, 255, 0.4);
-      }
-
-      .btn-outline {
-        transition: all 0.3s ease;
-      }
-
-      .btn-outline:hover {
-        border-color: #4c6bff;
-        color: #4c6bff;
-        transform: translateY(-2px);
-      }
-
-      /* Network node hover */
-      .network-node {
-        transition: all 0.3s ease;
-      }
-
-      .network-node:hover {
-        transform: scale(1.1) !important;
-      }
-
-      /* Nav link hover */
-      .nav-link {
-        position: relative;
-      }
-
-      .nav-link::after {
-        content: "";
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: #4c6bff;
-        transition: width 0.3s ease;
-      }
-
-      .nav-link:hover::after {
-        width: 100%;
-      }
-
-      /* Software scroll section */
-      /* Add this to your style section */
-      #software {
-        width: 100%;
-        max-width: 100vw;
-        overflow: hidden;
-      }
-
-      #software > div {
-        width: 100%;
-        max-width: 1280px; /* matches max-w-7xl */
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-
-      @media (min-width: 640px) {
-        #software > div {
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-        }
-      }
-
-      @media (min-width: 1024px) {
-        #software > div {
-          padding-left: 2rem;
-          padding-right: 2rem;
-        }
-      }
-
-      /* Critical: constrain the scroll container */
-      #software #scrollContainer {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-      }
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-      .hide-scroll-bar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-      .hide-scroll-bar::-webkit-scrollbar {
-        display: none;
-      }
-      .smooth-scroll {
-        scroll-behavior: smooth;
+        background: var(--primary-blue-dark);
       }
     </style>
   </head>
-  <body class="antialiased">
-    <!-- Grain overlay -->
-    <div class="grain-overlay"></div>
+  <body>
+    <!-- Diagonal Lines Background -->
+    <div class="diagonal-lines"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
 
     <!-- Navigation -->
-    <!-- Navigation -->
-    <nav
-      class="fixed w-full z-50 glass-nav transition-all duration-300"
-      id="navbar"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
-          <a href="#" class="flex-shrink-0 flex items-center gap-2">
-            <img
-              src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
-              alt="GoravAI Logo"
-              class="h-10 w-auto object-contain rounded-md"
-            />
-            <span
-              class="font-display font-bold text-2xl tracking-tight text-white"
-              >Gorav<span class="text-[#4C6BFF]">AI</span></span
-            >
-          </a>
-
-          <div class="hidden md:flex items-center space-x-8">
-            <a
-              href="#home"
-              class="nav-link text-sm font-medium text-white transition-colors hover:text-[#4C6BFF]"
-              >Home</a
-            >
-            <a
-              href="#services"
-              class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
-              >Services</a
-            >
-            <a
-              href="projects.html"
-              class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
-              >Projects</a
-            >
-            <a
-              href="#about"
-              class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
-              >About</a
-            >
-            <a
-              href="#footer"
-              class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
-              >Contact</a
-            >
-          </div>
-
-          <div class="hidden md:block">
-            <a
-              href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat"
-              target="_blank"
-              class="btn-primary inline-flex items-center px-6 py-2.5 bg-[#4C6BFF] text-white text-sm font-semibold rounded-xl hover:bg-[#3D56CC]"
-            >
-              Talk to Agent <i class="fas fa-robot ml-2"></i>
-            </a>
-          </div>
-
-          <div class="md:hidden flex items-center">
-            <button
-              id="mobile-menu-btn"
-              class="text-white hover:text-[#4C6BFF] focus:outline-none"
-            >
-              <i class="fas fa-bars text-2xl"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden bg-[#070A12] border-t border-white/[0.06] absolute w-full"
-      >
-        <div class="px-4 pt-2 pb-6 space-y-2">
-          <a
-            href="#home"
-            class="block px-3 py-2 text-base font-medium text-white bg-white/[0.04] rounded-md"
-            >Home</a
-          >
-          <a
-            href="#services"
-            class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
-            >Services</a
-          >
-          <a
-            href="projects.html"
-            class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
-            >Projects</a
-          >
-          <a
-            href="#about"
-            class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
-            >About</a
-          >
-          <a
-            href="#footer"
-            class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
-            >Contact</a
-          >
-          <a
-            href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat"
-            target="_blank"
-            class="block mt-4 text-center px-4 py-3 bg-[#4C6BFF] text-white font-semibold rounded-xl"
-            >Talk to Agent</a
-          >
-        </div>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img
+            src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
+            alt=""
+            style="
+              width: 32px;
+              height: 32px;
+              border-radius: 6px;
+              margin-right: 0.6rem;
+            "
+          />
+          <span class="gorav">Gorav</span><span class="ai">AI</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a
+          href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20am%20interested%20in%20your%20AI%20automation%20services.%20Can%20we%20discuss%20my%20project?"
+          class="nav-cta"
+          target="_blank"
+        >
+          <i class="fab fa-whatsapp"></i> Let's Talk
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-menu-close" id="mobileMenuClose">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul>
+        <li><a href="index.html" class="mobile-link">Home</a></li>
+        <li><a href="about.html" class="mobile-link">About</a></li>
+        <li><a href="services.html" class="mobile-link">Services</a></li>
+        <li><a href="projects.html" class="mobile-link">Projects</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+
     <!-- Hero Section -->
-    <section
-      id="home"
-      class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#070A12]"
-    >
-      <div
-        class="absolute inset-0 bg-gradient-to-b from-[#070A12] via-[#0B1120] to-[#070A12]"
-      ></div>
-
-      <div
-        class="hero-orb absolute left-1/2 top-[52%] -translate-x-1/2 -translate-y-1/2 w-[62vw] h-[62vw] max-w-[900px] max-h-[900px] opacity-0"
-      >
-        <div
-          class="absolute inset-0 rounded-full bg-gradient-radial from-[#4C6BFF]/30 via-[#4C6BFF]/10 to-transparent blur-3xl animate-pulse-glow"
-        ></div>
-        <div
-          class="absolute inset-[15%] rounded-full bg-gradient-radial from-[#4C6BFF]/40 via-[#2D3A8C]/20 to-transparent"
-        ></div>
-        <div
-          class="absolute inset-[35%] rounded-full bg-gradient-radial from-[#7B8FFF]/60 via-[#4C6BFF]/30 to-transparent blur-xl"
-        ></div>
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <img
+          src="https://github.com/Gorav-a36y/GoravAI/blob/main/hero-image.jpg?raw=true"
+          alt="AI Technology Background"
+        />
       </div>
-
-      <div
-        class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto pt-20"
-      >
-        <div
-          class="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] mb-8 opacity-0"
-        >
-          <span class="w-2 h-2 rounded-full bg-[#4C6BFF] animate-pulse"></span>
-          <span
-            class="text-xs font-medium text-[#A7B1D8] uppercase tracking-wider"
-            >Next-Gen AI Agency</span
-          >
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-circle"></i> AI Agency Based in Hyderabad, Pakistan
         </div>
-
-        <h1
-          class="hero-headline font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.05] opacity-0"
-        >
-          Build agents that work<br />while you
-          <span class="text-gradient">sleep.</span>
+        <h1>
+          Build agents that work<br />
+          <span class="highlight">while you sleep.</span>
         </h1>
-
-        <p
-          class="hero-subheadline text-lg md:text-xl text-[#A7B1D8] max-w-2xl mx-auto mb-10 leading-relaxed opacity-0"
-        >
-          GoravAI empowers businesses with powerful Telegram AI agents,
-          e-commerce automation, and high-impact digital solutions designed for
-          modern growth in Pakistan, Dubai & Saudi Arabia.
+        <p class="hero-subtitle">
+          We help businesses cut down manual work, automate repetitive tasks,
+          and run operations smoothly with smart n8n AI agents and custom
+          automation systems.
         </p>
-
-        <div
-          class="hero-cta flex flex-col sm:flex-row justify-center gap-4 opacity-0"
-        >
-          <a
-            href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat"
-            target="_blank"
-            class="btn-primary inline-flex items-center justify-center px-8 py-4 bg-[#4C6BFF] text-white rounded-xl font-semibold hover:bg-[#3D56CC] group"
-          >
-            Talk to Agent
-            <i
-              class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"
-            ></i>
+        <div class="hero-cta-group">
+          <a href="projects.html" class="btn-primary">
+            <i class="fas fa-rocket"></i> Explore Our Work
           </a>
-          <a
-            href="#services"
-            class="btn-outline inline-flex items-center justify-center px-8 py-4 bg-white/[0.04] text-white border border-white/[0.12] rounded-xl font-semibold"
-          >
-            Explore Services
+          <a href="#contact" class="btn-secondary">
+            <i class="fas fa-calendar"></i> Book a Free Call
           </a>
         </div>
-      </div>
-
-      <div
-        class="hero-scroll absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0"
-      >
-        <span class="text-xs text-[#A7B1D8]/60 uppercase tracking-widest"
-          >Scroll to explore</span
-        >
-        <i
-          class="fas fa-chevron-down w-5 h-5 text-[#A7B1D8]/60 animate-bounce"
-        ></i>
-      </div>
-    </section>
-
-    <!-- Agent Builder Section -->
-    <section
-      id="agent-builder"
-      class="relative min-h-screen flex items-center overflow-hidden bg-[#070A12]"
-      style="z-index: 20"
-    >
-      <div
-        class="absolute top-[10%] right-[6%] w-[50vw] h-[50vw] rounded-full bg-[#4C6BFF]/10 blur-[100px] pointer-events-none"
-      ></div>
-
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div class="space-y-8">
-            <div class="agent-builder-headline">
-              <h2
-                class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight"
-              >
-                Describe it.<br />
-                <span class="text-gradient">We build it.</span>
-              </h2>
-            </div>
-
-            <p
-              class="agent-builder-body text-lg text-[#A7B1D8] leading-relaxed max-w-md"
-            >
-              Type what you need. GoravAI generates the agent, connects the
-              tools, and deploys it in minutes—not weeks.
-            </p>
-
-            <ul class="agent-builder-features space-y-4">
-              <li class="flex items-center gap-3 text-white/90">
-                <div
-                  class="w-8 h-8 rounded-lg bg-[#4C6BFF]/10 flex items-center justify-center"
-                >
-                  <i class="fas fa-comment text-[#4C6BFF] text-sm"></i>
-                </div>
-                <span class="text-sm font-medium"
-                  >Natural language agent builder</span
-                >
-              </li>
-              <li class="flex items-center gap-3 text-white/90">
-                <div
-                  class="w-8 h-8 rounded-lg bg-[#4C6BFF]/10 flex items-center justify-center"
-                >
-                  <i class="fas fa-bolt text-[#4C6BFF] text-sm"></i>
-                </div>
-                <span class="text-sm font-medium"
-                  >Built-in memory & tool calling</span
-                >
-              </li>
-              <li class="flex items-center gap-3 text-white/90">
-                <div
-                  class="w-8 h-8 rounded-lg bg-[#4C6BFF]/10 flex items-center justify-center"
-                >
-                  <i class="fas fa-globe text-[#4C6BFF] text-sm"></i>
-                </div>
-                <span class="text-sm font-medium"
-                  >Deploy anywhere (Telegram, WhatsApp, Web)</span
-                >
-              </li>
-            </ul>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">8+</span>
+            <span class="stat-label">Projects Delivered</span>
           </div>
-
-          <div class="agent-builder-card relative">
-            <div
-              class="glass-card rounded-3xl p-6 sm:p-8 h-[500px] flex flex-col relative overflow-hidden"
-            >
-              <div class="flex items-center gap-2 mb-6">
-                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-              </div>
-
-              <div class="flex-1 space-y-4 overflow-hidden">
-                <div class="flex items-start gap-3">
-                  <div
-                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center flex-shrink-0"
-                  >
-                    <i class="fas fa-sparkles text-white text-sm"></i>
-                  </div>
-                  <div
-                    class="glass-card rounded-2xl rounded-tl-sm px-4 py-3 max-w-[80%]"
-                  >
-                    <p class="text-sm text-white/90">
-                      I'll create a Telegram bot for your Shopify store that
-                      handles orders, tracks shipments, and answers customer
-                      queries 24/7.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-3 justify-end">
-                  <div
-                    class="bg-[#4C6BFF] rounded-2xl rounded-tr-sm px-4 py-3 max-w-[80%]"
-                  >
-                    <p class="text-sm text-white">
-                      Perfect! Connect it to my Daraz store too.
-                    </p>
-                  </div>
-                  <div
-                    class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0"
-                  >
-                    <span class="text-xs text-white/60">You</span>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-3">
-                  <div
-                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4C6BFF] to-[#7B8FFF] flex items-center justify-center flex-shrink-0"
-                  >
-                    <i class="fas fa-sparkles text-white text-sm"></i>
-                  </div>
-                  <div
-                    class="glass-card rounded-2xl rounded-tl-sm px-4 py-3 max-w-[80%]"
-                  >
-                    <p class="text-sm text-white/90">
-                      Done! Your e-commerce agent is now live. Here's the
-                      dashboard link.
-                    </p>
-                    <div
-                      class="mt-3 flex items-center gap-2 text-xs text-[#4C6BFF]"
-                    >
-                      <i class="fas fa-check text-xs"></i>
-                      <span>Connected to Shopify</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-xs text-[#4C6BFF]">
-                      <i class="fas fa-check text-xs"></i>
-                      <span>Daraz integration active</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-xs text-[#4C6BFF]">
-                      <i class="fas fa-check text-xs"></i>
-                      <span>Telegram bot deployed</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-6">
-                <div
-                  class="flex items-center gap-3 px-5 py-4 rounded-full bg-white/[0.04] border border-white/[0.08]"
-                >
-                  <i class="fas fa-comment text-[#A7B1D8]"></i>
-                  <span class="text-sm text-[#A7B1D8]/60 flex-1"
-                    >Ask a follow-up...</span
-                  >
-                  <div
-                    class="w-8 h-8 rounded-full bg-[#4C6BFF] flex items-center justify-center"
-                  >
-                    <i class="fas fa-sparkles text-white text-sm"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#4C6BFF]/20 blur-2xl"
-            ></div>
-            <div
-              class="absolute -bottom-4 -left-4 w-32 h-32 rounded-full bg-[#7B8FFF]/10 blur-2xl"
-            ></div>
+          <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">AI Agent Uptime</span>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AGENT NETWORK SECTION - MOVED HERE (After Agent Builder) -->
-    <!-- AGENT NETWORK SECTION - EXPAND FROM CENTER ANIMATION -->
-    <section
-      id="agent-network"
-      class="relative py-24 bg-[#070A12] overflow-hidden"
-      style="z-index: 25"
-    >
-      <div class="relative z-10 text-center px-4 max-w-6xl mx-auto">
-        <div class="agent-network-headline mb-4 opacity-0">
-          <h2
-            class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white"
-          >
-            One hub. <span class="text-gradient">Many agents.</span>
-          </h2>
-        </div>
-
-        <p
-          class="agent-network-subheadline text-lg text-[#A7B1D8] max-w-xl mx-auto mb-16 opacity-0"
-        >
-          Orchestrate a team of specialized agents that hand off tasks, share
-          memory, and stay consistent across your e-commerce stack.
-        </p>
-
-        <div
-          class="relative w-full max-w-2xl mx-auto h-80 md:h-96 flex items-center justify-center"
-        >
-          <!-- Connection Lines (initially hidden) -->
-          <div
-            class="connection-lines absolute inset-0 pointer-events-none opacity-0"
-          >
-            <div
-              class="absolute left-1/2 top-1/2 w-[140px] h-[1px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left -translate-y-1/2 rotate-0"
-            ></div>
-            <div
-              class="absolute left-1/2 top-1/2 w-[140px] h-[1px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left -translate-y-1/2 rotate-60"
-            ></div>
-            <div
-              class="absolute left-1/2 top-1/2 w-[140px] h-[1px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left -translate-y-1/2 rotate-120"
-            ></div>
-            <div
-              class="absolute left-1/2 top-1/2 w-[140px] h-[1px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left -translate-y-1/2 rotate-180"
-            ></div>
-            <div
-              class="absolute left-1/2 top-1/2 w-[140px] h-[1px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left -translate-y-1/2 rotate-240"
-            ></div>
-            <div
-              class="absolute left-1/2 top-1/2 w-[140px] h-[1px] bg-gradient-to-r from-[#4C6BFF]/60 to-transparent origin-left -translate-y-1/2 rotate-300"
-            ></div>
-          </div>
-
-          <!-- Central Hub -->
-          <div class="agent-hub relative z-20 opacity-0 scale-50">
-            <div class="relative w-32 h-32 sm:w-40 sm:h-40">
-              <div
-                class="absolute inset-0 rounded-full bg-[#4C6BFF]/20 blur-2xl animate-pulse"
-              ></div>
-              <div
-                class="absolute inset-0 rounded-full bg-gradient-to-br from-[#4C6BFF] to-[#2D3A8C] flex flex-col items-center justify-center border border-white/10 shadow-[0_0_30px_rgba(76,107,255,0.3)]"
-              >
-                <i class="fas fa-microchip text-3xl text-white mb-2"></i>
-                <span class="text-sm font-semibold text-white">Agent Hub</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Satellite nodes - START AT CENTER (will expand outward) -->
-          <!-- Sales (0 deg) -->
-          <div
-            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0"
-            data-angle="0"
-          >
-            <div
-              class="group cursor-pointer flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
-            >
-              <div
-                class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300 shadow-lg"
-              >
-                <i class="fas fa-shopping-cart text-[#4C6BFF] text-lg"></i>
-              </div>
-              <span
-                class="mt-2 text-xs text-[#A7B1D8] whitespace-nowrap bg-[#070A12]/80 px-2 py-1 rounded"
-                >Sales</span
-              >
-            </div>
-          </div>
-
-          <!-- Support (60 deg) -->
-          <div
-            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0"
-            data-angle="60"
-          >
-            <div
-              class="group cursor-pointer flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
-            >
-              <div
-                class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300 shadow-lg"
-              >
-                <i class="fas fa-headset text-[#4C6BFF] text-lg"></i>
-              </div>
-              <span
-                class="mt-2 text-xs text-[#A7B1D8] whitespace-nowrap bg-[#070A12]/80 px-2 py-1 rounded"
-                >Support</span
-              >
-            </div>
-          </div>
-
-          <!-- Inventory (120 deg) -->
-          <div
-            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0"
-            data-angle="120"
-          >
-            <div
-              class="group cursor-pointer flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
-            >
-              <div
-                class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300 shadow-lg"
-              >
-                <i class="fas fa-box text-[#4C6BFF] text-lg"></i>
-              </div>
-              <span
-                class="mt-2 text-xs text-[#A7B1D8] whitespace-nowrap bg-[#070A12]/80 px-2 py-1 rounded"
-                >Inventory</span
-              >
-            </div>
-          </div>
-
-          <!-- Shipping (180 deg) -->
-          <div
-            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0"
-            data-angle="180"
-          >
-            <div
-              class="group cursor-pointer flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
-            >
-              <div
-                class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300 shadow-lg"
-              >
-                <i class="fas fa-truck text-[#4C6BFF] text-lg"></i>
-              </div>
-              <span
-                class="mt-2 text-xs text-[#A7B1D8] whitespace-nowrap bg-[#070A12]/80 px-2 py-1 rounded"
-                >Shipping</span
-              >
-            </div>
-          </div>
-
-          <!-- Analytics (240 deg) -->
-          <div
-            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0"
-            data-angle="240"
-          >
-            <div
-              class="group cursor-pointer flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
-            >
-              <div
-                class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300 shadow-lg"
-              >
-                <i class="fas fa-chart-line text-[#4C6BFF] text-lg"></i>
-              </div>
-              <span
-                class="mt-2 text-xs text-[#A7B1D8] whitespace-nowrap bg-[#070A12]/80 px-2 py-1 rounded"
-                >Analytics</span
-              >
-            </div>
-          </div>
-
-          <!-- Automation (300 deg) -->
-          <div
-            class="network-node absolute left-1/2 top-1/2 z-10 opacity-0"
-            data-angle="300"
-          >
-            <div
-              class="group cursor-pointer flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
-            >
-              <div
-                class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center group-hover:border-[#4C6BFF]/40 group-hover:bg-[#4C6BFF]/10 transition-all duration-300 shadow-lg"
-              >
-                <i class="fas fa-robot text-[#4C6BFF] text-lg"></i>
-              </div>
-              <span
-                class="mt-2 text-xs text-[#A7B1D8] whitespace-nowrap bg-[#070A12]/80 px-2 py-1 rounded"
-                >Automation</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Turn Tasks into Outcomes Section -->
-    <section class="py-20 md:py-32 bg-[#0B1120]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div class="space-y-6 outcomes-content">
-            <h2
-              class="font-display text-4xl md:text-5xl font-bold tracking-tight text-white"
-            >
-              Turn <span class="text-[#4C6BFF]">tasks</span> into outcomes.
-            </h2>
-            <p class="text-[#A7B1D8] text-lg leading-relaxed">
-              Stop managing tools and start managing results. Our autonomous
-              agents don't just prompt—they execute, monitor, and optimize your
-              e-commerce operations 24/7 across Pakistan, Dubai, and Saudi
-              Arabia.
-            </p>
-            <ul class="space-y-4 pt-4">
-              <li class="flex items-center gap-4 text-white">
-                <div
-                  class="h-8 w-8 rounded-full bg-[#4C6BFF]/20 flex items-center justify-center"
-                >
-                  <span
-                    class="material-symbols-outlined text-[#4C6BFF] text-[18px]"
-                    >check_circle</span
-                  >
-                </div>
-                <span class="font-medium"
-                  >Multi-step autonomous workflow execution</span
-                >
-              </li>
-              <li class="flex items-center gap-4 text-white">
-                <div
-                  class="h-8 w-8 rounded-full bg-[#4C6BFF]/20 flex items-center justify-center"
-                >
-                  <span
-                    class="material-symbols-outlined text-[#4C6BFF] text-[18px]"
-                    >check_circle</span
-                  >
-                </div>
-                <span class="font-medium"
-                  >Real-time sync with Shopify, Daraz & WhatsApp Business
-                  API</span
-                >
-              </li>
-              <li class="flex items-center gap-4 text-white">
-                <div
-                  class="h-8 w-8 rounded-full bg-[#4C6BFF]/20 flex items-center justify-center"
-                >
-                  <span
-                    class="material-symbols-outlined text-[#4C6BFF] text-[18px]"
-                    >check_circle</span
-                  >
-                </div>
-                <span class="font-medium"
-                  >Self-correcting error handling in Urdu, Arabic &
-                  English</span
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="relative group outcomes-image">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-[#4C6BFF] to-[#bac3ff] rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"
-            ></div>
-            <div
-              class="relative bg-[#10131c] rounded-2xl p-2 overflow-hidden border border-white/[0.08]"
-            >
-              <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuABarw50d4KIfpMMgrDBtX1rVLVGB3CeCmZ_W4D4nD10-F1NAikMbGexFVJEeJ43-raTOrBxtIcZUMIWtodDJBZWf-f-dnB2nBf4sNCb32zYGGm7vxg4MI6L5xcUoD1cEf1xA5bgGkJ7qLqLYOkyUimDOxfkDXcElqYGy-V_kbwbXCzqiNRGc8anqVgrKplXhwDTDrHAGfI2Jlpx-KTN9uNIYFdrU3R8Xm6Ea_wqtw7tpV7lFF_CYlA5prjtCgJtR77k1wuJ-lbhBM"
-                alt="AI Agent Dashboard"
-                class="w-full h-auto rounded-lg shadow-inner"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Bento Grid -->
-    <section id="services" class="py-24 bg-[#070A12]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16 services-header opacity-0">
-          <h2
-            class="font-display text-4xl md:text-6xl font-bold text-white mb-4"
-          >
-            The <span class="gradient-text">GoravAI Suite</span>
-          </h2>
-          <p class="text-[#A7B1D8] max-w-2xl mx-auto text-lg">
-            Next-gen AI services designed to move your e-commerce brand at the
-            speed of intelligence across Pakistan, Dubai & Saudi Arabia.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
-          <!-- Shopify & Telegram Card -->
-          <!-- Shopify & Telegram Card - FIXED -->
-          <!-- Shopify & Telegram Card - FIXED TEXT ALIGNMENT -->
-          <!-- Alternative: Better vertical balance -->
-          <div
-            class="md:col-span-7 relative group overflow-hidden rounded-[2rem] bg-[#1c1f28] border border-white/[0.08] p-8 md:p-10 bento-card opacity-0 translate-y-8"
-          >
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 h-full">
-              <!-- Text Column -->
-              <div class="flex flex-col justify-center">
-                <div
-                  class="h-12 w-12 rounded-2xl bg-[#4C6BFF]/10 flex items-center justify-center mb-4 border border-[#4C6BFF]/20"
-                >
-                  <span
-                    class="material-symbols-outlined text-[#4C6BFF] text-2xl"
-                    >smart_toy</span
-                  >
-                </div>
-
-                <h3
-                  class="font-display text-2xl font-bold text-white mb-3 leading-tight"
-                >
-                  Shopify & Telegram<br />
-                  <span class="text-[#4C6BFF]">E-Commerce Agents</span>
-                </h3>
-
-                <p class="text-[#A7B1D8] text-sm leading-relaxed mb-4">
-                  Deploy AI sales assistants for customer support, order
-                  tracking, and inventory management. Integrated with Shopify,
-                  Daraz & WhatsApp API.
-                </p>
-
-                <div class="flex flex-wrap gap-2 mb-5">
-                  <span
-                    class="px-2 py-1 bg-[#4C6BFF]/10 rounded text-[10px] text-[#4C6BFF]"
-                    >Telegram Bot</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-[#4C6BFF]/10 rounded text-[10px] text-[#4C6BFF]"
-                    >Shopify</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-[#4C6BFF]/10 rounded text-[10px] text-[#4C6BFF]"
-                    >24/7 Support</span
-                  >
-                </div>
-
-                <a
-                  href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat"
-                  target="_blank"
-                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#4C6BFF] text-white text-sm font-semibold hover:bg-[#3D56CC] transition-all w-fit"
-                >
-                  Learn More
-                  <span class="material-symbols-outlined text-sm"
-                    >arrow_forward</span
-                  >
-                </a>
-              </div>
-
-              <!-- Image Column -->
-              <div
-                class="relative h-[250px] md:h-full rounded-2xl overflow-hidden"
-              >
-                <img
-                  src="https://lh3.googleusercontent.com/aida/ADBb0uhN1Tv3frPAK4ID55xWcIN6gczcfwTbRkMsTorgxFlBvyQZR_WsQWoctioKu4EVQhBtS13nfPNi1Gg4R-0UOyPXwcxsk-FPO2pynn1jGmJhU4ZQenKSea5GXaI1BDBBh9HFS6Szid6Tziuatg1Yig-FF3fEk4mdaM_cxEmuVXim_2HTAAFjwGjwVqgZpYg4F1o2xX2PrNo1fjVOIQxK5pp5_JNa7iWTE3kN-nf5y7_voIOTyub0IwP3vgbhkK1ST18qi_HcFjk7tw"
-                  alt="AI Interface"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- Vibe Coding -->
-          <!-- Vibe Coding Card - FIXED -->
-          <!-- Vibe Coding Card - Same Layout as Shopify -->
-          <div
-            class="md:col-span-5 relative group overflow-hidden rounded-[2rem] bg-[#1c1f28] border border-white/[0.08] p-8 md:p-10 bento-card opacity-0 translate-y-8"
-          >
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 h-full">
-              <!-- Text Column -->
-              <div class="flex flex-col justify-center">
-                <div
-                  class="h-12 w-12 rounded-2xl bg-[#bac3ff]/10 flex items-center justify-center mb-4 border border-[#bac3ff]/20"
-                >
-                  <span
-                    class="material-symbols-outlined text-[#bac3ff] text-2xl"
-                    >code_blocks</span
-                  >
-                </div>
-
-                <h3
-                  class="font-display text-2xl font-bold text-white mb-3 leading-tight"
-                >
-                  Vibe<br />
-                  <span class="text-[#bac3ff]">Coding</span>
-                </h3>
-
-                <p class="text-[#A7B1D8] text-sm leading-relaxed mb-4">
-                  Transforming e-commerce concepts into high-performance web and
-                  mobile apps using AI-accelerated development cycles.
-                </p>
-
-                <div class="flex flex-wrap gap-2 mb-5">
-                  <span
-                    class="px-2 py-1 bg-[#bac3ff]/10 rounded text-[10px] text-[#bac3ff]"
-                    >Rapid Prototyping</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-[#bac3ff]/10 rounded text-[10px] text-[#bac3ff]"
-                    >AI Code</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-[#bac3ff]/10 rounded text-[10px] text-[#bac3ff]"
-                    >E-commerce Dev</span
-                  >
-                </div>
-
-                <a
-                  href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat"
-                  target="_blank"
-                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#bac3ff] text-[#070A12] text-sm font-semibold hover:bg-[#a5b4ff] transition-all w-fit"
-                >
-                  Learn More
-                  <span class="material-symbols-outlined text-sm"
-                    >arrow_forward</span
-                  >
-                </a>
-              </div>
-
-              <!-- Image Column -->
-              <div
-                class="relative h-[250px] md:h-full rounded-2xl overflow-hidden"
-              >
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa__GIWCmsv5ehoCyA9HfD41PUlMmxbulGezUKCphYOe2081Z6nNa2F5IPvzirQFAbeimVihZfGCYKjzLRMVbaueW89T7RdNNjopNGwXgw6JRQcJOYDvqHrsUAZlXHcvfkkzLI0xOTpsOcvL7fL3wEzoyeklJ7vri7Dib7P7LKQ1xk38BRU03yJ_PicPQdm1113y7hSWXPJoUnNroUtyxn4xrc3yM33NxEbcK7jAOKLCR6j6i_dZSe2yFG7ZGuI5goJUYUsgZfo2A"
-                  alt="Vibe Coding"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- AI Brand Logo -->
-          <div
-            class="md:col-span-6 relative group overflow-hidden rounded-[2rem] bg-[#1c1f28] border border-white/[0.08] p-8 flex flex-col md:flex-row gap-6 items-center bento-card opacity-0 translate-y-8"
-          >
-            <div class="flex-1">
-              <div
-                class="h-14 w-14 rounded-2xl bg-[#c8bfff]/10 flex items-center justify-center mb-4 border border-[#c8bfff]/20"
-              >
-                <span class="material-symbols-outlined text-[#c8bfff] text-3xl"
-                  >token</span
-                >
-              </div>
-              <h3
-                class="font-display text-xl md:text-2xl font-bold text-white mb-3"
-              >
-                AI Brand Logo Generation
-              </h3>
-              <p class="text-[#A7B1D8] text-sm leading-relaxed mb-4">
-                High-end, vector-perfect identity systems crafted by specialized
-                design models for e-commerce brands in Middle East & South Asia
-                markets.
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="px-2 py-1 bg-[#c8bfff]/10 rounded text-[10px] text-[#c8bfff]"
-                  >Brand Identity AI</span
-                >
-                <span
-                  class="px-2 py-1 bg-[#c8bfff]/10 rounded text-[10px] text-[#c8bfff]"
-                  >Logo Automation</span
-                >
-                <span
-                  class="px-2 py-1 bg-[#c8bfff]/10 rounded text-[10px] text-[#c8bfff]"
-                  >Vector Design</span
-                >
-              </div>
-            </div>
-            <div
-              class="w-32 h-32 rounded-full border-4 border-white/[0.08] p-4 animate-spin-slow flex-shrink-0"
-            >
-              <div
-                class="w-full h-full rounded-full bg-gradient-to-tr from-[#4C6BFF] to-[#c8bfff] shadow-[0_0_15px_rgba(186,195,255,0.3)]"
-              ></div>
-            </div>
-          </div>
-
-          <!-- AI Video Ads -->
-          <div
-            class="md:col-span-6 relative group overflow-hidden rounded-[2rem] bg-[#1c1f28] border border-white/[0.08] p-8 flex flex-col md:flex-row gap-6 items-center bento-card opacity-0 translate-y-8"
-          >
-            <div class="flex-1">
-              <div
-                class="h-14 w-14 rounded-2xl bg-[#ffb4ab]/10 flex items-center justify-center mb-4 border border-[#ffb4ab]/20"
-              >
-                <span class="material-symbols-outlined text-[#ffb4ab] text-3xl"
-                  >movie_filter</span
-                >
-              </div>
-              <h3
-                class="font-display text-xl md:text-2xl font-bold text-white mb-3"
-              >
-                AI Video Ads
-              </h3>
-              <p class="text-[#A7B1D8] text-sm leading-relaxed mb-4">
-                Cinematic product commercials and social content generated in
-                minutes for TikTok, Instagram Reels, and YouTube Shorts
-                marketing.
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="px-2 py-1 bg-[#ffb4ab]/10 rounded text-[10px] text-[#ffb4ab]"
-                  >Video Generation AI</span
-                >
-                <span
-                  class="px-2 py-1 bg-[#ffb4ab]/10 rounded text-[10px] text-[#ffb4ab]"
-                  >Social Media Content</span
-                >
-                <span
-                  class="px-2 py-1 bg-[#ffb4ab]/10 rounded text-[10px] text-[#ffb4ab]"
-                  >Product Marketing</span
-                >
-              </div>
-            </div>
-            <div
-              class="flex-1 relative rounded-xl overflow-hidden aspect-video border border-white/[0.08] bg-gradient-to-br from-[#272a33] to-[#10131c] flex items-center justify-center"
-            >
-              <span class="material-symbols-outlined text-4xl text-[#ffb4ab]/20"
-                >play_circle</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Software that feels like magic Section -->
-    <section id="software" class="py-24 bg-[#0B1120] overflow-hidden relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div
-          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 software-header opacity-0"
-        >
-          <div class="max-w-2xl space-y-4">
-            <h2
-              class="font-display text-4xl md:text-5xl font-bold tracking-tight text-white"
-            >
-              Software that <span class="gradient-text">feels like magic.</span>
-            </h2>
-            <p class="text-[#A7B1D8] text-lg">
-              Custom desktop and web applications built with "Vibe Coding"—where
-              your intent drives the architecture for e-commerce automation.
-            </p>
-          </div>
-
-          <!-- EXPLORE GALLERY BUTTON ADDED HERE -->
-          <div class="flex flex-col items-end gap-4">
-            <a
-              href="https://gorav-a36y.github.io/GoravAI/projects.html"
-              class="px-6 py-3 rounded-xl bg-[#4C6BFF] text-white text-sm font-bold hover:bg-[#3D56CC] transition-all flex items-center gap-2 group whitespace-nowrap"
-            >
-              Explore Gallery
-              <span
-                class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform"
-                >arrow_forward</span
-              >
-            </a>
-
-            <div class="hidden md:flex items-center gap-3">
-              <button
-                class="p-3 rounded-full border border-white/[0.12] hover:border-[#4C6BFF]/50 text-[#A7B1D8] hover:text-[#4C6BFF] transition-all glass-panel"
-                onclick="
-                  document
-                    .getElementById('scrollContainer')
-                    .scrollBy({ left: -400, behavior: 'smooth' })
-                "
-              >
-                <span class="material-symbols-outlined">chevron_left</span>
-              </button>
-              <button
-                class="p-3 rounded-full border border-white/[0.12] hover:border-[#4C6BFF]/50 text-[#A7B1D8] hover:text-[#4C6BFF] transition-all glass-panel"
-                onclick="
-                  document
-                    .getElementById('scrollContainer')
-                    .scrollBy({ left: 400, behavior: 'smooth' })
-                "
-              >
-                <span class="material-symbols-outlined">chevron_right</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="relative w-full max-w-full software-cards opacity-0"
-          style="max-width: 100%"
-        >
-          <div
-            class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0B1120] to-transparent z-10 pointer-events-none md:block hidden"
-          ></div>
-          <div
-            class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#0B1120] to-transparent z-10 pointer-events-none md:block hidden"
-          ></div>
-
-          <div
-            class="flex gap-6 pb-12 overflow-x-auto snap-x snap-mandatory hide-scroll-bar"
-            id="scrollContainer"
-            style="scrollbar-width: none; -ms-overflow-style: none"
-          >
-            <!-- Card 1: AI Driver Alert - GitHub Button -->
-            <div
-              class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
-            >
-              <div
-                class="h-64 rounded-2xl overflow-hidden mb-6 bg-[#10131c] relative group-hover:scale-[1.02] transition-transform duration-500"
-              >
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC8Ia_RbkkvJMObg5Icea6UGm5O5uBJaJuZmRZoKwM7U4YFDxNUMHZ-Yf_uJxhL3T1o7H2KCaWSjiXnom1QwtddRSQtyfnwV2jNNg4ABV9VQeeZlTO3M6ZwH-ZvrXi7jy6vPCHXdsLs3-I8HG8EVCpsgxycmlR2aVUxJEx4iSKt2kF8gp7yTf7KWRqS9RHmOvHsRpvBmmcyA-DLAemCdi7F6pceLA71TiJaj1Mf0lCQ11SyGz2oaTIxq2il4wpelWa5ZacszC1_NY"
-                  alt="AI Driver Alert System"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-2">
-                AI Driver Alert System
-              </h3>
-              <p class="text-[#A7B1D8] text-sm mb-6 flex-grow">
-                Real-time drowsiness detection utilizing computer vision to
-                ensure road safety for fleet operations.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Fleet Safety AI</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Computer Vision</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Drowsiness Detection</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Transport Automation</span
-                >
-              </div>
-              <div
-                class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
-              >
-                <button
-                  src="https://github.com/Gorav-a36y/ai-driver-drowsiness-detection"
-                  target="_blank"
-                  class="flex items-center gap-2 px-5 py-2 rounded-xl border border-white/[0.12] text-white text-sm font-bold hover:bg-white/[0.04] transition-all"
-                >
-                  <span class="material-symbols-outlined text-sm">code</span>
-                  GitHub
-                </button>
-              </div>
-            </div>
-
-            <!-- Card 2: House Map Generator - Access Button -->
-            <div
-              class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
-            >
-              <div
-                class="h-64 rounded-2xl overflow-hidden mb-6 bg-[#10131c] relative group-hover:scale-[1.02] transition-transform duration-500"
-              >
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa__GIWCmsv5ehoCyA9HfD41PUlMmxbulGezUKCphYOe2081Z6nNa2F5IPvzirQFAbeimVihZfGCYKjzLRMVbaueW89T7RdNNjopNGwXgw6JRQcJOYDvqHrsUAZlXHcvfkkzLI0xOTpsOcvL7fL3wEzoyeklJ7vri7Dib7P7LKQ1xk38BRU03yJ_PicPQdm1113y7hSWXPJoUnNroUtyxn4xrc3yM33NxEbcK7jAOKLCR6j6i_dZSe2yFG7ZGuI5goJUYUsgZfo2A"
-                  alt="House Map Generator"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-2">
-                House Map Generator
-              </h3>
-              <p class="text-[#A7B1D8] text-sm mb-6 flex-grow">
-                Instant 2D floor plans generated from natural language
-                descriptions for architects and realtors.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Architectural AI</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Floor Plan Generator</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Real Estate Tech</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >2D Visualization</span
-                >
-              </div>
-              <div
-                class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
-              >
-                <button
-                  class="flex items-center gap-2 px-5 py-2 rounded-xl bg-[#4C6BFF] text-white text-sm font-bold hover:brightness-110 transition-all"
-                >
-                  <span class="material-symbols-outlined text-sm"
-                    >rocket_launch</span
-                  >
-                  Access
-                </button>
-              </div>
-            </div>
-
-            <!-- Card 3: Mini Perplexity -->
-            <div
-              class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
-            >
-              <div
-                class="h-64 rounded-2xl overflow-hidden mb-6 bg-[#10131c] relative group-hover:scale-[1.02] transition-transform duration-500"
-              >
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsdZFis5lMTgyvzxRga5snuiGKp5Xyjr-y0oqbwYCV5qFJ9V2cLqkFY9uix83E8z3I1O4apt1s3elPuvLuJFjCBdshoMOdbqw5JnWVYmZMqXb9MOLBTewkFIpD7jlwLUNhyiMMTUD2EjxiqzUHyf-6OUa3HknpnrA38Nl-5Gi5-YkmGxUTO6sjlPbRmYr9XdSOhAKui_f9LuPeL9sVxLHjiKTjgVsPiahN1nk2103JalO-att37UXHE0TQ2gMxHO2S5yUL3p5e_IQ"
-                  alt="Mini Perplexity"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-2">
-                Mini Perplexity
-              </h3>
-              <p class="text-[#A7B1D8] text-sm mb-6 flex-grow">
-                AI-powered research tool that scrapes and synthesizes web data
-                for immediate fact-based responses.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >AI Research Tool</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Web Scraping Bot</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Knowledge Assistant</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Data Synthesis</span
-                >
-              </div>
-              <div
-                class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
-              >
-                <button
-                  class="flex items-center gap-2 px-5 py-2 rounded-xl bg-[#4C6BFF] text-white text-sm font-bold hover:brightness-110 transition-all"
-                >
-                  <span class="material-symbols-outlined text-sm"
-                    >rocket_launch</span
-                  >
-                  Access
-                </button>
-              </div>
-            </div>
-
-            <!-- Card 4: Google Maps Scraper - Download Button with Alert -->
-            <div
-              class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
-            >
-              <div
-                class="h-64 rounded-2xl overflow-hidden mb-6 bg-[#10131c] relative group-hover:scale-[1.02] transition-transform duration-500"
-              >
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_5W1n53m9u0-f7rS_0R5-I3W6zYqD9R-m4yTfXl6f_uJxhL3T1o7H2KCaWSjiXnom1QwtddRSQtyfnwV2jNNg4ABV9VQeeZlTO3M6ZwH-ZvrXi7jy6vPCHXdsLs3-I8HG8EVCpsgxycmlR2aVUxJEx4iSKt2kF8rp7yTf7KWRqS9RHmOvHsRpvBmmcyA-DLAemCdi7F6pceLA71TiJaj1Mf0lCQ11SyGz2oaTIxq2il4wpelWa5ZacszC1_NY"
-                  alt="Google Maps Scraper"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-2">
-                Google Maps Scraper
-              </h3>
-              <p class="text-[#A7B1D8] text-sm mb-6 flex-grow">
-                Human-like lead generation tool requiring no API keys.
-                Efficiently extracts business data from maps.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Lead Generation Bot</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >B2B Prospecting</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Local Business Data</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Sales Intelligence</span
-                >
-              </div>
-              <div
-                class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
-              >
-                <button
-                  onclick="showDownloadAlert()"
-                  class="flex items-center gap-2 px-5 py-2 rounded-xl bg-[#4C6BFF] text-white text-sm font-bold hover:brightness-110 transition-all"
-                >
-                  <span class="material-symbols-outlined text-sm"
-                    >download</span
-                  >
-                  Download
-                </button>
-              </div>
-            </div>
-
-            <!-- Card 5: Object Counter - GitHub Button -->
-            <div
-              class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
-            >
-              <div
-                class="h-64 rounded-2xl overflow-hidden mb-6 bg-[#10131c] relative group-hover:scale-[1.02] transition-transform duration-500"
-              >
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDctv_Zi5g7tk_l3MInryDJ4cSLNbQYwz2eXOY4mvzpTgUGw_LX8fey2wqpessTU7tvXfJyOu2qSqGMrl3nWgdYroOruYKRbij72uPwsuWfeiozjjUSKdDLvvd67Oyc09AV_nMGPolUpsj5Ca10phH8AZPBWmnEc2G_GaYZS_gQjrT0gUYFVXVbjKyUAtCxyxoJ8ASzNBHbcX4OrFze6OKOih2a1--fQFUDNfmgRgyx2gQLm3OcQrPm3Wg0mI8hCIJdpXhLBZjyT_g"
-                  alt="Object Counter"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-2">Object Counter</h3>
-              <p class="text-[#A7B1D8] text-sm mb-6 flex-grow">
-                Advanced detection and counting for traffic and logistics.
-                High-precision computer vision implementation.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Inventory AI</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Warehouse Automation</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Computer Vision</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Stock Management</span
-                >
-              </div>
-              <div
-                class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
-              >
-                <button
-                  class="flex items-center gap-2 px-5 py-2 rounded-xl border border-white/[0.12] text-white text-sm font-bold hover:bg-white/[0.04] transition-all"
-                >
-                  <span class="material-symbols-outlined text-sm">code</span>
-                  GitHub
-                </button>
-              </div>
-            </div>
-
-            <!-- NEW Card 6: Add your new project here -->
-            <div
-              class="min-w-[300px] md:min-w-[400px] lg:min-w-[450px] snap-start glass-panel rounded-3xl border border-white/[0.08] p-8 hover:border-[#4C6BFF]/40 transition-all group shrink-0 flex flex-col"
-            >
-              <div
-                class="h-64 rounded-2xl overflow-hidden mb-6 bg-[#10131c] relative group-hover:scale-[1.02] transition-transform duration-500"
-              >
-                <!-- Add your new image URL here -->
-                <img
-                  src="YOUR_NEW_IMAGE_URL"
-                  alt="New Project"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-2">
-                Your New Project
-              </h3>
-              <p class="text-[#A7B1D8] text-sm mb-6 flex-grow">
-                Description of your new project goes here.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Tag 1</span
-                >
-                <span
-                  class="px-3 py-1 bg-[#10131c] border border-white/[0.08] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#A7B1D8]"
-                  >Tag 2</span
-                >
-              </div>
-              <div
-                class="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]"
-              >
-                <button
-                  class="flex items-center gap-2 px-5 py-2 rounded-xl bg-[#4C6BFF] text-white text-sm font-bold hover:brightness-110 transition-all"
-                >
-                  <span class="material-symbols-outlined text-sm"
-                    >rocket_launch</span
-                  >
-                  Access
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Agency-grade delivery Section -->
-    <section class="py-24 bg-[#070A12]" style="z-index: 60">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          <div class="lg:sticky lg:top-24 agency-image opacity-0">
-            <div
-              class="relative rounded-3xl overflow-hidden"
-              style="max-height: 800px"
-            >
-              <img
-                src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/agency%20website%20pic.png"
-                alt="GoravAI Agency"
-                class="w-full h-auto object-cover"
-                style="max-height: 800px"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-[#070A12]/90 via-transparent to-transparent"
-              ></div>
-              <div class="absolute bottom-6 left-6 float-animation">
-                <div class="glass-card px-4 py-2 rounded-full">
-                  <span class="text-sm font-medium text-white"
-                    >GoravAI Agency</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="space-y-8 lg:pt-12">
-            <div class="mb-12 agency-header opacity-0">
-              <h2
-                class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
-              >
-                Agency-grade <span class="text-gradient">delivery.</span>
-              </h2>
-              <p class="text-lg text-[#A7B1D8] leading-relaxed">
-                We design, tune, and ship agents that match your e-commerce
-                workflows—not the other way around. Specialized for Pakistan,
-                Dubai & Saudi Arabia markets.
-              </p>
-            </div>
-
-            <div
-              class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500 opacity-0 translate-x-8"
-            >
-              <div class="flex items-start gap-4">
-                <div
-                  class="w-12 h-12 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="fas fa-lightbulb text-[#4C6BFF] text-xl"></i>
-                </div>
-                <div>
-                  <h3 class="font-display text-xl font-bold text-white mb-2">
-                    Discovery & Design
-                  </h3>
-                  <p class="text-[#A7B1D8] leading-relaxed">
-                    Map your workflow, define guardrails, and choose the right
-                    model stack for your Telegram and Shopify operations.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500 opacity-0 translate-x-8"
-            >
-              <div class="flex items-start gap-4">
-                <div
-                  class="w-12 h-12 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="fas fa-wrench text-[#4C6BFF] text-xl"></i>
-                </div>
-                <div>
-                  <h3 class="font-display text-xl font-bold text-white mb-2">
-                    Build & Integrate
-                  </h3>
-                  <p class="text-[#A7B1D8] leading-relaxed">
-                    Connect Shopify, Daraz, WhatsApp Business API, add memory,
-                    and ship secure endpoints.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="agency-card glass-card rounded-2xl p-6 sm:p-8 hover:border-[#4C6BFF]/30 transition-all duration-500 opacity-0 translate-x-8"
-            >
-              <div class="flex items-start gap-4">
-                <div
-                  class="w-12 h-12 rounded-xl bg-[#4C6BFF]/10 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="fas fa-chart-line text-[#4C6BFF] text-xl"></i>
-                </div>
-                <div>
-                  <h3 class="font-display text-xl font-bold text-white mb-2">
-                    Run & Improve
-                  </h3>
-                  <p class="text-[#A7B1D8] leading-relaxed">
-                    Monitor runs, collect feedback, and iterate prompts for
-                    better conversion rates.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Client Focus</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-[#070A12]" style="z-index: 80">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div class="space-y-8 about-content opacity-0">
-            <div>
-              <h2
-                class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6"
+    <section class="about section-padding" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image animate-on-scroll">
+            <img
+              src="https://litter.catbox.moe/ypnmdd.jpg"
+              alt="AI Automation"
+            />
+          </div>
+          <div class="about-content animate-on-scroll delay-1">
+            <span class="section-tag">About GoravAI</span>
+            <h2>Practical AI Solutions for Real Business Problems</h2>
+            <p>
+              GoravAI is an AI agency that builds smart digital systems to help
+              businesses work faster and smarter. We specialise in creating n8n
+              AI agents, automation workflows, and custom AI software that
+              handles the repetitive work so your team can focus on what
+              actually matters.
+            </p>
+            <p>
+              Whether it is customer support, lead generation, appointment
+              booking, or internal operations — we design AI solutions that fit
+              your business and deliver real results from day one.
+            </p>
+            <div class="about-features">
+              <div class="about-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>n8n AI Agents</span>
+              </div>
+              <div class="about-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Workflow Automation</span>
+              </div>
+              <div class="about-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Custom AI Software</span>
+              </div>
+              <div class="about-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>24/7 Support Setup</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section-padding" id="services">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">What We Do</span>
+          <h2 class="section-title">Services Built for Modern Businesses</h2>
+          <p class="section-desc">
+            From AI-powered customer support to full business automation, we
+            deliver solutions that save time and reduce costs.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>n8n AI Agents</h3>
+            <p>
+              We build intelligent AI agents using n8n that handle customer
+              conversations, qualify leads, book appointments, and manage
+              workflows — all running automatically 24/7 without human
+              intervention.
+            </p>
+          </div>
+          <div class="service-card animate-on-scroll delay-1">
+            <div class="service-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3>Automation Systems</h3>
+            <p>
+              Connect your tools and automate repetitive business processes.
+              From data entry to report generation, we set up systems that run
+              in the background and keep your operations moving.
+            </p>
+          </div>
+          <div class="service-card animate-on-scroll delay-2">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>AI Software Development</h3>
+            <p>
+              Need something custom? We develop tailored AI-powered software
+              solutions — from hospital management systems to flour mill
+              dashboards — designed specifically for your industry and workflow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section-padding" id="projects">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">Our Work</span>
+          <h2 class="section-title">Projects That Speak for Themselves</h2>
+          <p class="section-desc">
+            Here is a glimpse of what we have built for clients across different
+            industries.
+          </p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card animate-on-scroll">
+            <div class="project-image">
+              <img src="https://github.com/Gorav-a36y/GoravAI/blob/main/project-n8n.jpg?raw=true" alt="MillCore" />
+              <span class="project-tag">Management System</span>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <h3>MillCore</h3>
+              <p>
+                A complete digital management system for flour mills. Handles
+                billing, customer Khata (ledger), price updates, monthly
+                reports, and business analytics — all in one place.
+              </p>
+              <a href="#contact" class="project-link"
+                >Discuss Similar Project <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="project-card animate-on-scroll delay-1">
+            <div class="project-image">
+              <img
+                src="https://github.com/Gorav-a36y/GoravAI/blob/main/mission.jpg?raw=true"
+                alt="TradeFast Sparky"
+              />
+              <span class="project-tag">AI Support Agent</span>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <h3>TradeFast Sparky AI Agent</h3>
+              <p>
+                An AI customer support and job management agent built for
+                Australian electricians. Handles inquiries, estimates simple
+                jobs, collects project details, and forwards everything to the
+                electrician.
+              </p>
+              <a href="#contact" class="project-link"
+                >Discuss Similar Project <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="project-card animate-on-scroll">
+            <div class="project-image">
+              <img
+                src="https://github.com/Gorav-a36y/GoravAI/blob/main/project-software.jpg?raw=true"
+                alt="LeadGen Pro"
+              />
+              <span class="project-tag">Lead Generation</span>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <h3>LeadGen Pro</h3>
+              <p>
+                A powerful lead generation tool that scrapes Google Maps for
+                business data — names, websites, ratings, phone numbers, emails,
+                and social links — without using the expensive Google Maps API.
+              </p>
+              <a href="#contact" class="project-link"
+                >Discuss Similar Project <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="project-card animate-on-scroll delay-1">
+            <div class="project-image">
+              <img
+                src="https://github.com/Gorav-a36y/GoravAI/blob/main/project-voice.jpg?raw=true"
+                alt="Voice AI Agent"
+              />
+              <span class="project-tag">Voice AI</span>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <h3>ElevenLabs Voice AI Outreach Agent</h3>
+              <p>
+                An AI voice agent that makes natural sales calls for logo design
+                services. It introduces the service, answers questions,
+                qualifies prospects, and converts them into booked appointments.
+              </p>
+              <a href="#contact" class="project-link"
+                >Discuss Similar Project <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="project-card animate-on-scroll">
+            <div class="project-image">
+              <img
+                src="https://github.com/Gorav-a36y/GoravAI/blob/main/project-shopify.jpg?raw=true"
+                alt="Shopify AI Agent"
+              />
+              <span class="project-tag">E-commerce AI</span>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <h3>Shopify AI Agent</h3>
+              <p>
+                A 24/7 AI customer support assistant for Shopify stores. Handles
+                WISMO queries, returns, refunds, order tracking, and
+                multilingual support — keeping customers happy around the clock.
+              </p>
+              <a href="#contact" class="project-link"
+                >Discuss Similar Project <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="project-card animate-on-scroll delay-1">
+            <div class="project-image">
+              <img
+                src="https://github.com/Gorav-a36y/GoravAI/blob/main/project-social.jpg?raw=true"
+                alt="Social Media AI Agent"
+              />
+              <span class="project-tag">Social Media</span>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <h3>Social Media AI Agent</h3>
+              <p>
+                An automation system that researches trending topics daily and
+                creates high-quality social media posts for LinkedIn, Facebook,
+                and Instagram — keeping your brand active without manual effort.
+              </p>
+              <a href="#contact" class="project-link"
+                >Discuss Similar Project <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="project-card animate-on-scroll">
+            <div class="project-image">
+              <img
+                src="https://github.com/Gorav-a36y/GoravAI/blob/main/project-automation.jpg?raw=true"
+                alt="Hospital Management System"
+              />
+              <span class="project-tag">Healthcare</span>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <h3>Hospital Management System</h3>
+              <p>
+                A centralised platform connecting hospital departments with a
+                multilingual AI WhatsApp assistant for 24/7 patient support,
+                appointment booking, and doctor availability checks.
+              </p>
+              <a href="#contact" class="project-link"
+                >Discuss Similar Project <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="project-card animate-on-scroll delay-1">
+            <div class="project-image">
+              <img
+                src="https://github.com/Gorav-a36y/GoravAI/blob/main/project-n8n.jpg?raw=true"
+                alt="Dental Clinic AI Agent"
+              />
+              <span class="project-tag">Dental / Healthcare</span>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <h3>Dental Clinic AI Agent</h3>
+              <p>
+                An AI virtual receptionist for dental clinics that answers
+                patient queries, provides clinic information, and books
+                appointments based on real-time doctor availability.
+              </p>
+              <a
+                href="https://gorav-a36y.github.io/goravai-demo/"
+                target="_blank"
+                class="project-link"
+                >View Live Demo <i class="fas fa-external-link-alt"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder section-padding" id="founder">
+      <div class="container">
+        <div class="founder-grid">
+          <div class="founder-image-wrapper animate-on-scroll">
+            <div class="founder-glow"></div>
+            <div class="founder-image">
+              <img
+                src="https://pbs.twimg.com/profile_images/1997316190642061312/tq0oVJQs_400x400.jpg"
+                alt="Gorav Khemani - Founder of GoravAI"
+              />
+            </div>
+          </div>
+          <div class="founder-content animate-on-scroll delay-1">
+            <span class="section-tag">Meet the Founder</span>
+            <h2>Gorav Khemani</h2>
+            <span class="founder-role">Founder & AI Solutions Architect</span>
+            <p>
+              I started GoravAI with a simple belief — every business deserves
+              to benefit from AI, not just the big corporations with massive
+              tech budgets.
+            </p>
+            <p>
+              Having worked across industries from healthcare to e-commerce, I
+              understand the real pain points business owners face daily. That
+              is why every solution we build at GoravAI is practical,
+              affordable, and designed to deliver measurable results from day
+              one.
+            </p>
+            <p>
+              Based in Hyderabad, Sindh, we serve clients locally and
+              internationally, helping them automate operations, reduce manual
+              work, and scale without adding headcount.
+            </p>
+            <div class="founder-social">
+              <a
+                href="https://www.linkedin.com/in/gorav-khemani-61968a381/"
+                target="_blank"
+                title="LinkedIn"
               >
-                About <span class="text-gradient">GoravAI</span>
-              </h2>
-              <p class="text-lg text-[#A7B1D8] leading-relaxed mb-6">
-                GoravAI is a forward-thinking AI automation agency led by
-                experienced developers and AI engineers. We specialize in
-                building intelligent Telegram agents, Shopify automation, and
-                conversational commerce solutions for e-commerce sellers in
-                Pakistan, Dubai & Saudi Arabia.
-              </p>
-              <p class="text-lg text-[#A7B1D8] leading-relaxed">
-                Our mission is to democratize AI automation, making 24/7
-                customer support and sales automation accessible to businesses
-                of all sizes across the Middle East and South Asia.
-              </p>
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/gorav.khemani.2025"
+                target="_blank"
+                title="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Let's Build Something Smart Together</h2>
+          <p class="section-desc">
+            Have a project in mind? Reach out and let's discuss how AI can
+            transform your business operations.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info animate-on-scroll">
+            <h2>Start Your AI Journey Today</h2>
+            <p>
+              Whether you need a simple chatbot or a full business automation
+              system, we are here to help. Drop us a message and we will get
+              back to you within 24 hours.
+            </p>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div class="contact-details">
+                <h4>WhatsApp</h4>
+                <a href="https://wa.me/923312726787" target="_blank"
+                  >+92 331 2726787</a
+                >
+              </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-6 pt-6">
-              <div class="border-l-2 border-[#4C6BFF] pl-4">
-                <div
-                  class="font-display text-3xl sm:text-4xl font-bold text-white mb-1"
-                >
-                  10+
-                </div>
-                <div class="text-sm text-[#A7B1D8]">
-                  E-commerce Agents Deployed
-                </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
               </div>
-              <div class="border-l-2 border-[#7B8FFF] pl-4">
-                <div
-                  class="font-display text-3xl sm:text-4xl font-bold text-white mb-1"
-                >
-                  24/7
-                </div>
-                <div class="text-sm text-[#A7B1D8]">Automated Support</div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <a href="mailto:goravai787@gmail.com">goravai787@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>
+                  F-67/1196, Behind United Hotel, Qazi Qayoom Road, Hyder Chowk,
+                  Hyderabad, Sindh, Pakistan
+                </p>
               </div>
             </div>
           </div>
 
-          <div class="relative flex justify-center about-image opacity-0">
-            <div
-              class="glass-card rounded-3xl overflow-hidden"
-              style="width: 400px"
-            >
-              <div style="width: 400px; height: 400px; overflow: hidden">
-                <img
-                  src="https://pbs.twimg.com/profile_images/1997316190642061312/tq0oVJQs_400x400.jpg"
-                  alt="Gorav Khemani - Founder of GoravAI"
-                  class="w-full h-full object-cover"
+          <div class="contact-form animate-on-scroll delay-1">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your full name"
+                  required
                 />
               </div>
-
-              <div class="p-6 sm:p-8">
-                <h3 class="font-display text-2xl font-bold text-white mb-1">
-                  Gorav Khemani
-                </h3>
-                <p class="text-[#4C6BFF] font-medium mb-4">
-                  Founder of GoravAI
-                </p>
-
-                <div class="border-l-2 border-[#4C6BFF] pl-4 mb-6">
-                  <i
-                    class="fas fa-quote-left text-[#4C6BFF]/40 mb-2 text-sm"
-                  ></i>
-                  <p class="text-sm text-[#A7B1D8] italic">
-                    "A visionary leader focused on combining creative design
-                    with powerful automation for e-commerce growth."
-                  </p>
-                </div>
-
-                <div class="flex gap-3">
-                  <a
-                    href="https://www.linkedin.com/company/gorav-ai/?viewAsMember=true"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-btn social-linkedin w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300 cursor-pointer"
-                  >
-                    <i class="fab fa-linkedin-in text-lg"></i>
-                  </a>
-                  <a
-                    href="https://x.com/GoravKhemani"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-btn social-x w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300 cursor-pointer"
-                  >
-                    <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current">
-                      <path
-                        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
-                      />
-                    </svg>
-                  </a>
-                </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                />
               </div>
-            </div>
-
-            <div
-              class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#4C6BFF]/10 blur-2xl"
-            ></div>
-            <div
-              class="absolute -bottom-4 -left-4 w-32 h-32 rounded-full bg-[#7B8FFF]/10 blur-2xl"
-            ></div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+92 300 1234567"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Tell Us About Your Project</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Describe what you need — AI agent, automation, custom software..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="form-submit">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="py-24 bg-[#070A12]" style="z-index: 90">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12 faq-header opacity-0">
-          <h2
-            class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
-          >
-            Questions? <span class="text-gradient">Answers.</span>
-          </h2>
-        </div>
-
-        <div class="space-y-4">
-          <div
-            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden opacity-0"
-          >
-            <button
-              class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
-              onclick="toggleAccordion(this)"
-            >
-              <span class="text-white font-medium"
-                >Do I need to write code?</span
-              >
-              <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
-            </button>
-            <div class="accordion-content">
-              <p class="text-[#A7B1D8] pb-5 leading-relaxed">
-                No! GoravAI is designed for e-commerce sellers. You can build
-                powerful Telegram and WhatsApp bots using natural language.
-                Simply describe what you want, and our platform handles the
-                rest. For advanced users, we also offer API-level customization.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden opacity-0"
-          >
-            <button
-              class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
-              onclick="toggleAccordion(this)"
-            >
-              <span class="text-white font-medium"
-                >Can I connect my Shopify or Daraz store?</span
-              >
-              <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
-            </button>
-            <div class="accordion-content">
-              <p class="text-[#A7B1D8] pb-5 leading-relaxed">
-                Absolutely. GoravAI integrates with Shopify, Daraz, WooCommerce,
-                and major e-commerce platforms. We also support WhatsApp
-                Business API, Telegram Bot API, and custom webhook integrations
-                for seamless order management.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden opacity-0"
-          >
-            <button
-              class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
-              onclick="toggleAccordion(this)"
-            >
-              <span class="text-white font-medium"
-                >Does it support Urdu and Arabic?</span
-              >
-              <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
-            </button>
-            <div class="accordion-content">
-              <p class="text-[#A7B1D8] pb-5 leading-relaxed">
-                Yes! Our AI agents support multilingual conversations including
-                English, Urdu, and Arabic—perfect for customers in Pakistan,
-                Dubai, and Saudi Arabia. The AI automatically detects language
-                and responds appropriately.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden opacity-0"
-          >
-            <button
-              class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
-              onclick="toggleAccordion(this)"
-            >
-              <span class="text-white font-medium"
-                >How does the 24/7 support work?</span
-              >
-              <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
-            </button>
-            <div class="accordion-content">
-              <p class="text-[#A7B1D8] pb-5 leading-relaxed">
-                Once deployed, your AI agent handles customer queries, order
-                tracking, and sales automatically—day and night. It can answer
-                FAQs, process returns, check inventory, and escalate complex
-                issues to your human team when needed.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="accordion-item glass-card rounded-2xl border-none px-6 overflow-hidden opacity-0"
-          >
-            <button
-              class="accordion-trigger w-full flex items-center justify-between py-5 text-left"
-              onclick="toggleAccordion(this)"
-            >
-              <span class="text-white font-medium">How do I get support?</span>
-              <i class="fas fa-chevron-down accordion-icon text-[#A7B1D8]"></i>
-            </button>
-            <div class="accordion-content">
-              <p class="text-[#A7B1D8] pb-5 leading-relaxed">
-                All plans include email and WhatsApp support. Enterprise clients
-                get priority support with faster response times and a dedicated
-                account manager familiar with Middle East & South Asian
-                e-commerce markets.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section
-      class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0B1120]"
-      style="z-index: 100"
-    >
-      <div
-        class="absolute inset-0 bg-gradient-to-b from-[#0B1120] via-[#070A12] to-[#070A12]"
-      ></div>
-
-      <div
-        class="cta-orb absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 w-[72vw] h-[72vw] max-w-[980px] max-h-[980px] opacity-0"
-      >
-        <div
-          class="absolute inset-0 rounded-full bg-gradient-radial from-[#4C6BFF]/35 via-[#4C6BFF]/10 to-transparent blur-3xl animate-pulse-glow"
-        ></div>
-        <div
-          class="absolute inset-[10%] rounded-full bg-gradient-radial from-[#4C6BFF]/30 via-[#2D3A8C]/15 to-transparent"
-        ></div>
-        <div
-          class="absolute inset-[30%] rounded-full bg-gradient-radial from-[#7B8FFF]/50 via-[#4C6BFF]/25 to-transparent blur-xl"
-        ></div>
-      </div>
-
-      <div
-        class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
-      >
-        <h2
-          class="cta-headline font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 opacity-0"
-        >
-          Ready to automate your<br /><span class="text-gradient"
-            >e-commerce store?</span
-          >
-        </h2>
-
-        <p
-          class="cta-subheadline text-lg md:text-xl text-[#A7B1D8] max-w-xl mx-auto mb-10 opacity-0"
-        >
-          Start building your Telegram AI agent today. Join 50+ sellers in
-          Pakistan, Dubai & Saudi Arabia saving 20+ hours weekly with
-          automation.
-        </p>
-
-        <div
-          class="cta-buttons flex flex-col sm:flex-row items-center justify-center gap-4 mb-20 opacity-0"
-        >
-          <a
-            href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat"
-            target="_blank"
-            class="btn-primary inline-flex items-center justify-center px-8 py-4 bg-[#4C6BFF] text-white rounded-xl font-semibold hover:bg-[#3D56CC] group"
-          >
-            Talk to Agent
-            <i
-              class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"
-            ></i>
-          </a>
-          <a
-            href="mailto:parkashdev748@gmail.com"
-            class="btn-outline inline-flex items-center justify-center px-8 py-4 bg-white/[0.04] text-white border border-white/[0.12] rounded-xl font-semibold hover:border-[#4C6BFF] hover:text-[#4C6BFF]"
-          >
-            <i class="fas fa-calendar mr-2"></i> Book a call
-          </a>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer
-      id="footer"
-      class="relative bg-[#070A12] border-t border-white/[0.06]"
-      style="z-index: 110"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          <div class="lg:col-span-2">
-            <a href="#" class="flex items-center gap-2 mb-6">
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
               <img
                 src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
-                alt="GoravAI Logo"
-                class="h-10 w-auto object-contain rounded-md"
+                alt=""
+                style="
+                  width: 32px;
+                  height: 32px;
+                  border-radius: 6px;
+                  margin-right: 0.6rem;
+                "
               />
-              <span class="font-display font-bold text-xl text-white"
-                >Gorav<span class="text-[#4C6BFF]">AI</span></span
-              >
+              <span class="gorav">Gorav</span><span class="ai">AI</span>
             </a>
-            <p class="text-[#A7B1D8] text-sm leading-relaxed mb-6 max-w-sm">
-              GoravAI delivers modern, scalable, and intelligent automation
-              solutions for e-commerce sellers. Build Telegram AI agents that
-              work while you sleep.
+            <p>
+              Building smart AI agents and automation systems that help
+              businesses work faster, reduce manual effort, and scale without
+              limits. Based in Hyderabad, Sindh, Pakistan.
             </p>
-
-            <div class="space-y-3">
-              <a
-                href="mailto:goravai787@gmail.com"
-                class="flex items-center gap-3 text-sm text-[#A7B1D8] hover:text-white transition-colors"
-              >
-                <i class="fas fa-envelope w-4 h-4 text-[#4C6BFF]"></i>
-                goravai787@gmail.com
-              </a>
-              <a
-                href="https://wa.me/923312726787"
-                target="_blank"
-                class="flex items-center gap-3 text-sm text-[#A7B1D8] hover:text-white transition-colors"
-              >
-                <i class="fab fa-whatsapp w-4 h-4 text-[#4C6BFF]"></i>
-                +92 331 2726787
-              </a>
-              <div class="flex items-start gap-3 text-sm text-[#A7B1D8]">
-                <i
-                  class="fas fa-map-marker-alt w-4 h-4 text-[#4C6BFF] flex-shrink-0 mt-0.5"
-                ></i>
-                <span
-                  >F-67/1196, Behind United Hotel Qazi Qayoom Road Hyder chowk
-                  Hyderabad Sindh, Pakistan</span
-                >
-              </div>
-            </div>
           </div>
-
-          <div>
-            <h4 class="font-display font-semibold text-white mb-4">
-              Quick Links
-            </h4>
-            <ul class="space-y-3">
-              <li>
-                <a
-                  href="#home"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Services</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#software"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Software</a
-                >
-              </li>
-              <li>
-                <a
-                  href="projects.html"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >projects</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#footer"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Contact</a
-                >
-              </li>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
-
-          <div>
-            <h4 class="font-display font-semibold text-white mb-4">Services</h4>
-            <ul class="space-y-3">
-              <li>
-                <a
-                  href="#services"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Telegram AI Agents</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Shopify Automation</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Vibe Coding</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >AI Video Ads</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Brand Design</a
-                >
-              </li>
+          <div class="footer-column">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">n8n AI Agents</a></li>
+              <li><a href="services.html">Automation Systems</a></li>
+              <li><a href="services.html">AI Software Development</a></li>
+              <li><a href="services.html">Workflow Consulting</a></li>
             </ul>
           </div>
-
-          <div>
-            <h4 class="font-display font-semibold text-white mb-4">Legal</h4>
-            <ul class="space-y-3">
-              <li>
-                <a
-                  href="privacypolicy.html"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Privacy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="privacypolicy.html"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Terms</a
-                >
-              </li>
-              <li>
-                <a
-                  href="privacypolicy.html"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Security</a
-                >
-              </li>
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="privacypolicy.html">Privacy Policy</a></li>
+              <li><a href="privacypolicy.html">Terms of Service</a></li>
             </ul>
           </div>
         </div>
-
-        <div
-          class="mt-16 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4"
-        >
-          <p class="text-sm text-[#A7B1D8]/60">
-            © 2026 GoravAI. All rights reserved.
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            GoravAI. All rights reserved. Built with precision in Hyderabad,
+            Pakistan.
           </p>
-          <div class="flex items-center gap-4">
+          <div class="footer-social">
             <a
-              href="https://www.linkedin.com/company/gorav-ai/?viewAsMember=true"
+              href="https://www.linkedin.com/company/goravai/"
               target="_blank"
-              rel="noopener noreferrer"
-              class="social-btn social-linkedin w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
+              title="LinkedIn"
             >
               <i class="fab fa-linkedin-in"></i>
             </a>
             <a
-              href="https://x.com/GoravKhemani"
+              href="https://www.facebook.com/profile.php?id=61585322057102"
               target="_blank"
-              rel="noopener noreferrer"
-              class="social-btn social-x w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
+              title="Facebook"
             >
-              <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current">
-                <path
-                  d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
-                />
-              </svg>
+              <i class="fab fa-facebook-f"></i>
             </a>
             <a
-              href="https://www.instagram.com/gorav_khemani/"
+              href="https://www.instagram.com/gorav_ai_agency/"
               target="_blank"
-              rel="noopener noreferrer"
-              class="social-btn social-instagram w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
+              title="Instagram"
             >
               <i class="fab fa-instagram"></i>
             </a>
             <a
-              href="https://www.facebook.com/profile.php?id=61585322057102"
+              href="https://www.youtube.com/@GoravAI-e2v"
               target="_blank"
-              rel="noopener noreferrer"
-              class="social-btn social-facebook w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
+              title="YouTube"
             >
-              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-youtube"></i>
             </a>
           </div>
         </div>
       </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20am%20interested%20in%20your%20AI%20automation%20services.%20Can%20we%20discuss%20my%20project?"
+      class="whatsapp-float"
+      target="_blank"
+      title="Chat on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script>
-      // Register GSAP ScrollTrigger
-      gsap.registerPlugin(ScrollTrigger);
+      // ===== PARTICLES =====
+      function createParticles() {
+        const container = document.getElementById("particles");
+        const particleCount = 25;
 
-      // Mobile menu toggle
-      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      mobileMenuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      document.querySelectorAll("#mobile-menu a").forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.add("hidden");
-        });
-      });
-
-      // Accordion toggle
-      function toggleAccordion(button) {
-        const item = button.parentElement;
-        const isActive = item.classList.contains("active");
-
-        document.querySelectorAll(".accordion-item").forEach((acc) => {
-          acc.classList.remove("active");
-        });
-
-        if (!isActive) {
-          item.classList.add("active");
+        for (let i = 0; i < particleCount; i++) {
+          const particle = document.createElement("div");
+          particle.className = "particle";
+          particle.style.left = Math.random() * 100 + "%";
+          particle.style.top = Math.random() * 100 + "%";
+          particle.style.animationDelay = Math.random() * 15 + "s";
+          particle.style.animationDuration = 10 + Math.random() * 10 + "s";
+          const size = 2 + Math.random() * 3;
+          particle.style.width = size + "px";
+          particle.style.height = size + "px";
+          container.appendChild(particle);
         }
       }
+      createParticles();
 
-      // Navbar scroll effect
+      // ===== NAVBAR SCROLL =====
+      const navbar = document.getElementById("navbar");
       window.addEventListener("scroll", () => {
-        const nav = document.querySelector("nav");
         if (window.scrollY > 50) {
-          nav.classList.add("glass-nav");
+          navbar.classList.add("scrolled");
         } else {
-          nav.classList.remove("glass-nav");
+          navbar.classList.remove("scrolled");
         }
       });
 
-      // Set initial states for hero elements
-      gsap.set(".hero-orb", { opacity: 0, scale: 0.85 });
-      gsap.set(".hero-badge", { y: 20, opacity: 0 });
-      gsap.set(".hero-headline", { y: 30, opacity: 0 });
-      gsap.set(".hero-subheadline", { y: 20, opacity: 0 });
-      gsap.set(".hero-cta", { y: 15, opacity: 0 });
-      gsap.set(".hero-scroll", { opacity: 0 });
+      // ===== MOBILE MENU =====
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+      const mobileMenuClose = document.getElementById("mobileMenuClose");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
 
-      // Hero Entrance Animation
-      window.addEventListener("load", () => {
-        const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-        heroTl.to(".hero-orb", { opacity: 1, scale: 1, duration: 1.2 });
-        heroTl.to(".hero-badge", { y: 0, opacity: 1, duration: 0.6 }, "-=0.8");
-        heroTl.to(
-          ".hero-headline",
-          { y: 0, opacity: 1, duration: 0.8 },
-          "-=0.5",
-        );
-        heroTl.to(
-          ".hero-subheadline",
-          { y: 0, opacity: 1, duration: 0.6 },
-          "-=0.4",
-        );
-        heroTl.to(".hero-cta", { y: 0, opacity: 1, duration: 0.5 }, "-=0.3");
-        heroTl.to(".hero-scroll", { opacity: 1, duration: 0.5 }, "-=0.2");
-      });
-
-      // FIXED: Agent Builder - Using toggleActions instead of scrub for entrance
-      gsap.from(".agent-builder-headline", {
-        scrollTrigger: {
-          trigger: "#agent-builder",
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-        x: -100,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-      });
-
-      gsap.from(".agent-builder-body", {
-        scrollTrigger: {
-          trigger: "#agent-builder",
-          start: "top 75%",
-          toggleActions: "play none none reverse",
-        },
-        x: -80,
-        opacity: 0,
-        duration: 0.8,
-        delay: 0.1,
-        ease: "power2.out",
-      });
-
-      gsap.from(".agent-builder-features li", {
-        scrollTrigger: {
-          trigger: "#agent-builder",
-          start: "top 70%",
-          toggleActions: "play none none reverse",
-        },
-        x: -60,
-        opacity: 0,
-        stagger: 0.1,
-        duration: 0.6,
-        ease: "power2.out",
-      });
-
-      gsap.from(".agent-builder-card", {
-        scrollTrigger: {
-          trigger: "#agent-builder",
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-        x: 100,
-        opacity: 0,
-        scale: 0.95,
-        duration: 1,
-        ease: "power2.out",
-      });
-
-      // FIXED: Agent Network - Simplified animation without scrub
-      // Agent Network - EXPAND FROM CENTER ANIMATION
-      const networkTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#agent-network",
-          start: "top 75%",
-          toggleActions: "play none none reverse",
-        },
-      });
-
-      // Headlines fade in
-      networkTl
-        .to(".agent-network-headline", {
-          y: 0,
-          opacity: 1,
-          duration: 0.6,
-          ease: "power2.out",
-        })
-        .to(
-          ".agent-network-subheadline",
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            ease: "power2.out",
-          },
-          "-=0.4",
-        )
-
-        // Hub scales up from center
-        .to(
-          ".agent-hub",
-          {
-            scale: 1,
-            opacity: 1,
-            duration: 0.8,
-            ease: "back.out(1.7)",
-          },
-          "-=0.2",
-        )
-
-        // Lines fade in
-        .to(
-          ".connection-lines",
-          {
-            opacity: 1,
-            duration: 0.4,
-          },
-          "-=0.4",
-        )
-
-        // Nodes expand from center to their positions
-        .to(
-          ".network-node",
-          {
-            duration: 1.2,
-            ease: "power3.out",
-            stagger: 0.1,
-            opacity: 1,
-            scale: 1,
-            x: function (i, target) {
-              const angle = parseInt(target.getAttribute("data-angle"));
-              const radius = window.innerWidth < 640 ? 110 : 140; // Smaller radius on mobile
-              return Math.cos((angle * Math.PI) / 180) * radius;
-            },
-            y: function (i, target) {
-              const angle = parseInt(target.getAttribute("data-angle"));
-              const radius = window.innerWidth < 640 ? 110 : 140;
-              return Math.sin((angle * Math.PI) / 180) * radius;
-            },
-          },
-          "-=0.6",
-        );
-
-      // Turn Tasks into Outcomes - FIXED
-      gsap.from(".outcomes-content", {
-        scrollTrigger: {
-          trigger: ".outcomes-content",
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-        x: -60,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-      });
-
-      gsap.from(".outcomes-image", {
-        scrollTrigger: {
-          trigger: ".outcomes-image",
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-        x: 60,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-      });
-
-      // Services Bento Grid - FIXED (No scrub, proper toggleActions)
-      gsap.to(".services-header", {
-        scrollTrigger: {
-          trigger: "#services",
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: "power2.out",
-      });
-
-      gsap.to(".bento-card", {
-        scrollTrigger: {
-          trigger: "#services",
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-        y: 0,
-        opacity: 1,
-        stagger: 0.1,
-        duration: 0.6,
-        ease: "power2.out",
-      });
-
-      // Software Section - FIXED
-      gsap.to(".software-header", {
-        scrollTrigger: {
-          trigger: "#software",
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: "power2.out",
-      });
-
-      gsap.to(".software-cards", {
-        scrollTrigger: {
-          trigger: "#software",
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        delay: 0.2,
-        ease: "power2.out",
-      });
-
-      // Agency-grade delivery - FIXED (Proper toggleActions with duration)
-      gsap.to(".agency-image", {
-        scrollTrigger: {
-          trigger: ".agency-image",
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-        x: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "power2.out",
-      });
-
-      gsap.to(".agency-header", {
-        scrollTrigger: {
-          trigger: ".agency-header",
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-        y: 0,
-        x: 0,
-        opacity: 1,
-        duration: 0.8,
-        delay: 0.2,
-        ease: "power2.out",
-      });
-
-      gsap.to(".agency-card", {
-        scrollTrigger: {
-          trigger: ".agency-card",
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-        x: 0,
-        opacity: 1,
-        duration: 0.6,
-        stagger: 0.1,
-        delay: 0.3,
-        ease: "power2.out",
-      });
-
-      // About Section - FIXED
-      gsap.to(".about-content", {
-        scrollTrigger: {
-          trigger: "#about",
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-        x: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: "power2.out",
-      });
-
-      gsap.to(".about-image", {
-        scrollTrigger: {
-          trigger: "#about",
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-        x: 0,
-        opacity: 1,
-        scale: 1,
-        duration: 0.8,
-        ease: "power2.out",
-      });
-
-      // FAQ Section - FIXED
-      gsap.to(".faq-header", {
-        scrollTrigger: {
-          trigger: ".faq-header",
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: "power2.out",
-      });
-
-      gsap.to(".accordion-item", {
-        scrollTrigger: {
-          trigger: "#faq",
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-        y: 0,
-        opacity: 1,
-        stagger: 0.05,
-        duration: 0.5,
-        ease: "power2.out",
-      });
-
-      // Final CTA - FIXED
-      gsap.to(".cta-orb", {
-        scrollTrigger: {
-          trigger: ".cta-orb",
-          start: "top 90%",
-          toggleActions: "play none none reverse",
-        },
-        scale: 1,
-        opacity: 1,
-        duration: 1.2,
-        ease: "power2.out",
-      });
-
-      gsap.to(".cta-headline", {
-        scrollTrigger: {
-          trigger: ".cta-headline",
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: "power2.out",
-      });
-
-      gsap.to(".cta-subheadline", {
-        scrollTrigger: {
-          trigger: ".cta-subheadline",
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        delay: 0.1,
-        ease: "power2.out",
-      });
-
-      gsap.to(".cta-buttons", {
-        scrollTrigger: {
-          trigger: ".cta-buttons",
-          start: "top 90%",
-          toggleActions: "play none none reverse",
-        },
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        delay: 0.2,
-        ease: "power2.out",
-      });
-      // Add this inside your <script> tag, before the closing tag
-      function showDownloadAlert() {
-        alert(
-          "This software is currently unavailable for download. You can learn more about it on our Projects page.",
-        );
+      function openMobileMenu() {
+        mobileMenu.classList.add("open");
+        mobileMenuOverlay.classList.add("open");
+        document.body.style.overflow = "hidden";
       }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.remove("open");
+        mobileMenuOverlay.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      mobileMenuBtn.addEventListener("click", openMobileMenu);
+      mobileMenuClose.addEventListener("click", closeMobileMenu);
+      mobileMenuOverlay.addEventListener("click", closeMobileMenu);
+      mobileLinks.forEach((link) =>
+        link.addEventListener("click", closeMobileMenu),
+      );
+
+      // ===== SCROLL ANIMATIONS =====
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // ===== CONTACT FORM =====
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const phone = document.getElementById("phone").value;
+          const message = document.getElementById("message").value;
+
+          const whatsappMessage = `Hi GoravAI,%0A%0AMy Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}%0A%0AProject Details:%0A${encodeURIComponent(message)}`;
+
+          window.open(
+            `https://wa.me/923312726787?text=${whatsappMessage}`,
+            "_blank",
+          );
+        });
+
+      // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href !== "#") {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          }
+        });
+      });
+
+      // ===== ACTIVE NAV LINK =====
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-links a");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 100;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+          }
+        });
+      });
     </script>
   </body>
 </html>
