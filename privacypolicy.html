@@ -3,347 +3,777 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - GoravAI</title>
+    <title>Privacy Policy | GoravAI - AI Agents, Automation & Software Development</title>
+    <meta name="description" content="GoravAI Privacy Policy. Learn how we collect, use, and protect your data when you use our AI agent development, automation, and software services.">
+    <meta name="keywords" content="GoravAI privacy policy, AI agency privacy, data protection, Hyderabad Pakistan, GoravAI data policy">
+    <meta name="author" content="GoravAI">
+    <meta name="geo.region" content="PK-SD">
+    <meta name="geo.placename" content="Hyderabad, Sindh, Pakistan">
+    <meta property="og:title" content="Privacy Policy | GoravAI">
+    <meta property="og:description" content="How GoravAI handles your data. Transparent, secure, and compliant.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary-blue: #3B82F6;
+            --primary-blue-light: #60A5FA;
+            --primary-blue-dark: #2563EB;
+            --accent-cyan: #06B6D4;
+            --bg-dark: #0A0F1C;
+            --bg-darker: #070B14;
+            --bg-card: #111827;
+            --bg-card-hover: #1A2236;
+            --text-white: #F8FAFC;
+            --text-gray: #94A3B8;
+            --text-muted: #64748B;
+            --border-subtle: rgba(59, 130, 246, 0.15);
+            --glow-blue: rgba(59, 130, 246, 0.4);
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
-            line-height: 1.6;
-            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.7;
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
+        /* Diagonal Lines */
+        .diagonal-lines {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 0; overflow: hidden;
+        }
+        .diagonal-lines::before {
+            content: ''; position: absolute; top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: repeating-linear-gradient(135deg, transparent, transparent 120px, rgba(59, 130, 246, 0.03) 120px, rgba(59, 130, 246, 0.03) 121px);
+            animation: diagonalMove 25s linear infinite;
+        }
+        @keyframes diagonalMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(85px, 85px); }
         }
 
-        .privacy-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 50px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
+        /* Particles */
+        .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+        .particle {
+            position: absolute; width: 3px; height: 3px;
+            background: var(--primary-blue); border-radius: 50%; opacity: 0.3;
+            animation: floatParticle 15s infinite ease-in-out;
+        }
+        @keyframes floatParticle {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0.2; }
+            25% { transform: translateY(-30px) translateX(15px); opacity: 0.5; }
+            50% { transform: translateY(-15px) translateX(-10px); opacity: 0.3; }
+            75% { transform: translateY(-40px) translateX(20px); opacity: 0.4; }
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 3px solid #667eea;
+        /* Navbar */
+        .navbar {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            padding: 1.2rem 0; transition: var(--transition-smooth); backdrop-filter: blur(0px);
         }
-
-        .header h1 {
-            font-size: 2.8em;
-            color: #667eea;
-            margin-bottom: 10px;
-            font-weight: 700;
+        .navbar.scrolled {
+            background: rgba(10, 15, 28, 0.92); backdrop-filter: blur(20px);
+            padding: 0.8rem 0; border-bottom: 1px solid var(--border-subtle);
         }
-
-        .header .company-name {
-            font-size: 1.3em;
-            color: #764ba2;
-            font-weight: 600;
-            margin-bottom: 15px;
+        .nav-container {
+            max-width: 1280px; margin: 0 auto; padding: 0 2rem;
+            display: flex; justify-content: space-between; align-items: center;
         }
+        .logo {
+            font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px;
+            text-decoration: none; display: inline-flex; align-items: center; gap: 0;
+            white-space: nowrap;
+        }
+        .logo .gorav, .logo .ai { display: inline; letter-spacing: -0.5px; }
+        .logo .gorav { color: var(--text-white); }
+        .logo .ai { color: var(--primary-blue); }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a {
+            color: var(--text-gray); text-decoration: none; font-size: 0.9rem;
+            font-weight: 500; transition: var(--transition-smooth); position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--primary-blue);
+            transition: var(--transition-smooth);
+        }
+        .nav-links a:hover { color: var(--text-white); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active { color: var(--text-white); }
+        .nav-links a.active::after { width: 100%; }
+        .nav-cta {
+            background: var(--primary-blue); color: white; padding: 0.6rem 1.4rem;
+            border-radius: 8px; text-decoration: none; font-size: 0.85rem;
+            font-weight: 600; transition: var(--transition-smooth); border: 1px solid transparent;
+        }
+        .nav-cta:hover { background: var(--primary-blue-dark); box-shadow: 0 0 25px var(--glow-blue); transform: translateY(-2px); }
+        .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-white); font-size: 1.4rem; cursor: pointer; }
 
+        /* Hero */
+        .hero {
+            min-height: 45vh; display: flex; align-items: center; position: relative;
+            overflow: hidden; padding-top: 120px; padding-bottom: 3rem;
+        }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+        .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.25; }
+        .hero-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(180deg, rgba(10, 15, 28, 0.7) 0%, rgba(10, 15, 28, 0.95) 100%); z-index: 1;
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 0 2rem; width: 100%; text-align: center; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: rgba(59, 130, 246, 0.1); border: 1px solid var(--border-subtle);
+            padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.8rem;
+            color: var(--primary-blue-light); margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 700; line-height: 1.15; margin-bottom: 1.2rem;
+        }
+        .hero h1 .highlight { color: var(--primary-blue); }
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.15rem); color: var(--text-gray);
+            max-width: 600px; margin: 0 auto; font-weight: 400; line-height: 1.7;
+        }
         .last-updated {
-            color: #666;
-            font-size: 0.95em;
-            font-style: italic;
+            display: inline-block; margin-top: 1.5rem;
+            background: rgba(59, 130, 246, 0.08); border: 1px solid var(--border-subtle);
+            padding: 0.5rem 1.2rem; border-radius: 8px; font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .last-updated i { color: var(--primary-blue); margin-right: 0.4rem; }
+
+        /* Policy Content */
+        section { position: relative; z-index: 2; }
+        .section-padding { padding: 4rem 0; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+
+        .policy-nav {
+            background: var(--bg-card); border: 1px solid var(--border-subtle);
+            border-radius: 16px; padding: 1.5rem 2rem; margin-bottom: 3rem;
+            position: sticky; top: 90px; z-index: 10;
+        }
+        .policy-nav h3 {
+            font-size: 0.9rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 2px; color: var(--primary-blue); margin-bottom: 1rem;
+        }
+        .policy-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+        .policy-nav ul li a {
+            display: block; padding: 0.4rem 1rem; background: var(--bg-dark);
+            border: 1px solid rgba(255,255,255,0.06); border-radius: 8px;
+            color: var(--text-gray); text-decoration: none; font-size: 0.85rem;
+            font-weight: 500; transition: var(--transition-smooth);
+        }
+        .policy-nav ul li a:hover {
+            border-color: var(--primary-blue); color: var(--primary-blue-light);
+            background: rgba(59, 130, 246, 0.08);
         }
 
-        .section {
-            margin-bottom: 35px;
+        .policy-section {
+            margin-bottom: 3.5rem; scroll-margin-top: 100px;
         }
+        .policy-section h2 {
+            font-family: 'Playfair Display', serif; font-size: 1.6rem;
+            font-weight: 700; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem;
+        }
+        .policy-section h2 .section-icon {
+            width: 40px; height: 40px; min-width: 40px;
+            background: rgba(59, 130, 246, 0.1); border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .policy-section h2 .section-icon i { color: var(--primary-blue); font-size: 1rem; }
+        .policy-section p {
+            color: var(--text-gray); font-size: 0.98rem; line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .policy-section ul {
+            list-style: none; margin: 1rem 0 1.5rem; padding-left: 0;
+        }
+        .policy-section ul li {
+            color: var(--text-gray); font-size: 0.95rem; line-height: 1.8;
+            margin-bottom: 0.7rem; padding-left: 1.8rem; position: relative;
+        }
+        .policy-section ul li::before {
+            content: ''; position: absolute; left: 0; top: 0.65rem;
+            width: 8px; height: 8px; background: var(--primary-blue);
+            border-radius: 50%; opacity: 0.6;
+        }
+        .policy-section strong { color: var(--text-white); font-weight: 600; }
 
-        .section h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e0e0e0;
+        .info-card {
+            background: var(--bg-card); border: 1px solid var(--border-subtle);
+            border-radius: 14px; padding: 1.8rem; margin: 1.5rem 0;
+            transition: var(--transition-smooth);
         }
-
-        .section h3 {
-            color: #764ba2;
-            font-size: 1.3em;
-            margin-top: 20px;
-            margin-bottom: 10px;
+        .info-card:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-
-        .section p {
-            color: #555;
-            margin-bottom: 15px;
-            text-align: justify;
+        .info-card h4 {
+            font-size: 1.05rem; font-weight: 600; margin-bottom: 0.8rem;
+            display: flex; align-items: center; gap: 0.6rem;
         }
-
-        .section ul {
-            margin-left: 25px;
-            margin-bottom: 15px;
-        }
-
-        .section li {
-            color: #555;
-            margin-bottom: 8px;
-            padding-left: 5px;
-        }
-
-        .services-list {
-            background: linear-gradient(135deg, #667eea15, #764ba215);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 15px 0;
-            border-left: 4px solid #667eea;
-        }
-
-        .services-list ul {
-            list-style: none;
-            margin: 0;
-        }
-
-        .services-list li::before {
-            content: "✓ ";
-            color: #667eea;
-            font-weight: bold;
-            margin-right: 8px;
-        }
+        .info-card h4 i { color: var(--accent-cyan); font-size: 0.9rem; }
+        .info-card p { margin-bottom: 0; font-size: 0.93rem; }
 
         .highlight-box {
-            background: #f8f9ff;
-            border-left: 4px solid #764ba2;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(6, 182, 212, 0.04));
+            border: 1px solid var(--border-subtle); border-radius: 12px;
+            padding: 1.5rem; margin: 1.5rem 0;
         }
+        .highlight-box p { margin-bottom: 0; }
+        .highlight-box i { color: var(--primary-blue); margin-right: 0.5rem; }
 
-        .contact-section {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            margin-top: 40px;
+        /* Contact CTA */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.05));
+            border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);
+            text-align: center; padding: 4rem 0;
         }
-
-        .contact-section h2 {
-            color: white;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-            padding-bottom: 15px;
-            margin-bottom: 20px;
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            margin-bottom: 1rem;
         }
-
-        .contact-info {
-            line-height: 2;
+        .cta-section p { color: var(--text-gray); max-width: 550px; margin: 0 auto 1.8rem; }
+        .btn-primary {
+            background: var(--primary-blue); color: white; padding: 1rem 2.5rem;
+            border-radius: 10px; text-decoration: none; font-weight: 600;
+            font-size: 0.95rem; transition: var(--transition-smooth); border: 1px solid transparent;
+            display: inline-flex; align-items: center; gap: 0.5rem;
         }
+        .btn-primary:hover { background: var(--primary-blue-dark); box-shadow: 0 0 30px var(--glow-blue); transform: translateY(-3px); }
 
-        .contact-info p {
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        .contact-info strong {
-            display: inline-block;
-            width: 120px;
-            font-weight: 600;
-        }
-
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-            transition: border-color 0.3s;
-        }
-
-        .contact-info a:hover {
-            border-bottom-color: white;
-        }
-
+        /* Footer */
         .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 25px;
-            border-top: 2px solid #e0e0e0;
-            color: #666;
-            font-size: 0.95em;
+            background: var(--bg-darker); border-top: 1px solid var(--border-subtle); padding: 4rem 0 2rem;
+        }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand .logo { font-size: 1.5rem; margin-bottom: 1rem; display: inline-block; }
+        .footer-brand p { color: var(--text-gray); font-size: 0.9rem; line-height: 1.8; max-width: 300px; }
+        .footer-column h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-white); }
+        .footer-column ul { list-style: none; }
+        .footer-column ul li { margin-bottom: 0.8rem; }
+        .footer-column ul li a {
+            color: var(--text-gray); text-decoration: none; font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+        .footer-column ul li a:hover { color: var(--primary-blue); padding-left: 4px; }
+        .footer-bottom {
+            border-top: 1px solid var(--border-subtle); padding-top: 2rem;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+        }
+        .footer-copyright { color: var(--text-muted); font-size: 0.85rem; }
+        .footer-social { display: flex; gap: 0.8rem; }
+        .footer-social a {
+            width: 40px; height: 40px; border-radius: 50%; background: var(--bg-card);
+            border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: center;
+            color: var(--text-gray); text-decoration: none; transition: var(--transition-smooth);
+            font-size: 0.95rem; position: relative; overflow: hidden;
+        }
+        .footer-social a:hover { transform: translateY(-3px); }
+        .footer-social a[title="LinkedIn"]:hover { background-color: #0077b5 !important; color: white !important; border-color: #0077b5 !important; }
+        .footer-social a[title="Facebook"]:hover { background-color: #1877F2 !important; color: white !important; border-color: #1877F2 !important; }
+        .footer-social a[title="Instagram"]:hover { background-color: #E1306C !important; color: white !important; border-color: #E1306C !important; }
+        .footer-social a[title="YouTube"]:hover { background-color: #FF0000 !important; color: white !important; border-color: #FF0000 !important; }
+        @keyframes shineAnimation {
+            0% { transform: skewX(-20deg) translateX(-150%); }
+            100% { transform: skewX(-20deg) translateX(300%); }
+        }
+        .footer-social a::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 25%; height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-20deg) translateX(-150%); z-index: 10; pointer-events: none;
+        }
+        .footer-social a:hover::before { animation: shineAnimation 0.6s ease forwards; }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed; bottom: 2rem; right: 2rem; width: 60px; height: 60px;
+            background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 1.6rem; text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999;
+            transition: all 0.3s ease; animation: whatsappPulse 2s ease-in-out infinite;
+        }
+        .whatsapp-float:hover { transform: scale(1.1) translateY(-3px); box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6); }
+        @keyframes whatsappPulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
         }
 
-        .footer p {
-            color: #666;
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
 
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed; top: 0; right: -100%; width: 80%; max-width: 320px;
+            height: 100vh; background: var(--bg-card); z-index: 1001;
+            padding: 5rem 2rem 2rem; transition: right 0.4s ease;
+            border-left: 1px solid var(--border-subtle);
+        }
+        .mobile-menu.open { right: 0; }
+        .mobile-menu-overlay {
+            position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 1000;
+            opacity: 0; visibility: hidden; transition: all 0.4s ease;
+        }
+        .mobile-menu-overlay.open { opacity: 1; visibility: visible; }
+        .mobile-menu ul { list-style: none; }
+        .mobile-menu ul li { margin-bottom: 1.5rem; }
+        .mobile-menu ul li a {
+            color: var(--text-white); text-decoration: none; font-size: 1.1rem;
+            font-weight: 500; display: block; padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .mobile-menu-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--text-white); font-size: 1.5rem; cursor: pointer; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-darker); }
+        ::-webkit-scrollbar-thumb { background: var(--primary-blue); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary-blue-dark); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .policy-nav { position: relative; top: 0; }
+        }
         @media (max-width: 768px) {
-            .privacy-card {
-                padding: 30px 20px;
-            }
-
-            .header h1 {
-                font-size: 2em;
-            }
-
-            .section h2 {
-                font-size: 1.5em;
-            }
-
-            .contact-info strong {
-                display: block;
-                margin-bottom: 5px;
-            }
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .section-padding { padding: 2.5rem 0; }
+            .policy-section h2 { font-size: 1.3rem; }
+            .policy-nav ul { gap: 0.5rem; }
+            .policy-nav ul li a { font-size: 0.8rem; padding: 0.35rem 0.8rem; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="privacy-card">
-            <div class="header">
-                <h1>Privacy Policy</h1>
-                <div class="company-name">GoravAI</div>
-                <p class="last-updated">Last Updated: December 26, 2025</p>
+    <div class="diagonal-lines"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png" alt="" style="width:32px;height:32px;border-radius:6px;margin-right:0.6rem;">
+                <span class="gorav">Gorav</span><span class="ai">AI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20am%20interested%20in%20your%20AI%20services" class="nav-cta" target="_blank">
+                <i class="fab fa-whatsapp"></i> Let's Talk
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose"><i class="fas fa-times"></i></button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"><img src="https://litter.catbox.moe/rz60ay.jpg" alt="Privacy Policy"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-shield-alt" style="font-size:0.8rem;"></i> Your Data, Your Trust</div>
+            <h1>Privacy <span class="highlight">Policy</span></h1>
+            <p class="hero-subtitle">
+                We believe transparency is the foundation of trust. Here is exactly how we collect, use, and protect your information when you work with GoravAI.
+            </p>
+            <div class="last-updated"><i class="fas fa-calendar-alt"></i> Last Updated: August 2026</div>
+        </div>
+    </section>
+
+    <!-- Policy Content -->
+    <section class="section-padding" style="padding-top: 2rem;">
+        <div class="container">
+
+            <!-- Quick Navigation -->
+            <nav class="policy-nav animate-on-scroll">
+                <h3><i class="fas fa-list-ul" style="margin-right:0.5rem;"></i> Quick Navigation</h3>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#collect">What We Collect</a></li>
+                    <li><a href="#use">How We Use It</a></li>
+                    <li><a href="#storage">Data Storage</a></li>
+                    <li><a href="#sharing">Third Parties</a></li>
+                    <li><a href="#cookies">Cookies</a></li>
+                    <li><a href="#rights">Your Rights</a></li>
+                    <li><a href="#security">Security</a></li>
+                    <li><a href="#retention">Retention</a></li>
+                    <li><a href="#children">Children</a></li>
+                    <li><a href="#changes">Changes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Introduction -->
+            <div class="policy-section animate-on-scroll" id="introduction">
+                <h2>
+                    <span class="section-icon"><i class="fas fa-info-circle"></i></span>
+                    Introduction
+                </h2>
+                <p>
+                    GoravAI ("we", "us", or "our") is an AI agency based in <strong>Hyderabad, Sindh, Pakistan</strong>, specialising in AI agent development, business automation systems, and custom AI software development. We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner.
+                </p>
+                <p>
+                    This Privacy Policy explains what information we collect from you when you visit our website, contact us, or use our services. It also describes how we use that information, who we share it with, and the choices you have regarding your data.
+                </p>
+                <div class="highlight-box">
+                    <p><i class="fas fa-handshake"></i> <strong>Our Promise:</strong> We only collect the information we need to deliver our services effectively. We never sell your personal data to third parties, and we implement industry-standard security measures to keep your information safe.</p>
+                </div>
             </div>
 
-            <div class="section">
-                <h2>About GoravAI</h2>
-                <p>Welcome to GoravAI - Intelligent Web Development, AI and Automation. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you interact with our services.</p>
-                
-                <div class="services-list">
-                    <h3>Our Services Include:</h3>
+            <!-- What We Collect -->
+            <div class="policy-section animate-on-scroll" id="collect">
+                <h2>
+                    <span class="section-icon"><i class="fas fa-database"></i></span>
+                    Information We Collect
+                </h2>
+                <p>We collect different types of information depending on how you interact with us. This falls into two main categories:</p>
+
+                <div class="info-card">
+                    <h4><i class="fas fa-user"></i> Information You Provide Directly</h4>
+                    <p>When you fill out our contact form, message us on WhatsApp, or book a consultation call, you may provide:</p>
                     <ul>
-                        <li>AI Agents Development</li>
-                        <li>Web Development</li>
-                        <li>Logo Design</li>
-                        <li>SEO & Digital Marketing</li>
-                        <li>Domain & Hosting Services</li>
+                        <li>Your full name and business name</li>
+                        <li>Email address and phone number (including WhatsApp)</li>
+                        <li>Details about your business, goals, and project requirements</li>
+                        <li>Any files, documents, or data you share for project scoping</li>
+                        <li>Communication preferences and feedback</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h4><i class="fas fa-server"></i> Information Collected Automatically</h4>
+                    <p>When you browse our website, we automatically collect certain technical data:</p>
+                    <ul>
+                        <li>IP address and general geographic location (city/country level)</li>
+                        <li>Browser type, device type, and operating system</li>
+                        <li>Pages visited, time spent on site, and referral sources</li>
+                        <li>Cookies and similar tracking technologies (see Cookies section)</li>
+                    </ul>
+                </div>
+
+                <p><strong>AI Agent & Automation Data:</strong> If you engage us to build an AI agent or automation system for your business, we may process data on your behalf as part of the service delivery. This is governed by our service agreement and any data processing addendum we sign with you.</p>
+            </div>
+
+            <!-- How We Use It -->
+            <div class="policy-section animate-on-scroll" id="use">
+                <h2>
+                    <span class="section-icon"><i class="fas fa-bullseye"></i></span>
+                    How We Use Your Information
+                </h2>
+                <p>We use the information we collect for the following purposes:</p>
+                <ul>
+                    <li><strong>Service Delivery:</strong> To understand your requirements, design solutions, build AI agents, set up automation workflows, and develop custom software.</li>
+                    <li><strong>Communication:</strong> To respond to your enquiries, send project updates, schedule calls, and provide customer support via WhatsApp, email, or phone.</li>
+                    <li><strong>Hosting & Maintenance:</strong> To host and maintain the AI agents and automation systems we build for you, ensuring they run reliably 24/7.</li>
+                    <li><strong>Improvement:</strong> To analyse how visitors use our website so we can improve content, user experience, and service offerings.</li>
+                    <li><strong>Marketing:</strong> To share relevant updates, case studies, or new service announcements (only with your consent, and you can opt out anytime).</li>
+                    <li><strong>Legal Compliance:</strong> To comply with applicable laws, regulations, or legal processes when required.</li>
+                </ul>
+            </div>
+
+            <!-- Data Storage -->
+            <div class="policy-section animate-on-scroll" id="storage">
+                <h2>
+                    <span class="section-icon"><i class="fas fa-hdd"></i></span>
+                    Data Storage & Hosting
+                </h2>
+                <p>
+                    Your data is stored on secure servers provided by trusted third-party cloud hosting providers. For AI agents and automation systems we build, we typically use platforms such as <strong>n8n</strong>, cloud VPS providers, or your preferred infrastructure — depending on what we agree during project scoping.
+                </p>
+                <p>
+                    All data is stored with encryption at rest and in transit where technically feasible. Our hosting infrastructure is designed to ensure high availability and data integrity.
+                </p>
+                <div class="highlight-box">
+                    <p><i class="fas fa-globe"></i> <strong>Location:</strong> GoravAI is based in Hyderabad, Sindh, Pakistan. While our servers may be located in various regions depending on the project, we ensure all data handling complies with applicable data protection principles.</p>
+                </div>
+            </div>
+
+            <!-- Third Parties -->
+            <div class="policy-section animate-on-scroll" id="sharing">
+                <h2>
+                    <span class="section-icon"><i class="fas fa-share-alt"></i></span>
+                    Third-Party Services & Sharing
+                </h2>
+                <p>We do not sell, rent, or trade your personal information. We only share data with third parties in the following limited circumstances:</p>
+                <ul>
+                    <li><strong>Service Providers:</strong> We use trusted third-party tools for hosting, analytics, communication, and project management (e.g., cloud hosting providers, WhatsApp Business API, analytics platforms). These providers only access data necessary to perform their functions.</li>
+                    <li><strong>AI Platforms:</strong> When building AI agents, we may integrate with platforms like OpenAI, n8n, or voice AI providers. Data shared with these platforms is governed by their respective privacy policies and our service agreements.</li>
+                    <li><strong>Legal Requirements:</strong> We may disclose information if required by law, court order, or to protect our rights, property, or safety.</li>
+                    <li><strong>Business Transfers:</strong> In the unlikely event of a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction, with notice provided to you.</li>
+                </ul>
+            </div>
+
+            <!-- Cookies -->
+            <div class="policy-section animate-on-scroll" id="cookies">
+                <h2>
+                    <span class="section-icon"><i class="fas fa-cookie-bite"></i></span>
+                    Cookies & Tracking Technologies
+                </h2>
+                <p>
+                    Our website uses cookies and similar technologies to enhance your browsing experience, analyse site traffic, and understand where our visitors come from.
+                </p>
+                <p><strong>Types of cookies we use:</strong></p>
+                <ul>
+                    <li><strong>Essential Cookies:</strong> Required for the website to function properly (e.g., navigation, security).</li>
+                    <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our site so we can improve it. These are anonymised where possible.</li>
+                    <li><strong>Preference Cookies:</strong> Remember your settings and preferences for a better experience on return visits.</li>
+                </ul>
+                <p>
+                    You can control cookies through your browser settings. Most browsers allow you to refuse or delete cookies. Please note that disabling certain cookies may affect the functionality of our website.
+                </p>
+            </div>
+
+            <!-- Your Rights -->
+            <div class="policy-section animate-on-scroll" id="rights">
+                <h2>
+                    <span class="section-icon"><i class="fas fa-user-shield"></i></span>
+                    Your Rights & Choices
+                </h2>
+                <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+                <ul>
+                    <li><strong>Access:</strong> Request a copy of the personal information we hold about you.</li>
+                    <li><strong>Correction:</strong> Ask us to correct inaccurate or incomplete information.</li>
+                    <li><strong>Deletion:</strong> Request that we delete your personal data, subject to legal obligations.</li>
+                    <li><strong>Restriction:</strong> Ask us to limit how we use your data in certain circumstances.</li>
+                    <li><strong>Portability:</strong> Request your data in a structured, machine-readable format.</li>
+                    <li><strong>Objection:</strong> Object to certain types of processing, such as direct marketing.</li>
+                    <li><strong>Withdraw Consent:</strong> If you have given consent for any processing, you can withdraw it at any time.</li>
+                </ul>
+                <p>
+                    To exercise any of these rights, please contact us using the details in the Contact section below. We will respond within a reasonable timeframe and may need to verify your identity before processing your request.
+                </p>
+            </div>
+
+            <!-- Security -->
+            <div class="policy-section animate-on-scroll" id="security">
+                <h2>
+                    <span class="section-icon"><i class="fas fa-lock"></i></span>
+                    Data Security
+                </h2>
+                <p>
+                    We take the security of your data seriously and implement appropriate technical and organisational measures to protect it against unauthorised access, alteration, disclosure, or destruction.
+                </p>
+                <ul>
+                    <li>SSL/TLS encryption for all data transmitted between your browser and our servers</li>
+                    <li>Secure access controls and authentication for all systems</li>
+                    <li>Regular security reviews and updates to our infrastructure</li>
+                    <li>Limited access to personal data — only team members who need it to perform their duties can access it</li>
+                    <li>Secure backup and disaster recovery procedures</li>
+                </ul>
+                <p>
+                    While we strive to use commercially acceptable means to protect your personal information, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security.
+                </p>
+            </div>
+
+            <!-- Retention -->
+            <div class="policy-section animate-on-scroll" id="retention">
+                <h2>
+                    <span class="section-icon"><i class="fas fa-clock"></i></span>
+                    Data Retention
+                </h2>
+                <p>
+                    We retain your personal information only for as long as necessary to fulfil the purposes for which we collected it, including satisfying any legal, accounting, or reporting requirements.
+                </p>
+                <ul>
+                    <li><strong>Client project data:</strong> Retained for the duration of the project plus the agreed support period (typically 30–60 days), unless a longer retention is required by contract or law.</li>
+                    <li><strong>Communication records:</strong> Retained for up to 2 years to maintain service continuity and resolve any disputes.</li>
+                    <li><strong>Website analytics:</strong> Anonymised after 26 months in accordance with standard analytics practices.</li>
+                </ul>
+                <p>
+                    When your data is no longer needed, we securely delete or anonymise it. If you would like us to delete your data earlier, please contact us.
+                </p>
+            </div>
+
+            <!-- Children -->
+            <div class="policy-section animate-on-scroll" id="children">
+                <h2>
+                    <span class="section-icon"><i class="fas fa-child"></i></span>
+                    Children's Privacy
+                </h2>
+                <p>
+                    Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided us with personal data, please contact us immediately. If we become aware that we have collected personal data from a child without parental consent, we will take steps to delete that information.
+                </p>
+            </div>
+
+            <!-- Changes -->
+            <div class="policy-section animate-on-scroll" id="changes">
+                <h2>
+                    <span class="section-icon"><i class="fas fa-sync-alt"></i></span>
+                    Changes to This Policy
+                </h2>
+                <p>
+                    We may update this Privacy Policy from time to time to reflect changes in our practices, services, or legal requirements. When we make significant changes, we will update the "Last Updated" date at the top of this page and may notify you via email or a prominent notice on our website.
+                </p>
+                <p>
+                    We encourage you to review this policy periodically to stay informed about how we protect your information. Your continued use of our website and services after any changes constitutes acceptance of the updated policy.
+                </p>
+            </div>
+
+            <!-- Contact -->
+            <div class="policy-section animate-on-scroll" id="contact">
+                <h2>
+                    <span class="section-icon"><i class="fas fa-envelope"></i></span>
+                    Contact Us
+                </h2>
+                <p>
+                    If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your data, please reach out to us. We are here to help and will respond as quickly as possible.
+                </p>
+                <div class="info-card">
+                    <h4><i class="fas fa-building"></i> GoravAI</h4>
+                    <p style="margin-bottom:0.5rem;"><strong>Location:</strong> Hyderabad, Sindh, Pakistan</p>
+                    <p style="margin-bottom:0.5rem;"><strong>WhatsApp:</strong> <a href="https://wa.me/923312726787" target="_blank" style="color:var(--primary-blue);text-decoration:none;">+92 331 2726787</a></p>
+                    <p style="margin-bottom:0.5rem;"><strong>Social:</strong> <a href="https://www.linkedin.com/company/goravai/" target="_blank" style="color:var(--primary-blue);text-decoration:none;">LinkedIn</a> | <a href="https://www.instagram.com/gorav_ai_agency/" target="_blank" style="color:var(--primary-blue);text-decoration:none;">Instagram</a></p>
+                    <p style="margin-bottom:0;"><strong>Response Time:</strong> We aim to respond to all privacy-related enquiries within 48 hours.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="animate-on-scroll">Questions About Your Data?</h2>
+            <p class="animate-on-scroll delay-1">We are happy to clarify anything. Drop us a message and we will get back to you within 48 hours.</p>
+            <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20have%20a%20question%20about%20your%20Privacy%20Policy" class="btn-primary animate-on-scroll delay-2" target="_blank">
+                <i class="fab fa-whatsapp"></i> Chat With Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container" style="max-width:1280px;">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png" alt="" style="width:32px;height:32px;border-radius:6px;margin-right:0.6rem;">
+                        <span class="gorav">Gorav</span><span class="ai">AI</span>
+                    </a>
+                    <p>Building smart AI agents and automation systems that help businesses work faster, reduce manual effort, and scale without limits. Based in Hyderabad, Sindh, Pakistan.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">AI Agent Development</a></li>
+                        <li><a href="services.html">Automation Systems</a></li>
+                        <li><a href="services.html">AI Software Development</a></li>
+                        <li><a href="services.html">Workflow Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="privacypolicy.html">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
-
-            <div class="section">
-                <h2>Information We Collect</h2>
-                
-                <h3>1. Information You Provide</h3>
-                <p>When you engage with our services and provide us with a project, we collect and store the following information:</p>
-                <ul>
-                    <li>Your full name</li>
-                    <li>Email address</li>
-                    <li>Phone number</li>
-                    <li>Contact details</li>
-                    <li>Project requirements and specifications</li>
-                    <li>Company or organization information</li>
-                    <li>Any other details necessary for project completion</li>
-                </ul>
-                <p>We create a dedicated file containing all this information to effectively manage and deliver your project.</p>
-
-                <h3>2. Information Collected Automatically</h3>
-                <p>When you visit our website, we automatically collect certain technical information, including:</p>
-                <ul>
-                    <li>IP address</li>
-                    <li>Browser type and version</li>
-                    <li>Time spent on our pages</li>
-                    <li>Pages visited and navigation patterns</li>
-                    <li>Device information</li>
-                    <li>Referring website addresses</li>
-                </ul>
-
-                <h3>3. Third-Party Platform Information</h3>
-                <p>We may receive information about you if you contact us through social media platforms such as Facebook, Instagram, LinkedIn, or other communication channels. This information is limited to what these platforms share with us based on your privacy settings.</p>
-            </div>
-
-            <div class="section">
-                <h2>How We Use Your Information</h2>
-                <p>The information we collect is used for the following purposes:</p>
-                <ul>
-                    <li><strong>Respond to Inquiries:</strong> To address your questions and provide customer support</li>
-                    <li><strong>Service Improvement:</strong> To enhance our website, products, and services based on user feedback and behavior</li>
-                    <li><strong>Communication:</strong> To send updates, promotional offers, and marketing content (only with your explicit consent)</li>
-                    <li><strong>Transaction Processing:</strong> To handle payments, send invoices and receipts</li>
-                    <li><strong>Project Management:</strong> To provide detailed information and updates about your project</li>
-                    <li><strong>Legal Compliance:</strong> To comply with legal obligations and protect our rights</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>Cookies and Tracking Technologies</h2>
-                <p>Our website uses cookies, web beacons, and analytics tools (such as Google Analytics) to improve user experience and analyze website traffic. These technologies help us:</p>
-                <ul>
-                    <li>Remember your preferences and settings</li>
-                    <li>Understand how visitors interact with our website</li>
-                    <li>Optimize website performance and content</li>
-                    <li>Provide personalized experiences</li>
-                </ul>
-                <div class="highlight-box">
-                    <p><strong>Note:</strong> You can disable cookies in your browser settings at any time. However, please be aware that some features of our website may not function properly if cookies are disabled.</p>
+            <div class="footer-bottom">
+                <p class="footer-copyright"> GoravAI. All rights reserved. Built with precision in Hyderabad, Pakistan.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/goravai/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61585322057102" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/gorav_ai_agency/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@GoravAI-e2v" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
-            </div>
-
-            <div class="section">
-                <h2>Sharing Your Information</h2>
-                <p><strong>We do not sell or rent your personal information to third parties.</strong> We may share your data only in the following circumstances:</p>
-                <ul>
-                    <li><strong>Service Providers:</strong> With trusted third-party companies that help us operate our business, including hosting providers, analytics services, and payment processors. These parties are contractually obligated to protect your information.</li>
-                    <li><strong>Legal Requirements:</strong> When required by law, court order, or government request, or to protect our legal rights and safety</li>
-                    <li><strong>Business Partners:</strong> With your explicit consent for joint projects or collaborations</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>Data Security</h2>
-                <p>We take the security of your personal information seriously. We implement industry-standard administrative, technical, and physical safeguards to protect your data from unauthorized access, disclosure, alteration, or destruction.</p>
-                <div class="highlight-box">
-                    <p><strong>Important:</strong> While we strive to use commercially acceptable means to protect your personal information, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security of your data.</p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>Your Rights</h2>
-                <p>You have the following rights regarding your personal information:</p>
-                <ul>
-                    <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
-                    <li><strong>Correction:</strong> Request correction of any inaccurate or incomplete information</li>
-                    <li><strong>Updates:</strong> Request changes or updates to your project details</li>
-                    <li><strong>Deletion:</strong> Request deletion of your personal data (subject to legal exceptions and business requirements)</li>
-                    <li><strong>Objection:</strong> Object to the processing of your personal information in certain circumstances</li>
-                    <li><strong>Data Portability:</strong> Request transfer of your data to another service provider</li>
-                </ul>
-                <p>To exercise any of these rights, please contact us at <a href="mailto:parkashdev748@gmail.com" style="color: #667eea; text-decoration: none; font-weight: 600;">parkashdev748@gmail.com</a></p>
-            </div>
-
-            <div class="section">
-                <h2>Third-Party Websites</h2>
-                <p>Our website may contain links to external websites operated by third parties. Please be aware that we are not responsible for the privacy practices or content of these third-party websites. We encourage you to review the privacy policies of any external sites you visit.</p>
-            </div>
-
-            <div class="section">
-                <h2>Children's Privacy</h2>
-                <p>Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a minor, please contact us immediately.</p>
-            </div>
-
-            <div class="section">
-                <h2>Changes to This Privacy Policy</h2>
-                <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. Any changes will be posted on this page with an updated "Last Updated" date. We encourage you to review this policy periodically to stay informed about how we protect your information.</p>
-            </div>
-
-            <div class="contact-section">
-                <h2>Contact Us</h2>
-                <div class="contact-info">
-                    <p><strong>Company:</strong> GoravAI - Intelligent Web Development, AI and Automation</p>
-                    <p><strong>Address:</strong> F-67/1196, Behind United Hotel, Qazi Qayoom Road, Hyder Chowk, Hyderabad, Sindh, Pakistan</p>
-                    <p><strong>Email:</strong> <a href="mailto:parkashdev748@gmail.com">parkashdev748@gmail.com</a></p>
-                    <p><strong>Phone:</strong> <a href="tel:+923361319915">+92 336 1319915</a></p>
-                    <p><strong>Website:</strong> <a href="https://gorav-a36y.github.io/GoravAI/" target="_blank">https://gorav-a36y.github.io/GoravAI/</a></p>
-                </div>
-            </div>
-
-            <div class="footer">
-                <p>&copy; 2025 GoravAI. All Rights Reserved.</p>
-                <p>Intelligent Web Development, AI and Automation</p>
             </div>
         </div>
-    </div>
+    </footer>
+
+    <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20am%20interested%20in%20your%20AI%20automation%20services.%20Can%20we%20discuss%20my%20project?" class="whatsapp-float" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 25; i++) {
+                const p = document.createElement('div'); p.className = 'particle';
+                p.style.left = Math.random() * 100 + '%'; p.style.top = Math.random() * 100 + '%';
+                p.style.animationDelay = Math.random() * 15 + 's';
+                p.style.animationDuration = (10 + Math.random() * 10) + 's';
+                const s = 2 + Math.random() * 3; p.style.width = s + 'px'; p.style.height = s + 'px';
+                container.appendChild(p);
+            }
+        }
+        createParticles();
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        function openMobileMenu() { mobileMenu.classList.add('open'); mobileMenuOverlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+        function closeMobileMenu() { mobileMenu.classList.remove('open'); mobileMenuOverlay.classList.remove('open'); document.body.style.overflow = ''; }
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+        document.querySelectorAll('.mobile-menu a').forEach(link => link.addEventListener('click', closeMobileMenu));
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // Smooth scroll for policy nav links
+        document.querySelectorAll('.policy-nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
 </body>
 </html>
