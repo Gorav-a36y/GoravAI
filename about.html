@@ -1,0 +1,1328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us | GoravAI - AI Agency Hyderabad Pakistan</title>
+    <meta
+      name="description"
+      content="Learn about GoravAI mission, vision, and founder. AI agency in Hyderabad, Pakistan building smart AI agents, automation systems, and custom software."
+    />
+    <meta
+      name="keywords"
+      content="GoravAI about, AI agency Hyderabad, Gorav Khemani, AI mission vision, Pakistan AI company"
+    />
+    <meta name="author" content="GoravAI" />
+    <meta property="og:title" content="About Us | GoravAI" />
+    <meta
+      property="og:description"
+      content="Meet the team behind GoravAI. Our mission is to make AI accessible to every business."
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Playfair+Display:wght@600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-blue: #3b82f6;
+        --primary-blue-light: #60a5fa;
+        --primary-blue-dark: #2563eb;
+        --accent-cyan: #06b6d4;
+        --bg-dark: #0a0f1c;
+        --bg-darker: #070b14;
+        --bg-card: #111827;
+        --bg-card-hover: #1a2236;
+        --text-white: #f8fafc;
+        --text-gray: #94a3b8;
+        --text-muted: #64748b;
+        --border-subtle: rgba(59, 130, 246, 0.15);
+        --glow-blue: rgba(59, 130, 246, 0.4);
+        --t: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: Inter, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-white);
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+      .d {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+      .d::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: repeating-linear-gradient(
+          135deg,
+          transparent,
+          transparent 120px,
+          rgba(59, 130, 246, 0.03) 120px,
+          rgba(59, 130, 246, 0.03) 121px
+        );
+        animation: m 25s linear infinite;
+      }
+      @keyframes m {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(85px, 85px);
+        }
+      }
+      .p {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+      }
+      .pt {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        background: var(--primary-blue);
+        border-radius: 50%;
+        opacity: 0.3;
+        animation: f 15s infinite ease-in-out;
+      }
+      @keyframes f {
+        0%,
+        100% {
+          transform: translateY(0) translateX(0);
+          opacity: 0.2;
+        }
+        25% {
+          transform: translateY(-30px) translateX(15px);
+          opacity: 0.5;
+        }
+        50% {
+          transform: translateY(-15px) translateX(-10px);
+          opacity: 0.3;
+        }
+        75% {
+          transform: translateY(-40px) translateX(20px);
+          opacity: 0.4;
+        }
+      }
+      .n {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 1.2rem 0;
+        transition: var(--t);
+        backdrop-filter: blur(0);
+      }
+      .n.s {
+        background: rgba(10, 15, 28, 0.92);
+        backdrop-filter: blur(20px);
+        padding: 0.8rem 0;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+      .nc {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .l {
+        font-size: 1.6rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0;
+        white-space: nowrap;
+      }
+      .l .g,
+      .l .a {
+        display: inline;
+        letter-spacing: -0.5px;
+      }
+      .l .g {
+        color: var(--text-white);
+      }
+      .l .a {
+        color: var(--primary-blue);
+      }
+      .nl {
+        display: flex;
+        gap: 2.5rem;
+        list-style: none;
+      }
+      .nl a {
+        color: var(--text-gray);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: var(--t);
+        position: relative;
+      }
+      .nl a::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--primary-blue);
+        transition: var(--t);
+      }
+      .nl a:hover {
+        color: var(--text-white);
+      }
+      .nl a:hover::after {
+        width: 100%;
+      }
+      .nl a.x {
+        color: var(--text-white);
+      }
+      .nl a.x::after {
+        width: 100%;
+      }
+      .nc2 {
+        background: var(--primary-blue);
+        color: white;
+        padding: 0.6rem 1.4rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: var(--t);
+        border: 1px solid transparent;
+      }
+      .nc2:hover {
+        background: var(--primary-blue-dark);
+        box-shadow: 0 0 25px var(--glow-blue);
+        transform: translateY(-2px);
+      }
+      .mb {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-white);
+        font-size: 1.4rem;
+        cursor: pointer;
+      }
+      .h {
+        min-height: 55vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding-top: 120px;
+        padding-bottom: 4rem;
+      }
+      .hb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+      .hb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.25;
+      }
+      .ho {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(10, 15, 28, 0.7) 0%,
+          rgba(10, 15, 28, 0.95) 100%
+        );
+        z-index: 1;
+      }
+      .hc {
+        position: relative;
+        z-index: 2;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        width: 100%;
+        text-align: center;
+      }
+      .hb2 {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(59, 130, 246, 0.1);
+        border: 1px solid var(--border-subtle);
+        padding: 0.6rem 1.2rem;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        color: var(--primary-blue-light);
+        margin-bottom: 2rem;
+      }
+      .h h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 700;
+        line-height: 1.15;
+        margin-bottom: 1.5rem;
+      }
+      .h h1 .hl {
+        color: var(--primary-blue);
+      }
+      .hs {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        color: var(--text-gray);
+        max-width: 650px;
+        margin: 0 auto;
+        font-weight: 400;
+        line-height: 1.7;
+      }
+      section {
+        position: relative;
+        z-index: 2;
+      }
+      .sp {
+        padding: 5rem 0;
+      }
+      .c {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+      .sh {
+        text-align: center;
+        margin-bottom: 3.5rem;
+      }
+      .st {
+        display: inline-block;
+        color: var(--primary-blue);
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        margin-bottom: 1rem;
+      }
+      .sti {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+      .sd {
+        color: var(--text-gray);
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 1.05rem;
+      }
+      .mv {
+        background: var(--bg-darker);
+      }
+      .mg {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+      .mc {
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: 20px;
+        overflow: hidden;
+        transition: var(--t);
+      }
+      .mc:hover {
+        transform: translateY(-6px);
+        border-color: rgba(59, 130, 246, 0.3);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+      .mi {
+        width: 100%;
+        height: 240px;
+        overflow: hidden;
+      }
+      .mi img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--t);
+      }
+      .mc:hover .mi img {
+        transform: scale(1.05);
+      }
+      .mco {
+        padding: 2rem;
+      }
+      .mico {
+        width: 50px;
+        height: 50px;
+        background: rgba(59, 130, 246, 0.1);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.2rem;
+      }
+      .mico i {
+        font-size: 1.3rem;
+        color: var(--primary-blue);
+      }
+      .mc h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .mc p {
+        color: var(--text-gray);
+        font-size: 0.95rem;
+        line-height: 1.8;
+      }
+      .vg {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+      .vc {
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: 16px;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        transition: var(--t);
+      }
+      .vc:hover {
+        transform: translateY(-5px);
+        border-color: rgba(59, 130, 246, 0.3);
+      }
+      .vico {
+        width: 55px;
+        height: 55px;
+        background: rgba(59, 130, 246, 0.1);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.2rem;
+      }
+      .vico i,
+      .mico i {
+        display: inline-block;
+        font-family: "Font Awesome 6 Free";
+        font-size: 1.3rem;
+        line-height: 1;
+        color: var(--primary-blue);
+      }
+      .fso a i,
+      .fso2 a i {
+        display: inline-block;
+        font-family: "Font Awesome 6 Free";
+        font-size: 1rem;
+        line-height: 1;
+      }
+      .vc h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+      }
+      .vc p {
+        color: var(--text-gray);
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+      .fs {
+        background: var(--bg-darker);
+      }
+      .fg {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 4rem;
+        align-items: center;
+      }
+      .fiw {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .fi {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid var(--primary-blue);
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
+        position: relative;
+        z-index: 2;
+      }
+      .fi img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .flg {
+        position: absolute;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(59, 130, 246, 0.3),
+          transparent 70%
+        );
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        animation: pg 3s ease-in-out infinite;
+      }
+      @keyframes pg {
+        0%,
+        100% {
+          opacity: 0.5;
+          transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+          opacity: 0.8;
+          transform: translate(-50%, -50%) scale(1.05);
+        }
+      }
+      .fc h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+      }
+      .fr {
+        color: var(--primary-blue);
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        display: block;
+      }
+      .fc p {
+        color: var(--text-gray);
+        margin-bottom: 1.2rem;
+        font-size: 1.02rem;
+      }
+      .fso {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .fso a {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-gray);
+        text-decoration: none;
+        transition: var(--t);
+        font-size: 1.1rem;
+      }
+      .fso a:hover {
+        background: var(--primary-blue);
+        color: white;
+        border-color: var(--primary-blue);
+        box-shadow: 0 0 20px var(--glow-blue);
+        transform: translateY(-3px);
+      }
+      .sb {
+        background: linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.1),
+          rgba(6, 182, 212, 0.05)
+        );
+        border-top: 1px solid var(--border-subtle);
+        border-bottom: 1px solid var(--border-subtle);
+        padding: 3rem 0;
+      }
+      .sg {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+      }
+      .si {
+        text-align: center;
+      }
+      .sn {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        display: block;
+      }
+      .sl {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+      .cta {
+        background: linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.1),
+          rgba(6, 182, 212, 0.05)
+        );
+        border-top: 1px solid var(--border-subtle);
+        text-align: center;
+        padding: 5rem 0;
+      }
+      .cta h2 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+        margin-bottom: 1rem;
+      }
+      .cta p {
+        color: var(--text-gray);
+        max-width: 550px;
+        margin: 0 auto 2rem;
+      }
+      .bp {
+        background: var(--primary-blue);
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: var(--t);
+        border: 1px solid transparent;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .bp:hover {
+        background: var(--primary-blue-dark);
+        box-shadow: 0 0 30px var(--glow-blue);
+        transform: translateY(-3px);
+      }
+      .ft {
+        background: var(--bg-darker);
+        border-top: 1px solid var(--border-subtle);
+        padding: 4rem 0 2rem;
+      }
+      .fg2 {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 3rem;
+        margin-bottom: 3rem;
+      }
+      .fb .l {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+      }
+      .fb p {
+        color: var(--text-gray);
+        font-size: 0.9rem;
+        line-height: 1.8;
+        max-width: 300px;
+      }
+      .fc2 h4 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: var(--text-white);
+      }
+      .fc2 ul {
+        list-style: none;
+      }
+      .fc2 ul li {
+        margin-bottom: 0.8rem;
+      }
+      .fc2 ul li a {
+        color: var(--text-gray);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: var(--t);
+      }
+      .fc2 ul li a:hover {
+        color: var(--primary-blue);
+        padding-left: 4px;
+      }
+      .fb2 {
+        border-top: 1px solid var(--border-subtle);
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .fcr {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+      }
+      .fso2 {
+        display: flex;
+        gap: 0.8rem;
+      }
+      .fso2 a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-gray);
+        text-decoration: none;
+        transition: var(--t);
+        font-size: 0.95rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .fso2 a:hover {
+        transform: translateY(-3px);
+      }
+      .fso2 a[title="LinkedIn"]:hover {
+        background-color: #0077b5 !important;
+        color: white !important;
+        border-color: #0077b5 !important;
+      }
+      .fso2 a[title="Facebook"]:hover {
+        background-color: #1877f2 !important;
+        color: white !important;
+        border-color: #1877f2 !important;
+      }
+      .fso2 a[title="Instagram"]:hover {
+        background-color: #e1306c !important;
+        color: white !important;
+        border-color: #e1306c !important;
+      }
+      .fso2 a[title="YouTube"]:hover {
+        background-color: #ff0000 !important;
+        color: white !important;
+        border-color: #ff0000 !important;
+      }
+      @keyframes sa {
+        0% {
+          transform: skewX(-20deg) translateX(-150%);
+        }
+        100% {
+          transform: skewX(-20deg) translateX(300%);
+        }
+      }
+      .fso2 a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.6) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: skewX(-20deg) translateX(-150%);
+        z-index: 10;
+        pointer-events: none;
+      }
+      .fso2 a:hover::before {
+        animation: sa 0.6s ease forwards;
+      }
+      .wf {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.6rem;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        z-index: 999;
+        transition: all 0.3s ease;
+        animation: wp 2s ease-in-out infinite;
+      }
+      .wf:hover {
+        transform: scale(1.1) translateY(-3px);
+        box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+      }
+      @keyframes wp {
+        0%,
+        100% {
+          box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        }
+        50% {
+          box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
+        }
+      }
+      @keyframes fu {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .aos {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .aos.v {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .d1 {
+        transition-delay: 0.1s;
+      }
+      .d2 {
+        transition-delay: 0.2s;
+      }
+      .d3 {
+        transition-delay: 0.3s;
+      }
+      .mm {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background: var(--bg-card);
+        z-index: 1001;
+        padding: 5rem 2rem 2rem;
+        transition: right 0.4s ease;
+        border-left: 1px solid var(--border-subtle);
+      }
+      .mm.o {
+        right: 0;
+      }
+      .mmo {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+      }
+      .mmo.o {
+        opacity: 1;
+        visibility: visible;
+      }
+      .mm ul {
+        list-style: none;
+      }
+      .mm ul li {
+        margin-bottom: 1.5rem;
+      }
+      .mm ul li a {
+        color: var(--text-white);
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        display: block;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+      .mmc {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: none;
+        border: none;
+        color: var(--text-white);
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg-darker);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--primary-blue);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-blue-dark);
+      }
+      @media (max-width: 1024px) {
+        .mg {
+          grid-template-columns: 1fr;
+        }
+        .vg {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .fg {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .sg {
+          gap: 2.5rem;
+        }
+        .fg2 {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 768px) {
+        .nl {
+          display: none;
+        }
+        .mb {
+          display: block;
+        }
+        .vg {
+          grid-template-columns: 1fr;
+        }
+        .sg {
+          flex-direction: column;
+          gap: 2rem;
+        }
+        .fg2 {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        .fb2 {
+          flex-direction: column;
+          text-align: center;
+        }
+        .sp {
+          padding: 3rem 0;
+        }
+        .fi {
+          width: 250px;
+          height: 250px;
+        }
+        .flg {
+          width: 270px;
+          height: 270px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d"></div>
+    <div class="p" id="particles"></div>
+    <nav class="n" id="navbar">
+      <div class="nc">
+        <a href="index.html" class="l"
+          ><img
+            src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
+            alt
+            style="
+              width: 32px;
+              height: 32px;
+              border-radius: 6px;
+              margin-right: 0.6rem;
+            "
+          /><span class="g">Gorav</span><span class="a">AI</span></a
+        >
+        <ul class="nl">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="x">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a
+          href="https://wa.me/923312726787?text=Hello%20GoravAI%2C%20I%20would%20love%20to%20discuss%20an%20AI%20solution%20for%20my%20business.%20Could%20you%20help%20me%20get%20started%3F"
+          class="nc2"
+          target="_blank"
+          ><i class="fab fa-whatsapp"></i> Let's Talk</a
+        ><button class="mb" id="mb"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+    <div class="mmo" id="mmo"></div>
+    <div class="mm" id="mm">
+      <button class="mmc" id="mmc"><i class="fas fa-times"></i></button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <section class="h">
+      <div class="hb">
+        <img src="https://litter.catbox.moe/42klb6.jpg" alt="About" />
+      </div>
+      <div class="ho"></div>
+      <div class="hc">
+        <div class="hb2">
+          <i class="fas fa-circle" style="font-size: 0.5rem"></i> Who We Are
+        </div>
+        <h1>Building AI That Works for <span class="hl">Real People</span></h1>
+        <p class="hs">
+          We are a focused team from Hyderabad, Pakistan, helping businesses
+          across the world automate their work with practical AI solutions.
+        </p>
+      </div>
+    </section>
+    <section class="sb">
+      <div class="c">
+        <div class="sg">
+          <div class="si">
+            <span class="sn">8+</span><span class="sl">Projects Delivered</span>
+          </div>
+          <div class="si">
+            <span class="sn">3+</span><span class="sl">Countries Served</span>
+          </div>
+          <div class="si">
+            <span class="sn">24/7</span><span class="sl">AI Agent Uptime</span>
+          </div>
+          <div class="si">
+            <span class="sn">100%</span><span class="sl">Client Focus</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sp" mv id="mission">
+      <div class="c">
+        <div class="sh" aos>
+          <span class="st">Our Purpose</span>
+          <h2 class="sti">Why We Do What We Do</h2>
+          <p class="sd">
+            Every business deserves to benefit from AI, not just the ones with
+            massive tech budgets.
+          </p>
+        </div>
+        <div class="mg">
+          <div class="mc" aos>
+            <div class="mi">
+              <img src="https://litter.catbox.moe/vjhs6j.jpg" alt="Mission" />
+            </div>
+            <div class="mco">
+              <div class="mico"><i class="fas fa-bullseye"></i></div>
+              <h3>Our Mission</h3>
+              <p>
+                To make AI automation accessible, affordable, and practical for
+                every business. From local shops in Hyderabad to international
+                e-commerce brands. We believe technology should reduce your
+                workload, not add to it. Every solution we build is designed to
+                work from day one, with no complicated setup or hidden costs.
+              </p>
+            </div>
+          </div>
+          <div class="mc" aos d1>
+            <div class="mi">
+              <img src="https://litter.catbox.moe/6el1mi.jpg" alt="Vision" />
+            </div>
+            <div class="mco">
+              <div class="mico"><i class="fas fa-eye"></i></div>
+              <h3>Our Vision</h3>
+              <p>
+                To become the most trusted AI agency for small and medium
+                businesses across Pakistan, the Middle East, and beyond. We
+                envision a future where every business owner can focus on growth
+                while AI handles the repetitive tasks, running quietly in the
+                background 24 hours a day.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sp">
+      <div class="c">
+        <div class="sh" aos>
+          <span class="st">What Drives Us</span>
+          <h2 class="sti">Our Core Values</h2>
+          <p class="sd">
+            These principles guide every project we take on and every
+            relationship we build.
+          </p>
+        </div>
+        <div class="vg">
+          <div class="vc" aos>
+            <div class="vico"><i class="fas fa-handshake"></i></div>
+            <h4>Transparency First</h4>
+            <p>
+              No hidden costs, no false promises. We tell you exactly what is
+              possible, what it will cost, and how long it will take.
+            </p>
+          </div>
+          <div class="vc" aos d1>
+            <div class="vico"><i class="fas fa-rocket"></i></div>
+            <h4>Practical Results</h4>
+            <p>
+              We do not build fancy demos that do not work. Every solution is
+              tested, reliable, and ready for real-world use.
+            </p>
+          </div>
+          <div class="vc" aos d2>
+            <div class="vico"><i class="fas fa-users"></i></div>
+            <h4>Client Partnership</h4>
+            <p>
+              We do not just deliver and disappear. We stay connected, provide
+              support, and help you get the most from your AI investment.
+            </p>
+          </div>
+          <div class="vc" aos d3>
+            <div class="vico"><i class="fas fa-lightbulb"></i></div>
+            <h4>Continuous Innovation</h4>
+            <p>
+              AI is evolving fast and so are we. We constantly learn,
+              experiment, and bring the latest tools to our clients.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sp" fs id="founder">
+      <div class="c">
+        <div class="fg">
+          <div class="fiw" aos>
+            <div class="flg"></div>
+            <div class="fi">
+              <img
+                src="https://pbs.twimg.com/profile_images/1997316190642061312/tq0oVJQs_400x400.jpg"
+                alt="Gorav"
+                khemani
+              />
+            </div>
+          </div>
+          <div class="fc" aos d1>
+            <span class="st">Meet the Founder</span>
+            <h2>Gorav Khemani</h2>
+            <span class="fr">Founder &amp; AI Solutions Architect</span>
+            <p>
+              I started GoravAI with a simple belief, every business deserves to
+              benefit from AI, not just the big corporations with massive tech
+              budgets.
+            </p>
+            <p>
+              Having worked across industries from healthcare to e-commerce, I
+              understand the real pain points business owners face daily. That
+              is why every solution we build at GoravAI is practical,
+              affordable, and designed to deliver measurable results from day
+              one.
+            </p>
+            <p>
+              Based in Hyderabad, Sindh, we serve clients locally and
+              internationally, helping them automate operations, reduce manual
+              work, and scale without adding headcount.
+            </p>
+            <div class="fso">
+              <a
+                href="https://www.linkedin.com/in/gorav-khemani-61968a381/"
+                target="_blank"
+                title="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i></a
+              ><a
+                href="https://www.facebook.com/gorav.khemani.2025"
+                target="_blank"
+                title="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta" id="contact">
+      <div class="c">
+        <h2 aos>Ready to Work With Us?</h2>
+        <p aos d1>
+          Whether you are a startup or an established business, we would love to
+          hear about your project and show you how AI can help.
+        </p>
+        <a
+          href="https://wa.me/923312726787?text=Hello%20GoravAI%2C%20I%20would%20love%20to%20discuss%20an%20AI%20solution%20for%20my%20business.%20Could%20you%20help%20me%20get%20started%3F"
+          class="bp"
+          aos
+          d2
+          target="_blank"
+          ><i class="fab fa-whatsapp"></i> Start a Conversation</a
+        >
+      </div>
+    </section>
+    <footer class="ft">
+      <div class="c">
+        <div class="fg2">
+          <div class="fb">
+            <a href="index.html" class="l"
+              ><img
+                src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
+                alt
+                style="
+                  width: 32px;
+                  height: 32px;
+                  border-radius: 6px;
+                  margin-right: 0.6rem;
+                "
+              />
+              <span class="g">Gorav</span><span class="a">AI</span></a
+            >
+            <p>
+              Building smart AI agents and automation systems that help
+              businesses work faster, reduce manual effort, and scale without
+              limits. Based in Hyderabad, Sindh, Pakistan.
+            </p>
+          </div>
+          <div class="fc2">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="fc2">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">AI Agent Development</a></li>
+              <li><a href="services.html">Automation Systems</a></li>
+              <li><a href="services.html">AI Software Development</a></li>
+              <li><a href="services.html">Workflow Consulting</a></li>
+            </ul>
+          </div>
+          <div class="fc2">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="privacypolicy.html">Privacy Policy</a></li>
+              <li><a href="privacypolicy.html">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="fb2">
+          <p class="fcr">
+            GoravAI. All rights reserved. Built with precision in Hyderabad,
+            Pakistan.
+          </p>
+          <div class="fso2">
+            <a
+              href="https://www.linkedin.com/company/goravai/"
+              target="_blank"
+              title="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i></a
+            ><a
+              href="https://www.facebook.com/profile.php?id=61585322057102"
+              target="_blank"
+              title="Facebook"
+              ><i class="fab fa-facebook-f"></i></a
+            ><a
+              href="https://www.instagram.com/gorav_ai_agency/"
+              target="_blank"
+              title="Instagram"
+              ><i class="fab fa-instagram"></i></a
+            ><a
+              href="https://www.youtube.com/@GoravAI-e2v"
+              target="_blank"
+              title="YouTube"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a
+      href="https://wa.me/923312726787?text=Hello%20GoravAI%2C%20I%20would%20love%20to%20discuss%20an%20AI%20solution%20for%20my%20business.%20Could%20you%20help%20me%20get%20started%3F"
+      class="wf"
+      target="_blank"
+      title="Chat"
+      on
+      whatsapp
+      ><i class="fab fa-whatsapp"></i
+    ></a>
+
+    <script>
+      function cp() {
+        const c = document.getElementById("particles");
+        for (let i = 0; i < 25; i++) {
+          const p = document.createElement("div");
+          p.className = "pt";
+          p.style.left = Math.random() * 100 + "%";
+          p.style.top = Math.random() * 100 + "%";
+          p.style.animationDelay = Math.random() * 15 + "s";
+          p.style.animationDuration = 10 + Math.random() * 10 + "s";
+          const s = 2 + Math.random() * 3;
+          p.style.width = s + "px";
+          p.style.height = s + "px";
+          c.appendChild(p);
+        }
+      }
+      cp();
+      const nb = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        nb.classList.toggle("s", window.scrollY > 50);
+      });
+      const mbtn = document.getElementById("mb");
+      const mm = document.getElementById("mm");
+      const mmo = document.getElementById("mmo");
+      const mmc = document.getElementById("mmc");
+      function om() {
+        mm.classList.add("o");
+        mmo.classList.add("o");
+        document.body.style.overflow = "hidden";
+      }
+      function cm() {
+        mm.classList.remove("o");
+        mmo.classList.remove("o");
+        document.body.style.overflow = "";
+      }
+      mbtn.addEventListener("click", om);
+      mmc.addEventListener("click", cm);
+      mmo.addEventListener("click", cm);
+      document
+        .querySelectorAll(".mm a")
+        .forEach((l) => l.addEventListener("click", cm));
+      const o = new IntersectionObserver(
+        (e) => {
+          e.forEach((en) => {
+            if (en.isIntersecting) en.target.classList.add("v");
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+      );
+      document.querySelectorAll(".aos").forEach((el) => o.observe(el));
+    </script>
+  </body>
+</html>
