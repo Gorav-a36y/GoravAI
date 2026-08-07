@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Solutions | GoravAI - Agentic AI & Vibe AI Software</title>
+    <title>AI Solutions | GoravAI - Agentic AI & AI Software</title>
     <meta
       name="description"
-      content="Explore GoravAI's cutting-edge AI solutions including Agentic AI automation for Shopify, healthcare, education, and Vibe AI Software like LeadGen Pro, House Map Generator, Content Studio, Data Insights, and Auto Code."
+      content="Explore GoravAI's cutting-edge AI solutions including Agentic AI automation for Shopify, healthcare, education, and AI Software like LeadGen Pro, House Map Generator, Content Studio, Data Insights, and Auto Code."
     />
     <meta name="robots" content="index, follow" />
     <link
@@ -18,7 +18,7 @@
     <!-- OpenGraph Metadata -->
     <meta
       property="og:title"
-      content="AI Solutions | GoravAI - Agentic AI & Vibe AI Software"
+      content="AI Solutions | GoravAI - Agentic AI & AI Software"
     />
     <meta
       property="og:description"
@@ -39,7 +39,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="AI Solutions | GoravAI - Agentic AI & Vibe AI Software"
+      content="AI Solutions | GoravAI - Agentic AI & AI Software"
     />
     <meta
       name="twitter:description"
@@ -58,7 +58,7 @@
         "name": "GoravAI",
         "url": "https://gorav-a36y.github.io/GoravAI/",
         "logo": "https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png",
-        "description": "GoravAI delivers intelligent Agentic AI solutions and Vibe AI Software for enterprise automation, lead generation, content creation, and development.",
+        "description": "GoravAI delivers intelligent Agentic AI solutions and AI Software for enterprise automation, lead generation, content creation, and development.",
         "sameAs": [
           "https://www.linkedin.com/company/gorav-ai/",
           "https://x.com/GoravKhemani",
@@ -353,6 +353,91 @@
         color: white !important;
         box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
       }
+
+      @keyframes shineAnimation {
+        0% {
+          transform: skewX(-20deg) translateX(-150%);
+        }
+        100% {
+          transform: skewX(-20deg) translateX(300%);
+        }
+      }
+      .footer-social a,
+      .founder-social a {
+        position: relative;
+        overflow: hidden;
+      }
+      .footer-social a::before,
+      .founder-social a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.6) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: skewX(-20deg) translateX(-150%);
+        z-index: 10;
+        pointer-events: none;
+      }
+      .footer-social a:hover::before,
+      .founder-social a:hover::before {
+        animation: shineAnimation 0.6s ease forwards;
+      }
+      .footer-social a[title="LinkedIn"]:hover {
+        background-color: #0077b5 !important;
+        color: #fff !important;
+      }
+      .footer-social a[title="Facebook"]:hover {
+        background-color: #1877f2 !important;
+        color: #fff !important;
+      }
+      .footer-social a[title="Instagram"]:hover {
+        background-color: #e1306c !important;
+        color: #fff !important;
+      }
+      .footer-social a[title="YouTube"]:hover {
+        background-color: #ff0000 !important;
+        color: #fff !important;
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.6rem;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        z-index: 999;
+        transition: all 0.3s ease;
+        animation: whatsappPulse 2s ease-in-out infinite;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.1) translateY(-3px);
+        box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+      }
+      @keyframes whatsappPulse {
+        0%,
+        100% {
+          box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        }
+        50% {
+          box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
+        }
+      }
     </style>
   </head>
   <body class="antialiased">
@@ -363,9 +448,9 @@
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
-          <a href="#" class="flex-shrink-0 flex items-center gap-2">
+          <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
             <img
-              src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png "
+              src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png"
               alt="GoravAI Logo"
               class="h-10 w-auto object-contain rounded-md"
             />
@@ -374,7 +459,6 @@
               >Gorav<span class="text-[#4C6BFF]">AI</span></span
             >
           </a>
-
           <div class="hidden md:flex items-center space-x-8">
             <a
               href="index.html"
@@ -382,37 +466,35 @@
               >Home</a
             >
             <a
-              href="index.html#services"
-              class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
-              >Services</a
-            >
-            <a
-              href="#projects"
-              class="nav-link text-sm font-medium text-white transition-colors border-b-2 border-[#4C6BFF]"
-              >Projects</a
-            >
-            <a
-              href="index.html#about"
+              href="about.html"
               class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
               >About</a
             >
             <a
-              href="#footer"
+              href="services.html"
+              class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
+              >Services</a
+            >
+            <a
+              href="projects.html"
+              class="nav-link text-sm font-medium text-white transition-colors border-b-2 border-[#4C6BFF]"
+              >Projects</a
+            >
+            <a
+              href="#contact"
               class="nav-link text-sm font-medium text-[#A7B1D8] hover:text-white transition-colors"
               >Contact</a
             >
           </div>
-
           <div class="hidden md:block">
             <a
-              href="https://n8n-ywvixwir.us-west-1.clawcloudrun.com/webhook/8e76e9de-923b-4cdb-be2a-053b871bcca4/chat "
+              href="https://wa.me/923312726787?text=Hi%20GoravAI"
               target="_blank"
               class="btn-primary inline-flex items-center px-6 py-2.5 bg-[#4C6BFF] text-white text-sm font-semibold rounded-xl hover:bg-[#3D56CC] transition-colors"
             >
-              Talk to Agent <i class="fas fa-robot ml-2"></i>
+              Let's Talk <i class="fab fa-whatsapp ml-2"></i>
             </a>
           </div>
-
           <div class="md:hidden flex items-center">
             <button
               id="mobile-menu-btn"
@@ -423,7 +505,6 @@
           </div>
         </div>
       </div>
-
       <div
         id="mobile-menu"
         class="hidden md:hidden bg-[#070A12] border-t border-white/[0.06] absolute w-full"
@@ -435,17 +516,22 @@
             >Home</a
           >
           <a
-            href="index.html#services"
+            href="about.html"
+            class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
+            >About</a
+          >
+          <a
+            href="services.html"
             class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
             >Services</a
           >
           <a
-            href="index.html#projects"
+            href="projects.html"
             class="block px-3 py-2 text-base font-medium text-white bg-white/[0.04] rounded-md"
             >Projects</a
           >
           <a
-            href="#footer"
+            href="#contact"
             class="block px-3 py-2 text-base font-medium text-[#A7B1D8] hover:text-white hover:bg-white/[0.04] rounded-md"
             >Contact</a
           >
@@ -480,7 +566,7 @@
               class="category-btn text-lg font-display font-medium text-[#A7B1D8] pb-4"
               onclick="switchCategory('software')"
             >
-              Vibe AI Software
+              AI Software
             </button>
           </div>
         </div>
@@ -502,6 +588,32 @@
       </section>
     </main>
 
+    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div
+        class="rounded-3xl border border-white/[0.08] bg-gradient-to-br from-[#111827]/80 to-[#0B1120]/90 p-8 md:p-12 text-center shadow-2xl"
+      >
+        <p class="text-sm uppercase tracking-[0.3em] text-[#4C6BFF] mb-4">
+          Ready to Build?
+        </p>
+        <h2
+          class="font-display text-3xl md:text-4xl font-semibold text-white mb-4"
+        >
+          Let’s create an AI solution that fits your business.
+        </h2>
+        <p class="text-[#A7B1D8] max-w-2xl mx-auto mb-8">
+          Share your idea and we’ll turn it into a practical AI agent,
+          automation workflow, or custom software system.
+        </p>
+        <a
+          href="https://wa.me/923312726787?text=Hello%20GoravAI%2C%20I%20would%20love%20to%20discuss%20an%20AI%20solution%20for%20my%20business.%20Could%20you%20help%20me%20get%20started%3F"
+          target="_blank"
+          class="inline-flex items-center gap-3 rounded-full bg-[#4C6BFF] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#3D56CC]"
+        >
+          <i class="fab fa-whatsapp"></i> Start a Conversation
+        </a>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer
       id="footer"
@@ -510,7 +622,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           <div class="lg:col-span-2">
-            <a href="#" class="flex items-center gap-2 mb-6">
+            <a href="index.html" class="flex items-center gap-2 mb-6">
               <img
                 src="https://raw.githubusercontent.com/Gorav-a36y/GoravAI/refs/heads/main/favicon-32x32.png "
                 alt="GoravAI Logo"
@@ -567,28 +679,28 @@
               </li>
               <li>
                 <a
-                  href="index.html#services"
+                  href="about.html"
+                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
                   >Services</a
                 >
               </li>
               <li>
                 <a
-                  href="index.html#software"
-                  class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Software</a
-                >
-              </li>
-              <li>
-                <a
                   href="projects.html"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >projects</a
+                  >Projects</a
                 >
               </li>
               <li>
                 <a
-                  href="#footer"
+                  href="#contact"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
                   >Contact</a
                 >
@@ -603,7 +715,7 @@
                 <a
                   href="index.html#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Telegram AI Agents</a
+                  >n8n AI Agents</a
                 >
               </li>
               <li>
@@ -617,14 +729,14 @@
                 <a
                   href="index.html#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >Vibe Coding</a
+                  >AI Software</a
                 >
               </li>
               <li>
                 <a
                   href="index.html#services"
                   class="text-sm text-[#A7B1D8] hover:text-white transition-colors"
-                  >AI Video Ads</a
+                  >Workflow Automation</a
                 >
               </li>
               <li>
@@ -670,38 +782,38 @@
           <p class="text-sm text-[#A7B1D8]/60">
             © 2026 GoravAI. All rights reserved.
           </p>
-          <div class="flex items-center gap-4">
+          <div class="footer-social flex items-center gap-4">
             <a
-              href="https://www.linkedin.com/company/gorav-ai/?viewAsMember=true "
+              href="https://www.linkedin.com/company/goravai/"
               target="_blank"
+              title="LinkedIn"
               class="social-btn social-linkedin w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
             >
               <i class="fab fa-linkedin-in"></i>
             </a>
             <a
-              href="https://x.com/GoravKhemani "
+              href="https://www.facebook.com/profile.php?id=61585322057102"
               target="_blank"
-              class="social-btn social-x w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
+              title="Facebook"
+              class="social-btn social-facebook w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
             >
-              <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current">
-                <path
-                  d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
-                />
-              </svg>
+              <i class="fab fa-facebook-f"></i>
             </a>
             <a
-              href="https://www.instagram.com/gorav_khemani/ "
+              href="https://www.instagram.com/gorav_ai_agency/"
               target="_blank"
+              title="Instagram"
               class="social-btn social-instagram w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
             >
               <i class="fab fa-instagram"></i>
             </a>
             <a
-              href="https://www.facebook.com/profile.php?id=61585322057102 "
+              href="https://www.youtube.com/@GoravAI-e2v"
               target="_blank"
-              class="social-btn social-facebook w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
+              title="YouTube"
+              class="social-btn social-youtube w-10 h-10 rounded-full bg-white/[0.04] flex items-center justify-center text-[#A7B1D8] transition-all duration-300"
             >
-              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-youtube"></i>
             </a>
           </div>
         </div>
@@ -1387,5 +1499,14 @@
         );
       }
     </script>
+
+    <a
+      href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20am%20interested%20in%20your%20AI%20automation%20services.%20Can%20we%20discuss%20my%20project?"
+      class="whatsapp-float"
+      target="_blank"
+      title="Chat on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
   </body>
 </html>
