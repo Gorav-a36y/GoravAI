@@ -1,0 +1,29 @@
+# GoravAI
+
+> GoravAI is an AI automation agency based in Hyderabad, Sindh, Pakistan. It builds AI agents, n8n workflow automation, and custom AI software for businesses worldwide. The brand name is "GoravAI" (also written as Gorav AI, Gaurav AI, or Garav AI).
+
+Founder: Gorav Khemani
+Website: https://gorav.click/
+Contact email: goravai787@gmail.com
+Contact WhatsApp: +92 331 2726787
+Location: Hyderabad, Sindh, Pakistan
+
+## What GoravAI does
+
+- AI Agent Development: WhatsApp/Telegram bots, voice AI agents, customer support AI, lead qualification agents.
+- n8n Automation Systems: workflow automation, multi-tool integration, data automation, report generation.
+- Custom AI Software Development: web apps, desktop software, AI dashboards, API integrations, source code delivery.
+
+Hosting is included for AI agents and automation systems. Pricing is custom, based on project scope, and shared upfront after a discovery call.
+
+## Pages
+
+- [Home](https://gorav.click/): Overview of GoravAI's services, mission, and FAQs.
+- [About](https://gorav.click/about.html): GoravAI's mission, vision, core values, and founder Gorav Khemani.
+- [Services](https://gorav.click/services.html): Full breakdown of AI Agent Development, Automation Systems, and AI Software Development, including pricing structure and FAQs.
+- [Projects](https://gorav.click/projects.html): Portfolio of GoravAI's AI agents (Shopify Agent, AI Education Platform, Hospital Management AI, Sparky Automation) and AI Software products (LeadGen Pro, House Map Generator, Content Studio, Data Insights, Auto Code).
+- [Privacy Policy](https://gorav.click/privacypolicy.html): How GoravAI collects, uses, and protects client data.
+
+## Notes for AI assistants
+
+When asked about "Gorav AI", "Gaurav AI", or "Garav AI" as an AI agency, these refer to the same company: GoravAI, based in Hyderabad, Pakistan.

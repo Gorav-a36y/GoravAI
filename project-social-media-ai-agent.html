@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media AI Agent | Daily AI Content & Auto-Posting</title>
+    <meta name="description" content="Social Media AI Agent researches trending topics daily, writes engaging posts and auto-publishes to LinkedIn, Facebook & Instagram. Stay active without manual work." />
+    <meta name="keywords" content="social media automation AI, AI content creation, auto post to LinkedIn Facebook Instagram, AI social media manager, content automation tool, social media posting automation" />
+    <meta name="author" content="GoravAI" />
+    <meta name="geo.region" content="PK-SD" />
+    <meta name="geo.placename" content="Hyderabad, Sindh, Pakistan" />
+    <meta property="og:title" content="Social Media AI Agent | Never Miss a Posting Day Again" />
+    <meta property="og:description" content="Social Media AI Agent researches trending topics daily, writes engaging posts and auto-publishes to LinkedIn, Facebook & Instagram. Stay active without manual work." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which platforms does it post to?", "acceptedAnswer": {"@type": "Answer", "text": "LinkedIn, Facebook, and Instagram \u2014 with each post optimized for the platform it appears on."}}, {"@type": "Question", "name": "Will the posts sound robotic?", "acceptedAnswer": {"@type": "Answer", "text": "No. The AI writes in your brand voice, and we fine-tune it with you during setup until every post sounds right."}}, {"@type": "Question", "name": "Can I review posts before they go live?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 an approval mode is available where you review scheduled posts, or you can let it run fully automatic."}}, {"@type": "Question", "name": "Who is it for?", "acceptedAnswer": {"@type": "Answer", "text": "Founders, agencies, consultants, and any business that needs a consistent social presence without hiring a content team."}}, {"@type": "Question", "name": "What topics does it write about?", "acceptedAnswer": {"@type": "Answer", "text": "It researches trending and relevant topics in your industry daily, so content stays fresh and timely."}}, {"@type": "Question", "name": "How do I get started?", "acceptedAnswer": {"@type": "Answer", "text": "Message us on WhatsApp \u2014 we will set up your industry profile and connect your accounts."}}]}</script>
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --primary-blue: #3b82f6;
+        --primary-blue-light: #60a5fa;
+        --primary-blue-dark: #2563eb;
+        --accent-cyan: #06b6d4;
+        --bg-dark: #0a0f1c;
+        --bg-darker: #070b14;
+        --bg-card: #111827;
+        --bg-card-hover: #1a2236;
+        --text-white: #f8fafc;
+        --text-gray: #94a3b8;
+        --text-muted: #64748b;
+        --border-subtle: rgba(59, 130, 246, 0.15);
+        --glow-blue: rgba(59, 130, 246, 0.4);
+        --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-white);
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      /* Diagonal Lines */
+      .diagonal-lines {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        pointer-events: none; z-index: 0; overflow: hidden;
+      }
+      .diagonal-lines::before {
+        content: ""; position: absolute; top: -50%; left: -50%;
+        width: 200%; height: 200%;
+        background: repeating-linear-gradient(135deg, transparent, transparent 120px, rgba(59, 130, 246, 0.03) 120px, rgba(59, 130, 246, 0.03) 121px);
+        animation: diagonalMove 25s linear infinite;
+      }
+      @keyframes diagonalMove { 0% { transform: translate(0, 0); } 100% { transform: translate(85px, 85px); } }
+
+      /* Particles */
+      .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+      .particle {
+        position: absolute; width: 3px; height: 3px;
+        background: var(--primary-blue); border-radius: 50%; opacity: 0.3;
+        animation: floatParticle 15s infinite ease-in-out;
+      }
+      @keyframes floatParticle {
+        0%, 100% { transform: translateY(0) translateX(0); opacity: 0.2; }
+        25% { transform: translateY(-30px) translateX(15px); opacity: 0.5; }
+        50% { transform: translateY(-15px) translateX(-10px); opacity: 0.3; }
+        75% { transform: translateY(-40px) translateX(20px); opacity: 0.4; }
+      }
+
+      /* Navbar */
+      .navbar {
+        position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+        padding: 1.2rem 0; transition: var(--transition-smooth); backdrop-filter: blur(0px);
+      }
+      .navbar.scrolled {
+        background: rgba(10, 15, 28, 0.92); backdrop-filter: blur(20px);
+        padding: 0.8rem 0; border-bottom: 1px solid var(--border-subtle);
+      }
+      .nav-container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+      .logo {
+        font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px;
+        text-decoration: none; display: inline-flex; align-items: center; gap: 0; white-space: nowrap;
+      }
+      .logo .gorav { color: var(--text-white); }
+      .logo .ai { color: var(--primary-blue); }
+      .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+      .nav-links a {
+        color: var(--text-gray); text-decoration: none; font-size: 0.9rem;
+        font-weight: 500; transition: var(--transition-smooth); position: relative;
+      }
+      .nav-links a::after {
+        content: ""; position: absolute; bottom: -4px; left: 0;
+        width: 0; height: 2px; background: var(--primary-blue); transition: var(--transition-smooth);
+      }
+      .nav-links a:hover { color: var(--text-white); }
+      .nav-links a:hover::after { width: 100%; }
+      .nav-links a.active { color: var(--text-white); }
+      .nav-links a.active::after { width: 100%; }
+      .nav-cta {
+        background: var(--primary-blue); color: white; padding: 0.6rem 1.4rem;
+        border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600;
+        transition: var(--transition-smooth); border: 1px solid transparent;
+      }
+      .nav-cta:hover { background: var(--primary-blue-dark); box-shadow: 0 0 25px var(--glow-blue); transform: translateY(-2px); }
+      .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-white); font-size: 1.4rem; cursor: pointer; }
+
+      /* Hero */
+      .hero {
+        min-height: 70vh; display: flex; align-items: center; position: relative;
+        overflow: hidden; padding-top: 150px; padding-bottom: 5rem;
+        background:
+          radial-gradient(ellipse at 20% 20%, rgba(59, 130, 246, 0.12), transparent 55%),
+          radial-gradient(ellipse at 80% 80%, rgba(6, 182, 212, 0.08), transparent 55%);
+      }
+      .hero-content { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 0 2rem; width: 100%; text-align: center; }
+      .hero-badge {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        background: rgba(59, 130, 246, 0.1); border: 1px solid var(--border-subtle);
+        padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.8rem;
+        color: var(--primary-blue-light); margin-bottom: 1.5rem;
+      }
+      .hero h1 {
+        font-family: "Playfair Display", serif; font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 700; line-height: 1.15; margin-bottom: 1.5rem;
+      }
+      .hero h1 .highlight { color: var(--primary-blue); }
+      .hero-subtitle {
+        font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text-gray);
+        max-width: 680px; margin: 0 auto 2rem; font-weight: 400; line-height: 1.7;
+      }
+      .hero-cta-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 3rem; }
+      .btn-primary {
+        background: var(--primary-blue); color: white; padding: 1rem 2rem; border-radius: 10px;
+        text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: var(--transition-smooth);
+        border: 1px solid transparent; display: inline-flex; align-items: center; gap: 0.5rem;
+      }
+      .btn-primary:hover { background: var(--primary-blue-dark); box-shadow: 0 0 30px var(--glow-blue); transform: translateY(-3px); }
+      .btn-secondary {
+        background: transparent; color: var(--text-white); padding: 1rem 2rem; border-radius: 10px;
+        text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: var(--transition-smooth);
+        border: 1px solid rgba(255, 255, 255, 0.2); display: inline-flex; align-items: center; gap: 0.5rem;
+      }
+      .btn-secondary:hover { border-color: var(--primary-blue); color: var(--primary-blue); transform: translateY(-3px); }
+      .hero-chips { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+      .chip {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        background: var(--bg-card); border: 1px solid var(--border-subtle);
+        padding: 0.55rem 1.1rem; border-radius: 50px; font-size: 0.83rem; color: var(--text-gray);
+      }
+      .chip i { color: var(--primary-blue); font-size: 0.8rem; }
+
+      /* Breadcrumb */
+      .breadcrumb { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 1.2rem 2rem 0; }
+      .breadcrumb ul { list-style: none; display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; }
+      .breadcrumb a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: var(--transition-smooth); }
+      .breadcrumb a:hover { color: var(--primary-blue); }
+      .breadcrumb li[aria-current] { color: var(--primary-blue-light); font-size: 0.85rem; font-weight: 500; }
+      .breadcrumb .sep { color: var(--text-muted); font-size: 0.8rem; }
+
+      /* Sections */
+      section { position: relative; z-index: 2; }
+      .section-padding { padding: 5rem 0; }
+      .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+      .section-header { text-align: center; margin-bottom: 3.5rem; }
+      .section-tag {
+        display: inline-block; color: var(--primary-blue); font-size: 0.9rem; font-weight: 700;
+        text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 1rem;
+      }
+      .section-title { font-family: "Playfair Display", serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; margin-bottom: 1rem; line-height: 1.2; }
+      .section-desc { color: var(--text-gray); max-width: 640px; margin: 0 auto; font-size: 1.05rem; }
+
+      /* Problem section */
+      .problem { background: var(--bg-darker); }
+      .problem-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+      .problem-card {
+        background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 16px;
+        padding: 2rem 1.5rem; transition: var(--transition-smooth);
+      }
+      .problem-card:hover { transform: translateY(-5px); border-color: rgba(59, 130, 246, 0.3); }
+      .problem-card .p-ico {
+        width: 48px; height: 48px; border-radius: 12px;
+        background: rgba(248, 113, 113, 0.1); display: flex; align-items: center; justify-content: center;
+        margin-bottom: 1.2rem;
+      }
+      .problem-card .p-ico i { color: #f87171; font-size: 1.2rem; }
+      .problem-card h4 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+      .problem-card p { color: var(--text-gray); font-size: 0.9rem; line-height: 1.7; }
+
+      /* Feature cards */
+      .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+      .feature-card {
+        background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 16px;
+        padding: 2.5rem 2rem; transition: var(--transition-smooth); position: relative; overflow: hidden;
+      }
+      .feature-card::before {
+        content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--accent-cyan));
+        transform: scaleX(0); transition: var(--transition-smooth);
+      }
+      .feature-card:hover::before { transform: scaleX(1); }
+      .feature-card:hover {
+        background: var(--bg-card-hover); transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.1);
+        border-color: rgba(59, 130, 246, 0.3);
+      }
+      .feature-icon {
+        width: 56px; height: 56px; background: rgba(59, 130, 246, 0.1); border-radius: 14px;
+        display: flex; align-items: center; justify-content: center; margin-bottom: 1.4rem;
+        transition: var(--transition-smooth);
+      }
+      .feature-card:hover .feature-icon { background: rgba(59, 130, 246, 0.2); box-shadow: 0 0 20px var(--glow-blue); }
+      .feature-icon i { font-size: 1.4rem; color: var(--primary-blue); }
+      .feature-card h3 { font-size: 1.15rem; margin-bottom: 0.7rem; font-weight: 600; }
+      .feature-card p { color: var(--text-gray); font-size: 0.93rem; line-height: 1.75; }
+
+      /* AI highlight */
+      .ai-highlight {
+        background:
+          radial-gradient(ellipse at 30% 40%, rgba(59, 130, 246, 0.14), transparent 60%),
+          var(--bg-darker);
+        border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);
+      }
+      .ai-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center; }
+      .ai-content h2 { font-family: "Playfair Display", serif; font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin-bottom: 1rem; line-height: 1.25; }
+      .ai-content h2 .highlight { color: var(--primary-blue); }
+      .ai-content > p { color: var(--text-gray); margin-bottom: 1.5rem; font-size: 1.02rem; }
+      .ai-points { list-style: none; }
+      .ai-points li { display: flex; gap: 0.9rem; align-items: flex-start; margin-bottom: 1.1rem; color: var(--text-gray); font-size: 0.97rem; }
+      .ai-points li i { color: var(--accent-cyan); margin-top: 0.3rem; font-size: 0.95rem; }
+      .ai-demo {
+        background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 16px;
+        padding: 1.8rem; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      }
+      .ai-demo-header { display: flex; gap: 0.4rem; margin-bottom: 1.4rem; }
+      .ai-demo-header span { width: 11px; height: 11px; border-radius: 50%; background: rgba(255,255,255,0.12); }
+      .ai-msg { margin-bottom: 1.2rem; }
+      .ai-msg .who { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 0.35rem; display: block; }
+      .ai-bubble {
+        background: var(--bg-dark); border: 1px solid rgba(255,255,255,0.07);
+        border-radius: 12px; padding: 0.9rem 1.1rem; font-size: 0.9rem; color: var(--text-gray); line-height: 1.65;
+      }
+      .ai-msg.owner .ai-bubble { border-color: rgba(59, 130, 246, 0.3); }
+      .typing { display: inline-flex; gap: 4px; padding: 0.6rem 0; }
+      .typing span { width: 6px; height: 6px; background: var(--primary-blue); border-radius: 50%; animation: blink 1.2s infinite; }
+      .typing span:nth-child(2) { animation-delay: 0.2s; }
+      .typing span:nth-child(3) { animation-delay: 0.4s; }
+      @keyframes blink { 0%, 80%, 100% { opacity: 0.25; } 40% { opacity: 1; } }
+
+      /* How it works */
+      .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+      .step-card {
+        text-align: center; padding: 2rem 1.5rem; background: var(--bg-card);
+        border: 1px solid var(--border-subtle); border-radius: 16px; transition: var(--transition-smooth);
+      }
+      .step-card:hover { transform: translateY(-5px); border-color: rgba(59, 130, 246, 0.3); }
+      .step-num {
+        width: 50px; height: 50px; border-radius: 50%; background: rgba(59, 130, 246, 0.1);
+        border: 2px solid var(--primary-blue); display: flex; align-items: center; justify-content: center;
+        margin: 0 auto 1.2rem; font-weight: 700; color: var(--primary-blue); font-size: 1.1rem;
+      }
+      .step-card h4 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+      .step-card p { color: var(--text-gray); font-size: 0.88rem; line-height: 1.65; }
+
+      /* Benefits */
+      .benefits { background: var(--bg-darker); }
+      .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+      .benefit {
+        display: flex; gap: 1rem; align-items: flex-start;
+        background: var(--bg-card); border: 1px solid var(--border-subtle);
+        border-radius: 14px; padding: 1.5rem; transition: var(--transition-smooth);
+      }
+      .benefit:hover { border-color: rgba(59, 130, 246, 0.3); transform: translateY(-3px); }
+      .benefit i { color: var(--primary-blue); font-size: 1.2rem; margin-top: 0.2rem; }
+      .benefit h4 { font-size: 1rem; margin-bottom: 0.3rem; }
+      .benefit p { color: var(--text-gray); font-size: 0.9rem; line-height: 1.65; }
+
+      /* Pricing */
+      .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+      .pricing-card {
+        background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 16px;
+        padding: 2.5rem 2rem; text-align: center; transition: var(--transition-smooth);
+        position: relative; overflow: hidden; display: flex; flex-direction: column;
+      }
+      .pricing-card:hover { transform: translateY(-6px); border-color: rgba(59, 130, 246, 0.3); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
+      .pricing-card.featured { border-color: rgba(59, 130, 246, 0.4); box-shadow: 0 0 30px rgba(59, 130, 246, 0.1); }
+      .pricing-card.featured::before {
+        content: "Best Value"; position: absolute; top: 0; right: 0;
+        background: var(--primary-blue); color: white; font-size: 0.7rem; font-weight: 700;
+        padding: 0.3rem 1rem; border-bottom-left-radius: 12px; text-transform: uppercase; letter-spacing: 1px;
+      }
+      .pricing-icon {
+        width: 60px; height: 60px; background: rgba(59, 130, 246, 0.1); border-radius: 50%;
+        display: flex; align-items: center; justify-content: center; margin: 0 auto 1.4rem;
+      }
+      .pricing-icon i { font-size: 1.5rem; color: var(--primary-blue); }
+      .pricing-card h3 { font-size: 1.2rem; margin-bottom: 0.4rem; font-weight: 600; }
+      .pricing-type { font-size: 0.8rem; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1.2rem; display: block; }
+      .price { font-size: 2.3rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 0.2rem; }
+      .price-note { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.6rem; }
+      .pricing-features { list-style: none; text-align: left; margin-bottom: 2rem; flex-grow: 1; }
+      .pricing-features li {
+        display: flex; align-items: center; gap: 0.6rem; color: var(--text-gray);
+        font-size: 0.9rem; margin-bottom: 0.7rem; padding-bottom: 0.7rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      }
+      .pricing-features li:last-child { border-bottom: none; }
+      .pricing-features li i { color: var(--primary-blue); font-size: 0.85rem; }
+      .pricing-btn {
+        display: inline-block; width: 100%; padding: 0.95rem; background: var(--primary-blue);
+        color: white; text-decoration: none; border-radius: 10px; font-weight: 600;
+        font-size: 0.9rem; transition: var(--transition-smooth); border: none; cursor: pointer;
+      }
+      .pricing-btn:hover { background: var(--primary-blue-dark); box-shadow: 0 0 25px var(--glow-blue); }
+      .pricing-btn.outline { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: var(--text-white); }
+      .pricing-btn.outline:hover { border-color: var(--primary-blue); color: var(--primary-blue); box-shadow: none; }
+      .license-note {
+        text-align: center; margin-top: 2.5rem; padding: 1.4rem 1.8rem;
+        background: rgba(59, 130, 246, 0.05); border: 1px solid var(--border-subtle);
+        border-radius: 12px; max-width: 800px; margin-left: auto; margin-right: auto;
+        color: var(--text-gray); font-size: 0.93rem;
+      }
+      .license-note i { color: var(--primary-blue); margin-right: 0.5rem; }
+      .license-note strong { color: var(--text-white); }
+
+      /* FAQ */
+      .faq-section { background-color: #070a12; padding: 5rem 20px; }
+      .faq-container { max-width: 800px; margin: 0 auto; }
+      .faq-title { text-align: center; font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 700; color: #ffffff; margin-bottom: 3rem; letter-spacing: -0.02em; font-family: "Playfair Display", serif; }
+      .faq-title span { color: #6366f1; }
+      .faq-list { display: flex; flex-direction: column; gap: 16px; }
+      .accordion-item {
+        width: 100%; background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+        border: none; border-radius: 16px; overflow: hidden;
+        padding-left: 24px; padding-right: 24px; opacity: 0;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+      }
+      .accordion-item:hover { background: rgba(255, 255, 255, 0.05); }
+      .accordion-item.active { background: rgba(255, 255, 255, 0.04); }
+      .accordion-item.is-visible { opacity: 1; transform: translate(0px, 0px); }
+      .faq-question {
+        width: 100%; height: 64px; display: flex; align-items: center; justify-content: space-between;
+        background: none; border: none; color: #e4e4e7; font-size: 1rem; font-weight: 500;
+        text-align: left; cursor: pointer; padding: 0; line-height: 1.4; transition: color 0.3s ease;
+        font-family: inherit;
+      }
+      .faq-question:hover { color: #ffffff; }
+      .faq-icon { flex-shrink: 0; margin-left: 16px; color: #71717a; transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+      .accordion-item.active .faq-icon { transform: rotate(180deg); color: #a1a1aa; }
+      .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease; }
+      .faq-answer p { padding: 0 0 24px 0; margin: 0; color: #71717a; font-size: 0.95rem; line-height: 1.7; }
+
+      /* Related */
+      .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+      .related-card {
+        display: flex; gap: 1rem; align-items: center; background: var(--bg-card);
+        border: 1px solid var(--border-subtle); border-radius: 14px; padding: 1.4rem 1.5rem;
+        text-decoration: none; transition: var(--transition-smooth);
+      }
+      .related-card:hover { transform: translateY(-4px); border-color: rgba(59, 130, 246, 0.3); }
+      .related-card .r-ico {
+        width: 46px; height: 46px; min-width: 46px; border-radius: 12px;
+        background: rgba(59, 130, 246, 0.1); display: flex; align-items: center; justify-content: center;
+      }
+      .related-card .r-ico i { color: var(--primary-blue); font-size: 1.1rem; }
+      .related-card h4 { font-size: 0.98rem; color: var(--text-white); margin-bottom: 0.15rem; }
+      .related-card span { font-size: 0.8rem; color: var(--text-muted); }
+
+      /* CTA */
+      .cta-section {
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.05));
+        border-top: 1px solid var(--border-subtle); text-align: center; padding: 5rem 0;
+      }
+      .cta-section h2 { font-family: "Playfair Display", serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin-bottom: 1rem; }
+      .cta-section p { color: var(--text-gray); max-width: 550px; margin: 0 auto 2rem; }
+
+      /* Footer */
+      .footer { background: var(--bg-darker); border-top: 1px solid var(--border-subtle); padding: 4rem 0 2rem; }
+      .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+      .footer-brand p { color: var(--text-gray); font-size: 0.9rem; line-height: 1.8; max-width: 300px; }
+      .footer-column h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-white); }
+      .footer-column ul { list-style: none; }
+      .footer-column ul li { margin-bottom: 0.8rem; }
+      .footer-column ul li a { color: var(--text-gray); text-decoration: none; font-size: 0.9rem; transition: var(--transition-smooth); }
+      .footer-column ul li a:hover { color: var(--primary-blue); padding-left: 4px; }
+      .footer-bottom {
+        border-top: 1px solid var(--border-subtle); padding-top: 2rem;
+        display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+      }
+      .footer-copyright { color: var(--text-muted); font-size: 0.85rem; }
+      .footer-social { display: flex; gap: 0.8rem; }
+      .footer-social a {
+        width: 40px; height: 40px; border-radius: 50%; background: var(--bg-card);
+        border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: center;
+        color: var(--text-gray); text-decoration: none; transition: var(--transition-smooth);
+        font-size: 0.95rem; position: relative; overflow: hidden;
+      }
+      .footer-social a:hover { transform: translateY(-3px); }
+      .footer-social a[title="LinkedIn"]:hover { background-color: #0077b5 !important; color: white !important; border-color: #0077b5 !important; }
+      .footer-social a[title="Facebook"]:hover { background-color: #1877f2 !important; color: white !important; border-color: #1877f2 !important; }
+      .footer-social a[title="Instagram"]:hover { background-color: #e1306c !important; color: white !important; border-color: #e1306c !important; }
+      .footer-social a[title="YouTube"]:hover { background-color: #ff0000 !important; color: white !important; border-color: #ff0000 !important; }
+      @keyframes shineAnimation {
+        0% { transform: skewX(-20deg) translateX(-150%); }
+        100% { transform: skewX(-20deg) translateX(300%); }
+      }
+      .footer-social a::before {
+        content: ""; position: absolute; top: 0; left: 0; width: 25%; height: 100%;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+        transform: skewX(-20deg) translateX(-150%); z-index: 10; pointer-events: none;
+      }
+      .footer-social a:hover::before { animation: shineAnimation 0.6s ease forwards; }
+
+      /* WhatsApp float */
+      .whatsapp-float {
+        position: fixed; bottom: 2rem; right: 2rem; width: 60px; height: 60px;
+        background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        color: white; font-size: 1.6rem; text-decoration: none;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999;
+        transition: all 0.3s ease; animation: whatsappPulse 2s ease-in-out infinite;
+      }
+      .whatsapp-float:hover { transform: scale(1.1) translateY(-3px); box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6); }
+      @keyframes whatsappPulse {
+        0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+        50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
+      }
+
+      /* Animations */
+      .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+      .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+      .delay-1 { transition-delay: 0.1s; }
+      .delay-2 { transition-delay: 0.2s; }
+      .delay-3 { transition-delay: 0.3s; }
+
+      /* Mobile menu */
+      .mobile-menu {
+        position: fixed; top: 0; right: -100%; width: 80%; max-width: 320px; height: 100vh;
+        background: var(--bg-card); z-index: 1001; padding: 5rem 2rem 2rem;
+        transition: right 0.4s ease; border-left: 1px solid var(--border-subtle);
+      }
+      .mobile-menu.open { right: 0; }
+      .mobile-menu-overlay {
+        position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 1000;
+        opacity: 0; visibility: hidden; transition: all 0.4s ease;
+      }
+      .mobile-menu-overlay.open { opacity: 1; visibility: visible; }
+      .mobile-menu ul { list-style: none; }
+      .mobile-menu ul li { margin-bottom: 1.5rem; }
+      .mobile-menu ul li a {
+        color: var(--text-white); text-decoration: none; font-size: 1.1rem; font-weight: 500;
+        display: block; padding: 0.5rem 0; border-bottom: 1px solid var(--border-subtle);
+      }
+      .mobile-menu-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--text-white); font-size: 1.5rem; cursor: pointer; }
+
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: var(--bg-darker); }
+      ::-webkit-scrollbar-thumb { background: var(--primary-blue); border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--primary-blue-dark); }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .features-grid, .pricing-grid, .related-grid { grid-template-columns: repeat(2, 1fr); }
+        .problem-grid, .steps-grid { grid-template-columns: repeat(2, 1fr); }
+        .ai-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+        .footer-grid { grid-template-columns: 1fr 1fr; }
+      }
+      @media (max-width: 768px) {
+        .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .features-grid, .pricing-grid, .problem-grid, .steps-grid, .benefits-grid, .related-grid { grid-template-columns: 1fr; }
+        .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+        .footer-bottom { flex-direction: column; text-align: center; }
+        .section-padding { padding: 3rem 0; }
+        .hero { padding-top: 130px; }
+      }
+    </style>
+  <base target="_blank">
+</head>
+  <body>
+    <div class="diagonal-lines"></div>
+    <div class="particles" id="particles"></div>
+<!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img src="assets/favicon-32x32.png" alt="" style="width:32px;height:32px;border-radius:6px;margin-right:0.6rem;" />
+          <span class="gorav">Gorav</span><span class="ai">AI</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20am%20interested%20in%20DairyPro%20dairy%20management%20software" class="nav-cta" target="_blank">
+          <i class="fab fa-whatsapp"></i> Let's Talk
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+
+    
+<!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-menu-close" id="mobileMenuClose"><i class="fas fa-times"></i></button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge"><i class="fas fa-circle" style="font-size:0.5rem;"></i> AI Content & Social Media Automation</div>
+        <h1>Your Social Media, Posted by AI —<br /><span class="highlight">Every Single Day</span></h1>
+        <p class="hero-subtitle">An automation system that researches trending topics daily, understands what your audience cares about, writes high-quality platform-optimized posts, and publishes them on LinkedIn, Facebook, and Instagram — automatically. Your brand stays active and visible without manual effort.</p>
+        <div class="hero-cta-group">
+          <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20am%20interested%20in%20the%20Social%20Media%20AI%20Agent" class="btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> Automate My Social Media</a>
+          
+        </div>
+        <div class="hero-chips"><span class="chip"><i class="fas fa-newspaper"></i> Daily Trend Research</span><span class="chip"><i class="fas fa-pen-nib"></i> AI-Written Posts</span><span class="chip"><i class="fas fa-paper-plane"></i> Auto-Publishing</span></div>
+      </div>
+    </section>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="sep"><i class="fas fa-chevron-right"></i></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li class="sep"><i class="fas fa-chevron-right"></i></li>
+        <li aria-current="page">Social Media AI Agent</li>
+      </ul>
+    </nav>
+    <section class="section-padding problem">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">The Problem</span>
+          <h2 class="section-title">Consistency Is What Social Media Demands — and What Businesses Lack</h2>
+          <p class="section-desc">Posting daily takes hours most teams don't have. So accounts go quiet — and quiet accounts get forgotten.</p>
+        </div>
+        <div class="problem-grid"><div class="problem-card animate-on-scroll">
+            <div class="p-ico"><i class="fas fa-clock"></i></div>
+            <h4>Content Takes Hours</h4><p>Researching topics, writing posts, formatting per platform — one good post eats your morning.</p></div><div class="problem-card animate-on-scroll delay-1">
+            <div class="p-ico"><i class="fas fa-calendar-xmark"></i></div>
+            <h4>Inconsistent Posting</h4><p>Busy weeks mean silent feeds. Algorithms punish gaps, and followers drift away.</p></div><div class="problem-card animate-on-scroll delay-2">
+            <div class="p-ico"><i class="fas fa-lightbulb"></i></div>
+            <h4>Running Out of Ideas</h4><p>Staring at a blank page wondering what to post is a weekly ritual for most owners.</p></div><div class="problem-card animate-on-scroll delay-3">
+            <div class="p-ico"><i class="fas fa-chart-line"></i></div>
+            <h4>No Time for Strategy</h4><p>You are so busy posting that you never get to analyze what actually works.</p></div></div>
+      </div>
+    </section>
+    <section class="section-padding" id="features">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">The Solution</span>
+          <h2 class="section-title">The Whole Content Workflow, Automated</h2>
+          <p class="section-desc">From trend research to published post — the agent handles every step while you focus on your business.</p>
+        </div>
+        <div class="features-grid"><div class="feature-card animate-on-scroll">
+            <div class="feature-icon"><i class="fas fa-newspaper"></i></div>
+            <h3>Daily Trend Research</h3><p>Every day, the agent scans the internet for trending and relevant topics in your industry.</p></div><div class="feature-card animate-on-scroll delay-1">
+            <div class="feature-icon"><i class="fas fa-brain"></i></div>
+            <h3>Understands What Matters</h3><p>AI reads and understands the content — filtering noise and picking angles your audience actually cares about.</p></div><div class="feature-card animate-on-scroll delay-2">
+            <div class="feature-icon"><i class="fas fa-pen-nib"></i></div>
+            <h3>High-Quality Post Writing</h3><p>Engaging, professional posts written automatically — not generic filler, but content worth reading.</p></div><div class="feature-card animate-on-scroll">
+            <div class="feature-icon"><i class="fas fa-mobile-screen"></i></div>
+            <h3>Platform-Optimized</h3><p>Each post is formatted for LinkedIn, Facebook, and Instagram — tone and style matched to each platform.</p></div><div class="feature-card animate-on-scroll delay-1">
+            <div class="feature-icon"><i class="fas fa-paper-plane"></i></div>
+            <h3>Automatic Publishing</h3><p>Posts go live on schedule across all your channels. No manual posting, ever again.</p></div><div class="feature-card animate-on-scroll delay-2">
+            <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+            <h3>Always-On Presence</h3><p>Your brand stays visible and active every single day — weekends and holidays included.</p></div></div>
+      </div>
+    </section>
+    <section class="section-padding ai-highlight">
+      <div class="container">
+        <div class="ai-grid">
+          <div class="ai-content animate-on-scroll">
+            <span class="section-tag">Content That Sounds Like You</span>
+            <h2>An AI That <span class="highlight">Researches, Writes & Publishes</span></h2>
+            <p>The agent works like a content team in a box — researcher, copywriter, and social media manager in one.</p>
+            <ul class="ai-points"><li><i class="fas fa-check-circle"></i> <span><strong>Industry-aware</strong> — it tracks topics relevant to your business, not random trends.</span></li><li><i class="fas fa-check-circle"></i> <span><strong>On-brand voice</strong> — posts match your company's tone and style.</span></li><li><i class="fas fa-check-circle"></i> <span><strong>Hands-free operation</strong> — set it once and your feeds stay active around the clock.</span></li></ul>
+          </div>
+          <div class="ai-demo animate-on-scroll delay-1" aria-hidden="true">
+            <div class="ai-demo-header"><span></span><span></span><span></span></div>
+            <div class="ai-msg owner"><span class="who">Business Owner</span><div class="ai-bubble">I have not posted on LinkedIn for two weeks. Help.</div></div><div class="ai-msg"><span class="who">AI Assistant</span><div class="ai-bubble">Already handled. I found 3 trending topics in your industry today, drafted posts for LinkedIn, Facebook and Instagram, and scheduled them at peak engagement times. Tomorrow's posts are queued too.</div></div><div class="ai-msg"><span class="who">AI Assistant</span><div class="ai-bubble">Anything else you would like to know?</div><div class="typing"><span></span><span></span><span></span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">How It Works</span>
+          <h2 class="section-title">Set It Once, Post Forever</h2>
+          <p class="section-desc">A few hours of setup, then your social media runs itself.</p>
+        </div>
+        <div class="steps-grid"><div class="step-card animate-on-scroll">
+            <div class="step-num">1</div><h4>Define Your Brand</h4><p>We configure your industry, tone of voice, target audience, and key topics.</p></div><div class="step-card animate-on-scroll delay-2">
+            <div class="step-num">2</div><h4>Connect Your Accounts</h4><p>Link your LinkedIn, Facebook, and Instagram profiles securely.</p></div><div class="step-card animate-on-scroll delay-3">
+            <div class="step-num">3</div><h4>Approve the Style</h4><p>Review the first AI-written posts and fine-tune until they sound exactly like you.</p></div><div class="step-card animate-on-scroll delay-4">
+            <div class="step-num">4</div><h4>It Runs Daily</h4><p>Fresh, researched, on-brand content published every day — automatically.</p></div></div>
+      </div>
+    </section>
+    <section class="section-padding benefits">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">The Results</span>
+          <h2 class="section-title">What Changes for Your Marketing</h2>
+          <p class="section-desc">What businesses gain when content creation stops consuming their week.</p>
+        </div>
+        <div class="benefits-grid"><div class="benefit animate-on-scroll">
+            <i class="fas fa-clock"></i><div><h4>Hours Back Every Week</h4><p>The daily posting grind disappears — your team focuses on strategy and sales.</p></div></div><div class="benefit animate-on-scroll delay-1">
+            <i class="fas fa-chart-line"></i><div><h4>Consistency Algorithms Reward</h4><p>Daily, quality posting grows reach and engagement steadily over time.</p></div></div><div class="benefit animate-on-scroll delay-2">
+            <i class="fas fa-bullhorn"></i><div><h4>Always Visible</h4><p>Your brand shows up in feeds every day — top of mind when customers are ready to buy.</p></div></div><div class="benefit animate-on-scroll delay-3">
+            <i class="fas fa-coins"></i><div><h4>A Content Team at a Fraction of the Cost</h4><p>Researcher, writer, and scheduler in one automated system.</p></div></div></div>
+      </div>
+    </section>
+    <section class="faq-section">
+      <div class="faq-container">
+        <h2 class="faq-title">Questions? <span>Answers.</span></h2>
+        <div class="faq-list"><div class="accordion-item">
+            <button class="faq-question">
+              Which platforms does it post to?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer"><p>LinkedIn, Facebook, and Instagram — with each post optimized for the platform it appears on.</p></div>
+          </div><div class="accordion-item">
+            <button class="faq-question">
+              Will the posts sound robotic?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer"><p>No. The AI writes in your brand voice, and we fine-tune it with you during setup until every post sounds right.</p></div>
+          </div><div class="accordion-item">
+            <button class="faq-question">
+              Can I review posts before they go live?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer"><p>Yes — an approval mode is available where you review scheduled posts, or you can let it run fully automatic.</p></div>
+          </div><div class="accordion-item">
+            <button class="faq-question">
+              Who is it for?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer"><p>Founders, agencies, consultants, and any business that needs a consistent social presence without hiring a content team.</p></div>
+          </div><div class="accordion-item">
+            <button class="faq-question">
+              What topics does it write about?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer"><p>It researches trending and relevant topics in your industry daily, so content stays fresh and timely.</p></div>
+          </div><div class="accordion-item">
+            <button class="faq-question">
+              How do I get started?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer"><p>Message us on WhatsApp — we will set up your industry profile and connect your accounts.</p></div>
+          </div></div>
+      </div>
+    </section>
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">More Projects</span>
+          <h2 class="section-title">More Solutions We Have Built</h2>
+        </div>
+        <div class="related-grid"><a href="project-leadgen-pro.html" class="related-card animate-on-scroll">
+            <div class="r-ico"><i class="fas fa-magnifying-glass-location"></i></div>
+            <div><h4>LeadGen Pro</h4><span>Google Maps lead scraper</span></div></a><a href="project-voice-ai-agent.html" class="related-card animate-on-scroll delay-1">
+            <div class="r-ico"><i class="fas fa-phone-volume"></i></div>
+            <div><h4>Voice AI Outreach Agent</h4><span>AI voice sales calls</span></div></a><a href="project-shopify-ai-agent.html" class="related-card animate-on-scroll delay-2">
+            <div class="r-ico"><i class="fas fa-cart-shopping"></i></div>
+            <div><h4>Shopify AI Agent</h4><span>AI support for stores</span></div></a></div>
+      </div>
+    </section>
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <h2 class="animate-on-scroll">Never Miss a Posting Day Again</h2>
+        <p class="animate-on-scroll delay-1">Message us on WhatsApp and your social media starts running itself this week.</p>
+        <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20am%20interested%20in%20the%20Social%20Media%20AI%20Agent" class="btn-primary animate-on-scroll delay-2" target="_blank"><i class="fab fa-whatsapp"></i> Chat With Us on WhatsApp</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <img src="assets/favicon-32x32.png" alt="" style="width:32px;height:32px;border-radius:6px;margin-right:0.6rem;" />
+              <span class="gorav">Gorav</span><span class="ai">AI</span>
+            </a>
+            <p>Building smart AI agents and automation systems that help businesses work faster, reduce manual effort, and scale without limits. Based in Hyderabad, Sindh, Pakistan.</p>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">AI Agent Development</a></li>
+              <li><a href="services.html">Automation Systems</a></li>
+              <li><a href="services.html">AI Software Development</a></li>
+              <li><a href="services.html">Workflow Consulting</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="privacypolicy.html">Privacy Policy</a></li>
+              <li><a href="privacypolicy.html">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright"> GoravAI. All rights reserved. Built with precision in Hyderabad, Pakistan.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/goravai/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61585322057102" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/gorav_ai_agency/" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@GoravAI-e2v" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20found%20your%20project%20page%20and%20want%20to%20discuss%20it%20for%20my%20business" class="whatsapp-float" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+     <script>
+      // 1. Reveal-on-scroll for every .animate-on-scroll element
+      document.addEventListener('DOMContentLoaded', function () {
+        var revealItems = document.querySelectorAll('.animate-on-scroll');
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        revealItems.forEach(function (el) { observer.observe(el); });
+ 
+        // 2. FAQ accordion items also need their own fade-in
+        var accordionItems = document.querySelectorAll('.accordion-item');
+        var accObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              accObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        accordionItems.forEach(function (el) { accObserver.observe(el); });
+ 
+        // 3. FAQ accordion open/close
+        accordionItems.forEach(function (item) {
+          var question = item.querySelector('.faq-question');
+          var answer = item.querySelector('.faq-answer');
+          question.addEventListener('click', function () {
+            var isOpen = item.classList.contains('active');
+            // close all
+            accordionItems.forEach(function (other) {
+              other.classList.remove('active');
+              other.querySelector('.faq-answer').style.maxHeight = null;
+            });
+            // open clicked one if it wasn't already open
+            if (!isOpen) {
+              item.classList.add('active');
+              answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+          });
+        });
+ 
+        // 4. Navbar background on scroll
+        var navbar = document.getElementById('navbar');
+        function handleNavbarScroll() {
+          if (window.scrollY > 40) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+        }
+        window.addEventListener('scroll', handleNavbarScroll);
+        handleNavbarScroll();
+ 
+        // 5. Mobile menu open/close
+        var mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        var mobileMenuClose = document.getElementById('mobileMenuClose');
+        var mobileMenu = document.getElementById('mobileMenu');
+        var mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+ 
+        function openMobileMenu() {
+          mobileMenu.classList.add('open');
+          mobileMenuOverlay.classList.add('open');
+        }
+        function closeMobileMenu() {
+          mobileMenu.classList.remove('open');
+          mobileMenuOverlay.classList.remove('open');
+        }
+        if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
+        if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
+        if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+        mobileMenu.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', closeMobileMenu);
+        });
+ 
+        // 6. Floating background particles
+        var particlesContainer = document.getElementById('particles');
+        var particleCount = 25;
+        for (var i = 0; i < particleCount; i++) {
+          var particle = document.createElement('div');
+          particle.className = 'particle';
+          particle.style.left = Math.random() * 100 + '%';
+          particle.style.top = Math.random() * 100 + '%';
+          particle.style.animationDelay = (Math.random() * 15) + 's';
+          particle.style.animationDuration = (12 + Math.random() * 8) + 's';
+          particlesContainer.appendChild(particle);
+        }
+      });
+    </script>
+  </body>
+</html>

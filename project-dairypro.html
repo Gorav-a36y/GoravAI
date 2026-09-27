@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DairyPro | Dairy Management Software Pakistan – Khata, POS & AI Assistant</title>
+    <meta name="description" content="DairyPro is a complete dairy management software for milk shops and dairy businesses in Pakistan. Supplier & customer khata, POS billing, daily milk ledger, waste tracking and AI business assistant." />
+    <meta name="keywords" content="dairy management software Pakistan, milk shop software, dairy billing software, khata software, dairy POS software, milk delivery software, dairy shop management system, GoravAI DairyPro" />
+    <meta name="author" content="GoravAI" />
+    <meta name="geo.region" content="PK-SD" />
+    <meta name="geo.placename" content="Hyderabad, Sindh, Pakistan" />
+    <meta property="og:title" content="DairyPro | Dairy Management Software Pakistan" />
+    <meta property="og:description" content="Run your whole dairy business from one software — khata, POS billing, daily milk ledger, waste tracking and an AI assistant. Made for Pakistan." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "DairyPro",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows, Web",
+      "description": "Complete dairy management software for milk shops and dairy businesses in Pakistan. Supplier and customer khata, POS billing, daily milk ledger, waste tracking and AI business assistant.",
+      "offers": [
+        { "@type": "Offer", "name": "Dairy Pro Lifetime", "price": "55000", "priceCurrency": "PKR", "description": "One-time payment, computer/local version" },
+        { "@type": "Offer", "name": "Dairy Pro Cloud", "price": "2999", "priceCurrency": "PKR", "description": "Monthly subscription, web-based, access from anywhere" },
+        { "@type": "Offer", "name": "Dairy Pro Desktop", "price": "1999", "priceCurrency": "PKR", "description": "Monthly subscription, computer/local version" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Does DairyPro work without internet?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Dairy Pro Lifetime and Dairy Pro Desktop versions run on your own computer and work fully offline. Only the Cloud version needs internet because it is web-based." } },
+        { "@type": "Question", "name": "What does the license cover?", "acceptedAnswer": { "@type": "Answer", "text": "One license covers one computer and one dairy business. This keeps your data safe and keeps the software fairly priced for every dairy owner." } },
+        { "@type": "Question", "name": "Can I get my customers' monthly milk ledger?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Select any daily milk customer, choose the month, and download the full monthly ledger showing every day's milk taken. You can share it on WhatsApp or print it." } },
+        { "@type": "Question", "name": "Do you provide training and support?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We provide setup help, staff training and ongoing support. The software is designed to be so simple that your shop staff can learn it within one day." } },
+        { "@type": "Question", "name": "Is my business data safe?", "acceptedAnswer": { "@type": "Answer", "text": "Your khata and billing data is stored securely. In the local version it stays on your own computer, and in the Cloud version it is stored on secure servers with regular backups." } },
+        { "@type": "Question", "name": "Can I switch plans later?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can start with a monthly plan and upgrade to Lifetime anytime. Your data moves with you — nothing is lost." } }
+      ]
+    }
+    </script>
+
+    <style>
+      :root {
+        --primary-blue: #3b82f6;
+        --primary-blue-light: #60a5fa;
+        --primary-blue-dark: #2563eb;
+        --accent-cyan: #06b6d4;
+        --bg-dark: #0a0f1c;
+        --bg-darker: #070b14;
+        --bg-card: #111827;
+        --bg-card-hover: #1a2236;
+        --text-white: #f8fafc;
+        --text-gray: #94a3b8;
+        --text-muted: #64748b;
+        --border-subtle: rgba(59, 130, 246, 0.15);
+        --glow-blue: rgba(59, 130, 246, 0.4);
+        --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-white);
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      /* Diagonal Lines */
+      .diagonal-lines {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        pointer-events: none; z-index: 0; overflow: hidden;
+      }
+      .diagonal-lines::before {
+        content: ""; position: absolute; top: -50%; left: -50%;
+        width: 200%; height: 200%;
+        background: repeating-linear-gradient(135deg, transparent, transparent 120px, rgba(59, 130, 246, 0.03) 120px, rgba(59, 130, 246, 0.03) 121px);
+        animation: diagonalMove 25s linear infinite;
+      }
+      @keyframes diagonalMove { 0% { transform: translate(0, 0); } 100% { transform: translate(85px, 85px); } }
+
+      /* Particles */
+      .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+      .particle {
+        position: absolute; width: 3px; height: 3px;
+        background: var(--primary-blue); border-radius: 50%; opacity: 0.3;
+        animation: floatParticle 15s infinite ease-in-out;
+      }
+      @keyframes floatParticle {
+        0%, 100% { transform: translateY(0) translateX(0); opacity: 0.2; }
+        25% { transform: translateY(-30px) translateX(15px); opacity: 0.5; }
+        50% { transform: translateY(-15px) translateX(-10px); opacity: 0.3; }
+        75% { transform: translateY(-40px) translateX(20px); opacity: 0.4; }
+      }
+
+      /* Navbar */
+      .navbar {
+        position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+        padding: 1.2rem 0; transition: var(--transition-smooth); backdrop-filter: blur(0px);
+      }
+      .navbar.scrolled {
+        background: rgba(10, 15, 28, 0.92); backdrop-filter: blur(20px);
+        padding: 0.8rem 0; border-bottom: 1px solid var(--border-subtle);
+      }
+      .nav-container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+      .logo {
+        font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px;
+        text-decoration: none; display: inline-flex; align-items: center; gap: 0; white-space: nowrap;
+      }
+      .logo .gorav { color: var(--text-white); }
+      .logo .ai { color: var(--primary-blue); }
+      .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+      .nav-links a {
+        color: var(--text-gray); text-decoration: none; font-size: 0.9rem;
+        font-weight: 500; transition: var(--transition-smooth); position: relative;
+      }
+      .nav-links a::after {
+        content: ""; position: absolute; bottom: -4px; left: 0;
+        width: 0; height: 2px; background: var(--primary-blue); transition: var(--transition-smooth);
+      }
+      .nav-links a:hover { color: var(--text-white); }
+      .nav-links a:hover::after { width: 100%; }
+      .nav-links a.active { color: var(--text-white); }
+      .nav-links a.active::after { width: 100%; }
+      .nav-cta {
+        background: var(--primary-blue); color: white; padding: 0.6rem 1.4rem;
+        border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600;
+        transition: var(--transition-smooth); border: 1px solid transparent;
+      }
+      .nav-cta:hover { background: var(--primary-blue-dark); box-shadow: 0 0 25px var(--glow-blue); transform: translateY(-2px); }
+      .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-white); font-size: 1.4rem; cursor: pointer; }
+
+      /* Hero */
+      .hero {
+        min-height: 70vh; display: flex; align-items: center; position: relative;
+        overflow: hidden; padding-top: 150px; padding-bottom: 5rem;
+        background:
+          radial-gradient(ellipse at 20% 20%, rgba(59, 130, 246, 0.12), transparent 55%),
+          radial-gradient(ellipse at 80% 80%, rgba(6, 182, 212, 0.08), transparent 55%);
+      }
+      .hero-content { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 0 2rem; width: 100%; text-align: center; }
+      .hero-badge {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        background: rgba(59, 130, 246, 0.1); border: 1px solid var(--border-subtle);
+        padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.8rem;
+        color: var(--primary-blue-light); margin-bottom: 1.5rem;
+      }
+      .hero h1 {
+        font-family: "Playfair Display", serif; font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 700; line-height: 1.15; margin-bottom: 1.5rem;
+      }
+      .hero h1 .highlight { color: var(--primary-blue); }
+      .hero-subtitle {
+        font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text-gray);
+        max-width: 680px; margin: 0 auto 2rem; font-weight: 400; line-height: 1.7;
+      }
+      .hero-cta-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 3rem; }
+      .btn-primary {
+        background: var(--primary-blue); color: white; padding: 1rem 2rem; border-radius: 10px;
+        text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: var(--transition-smooth);
+        border: 1px solid transparent; display: inline-flex; align-items: center; gap: 0.5rem;
+      }
+      .btn-primary:hover { background: var(--primary-blue-dark); box-shadow: 0 0 30px var(--glow-blue); transform: translateY(-3px); }
+      .btn-secondary {
+        background: transparent; color: var(--text-white); padding: 1rem 2rem; border-radius: 10px;
+        text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: var(--transition-smooth);
+        border: 1px solid rgba(255, 255, 255, 0.2); display: inline-flex; align-items: center; gap: 0.5rem;
+      }
+      .btn-secondary:hover { border-color: var(--primary-blue); color: var(--primary-blue); transform: translateY(-3px); }
+      .hero-chips { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+      .chip {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        background: var(--bg-card); border: 1px solid var(--border-subtle);
+        padding: 0.55rem 1.1rem; border-radius: 50px; font-size: 0.83rem; color: var(--text-gray);
+      }
+      .chip i { color: var(--primary-blue); font-size: 0.8rem; }
+
+      /* Breadcrumb */
+      .breadcrumb { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 1.2rem 2rem 0; }
+      .breadcrumb ul { list-style: none; display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; }
+      .breadcrumb a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: var(--transition-smooth); }
+      .breadcrumb a:hover { color: var(--primary-blue); }
+      .breadcrumb li[aria-current] { color: var(--primary-blue-light); font-size: 0.85rem; font-weight: 500; }
+      .breadcrumb .sep { color: var(--text-muted); font-size: 0.8rem; }
+
+      /* Sections */
+      section { position: relative; z-index: 2; }
+      .section-padding { padding: 5rem 0; }
+      .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+      .section-header { text-align: center; margin-bottom: 3.5rem; }
+      .section-tag {
+        display: inline-block; color: var(--primary-blue); font-size: 0.9rem; font-weight: 700;
+        text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 1rem;
+      }
+      .section-title { font-family: "Playfair Display", serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; margin-bottom: 1rem; line-height: 1.2; }
+      .section-desc { color: var(--text-gray); max-width: 640px; margin: 0 auto; font-size: 1.05rem; }
+
+      /* Problem section */
+      .problem { background: var(--bg-darker); }
+      .problem-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+      .problem-card {
+        background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 16px;
+        padding: 2rem 1.5rem; transition: var(--transition-smooth);
+      }
+      .problem-card:hover { transform: translateY(-5px); border-color: rgba(59, 130, 246, 0.3); }
+      .problem-card .p-ico {
+        width: 48px; height: 48px; border-radius: 12px;
+        background: rgba(248, 113, 113, 0.1); display: flex; align-items: center; justify-content: center;
+        margin-bottom: 1.2rem;
+      }
+      .problem-card .p-ico i { color: #f87171; font-size: 1.2rem; }
+      .problem-card h4 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+      .problem-card p { color: var(--text-gray); font-size: 0.9rem; line-height: 1.7; }
+
+      /* Feature cards */
+      .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+      .feature-card {
+        background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 16px;
+        padding: 2.5rem 2rem; transition: var(--transition-smooth); position: relative; overflow: hidden;
+      }
+      .feature-card::before {
+        content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--accent-cyan));
+        transform: scaleX(0); transition: var(--transition-smooth);
+      }
+      .feature-card:hover::before { transform: scaleX(1); }
+      .feature-card:hover {
+        background: var(--bg-card-hover); transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.1);
+        border-color: rgba(59, 130, 246, 0.3);
+      }
+      .feature-icon {
+        width: 56px; height: 56px; background: rgba(59, 130, 246, 0.1); border-radius: 14px;
+        display: flex; align-items: center; justify-content: center; margin-bottom: 1.4rem;
+        transition: var(--transition-smooth);
+      }
+      .feature-card:hover .feature-icon { background: rgba(59, 130, 246, 0.2); box-shadow: 0 0 20px var(--glow-blue); }
+      .feature-icon i { font-size: 1.4rem; color: var(--primary-blue); }
+      .feature-card h3 { font-size: 1.15rem; margin-bottom: 0.7rem; font-weight: 600; }
+      .feature-card p { color: var(--text-gray); font-size: 0.93rem; line-height: 1.75; }
+
+      /* AI highlight */
+      .ai-highlight {
+        background:
+          radial-gradient(ellipse at 30% 40%, rgba(59, 130, 246, 0.14), transparent 60%),
+          var(--bg-darker);
+        border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);
+      }
+      .ai-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center; }
+      .ai-content h2 { font-family: "Playfair Display", serif; font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin-bottom: 1rem; line-height: 1.25; }
+      .ai-content h2 .highlight { color: var(--primary-blue); }
+      .ai-content > p { color: var(--text-gray); margin-bottom: 1.5rem; font-size: 1.02rem; }
+      .ai-points { list-style: none; }
+      .ai-points li { display: flex; gap: 0.9rem; align-items: flex-start; margin-bottom: 1.1rem; color: var(--text-gray); font-size: 0.97rem; }
+      .ai-points li i { color: var(--accent-cyan); margin-top: 0.3rem; font-size: 0.95rem; }
+      .ai-demo {
+        background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 16px;
+        padding: 1.8rem; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      }
+      .ai-demo-header { display: flex; gap: 0.4rem; margin-bottom: 1.4rem; }
+      .ai-demo-header span { width: 11px; height: 11px; border-radius: 50%; background: rgba(255,255,255,0.12); }
+      .ai-msg { margin-bottom: 1.2rem; }
+      .ai-msg .who { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 0.35rem; display: block; }
+      .ai-bubble {
+        background: var(--bg-dark); border: 1px solid rgba(255,255,255,0.07);
+        border-radius: 12px; padding: 0.9rem 1.1rem; font-size: 0.9rem; color: var(--text-gray); line-height: 1.65;
+      }
+      .ai-msg.owner .ai-bubble { border-color: rgba(59, 130, 246, 0.3); }
+      .typing { display: inline-flex; gap: 4px; padding: 0.6rem 0; }
+      .typing span { width: 6px; height: 6px; background: var(--primary-blue); border-radius: 50%; animation: blink 1.2s infinite; }
+      .typing span:nth-child(2) { animation-delay: 0.2s; }
+      .typing span:nth-child(3) { animation-delay: 0.4s; }
+      @keyframes blink { 0%, 80%, 100% { opacity: 0.25; } 40% { opacity: 1; } }
+
+      /* How it works */
+      .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+      .step-card {
+        text-align: center; padding: 2rem 1.5rem; background: var(--bg-card);
+        border: 1px solid var(--border-subtle); border-radius: 16px; transition: var(--transition-smooth);
+      }
+      .step-card:hover { transform: translateY(-5px); border-color: rgba(59, 130, 246, 0.3); }
+      .step-num {
+        width: 50px; height: 50px; border-radius: 50%; background: rgba(59, 130, 246, 0.1);
+        border: 2px solid var(--primary-blue); display: flex; align-items: center; justify-content: center;
+        margin: 0 auto 1.2rem; font-weight: 700; color: var(--primary-blue); font-size: 1.1rem;
+      }
+      .step-card h4 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+      .step-card p { color: var(--text-gray); font-size: 0.88rem; line-height: 1.65; }
+
+      /* Benefits */
+      .benefits { background: var(--bg-darker); }
+      .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+      .benefit {
+        display: flex; gap: 1rem; align-items: flex-start;
+        background: var(--bg-card); border: 1px solid var(--border-subtle);
+        border-radius: 14px; padding: 1.5rem; transition: var(--transition-smooth);
+      }
+      .benefit:hover { border-color: rgba(59, 130, 246, 0.3); transform: translateY(-3px); }
+      .benefit i { color: var(--primary-blue); font-size: 1.2rem; margin-top: 0.2rem; }
+      .benefit h4 { font-size: 1rem; margin-bottom: 0.3rem; }
+      .benefit p { color: var(--text-gray); font-size: 0.9rem; line-height: 1.65; }
+
+      /* Pricing */
+      .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+      .pricing-card {
+        background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 16px;
+        padding: 2.5rem 2rem; text-align: center; transition: var(--transition-smooth);
+        position: relative; overflow: hidden; display: flex; flex-direction: column;
+      }
+      .pricing-card:hover { transform: translateY(-6px); border-color: rgba(59, 130, 246, 0.3); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
+      .pricing-card.featured { border-color: rgba(59, 130, 246, 0.4); box-shadow: 0 0 30px rgba(59, 130, 246, 0.1); }
+      .pricing-card.featured::before {
+        content: "Best Value"; position: absolute; top: 0; right: 0;
+        background: var(--primary-blue); color: white; font-size: 0.7rem; font-weight: 700;
+        padding: 0.3rem 1rem; border-bottom-left-radius: 12px; text-transform: uppercase; letter-spacing: 1px;
+      }
+      .pricing-icon {
+        width: 60px; height: 60px; background: rgba(59, 130, 246, 0.1); border-radius: 50%;
+        display: flex; align-items: center; justify-content: center; margin: 0 auto 1.4rem;
+      }
+      .pricing-icon i { font-size: 1.5rem; color: var(--primary-blue); }
+      .pricing-card h3 { font-size: 1.2rem; margin-bottom: 0.4rem; font-weight: 600; }
+      .pricing-type { font-size: 0.8rem; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1.2rem; display: block; }
+      .price { font-size: 2.3rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 0.2rem; }
+      .price-note { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.6rem; }
+      .pricing-features { list-style: none; text-align: left; margin-bottom: 2rem; flex-grow: 1; }
+      .pricing-features li {
+        display: flex; align-items: center; gap: 0.6rem; color: var(--text-gray);
+        font-size: 0.9rem; margin-bottom: 0.7rem; padding-bottom: 0.7rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      }
+      .pricing-features li:last-child { border-bottom: none; }
+      .pricing-features li i { color: var(--primary-blue); font-size: 0.85rem; }
+      .pricing-btn {
+        display: inline-block; width: 100%; padding: 0.95rem; background: var(--primary-blue);
+        color: white; text-decoration: none; border-radius: 10px; font-weight: 600;
+        font-size: 0.9rem; transition: var(--transition-smooth); border: none; cursor: pointer;
+      }
+      .pricing-btn:hover { background: var(--primary-blue-dark); box-shadow: 0 0 25px var(--glow-blue); }
+      .pricing-btn.outline { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: var(--text-white); }
+      .pricing-btn.outline:hover { border-color: var(--primary-blue); color: var(--primary-blue); box-shadow: none; }
+      .license-note {
+        text-align: center; margin-top: 2.5rem; padding: 1.4rem 1.8rem;
+        background: rgba(59, 130, 246, 0.05); border: 1px solid var(--border-subtle);
+        border-radius: 12px; max-width: 800px; margin-left: auto; margin-right: auto;
+        color: var(--text-gray); font-size: 0.93rem;
+      }
+      .license-note i { color: var(--primary-blue); margin-right: 0.5rem; }
+      .license-note strong { color: var(--text-white); }
+
+      /* FAQ */
+      .faq-section { background-color: #070a12; padding: 5rem 20px; }
+      .faq-container { max-width: 800px; margin: 0 auto; }
+      .faq-title { text-align: center; font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 700; color: #ffffff; margin-bottom: 3rem; letter-spacing: -0.02em; font-family: "Playfair Display", serif; }
+      .faq-title span { color: #6366f1; }
+      .faq-list { display: flex; flex-direction: column; gap: 16px; }
+      .accordion-item {
+        width: 100%; background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+        border: none; border-radius: 16px; overflow: hidden;
+        padding-left: 24px; padding-right: 24px; opacity: 0;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+      }
+      .accordion-item:hover { background: rgba(255, 255, 255, 0.05); }
+      .accordion-item.active { background: rgba(255, 255, 255, 0.04); }
+      .accordion-item.is-visible { opacity: 1; transform: translate(0px, 0px); }
+      .faq-question {
+        width: 100%; height: 64px; display: flex; align-items: center; justify-content: space-between;
+        background: none; border: none; color: #e4e4e7; font-size: 1rem; font-weight: 500;
+        text-align: left; cursor: pointer; padding: 0; line-height: 1.4; transition: color 0.3s ease;
+        font-family: inherit;
+      }
+      .faq-question:hover { color: #ffffff; }
+      .faq-icon { flex-shrink: 0; margin-left: 16px; color: #71717a; transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+      .accordion-item.active .faq-icon { transform: rotate(180deg); color: #a1a1aa; }
+      .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease; }
+      .faq-answer p { padding: 0 0 24px 0; margin: 0; color: #71717a; font-size: 0.95rem; line-height: 1.7; }
+
+      /* Related */
+      .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+      .related-card {
+        display: flex; gap: 1rem; align-items: center; background: var(--bg-card);
+        border: 1px solid var(--border-subtle); border-radius: 14px; padding: 1.4rem 1.5rem;
+        text-decoration: none; transition: var(--transition-smooth);
+      }
+      .related-card:hover { transform: translateY(-4px); border-color: rgba(59, 130, 246, 0.3); }
+      .related-card .r-ico {
+        width: 46px; height: 46px; min-width: 46px; border-radius: 12px;
+        background: rgba(59, 130, 246, 0.1); display: flex; align-items: center; justify-content: center;
+      }
+      .related-card .r-ico i { color: var(--primary-blue); font-size: 1.1rem; }
+      .related-card h4 { font-size: 0.98rem; color: var(--text-white); margin-bottom: 0.15rem; }
+      .related-card span { font-size: 0.8rem; color: var(--text-muted); }
+
+      /* CTA */
+      .cta-section {
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.05));
+        border-top: 1px solid var(--border-subtle); text-align: center; padding: 5rem 0;
+      }
+      .cta-section h2 { font-family: "Playfair Display", serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin-bottom: 1rem; }
+      .cta-section p { color: var(--text-gray); max-width: 550px; margin: 0 auto 2rem; }
+
+      /* Footer */
+      .footer { background: var(--bg-darker); border-top: 1px solid var(--border-subtle); padding: 4rem 0 2rem; }
+      .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+      .footer-brand p { color: var(--text-gray); font-size: 0.9rem; line-height: 1.8; max-width: 300px; }
+      .footer-column h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-white); }
+      .footer-column ul { list-style: none; }
+      .footer-column ul li { margin-bottom: 0.8rem; }
+      .footer-column ul li a { color: var(--text-gray); text-decoration: none; font-size: 0.9rem; transition: var(--transition-smooth); }
+      .footer-column ul li a:hover { color: var(--primary-blue); padding-left: 4px; }
+      .footer-bottom {
+        border-top: 1px solid var(--border-subtle); padding-top: 2rem;
+        display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+      }
+      .footer-copyright { color: var(--text-muted); font-size: 0.85rem; }
+      .footer-social { display: flex; gap: 0.8rem; }
+      .footer-social a {
+        width: 40px; height: 40px; border-radius: 50%; background: var(--bg-card);
+        border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: center;
+        color: var(--text-gray); text-decoration: none; transition: var(--transition-smooth);
+        font-size: 0.95rem; position: relative; overflow: hidden;
+      }
+      .footer-social a:hover { transform: translateY(-3px); }
+      .footer-social a[title="LinkedIn"]:hover { background-color: #0077b5 !important; color: white !important; border-color: #0077b5 !important; }
+      .footer-social a[title="Facebook"]:hover { background-color: #1877f2 !important; color: white !important; border-color: #1877f2 !important; }
+      .footer-social a[title="Instagram"]:hover { background-color: #e1306c !important; color: white !important; border-color: #e1306c !important; }
+      .footer-social a[title="YouTube"]:hover { background-color: #ff0000 !important; color: white !important; border-color: #ff0000 !important; }
+      @keyframes shineAnimation {
+        0% { transform: skewX(-20deg) translateX(-150%); }
+        100% { transform: skewX(-20deg) translateX(300%); }
+      }
+      .footer-social a::before {
+        content: ""; position: absolute; top: 0; left: 0; width: 25%; height: 100%;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+        transform: skewX(-20deg) translateX(-150%); z-index: 10; pointer-events: none;
+      }
+      .footer-social a:hover::before { animation: shineAnimation 0.6s ease forwards; }
+
+      /* WhatsApp float */
+      .whatsapp-float {
+        position: fixed; bottom: 2rem; right: 2rem; width: 60px; height: 60px;
+        background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        color: white; font-size: 1.6rem; text-decoration: none;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999;
+        transition: all 0.3s ease; animation: whatsappPulse 2s ease-in-out infinite;
+      }
+      .whatsapp-float:hover { transform: scale(1.1) translateY(-3px); box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6); }
+      @keyframes whatsappPulse {
+        0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+        50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
+      }
+
+      /* Animations */
+      .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+      .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+      .delay-1 { transition-delay: 0.1s; }
+      .delay-2 { transition-delay: 0.2s; }
+      .delay-3 { transition-delay: 0.3s; }
+
+      /* Mobile menu */
+      .mobile-menu {
+        position: fixed; top: 0; right: -100%; width: 80%; max-width: 320px; height: 100vh;
+        background: var(--bg-card); z-index: 1001; padding: 5rem 2rem 2rem;
+        transition: right 0.4s ease; border-left: 1px solid var(--border-subtle);
+      }
+      .mobile-menu.open { right: 0; }
+      .mobile-menu-overlay {
+        position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 1000;
+        opacity: 0; visibility: hidden; transition: all 0.4s ease;
+      }
+      .mobile-menu-overlay.open { opacity: 1; visibility: visible; }
+      .mobile-menu ul { list-style: none; }
+      .mobile-menu ul li { margin-bottom: 1.5rem; }
+      .mobile-menu ul li a {
+        color: var(--text-white); text-decoration: none; font-size: 1.1rem; font-weight: 500;
+        display: block; padding: 0.5rem 0; border-bottom: 1px solid var(--border-subtle);
+      }
+      .mobile-menu-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--text-white); font-size: 1.5rem; cursor: pointer; }
+
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: var(--bg-darker); }
+      ::-webkit-scrollbar-thumb { background: var(--primary-blue); border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--primary-blue-dark); }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .features-grid, .pricing-grid, .related-grid { grid-template-columns: repeat(2, 1fr); }
+        .problem-grid, .steps-grid { grid-template-columns: repeat(2, 1fr); }
+        .ai-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+        .footer-grid { grid-template-columns: 1fr 1fr; }
+      }
+      @media (max-width: 768px) {
+        .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .features-grid, .pricing-grid, .problem-grid, .steps-grid, .benefits-grid, .related-grid { grid-template-columns: 1fr; }
+        .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+        .footer-bottom { flex-direction: column; text-align: center; }
+        .section-padding { padding: 3rem 0; }
+        .hero { padding-top: 130px; }
+      }
+    </style>
+  <base target="_blank">
+</head>
+  <body>
+    <div class="diagonal-lines"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img src="assets/favicon-32x32.png" alt="" style="width:32px;height:32px;border-radius:6px;margin-right:0.6rem;" />
+          <span class="gorav">Gorav</span><span class="ai">AI</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20am%20interested%20in%20DairyPro%20dairy%20management%20software" class="nav-cta">
+          <i class="fab fa-whatsapp"></i> Let's Talk
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-menu-close" id="mobileMenuClose"><i class="fas fa-times"></i></button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge"><i class="fas fa-circle" style="font-size:0.5rem;"></i> Dairy Management Software · Made for Pakistan</div>
+        <h1>Run Your Whole Dairy Business<br />from <span class="highlight">One Software</span></h1>
+        <p class="hero-subtitle">
+          DairyPro digitalises your dairy shop — supplier khata, customer khata, POS billing, daily milk records, waste tracking and a built-in AI assistant that knows your business. No paper work, no missed entries, no month-end tension.
+        </p>
+        <div class="hero-cta-group">
+          <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20want%20to%20get%20DairyPro%20for%20my%20dairy%20business" class="btn-primary">
+            <i class="fab fa-whatsapp"></i> Get DairyPro on WhatsApp
+          </a>
+          <a href="#pricing" class="btn-secondary"><i class="fas fa-tag"></i> See Pricing</a>
+        </div>
+        <div class="hero-chips">
+          <span class="chip"><i class="fas fa-book"></i> Digital Khata — No Paper Work</span>
+          <span class="chip"><i class="fas fa-hand-pointer"></i> 1-Click Daily Milk Entry</span>
+          <span class="chip"><i class="fas fa-brain"></i> AI Assistant Included</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="sep"><i class="fas fa-chevron-right"></i></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li class="sep"><i class="fas fa-chevron-right"></i></li>
+        <li aria-current="page">DairyPro</li>
+      </ul>
+    </nav>
+
+    <!-- Problem -->
+    <section class="section-padding problem">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">The Problem</span>
+          <h2 class="section-title">Every Dairy Owner Knows This Pain</h2>
+          <p class="section-desc">If you run a dairy shop or milk business, you are managing too many things on paper — and paper always creates problems.</p>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-card animate-on-scroll">
+            <div class="p-ico"><i class="fas fa-file-circle-xmark"></i></div>
+            <h4>Khata Registers Get Lost</h4>
+            <p>Supplier and customer khata written in registers can be lost, damaged, or disputed. One missing page means lost money.</p>
+          </div>
+          <div class="problem-card animate-on-scroll delay-1">
+            <div class="p-ico"><i class="fas fa-calculator"></i></div>
+            <h4>Month-End Takes Days</h4>
+            <p>Calculating monthly milk ledgers for daily customers by hand is slow, tiring, and full of calculation mistakes.</p>
+          </div>
+          <div class="problem-card animate-on-scroll delay-2">
+            <div class="p-ico"><i class="fas fa-trash"></i></div>
+            <h4>Waste Is Never Recorded</h4>
+            <p>Broken eggs, spoiled milk, damaged stock — without tracking, you never know how much money waste is eating every month.</p>
+          </div>
+          <div class="problem-card animate-on-scroll delay-3">
+            <div class="p-ico"><i class="fas fa-question-circle"></i></div>
+            <h4>No Business Insights</h4>
+            <p>You work hard every day, but you have no clear picture of profit, loss, or which products actually make money.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section-padding" id="features">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">The Solution</span>
+          <h2 class="section-title">Everything Your Dairy Needs, Built In</h2>
+          <p class="section-desc">DairyPro covers the complete daily cycle of a dairy business — from buying raw material to selling products to closing the month's khata.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon"><i class="fas fa-boxes-stacked"></i></div>
+            <h3>Raw Material & Suppliers</h3>
+            <p>Add all raw materials you receive from suppliers — milk, eggs, and more. Create supplier accounts, record every collection, and print the receipt instantly if needed.</p>
+          </div>
+          <div class="feature-card animate-on-scroll delay-1">
+            <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+            <h3>Supplier Khata (Ledger)</h3>
+            <p>Not paying a supplier right now? The amount automatically goes to their digital khata. Every pending rupee is recorded — no paper work, no forgotten payments, no disputes.</p>
+          </div>
+          <div class="feature-card animate-on-scroll delay-2">
+            <div class="feature-icon"><i class="fas fa-jar"></i></div>
+            <h3>Create & Sell Products</h3>
+            <p>Make products from your raw materials — yogurt (dahi), desi ghee, and anything else you produce. Sell them with proper pricing and stock tracking.</p>
+          </div>
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon"><i class="fas fa-cash-register"></i></div>
+            <h3>POS Billing Screen</h3>
+            <p>A simple point-of-sale screen where you select the customer and sell products plus raw materials in seconds. Every sale makes a receipt and updates the khata automatically.</p>
+          </div>
+          <div class="feature-card animate-on-scroll delay-1">
+            <div class="feature-icon"><i class="fas fa-recycle"></i></div>
+            <h3>Waste Material Tracking</h3>
+            <p>Eggs broken? Milk spoiled? Add it to the waste page in one entry. You finally see exactly how much loss happens — and where you can control it.</p>
+          </div>
+          <div class="feature-card animate-on-scroll delay-2">
+            <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+            <h3>1-Click Daily Milk Entry</h3>
+            <p>For customers who take milk daily and pay monthly — just click one button and the software automatically adds that day's milk to their khata. Month-end collection becomes effortless.</p>
+          </div>
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon"><i class="fas fa-file-arrow-down"></i></div>
+            <h3>Monthly Ledger Download</h3>
+            <p>Any customer asks for their month's record? Select the customer, choose the month, click download. The full daily milk ledger is ready to print or share on WhatsApp.</p>
+          </div>
+          <div class="feature-card animate-on-scroll delay-1">
+            <div class="feature-icon"><i class="fas fa-users"></i></div>
+            <h3>Customer Khata</h3>
+            <p>Create customer accounts with their own khata. When someone buys on credit, the receipt and the ledger entry are both created automatically. Full history, always available.</p>
+          </div>
+          <div class="feature-card animate-on-scroll delay-2">
+            <div class="feature-icon"><i class="fas fa-wifi-slash"></i></div>
+            <h3>Works On Your Computer</h3>
+            <p>The desktop version runs fully on your own computer — no internet needed for daily billing and khata. Your data stays with you, safe on your machine.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Assistant -->
+    <section class="section-padding ai-highlight">
+      <div class="container">
+        <div class="ai-grid">
+          <div class="ai-content animate-on-scroll">
+            <span class="section-tag">What Makes Us Better</span>
+            <h2>An <span class="highlight">AI Assistant</span> That Works Like Your Own Employee</h2>
+            <p>This is the feature that makes DairyPro different from every other billing software. You get a built-in AI assistant that understands your dairy business.</p>
+            <ul class="ai-points">
+              <li><i class="fas fa-check-circle"></i> <span><strong>Ask anything about your business</strong> — sales, khata balances, stock, waste — and get instant answers.</span></li>
+              <li><i class="fas fa-check-circle"></i> <span><strong>Get real analytics</strong> — see what is selling, what is wasting, and where your profit is going.</span></li>
+              <li><i class="fas fa-check-circle"></i> <span><strong>Take growth suggestions</strong> — practical advice for improving your dairy business, based on your own data.</span></li>
+              <li><i class="fas fa-check-circle"></i> <span><strong>Talks like a human</strong> — it answers as a person who knows everything about your dairy, not like a cold report.</span></li>
+            </ul>
+          </div>
+          <div class="ai-demo animate-on-scroll delay-1" aria-hidden="true">
+            <div class="ai-demo-header"><span></span><span></span><span></span></div>
+            <div class="ai-msg owner">
+              <span class="who">Dairy Owner</span>
+              <div class="ai-bubble">Which product gave me the most profit this month?</div>
+            </div>
+            <div class="ai-msg">
+              <span class="who">DairyPro AI Assistant</span>
+              <div class="ai-bubble">Your dahi (yogurt) gave the highest profit this month — 38% margin. Milk sales were your highest revenue, but margin is 12%. I suggest increasing dahi production by [suggestion based on your sales trend].</div>
+            </div>
+            <div class="ai-msg owner">
+              <span class="who">Dairy Owner</span>
+              <div class="ai-bubble">How much khata is pending from customers?</div>
+            </div>
+            <div class="ai-msg">
+              <span class="who">DairyPro AI Assistant</span>
+              <div class="ai-bubble">Total pending from 14 customers: <strong style="color:var(--text-white);">PKR [amount]</strong>. Three customers cross 30 days — shall I list them with their monthly ledgers?</div>
+              <div class="typing"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">How It Works</span>
+          <h2 class="section-title">From Paper to Digital in One Day</h2>
+          <p class="section-desc">No technical knowledge needed. If your staff can use a mobile phone, they can use DairyPro.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card animate-on-scroll">
+            <div class="step-num">1</div>
+            <h4>Install & Setup</h4>
+            <p>We install DairyPro on your computer or set up your cloud account. Your shop details, products, and prices are configured for you.</p>
+          </div>
+          <div class="step-card animate-on-scroll delay-1">
+            <div class="step-num">2</div>
+            <h4>Add Suppliers & Customers</h4>
+            <p>Enter your suppliers and customers once. Their khata opens automatically — you can also add opening balances from your old register.</p>
+          </div>
+          <div class="step-card animate-on-scroll delay-2">
+            <div class="step-num">3</div>
+            <h4>Start Daily Billing</h4>
+            <p>Use the POS screen for sales, one click for daily milk customers, and the waste page for any damage. Receipts print, khata updates itself.</p>
+          </div>
+          <div class="step-card animate-on-scroll delay-3">
+            <div class="step-num">4</div>
+            <h4>Ask Your AI Assistant</h4>
+            <p>Whenever you want a report, an answer, or a growth suggestion — just ask the AI assistant. It knows your whole business.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section-padding benefits">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">The Results</span>
+          <h2 class="section-title">What Changes for Your Business</h2>
+          <p class="section-desc">Real outcomes dairy owners get when the paper work stops and the software starts.</p>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit animate-on-scroll">
+            <i class="fas fa-bolt"></i>
+            <div>
+              <h4>Billing in Seconds, Not Minutes</h4>
+              <p>The POS screen turns every sale into a receipt plus a khata entry automatically. Long queues during busy hours become short.</p>
+            </div>
+          </div>
+          <div class="benefit animate-on-scroll delay-1">
+            <i class="fas fa-book"></i>
+            <div>
+              <h4>Zero Missed Khata Entries</h4>
+              <p>Every supplier due and customer credit is recorded the moment it happens. No forgotten payments, no arguments at month-end.</p>
+            </div>
+          </div>
+          <div class="benefit animate-on-scroll delay-2">
+            <i class="fas fa-calendar-day"></i>
+            <div>
+              <h4>Month-End Done in One Click</h4>
+              <p>Daily milk customers' full month ledger downloads instantly. What used to take days of register-flipping now takes seconds.</p>
+            </div>
+          </div>
+          <div class="benefit animate-on-scroll delay-3">
+            <i class="fas fa-lightbulb"></i>
+            <div>
+              <h4>Decisions Based on Data</h4>
+              <p>The AI assistant turns your daily entries into clear answers — what sells, what wastes, what earns. You stop guessing and start deciding.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section-padding" id="pricing">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">Pricing</span>
+          <h2 class="section-title">Simple Plans for Every Dairy Owner</h2>
+          <p class="section-desc">Choose the version that fits how you work. All plans include the AI assistant, khata, POS, and full features.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card animate-on-scroll">
+            <div class="pricing-icon"><i class="fas fa-laptop"></i></div>
+            <h3>Dairy Pro Desktop</h3>
+            <span class="pricing-type">Computer / Local · Monthly</span>
+            <div class="price">PKR 1,999</div>
+            <div class="price-note">per month · pay as you go</div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Runs on your computer</li>
+              <li><i class="fas fa-check"></i> Works without internet</li>
+              <li><i class="fas fa-check"></i> Full khata, POS & waste tracking</li>
+              <li><i class="fas fa-check"></i> 1-click daily milk entry</li>
+              <li><i class="fas fa-check"></i> AI assistant included</li>
+              <li><i class="fas fa-check"></i> Support & updates included</li>
+            </ul>
+            <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20want%20the%20Dairy%20Pro%20Desktop%20plan%20(PKR%201,999/month)" class="pricing-btn outline">Get Desktop Plan</a>
+          </div>
+          <div class="pricing-card featured animate-on-scroll delay-1">
+            <div class="pricing-icon"><i class="fas fa-crown"></i></div>
+            <h3>Dairy Pro Lifetime</h3>
+            <span class="pricing-type">Computer / Local · One-Time</span>
+            <div class="price">PKR 55,000</div>
+            <div class="price-note">one-time payment · never pay again</div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Everything in Desktop — forever</li>
+              <li><i class="fas fa-check"></i> Pay once, own it for life</li>
+              <li><i class="fas fa-check"></i> Works without internet</li>
+              <li><i class="fas fa-check"></i> Full khata, POS & waste tracking</li>
+              <li><i class="fas fa-check"></i> AI assistant included</li>
+              <li><i class="fas fa-check"></i> Priority support & updates</li>
+            </ul>
+            <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20want%20the%20Dairy%20Pro%20Lifetime%20plan%20(PKR%2055,000%20one-time)" class="pricing-btn">Get Lifetime License</a>
+          </div>
+          <div class="pricing-card animate-on-scroll delay-2">
+            <div class="pricing-icon"><i class="fas fa-cloud"></i></div>
+            <h3>Dairy Pro Cloud</h3>
+            <span class="pricing-type">Web-Based · Monthly</span>
+            <div class="price">PKR 2,999</div>
+            <div class="price-note">per month · access from anywhere</div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Use from any device, anywhere</li>
+              <li><i class="fas fa-check"></i> Data secured on cloud servers</li>
+              <li><i class="fas fa-check"></i> Full khata, POS & waste tracking</li>
+              <li><i class="fas fa-check"></i> 1-click daily milk entry</li>
+              <li><i class="fas fa-check"></i> AI assistant included</li>
+              <li><i class="fas fa-check"></i> Automatic backups & updates</li>
+            </ul>
+            <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20want%20the%20Dairy%20Pro%20Cloud%20plan%20(PKR%202,999/month)" class="pricing-btn outline">Get Cloud Plan</a>
+          </div>
+        </div>
+        <div class="license-note">
+          <p><i class="fas fa-id-card"></i> <strong>License:</strong> One license covers <strong>1 computer and 1 dairy business</strong>. This keeps your business data secure and the software fairly priced for every dairy owner.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="faq-container">
+        <h2 class="faq-title">Questions? <span>Answers.</span></h2>
+        <div class="faq-list">
+          <div class="accordion-item">
+            <button class="faq-question">
+              Does DairyPro work without internet?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. The Dairy Pro Lifetime and Dairy Pro Desktop versions run on your own computer and work fully offline. Only the Cloud version needs internet because it is web-based.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="faq-question">
+              What does the license cover?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>One license covers one computer and one dairy business. This keeps your data safe and keeps the software fairly priced for every dairy owner.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="faq-question">
+              Can I get my customers' monthly milk ledger?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Select any daily milk customer, choose the month, and download the full monthly ledger showing every day's milk taken. You can share it on WhatsApp or print it.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="faq-question">
+              Do you provide training and support?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. We provide setup help, staff training, and ongoing support. The software is designed to be so simple that your shop staff can learn it within one day.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="faq-question">
+              Is my business data safe?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Your khata and billing data is stored securely. In the local version it stays on your own computer, and in the Cloud version it is stored on secure servers with regular backups.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="faq-question">
+              Can I switch plans later?
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. You can start with a monthly plan and upgrade to Lifetime anytime. Your data moves with you — nothing is lost.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">More Projects</span>
+          <h2 class="section-title">Software Built for Real Businesses</h2>
+        </div>
+        <div class="related-grid">
+          <a href="project-millcore.html" class="related-card animate-on-scroll">
+            <div class="r-ico"><i class="fas fa-wheat-awn"></i></div>
+            <div>
+              <h4>MillCore</h4>
+              <span>Flour Mill Management System</span>
+            </div>
+          </a>
+          <a href="project-hospital-management.html" class="related-card animate-on-scroll delay-1">
+            <div class="r-ico"><i class="fas fa-hospital"></i></div>
+            <div>
+              <h4>Hospital Management System</h4>
+              <span>Departments + AI WhatsApp Assistant</span>
+            </div>
+          </a>
+          <a href="project-leadgen-pro.html" class="related-card animate-on-scroll delay-2">
+            <div class="r-ico"><i class="fas fa-magnifying-glass-location"></i></div>
+            <div>
+              <h4>LeadGen Pro</h4>
+              <span>Google Maps Lead Generation Tool</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <h2 class="animate-on-scroll">Ready to Digitalise Your Dairy Business?</h2>
+        <p class="animate-on-scroll delay-1">Message us on WhatsApp today. We will answer your questions, show you how DairyPro fits your shop, and help you choose the right plan.</p>
+        <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20am%20interested%20in%20DairyPro%20dairy%20management%20software.%20Please%20guide%20me." class="btn-primary animate-on-scroll delay-2">
+          <i class="fab fa-whatsapp"></i> Chat With Us on WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <img src="assets/favicon-32x32.png" alt="" style="width:32px;height:32px;border-radius:6px;margin-right:0.6rem;" />
+              <span class="gorav">Gorav</span><span class="ai">AI</span>
+            </a>
+            <p>Building smart AI agents and automation systems that help businesses work faster, reduce manual effort, and scale without limits. Based in Hyderabad, Sindh, Pakistan.</p>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">AI Agent Development</a></li>
+              <li><a href="services.html">Automation Systems</a></li>
+              <li><a href="services.html">AI Software Development</a></li>
+              <li><a href="services.html">Workflow Consulting</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="privacypolicy.html">Privacy Policy</a></li>
+              <li><a href="privacypolicy.html">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright"> GoravAI. All rights reserved. Built with precision in Hyderabad, Pakistan.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/goravai/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61585322057102" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/gorav_ai_agency/" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@GoravAI-e2v" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20am%20interested%20in%20DairyPro%20dairy%20management%20software" class="whatsapp-float" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+      function createParticles() {
+        const container = document.getElementById("particles");
+        for (let i = 0; i < 25; i++) {
+          const p = document.createElement("div");
+          p.className = "particle";
+          p.style.left = Math.random() * 100 + "%";
+          p.style.top = Math.random() * 100 + "%";
+          p.style.animationDelay = Math.random() * 15 + "s";
+          p.style.animationDuration = 10 + Math.random() * 10 + "s";
+          const s = 2 + Math.random() * 3;
+          p.style.width = s + "px";
+          p.style.height = s + "px";
+          container.appendChild(p);
+        }
+      }
+      createParticles();
+
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        navbar.classList.toggle("scrolled", window.scrollY > 50);
+      });
+
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+      const mobileMenuClose = document.getElementById("mobileMenuClose");
+      function openMobileMenu() { mobileMenu.classList.add("open"); mobileMenuOverlay.classList.add("open"); document.body.style.overflow = "hidden"; }
+      function closeMobileMenu() { mobileMenu.classList.remove("open"); mobileMenuOverlay.classList.remove("open"); document.body.style.overflow = ""; }
+      mobileMenuBtn.addEventListener("click", openMobileMenu);
+      mobileMenuClose.addEventListener("click", closeMobileMenu);
+      mobileMenuOverlay.addEventListener("click", closeMobileMenu);
+      document.querySelectorAll(".mobile-menu a").forEach((link) => link.addEventListener("click", closeMobileMenu));
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add("visible"); });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+      );
+      document.querySelectorAll(".animate-on-scroll").forEach((el) => observer.observe(el));
+
+      // FAQ accordion
+      document.querySelectorAll(".accordion-item").forEach((item, index) => {
+        setTimeout(() => { item.classList.add("is-visible"); }, index * 100);
+      });
+      document.querySelectorAll(".faq-question").forEach((button) => {
+        button.addEventListener("click", () => {
+          const item = button.closest(".accordion-item");
+          const isActive = item.classList.contains("active");
+          document.querySelectorAll(".accordion-item").forEach((i) => {
+            i.classList.remove("active");
+            i.querySelector(".faq-answer").style.maxHeight = null;
+          });
+          if (!isActive) {
+            item.classList.add("active");
+            const answer = item.querySelector(".faq-answer");
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
