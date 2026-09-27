@@ -1,11 +1,20 @@
 <!doctype html>
 <html lang="en">
   <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LS24LZ8S17"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LS24LZ8S17');
+  </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MillCore | Flour Mill Management Software with AI Assistant</title>
-    <meta name="description" content="MillCore is flour mill management software: price updates, customer billing, ledger (khata) accounts, monthly reports and an AI assistant for your flour mill business." />
-    <meta name="keywords" content="flour mill management software, flour mill software, mill billing software, customer ledger software, khata software, milling business software, flour mill POS" />
+    <title>MillCore | Flour Mill Management Software Pakistan – Atta Mill ERP with AI</title>
+    <meta name="description" content="MillCore is flour mill management software built for Pakistani atta/flour mills: price updates, customer billing, khata ledger, inventory, monthly reports and an AI assistant." />
+    <meta name="keywords" content="flour mill management software Pakistan, flour mill software Pakistan, atta mill management system, flour mill accounting software, flour mill inventory software, flour mill ERP, mill billing software, khata software" />
     <meta name="author" content="GoravAI" />
     <meta name="geo.region" content="PK-SD" />
     <meta name="geo.placename" content="Hyderabad, Sindh, Pakistan" />
@@ -19,7 +28,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
@@ -427,12 +437,16 @@
         background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center;
         color: white; font-size: 1.6rem; text-decoration: none;
         box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999;
-        transition: all 0.3s ease; animation: whatsappPulse 2s ease-in-out infinite;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .whatsapp-float::before {
+        content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%;
+        background: rgba(37, 211, 102, 0.5); animation: whatsappPulse 2s ease-in-out infinite; z-index: -1;
       }
       .whatsapp-float:hover { transform: scale(1.1) translateY(-3px); box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6); }
       @keyframes whatsappPulse {
-        0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
-        50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
+        0% { transform: scale(1); opacity: 0.6; }
+        100% { transform: scale(1.6); opacity: 0; }
       }
 
       /* Animations */
@@ -493,7 +507,7 @@
     <nav class="navbar" id="navbar">
       <div class="nav-container">
         <a href="index.html" class="logo">
-          <img src="assets/favicon-32x32.png" alt="" style="width:32px;height:32px;border-radius:6px;margin-right:0.6rem;" />
+          <img loading="lazy" decoding="async" src="assets/favicon-32x32.png" alt="" style="width:32px;height:32px;border-radius:6px;margin-right:0.6rem;" />
           <span class="gorav">Gorav</span><span class="ai">AI</span>
         </a>
         <ul class="nav-links">
@@ -527,9 +541,9 @@
     
     <section class="hero">
       <div class="hero-content">
-        <div class="hero-badge"><i class="fas fa-circle" style="font-size:0.5rem;"></i> Flour Mill Management Software</div>
+        <div class="hero-badge"><i class="fas fa-circle" style="font-size:0.5rem;"></i> Flour Mill Management Software for Pakistan</div>
         <h1>Run Your Entire Flour Mill from<br /><span class="highlight">One Dashboard</span></h1>
-        <p class="hero-subtitle">MillCore digitizes your flour mill — live price updates, printed customer bills, customer ledger (khata) with receipts, monthly sales reports, and an AI assistant that knows your mill's business and answers like a trusted advisor on your payroll.</p>
+        <p class="hero-subtitle">MillCore digitizes your flour/atta mill business in Pakistan — live price updates, printed customer bills, customer ledger (khata) with receipts, monthly sales reports, and an AI assistant that knows your mill's business and answers like a trusted advisor on your payroll.</p>
         <div class="hero-cta-group">
           <a href="https://wa.me/923312726787?text=Hi%20GoravAI,%20I%20am%20interested%20in%20MillCore%20for%20my%20flour%20mill" class="btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> Get MillCore for Your Mill</a>
           
@@ -700,7 +714,7 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <a href="index.html" class="logo">
-              <img src="assets/favicon-32x32.png" alt="" style="width:32px;height:32px;border-radius:6px;margin-right:0.6rem;" />
+              <img loading="lazy" decoding="async" src="assets/favicon-32x32.png" alt="" style="width:32px;height:32px;border-radius:6px;margin-right:0.6rem;" />
               <span class="gorav">Gorav</span><span class="ai">AI</span>
             </a>
             <p>Building smart AI agents and automation systems that help businesses work faster, reduce manual effort, and scale without limits. Based in Hyderabad, Sindh, Pakistan.</p>

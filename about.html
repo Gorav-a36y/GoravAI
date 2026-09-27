@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LS24LZ8S17"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LS24LZ8S17');
+  </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About Us | GoravAI - AI Agency Hyderabad Pakistan</title>
@@ -27,11 +36,11 @@
     <meta property="og:url" content="https://gorav.click/about.html" />
     <meta property="og:site_name" content="GoravAI" />
     <meta property="og:locale" content="en_PK" />
-    <meta property="og:image" content="https://gorav.click/assets/hero-image.jpg" />
+    <meta property="og:image" content="https://gorav.click/assets/hero-image.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="About Us | GoravAI" />
     <meta name="twitter:description" content="Meet the team behind GoravAI. Our mission is to make AI accessible to every business." />
-    <meta name="twitter:image" content="https://gorav.click/assets/hero-image.jpg" />
+    <meta name="twitter:image" content="https://gorav.click/assets/hero-image.webp" />
     <link rel="manifest" href="site.webmanifest" />
     <meta name="theme-color" content="#0a0f1c" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
@@ -39,10 +48,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -73,7 +80,7 @@
         "jobTitle": "Founder",
         "worksFor": { "@id": "https://gorav.click/#organization" },
         "url": "https://gorav.click/about.html",
-        "image": "https://gorav.click/assets/founder.jpg",
+        "image": "https://gorav.click/assets/founder.webp",
         "sameAs": [
           "https://www.linkedin.com/in/gorav-khemani-61968a381/",
           "https://www.facebook.com/gorav.khemani.2025"
@@ -1184,7 +1191,7 @@
     <nav class="n" id="navbar">
       <div class="nc">
         <a href="index.html" class="l"
-          ><img
+          ><img loading="lazy" decoding="async"
             src="assets/favicon-32x32.png"
             alt
             style="
@@ -1233,8 +1240,8 @@
     </nav>
     <section class="h">
       <div class="hb">
-        <img
-          src="assets/hero-image.jpg"
+        <img loading="lazy" decoding="async"
+          src="assets/hero-image.webp"
           alt="GoravAI team building AI agents and automation systems in Hyderabad, Pakistan"
         />
       </div>
@@ -1281,8 +1288,8 @@
         <div class="mg">
           <div class="mc" aos>
             <div class="mi">
-              <img
-                src="assets/mission.jpg"
+              <img loading="lazy" decoding="async"
+                src="assets/mission.webp"
                 alt="GoravAI mission - replacing manual work with practical AI solutions"
               />
             </div>
@@ -1300,8 +1307,8 @@
           </div>
           <div class="mc" aos d1>
             <div class="mi">
-              <img
-                src="assets/vision.jpg"
+              <img loading="lazy" decoding="async"
+                src="assets/vision.webp"
                 alt="GoravAI vision - becoming a trusted AI agency across Pakistan and beyond"
               />
             </div>
@@ -1372,8 +1379,8 @@
           <div class="fiw" aos>
             <div class="flg"></div>
             <div class="fi">
-              <img
-                src="assets/founder.jpg"
+              <img loading="lazy" decoding="async"
+                src="assets/founder.webp"
                 alt="Gorav Khemani, Founder of GoravAI"
               />
             </div>
@@ -1565,7 +1572,7 @@
         <div class="fg2">
           <div class="fb">
             <a href="index.html" class="l"
-              ><img
+              ><img loading="lazy" decoding="async"
                 src="assets/favicon-32x32.png"
                 alt
                 style="

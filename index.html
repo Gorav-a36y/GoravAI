@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LS24LZ8S17"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LS24LZ8S17');
+  </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoravAI | AI Agents & Automation Agency in Hyderabad</title>
@@ -20,6 +29,7 @@
     <meta name="geo.position" content="25.3960;68.3578" />
     <meta name="ICBM" content="25.3960, 68.3578" />
     <link rel="canonical" href="https://gorav.click/" />
+    <link rel="preload" as="image" href="assets/hero-image.webp" fetchpriority="high" />
 
     <!-- Open Graph -->
     <meta
@@ -34,14 +44,14 @@
     <meta property="og:url" content="https://gorav.click/" />
     <meta property="og:site_name" content="GoravAI" />
     <meta property="og:locale" content="en_PK" />
-    <meta property="og:image" content="https://gorav.click/assets/hero-image.jpg" />
+    <meta property="og:image" content="https://gorav.click/assets/hero-image.webp" />
     <meta property="og:image:alt" content="GoravAI - AI agents and automation systems" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="GoravAI | AI Agents & Automation for Smart Businesses" />
     <meta name="twitter:description" content="Build agents that work while you sleep. GoravAI creates practical AI solutions for real business problems." />
-    <meta name="twitter:image" content="https://gorav.click/assets/hero-image.jpg" />
+    <meta name="twitter:image" content="https://gorav.click/assets/hero-image.webp" />
 
     <link rel="manifest" href="site.webmanifest" />
     <meta name="theme-color" content="#0a0f1c" />
@@ -50,10 +60,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -71,7 +79,7 @@
         "alternateName": ["Gorav AI", "Gaurav AI", "Garav AI"],
         "url": "https://gorav.click/",
         "logo": "https://gorav.click/assets/android-chrome-512x512.png",
-        "image": "https://gorav.click/assets/hero-image.jpg",
+        "image": "https://gorav.click/assets/hero-image.webp",
         "description": "GoravAI builds smart AI agents, n8n automation systems, and custom AI software that help businesses reduce manual work and grow faster.",
         "priceRange": "$$",
         "email": "goravai787@gmail.com",
@@ -1053,7 +1061,7 @@
       }
       .projects-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
       }
       .project-card {
@@ -1669,8 +1677,20 @@
         text-decoration: none;
         box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
         z-index: 999;
-        transition: var(--transition-smooth);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .whatsapp-float::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: rgba(37, 211, 102, 0.5);
         animation: whatsappPulse 2s ease-in-out infinite;
+        z-index: -1;
       }
 
       .whatsapp-float:hover {
@@ -1679,12 +1699,13 @@
       }
 
       @keyframes whatsappPulse {
-        0%,
-        100% {
-          box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        0% {
+          transform: scale(1);
+          opacity: 0.6;
         }
-        50% {
-          box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
+        100% {
+          transform: scale(1.6);
+          opacity: 0;
         }
       }
 
@@ -1726,7 +1747,8 @@
 
       /* ===== MOBILE RESPONSIVE ===== */
       @media (max-width: 1024px) {
-        .services-grid {
+        .services-grid,
+        .projects-grid {
           grid-template-columns: repeat(2, 1fr);
         }
         .footer-grid {
@@ -1868,7 +1890,7 @@
     <nav class="navbar" id="navbar">
       <div class="nav-container">
         <a href="index.html" class="logo">
-          <img
+          <img loading="lazy" decoding="async"
             src="assets/favicon-32x32.png"
             alt=""
             style="
@@ -1920,8 +1942,11 @@
     <section class="hero" id="home">
       <div class="hero-bg">
         <img
-          src="assets/hero-image.jpg"
+          src="assets/hero-image.webp"
           alt="GoravAI AI agents and automation technology"
+          fetchpriority="high"
+          width="1600"
+          height="900"
         />
       </div>
       <div class="hero-overlay"></div>
@@ -1968,8 +1993,8 @@
       <div class="container">
         <div class="about-grid">
           <div class="about-image animate-on-scroll">
-            <img
-              src="assets/about-image.png"
+            <img loading="lazy" decoding="async"
+              src="assets/about-image.webp"
               alt="AI automation workflow illustration by GoravAI"
             />
           </div>
@@ -2075,8 +2100,8 @@
         <div class="projects-grid">
           <div class="project-card animate-on-scroll">
             <div class="project-image">
-              <img
-                src="assets/project-n8n.jpg"
+              <img loading="lazy" decoding="async"
+                src="assets/project-n8n.webp"
                 alt="MillCore"
               />
               <span class="project-tag">Management System</span>
@@ -2089,15 +2114,13 @@
                 billing, customer Khata (ledger), price updates, monthly
                 reports, and business analytics — all in one place.
               </p>
-              <a href="#contact" class="project-link"
-                >Discuss Similar Project <i class="fas fa-arrow-right"></i
-              ></a>
+              <a href="project-millcore.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           <div class="project-card animate-on-scroll delay-1">
             <div class="project-image">
-              <img
-                src="assets/mission.jpg"
+              <img loading="lazy" decoding="async"
+                src="assets/mission.webp"
                 alt="TradeFast Sparky"
               />
               <span class="project-tag">AI Support Agent</span>
@@ -2111,15 +2134,13 @@
                 jobs, collects project details, and forwards everything to the
                 electrician.
               </p>
-              <a href="#contact" class="project-link"
-                >Discuss Similar Project <i class="fas fa-arrow-right"></i
-              ></a>
+              <a href="project-tradefast-sparky.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           <div class="project-card animate-on-scroll">
             <div class="project-image">
-              <img
-                src="assets/project-software.jpg"
+              <img loading="lazy" decoding="async"
+                src="assets/project-software.webp"
                 alt="LeadGen Pro"
               />
               <span class="project-tag">Lead Generation</span>
@@ -2132,15 +2153,13 @@
                 business data — names, websites, ratings, phone numbers, emails,
                 and social links — without using the expensive Google Maps API.
               </p>
-              <a href="#contact" class="project-link"
-                >Discuss Similar Project <i class="fas fa-arrow-right"></i
-              ></a>
+              <a href="project-leadgen-pro.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           <div class="project-card animate-on-scroll delay-1">
             <div class="project-image">
-              <img
-                src="assets/project-voice.jpg"
+              <img loading="lazy" decoding="async"
+                src="assets/project-voice.webp"
                 alt="ElevenLabs voice AI outreach agent by GoravAI"
               />
               <span class="project-tag">Voice AI</span>
@@ -2153,15 +2172,13 @@
                 services. It introduces the service, answers questions,
                 qualifies prospects, and converts them into booked appointments.
               </p>
-              <a href="#contact" class="project-link"
-                >Discuss Similar Project <i class="fas fa-arrow-right"></i
-              ></a>
+              <a href="project-voice-ai-agent.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           <div class="project-card animate-on-scroll">
             <div class="project-image">
-              <img
-                src="assets/project-shopify.jpg"
+              <img loading="lazy" decoding="async"
+                src="assets/project-shopify.webp"
                 alt="Shopify AI Agent"
               />
               <span class="project-tag">E-commerce AI</span>
@@ -2174,15 +2191,13 @@
                 WISMO queries, returns, refunds, order tracking, and
                 multilingual support — keeping customers happy around the clock.
               </p>
-              <a href="#contact" class="project-link"
-                >Discuss Similar Project <i class="fas fa-arrow-right"></i
-              ></a>
+              <a href="project-shopify-ai-agent.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           <div class="project-card animate-on-scroll delay-1">
             <div class="project-image">
-              <img
-                src="assets/project-social.jpg"
+              <img loading="lazy" decoding="async"
+                src="assets/project-social.webp"
                 alt="Social Media AI Agent"
               />
               <span class="project-tag">Social Media</span>
@@ -2195,15 +2210,13 @@
                 creates high-quality social media posts for LinkedIn, Facebook,
                 and Instagram — keeping your brand active without manual effort.
               </p>
-              <a href="#contact" class="project-link"
-                >Discuss Similar Project <i class="fas fa-arrow-right"></i
-              ></a>
+              <a href="project-social-media-ai-agent.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           <div class="project-card animate-on-scroll">
             <div class="project-image">
-              <img
-                src="assets/project-automation.jpg"
+              <img loading="lazy" decoding="async"
+                src="assets/project-automation.webp"
                 alt="Hospital Management System"
               />
               <span class="project-tag">Healthcare</span>
@@ -2216,15 +2229,13 @@
                 multilingual AI WhatsApp assistant for 24/7 patient support,
                 appointment booking, and doctor availability checks.
               </p>
-              <a href="#contact" class="project-link"
-                >Discuss Similar Project <i class="fas fa-arrow-right"></i
-              ></a>
+              <a href="project-hospital-management-system.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           <div class="project-card animate-on-scroll delay-1">
             <div class="project-image">
-              <img
-                src="assets/project-n8n.jpg"
+              <img loading="lazy" decoding="async"
+                src="assets/project-n8n.webp"
                 alt="Dental Clinic AI Agent"
               />
               <span class="project-tag">Dental / Healthcare</span>
@@ -2237,12 +2248,45 @@
                 patient queries, provides clinic information, and books
                 appointments based on real-time doctor availability.
               </p>
-              <a
-                href="https://gorav-a36y.github.io/goravai-demo/"
-                target="_blank"
-                class="project-link"
-                >View Live Demo <i class="fas fa-external-link-alt"></i
-              ></a>
+              <a href="project-dental-clinic-ai-agent.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="project-card animate-on-scroll">
+            <div class="project-image">
+              <img loading="lazy" decoding="async"
+                src="assets/vision.webp"
+                alt="DairyPro"
+              />
+              <span class="project-tag">Dairy Shop Software</span>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <h3>DairyPro</h3>
+              <p>
+                Complete dairy shop management software for milk shops and dairy
+                businesses in Pakistan — supplier & customer khata, POS billing,
+                daily milk ledger, waste tracking, and an AI business assistant.
+              </p>
+              <a href="project-dairypro.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="project-card animate-on-scroll delay-1">
+            <div class="project-image">
+              <img loading="lazy" decoding="async"
+                src="assets/project-software.webp"
+                alt="Pharmacy Management System"
+              />
+              <span class="project-tag">Pharmacy Software</span>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <h3>Pharmacy Management System</h3>
+              <p>
+                Pharmacy and medical store management software for Pakistan —
+                inventory, expiry tracking, POS billing, supplier khata accounts,
+                and an AI accountant that reads your books like a CA.
+              </p>
+              <a href="project-pharmacy-management-system.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -2256,8 +2300,8 @@
           <div class="founder-image-wrapper animate-on-scroll">
             <div class="founder-glow"></div>
             <div class="founder-image">
-              <img
-                src="assets/founder.jpg"
+              <img loading="lazy" decoding="async"
+                src="assets/founder.webp"
                 alt="Gorav Khemani - Founder of GoravAI"
               />
             </div>
@@ -2574,7 +2618,7 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <a href="index.html" class="logo">
-              <img
+              <img loading="lazy" decoding="async"
                 src="assets/favicon-32x32.png"
                 alt=""
                 style="
