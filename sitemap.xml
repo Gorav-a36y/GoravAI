@@ -2,77 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gorav.click/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://gorav.click/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://gorav.click/services.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://gorav.click/projects.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://gorav.click/about.html</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://gorav.click/project-dairypro.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://gorav.click/project-millcore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://gorav.click/project-pharmacy-management-system.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gorav.click/project-dental-clinic-ai-agent.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gorav.click/project-tradefast-sparky.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gorav.click/project-leadgen-pro.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gorav.click/project-voice-ai-agent.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gorav.click/project-shopify-ai-agent.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gorav.click/project-social-media-ai-agent.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://gorav.click/project-hospital-management-system.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://gorav.click/project-dental-clinic-ai-agent.html</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://gorav.click/project-tradefast-sparky.html</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://gorav.click/project-leadgen-pro.html</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://gorav.click/project-voice-ai-agent.html</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://gorav.click/project-shopify-ai-agent.html</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://gorav.click/project-social-media-ai-agent.html</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://gorav.click/privacypolicy.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-09-28</lastmod>
   </url>
 </urlset>
